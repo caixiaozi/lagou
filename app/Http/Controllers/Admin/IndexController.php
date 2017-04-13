@@ -17,7 +17,11 @@ class IndexController extends Controller
     //显示登录视图
     public function showLogin()
     {
+<<<<<<< HEAD
     	return view('admin.login');
+=======
+    	return view('admin/login');
+>>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
     }
 
 
@@ -62,4 +66,13 @@ class IndexController extends Controller
 //        return '登录';
     }
 
+<<<<<<< HEAD
+=======
+    //注销
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('admin/login');
+    }
+>>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
 }

@@ -67,7 +67,14 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
+<<<<<<< HEAD
             'model' => App\User::class,
+=======
+            //如果自己的用户表的模型的命名空间不是这样需要自定义
+            'model' => App\User::class,
+            //表名
+            'table' => 'users'
+>>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
         ],
 
         // 'users' => [

@@ -24,7 +24,11 @@ class UserLoginRequest extends FormRequest
     public function rules()
     {
         return [
+<<<<<<< HEAD
             'username' => 'required',
+=======
+            'email' => 'required',
+>>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
             'password' => 'required',
             'code' => 'captcha'
         ];
@@ -33,7 +37,11 @@ class UserLoginRequest extends FormRequest
     public function messages()
     {
         return [
+<<<<<<< HEAD
             'username.required' => '用户名不能为空',
+=======
+            'email.required' => '邮箱不能为空',
+>>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
             'password.required' => '密码不能为空',
             'code.captcha' => '验证码错误',
         ];
