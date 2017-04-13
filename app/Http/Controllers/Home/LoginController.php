@@ -13,10 +13,10 @@ class LoginController extends Controller
         return view('home.login.login');
     }
 
-    //找回密码
-    public function  retrievepassword()
-    {
-        return view('home.retrievepassword');
-    }
+//    //找回密码
+//    public function  retrievepassword()
+//    {
+//        return view('home.retrievepassword');
+//    }
 
 }

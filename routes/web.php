@@ -30,7 +30,20 @@ Route::get('retrievepassword','Home\IndexController@retrievepassword');
 //我的简历
 Route::get('myresume','Home\MyresumeController@myresume');
 
+//公司注册首页
 Route::get('company','Home\CompanyController@company');
 
-
+//公司主页
 Route::get('CompanyShow','Home\CompanyShowController@CompanyShow');
+
+//公司详情页
+Route::get('firm','Home\FirmController@firm');
+
+//公司首页
+Route::get('head','Home\HeadController@head');
+
+//公司简介
+Route::get('jobShow','Home\JobShowController@jobShow');
+
+//个人简介
+Route::get('personal','Home\PersonalController@personal');

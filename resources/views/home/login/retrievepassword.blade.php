@@ -86,7 +86,7 @@
             </ul>
             <div class="form_body"  data-view="emailFindStep1">
                 <div class="input_item clearfix" data-propertyname="email" data-controltype="Email" style="display:block;">
-                    <input type="text" class="input input_white" id="" name="email" placeholder="请输入注册时使用的邮箱地址" data-required="required" autocomplete="off" value="{{ old('email') }}"> >
+                    <input type="text" class="input input_white" id="" name="email" placeholder="请输入注册时使用的邮箱地址" data-required="required" autocomplete="off" value="{{ old('email') }}">
                 </div>
 
                 <div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display:block;">
