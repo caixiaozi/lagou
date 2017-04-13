@@ -17,7 +17,7 @@ class IndexController extends Controller
     //显示登录视图
     public function showLogin()
     {
-    	return view('admin.login');
+    	return view('admin/login');
     }
 
 
@@ -62,4 +62,10 @@ class IndexController extends Controller
 //        return '登录';
     }
 
+    //注销
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('admin/login');
+    }
 }
