@@ -11,23 +11,11 @@
     </ul>
     <!--面包屑导航 结束-->
 
-
-
-    <div class="result_wrap">
+    <div class="portlet-body">
         <form action="" method="post">
             {{csrf_field()}}
-            <table class="add_tab">
+            <table class="table table-hover table-striped table-bordered">
                 <tbody>
-                {{--<tr>--}}
-                    {{--<th width="120"><i class="require">*</i>分类：</th>--}}
-                    {{--<td>--}}
-                        {{--<select name="">--}}
-                            {{--<option value="">==请选择==</option>--}}
-                            {{--<option value="19">精品界面</option>--}}
-                            {{--<option value="20">推荐界面</option>--}}
-                        {{--</select>--}}
-                    {{--</td>--}}
-                {{--</tr>--}}
                 <tr>
                     <th><i class="require">*</i>权限路由：</th>
                     <td>
@@ -57,4 +45,5 @@
             </table>
         </form>
     </div>
+
 @endsection

@@ -3140,7 +3140,7 @@
         <span class="positioncount"></span>
         <a class="bar_login passport_login_pop" href="javascript:;"><i></i></a>
         <div class="right">
-            <a rel="nofollow" href="/frontRegister.do?from=index_footerbar" onclick="_hmt.push(['_trackEvent', 'button', 'click', 'register'])" class="bar_register" id="bar_register" target="_blank" data-lg-tj-id="4t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"><i></i></a>
+            <a rel="nofollow" href="{{url("home/register")}}" onclick="_hmt.push(['_trackEvent', 'button', 'click', 'register'])" class="bar_register" id="bar_register" target="_blank" data-lg-tj-id="4t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"><i></i></a>
         </div>
         <input type="hidden" id="cc" value="180953" />
         <input type="hidden" id="cp" value="2936879" />

@@ -58,7 +58,7 @@
             <div class="controls">
                 <div class="input-icon left">
                     <i class="icon-user"></i>
-                    <input class="m-wrap placeholder-no-fix" type="text" placeholder="Username" name="username"/>
+                    <input class="m-wrap placeholder-no-fix" type="text" placeholder="Username" name="name"/>
                 </div>
             </div>
         </div>
@@ -71,17 +71,14 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-        <div class="form-group">
-            <input type="text" class="form-control" name="code" placeholder="请输入验证码"/>
-            {{--{!! captcha_img()!!}--}}
-        </div>
-=======
         {{--<div class="form-group">--}}
             {{--<input type="text" class="form-control" name="code" placeholder="请输入验证码"/>--}}
             {{--{!! captcha_img()!!}--}}
         {{--</div>--}}
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
+        {{--<div class="form-group">--}}
+            {{--<input type="text" class="form-control" name="code" placeholder="请输入验证码"/>--}}
+            {{--{!! captcha_img()!!}--}}
+        {{--</div>--}}
         <div class="form-actions">
             <label class="checkbox">
                 <input type="checkbox" name="remember" value="1"/> 记住我

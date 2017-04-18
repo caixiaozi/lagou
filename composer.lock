@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "76036da3b5b55b91dbe1e1affa01bf9e",
-=======
     "content-hash": "e3cdd64f16effcd8f833e69c02662e66",
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -165,8 +161,6 @@
             "time": "2015-11-06T14:35:42+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "guzzlehttp/guzzle",
             "version": "6.2.3",
             "source": {
@@ -407,7 +401,6 @@
             "time": "2017-02-04T10:37:19+00:00"
         },
         {
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -764,8 +757,6 @@
             "time": "2017-03-22T15:43:14+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "mews/captcha",
             "version": "v2.1.4",
             "source": {
@@ -823,7 +814,6 @@
             "time": "2016-07-19T09:01:51+00:00"
         },
         {
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
             "name": "monolog/monolog",
             "version": "1.22.1",
             "source": {
@@ -1098,8 +1088,6 @@
             "time": "2017-03-13T16:27:32+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -1150,7 +1138,6 @@
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -1526,18 +1513,6 @@
         },
         {
             "name": "symfony/event-dispatcher",
-<<<<<<< HEAD
-            "version": "v3.2.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "b7a1b9e0a0f623ce43b4c8d775eb138f190c9d8d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/event-dispatcher/b7a1b9e0a0f623ce43b4c8d775eb138f190c9d8d.zip",
-                "reference": "b7a1b9e0a0f623ce43b4c8d775eb138f190c9d8d",
-=======
             "version": "v3.2.7",
             "source": {
                 "type": "git",
@@ -1548,7 +1523,6 @@
                 "type": "zip",
                 "url": "https://files.phpcomposer.com/files/symfony/event-dispatcher/154bb1ef7b0e42ccc792bd53edbce18ed73440ca.zip",
                 "reference": "154bb1ef7b0e42ccc792bd53edbce18ed73440ca",
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
                 "shasum": ""
             },
             "require": {
@@ -1595,11 +1569,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-            "time": "2017-02-21T09:12:04+00:00"
-=======
             "time": "2017-04-04T07:26:27+00:00"
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
         },
         {
             "name": "symfony/finder",
@@ -2252,8 +2222,6 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "zizaco/entrust",
@@ -2322,7 +2290,6 @@
                 "roles"
             ],
             "time": "2016-12-29 06:25:06"
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
         }
     ],
     "packages-dev": [
@@ -2791,18 +2758,6 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-<<<<<<< HEAD
-            "version": "4.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "09e2277d14ea467e5a984010f501343ef29ffc69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/php-code-coverage/09e2277d14ea467e5a984010f501343ef29ffc69.zip",
-                "reference": "09e2277d14ea467e5a984010f501343ef29ffc69",
-=======
             "version": "4.0.8",
             "source": {
                 "type": "git",
@@ -2813,7 +2768,6 @@
                 "type": "zip",
                 "url": "https://files.phpcomposer.com/files/sebastianbergmann/php-code-coverage/ef7b2f56815df854e66ceaee8ebe9393ae36a40d.zip",
                 "reference": "ef7b2f56815df854e66ceaee8ebe9393ae36a40d",
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
                 "shasum": ""
             },
             "require": {
@@ -2863,11 +2817,7 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
-            "time": "2017-03-01T09:12:17+00:00"
-=======
             "time": "2017-04-02T07:44:40+00:00"
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3057,18 +3007,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
-            "version": "5.7.17",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/68752b665d3875f9a38a357e3ecb35c79f8673bf.zip",
-                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf",
-=======
             "version": "5.7.19",
             "source": {
                 "type": "git",
@@ -3079,7 +3017,6 @@
                 "type": "zip",
                 "url": "https://files.phpcomposer.com/files/sebastianbergmann/phpunit/69c4f49ff376af2692bad9cebd883d17ebaa98a1.zip",
                 "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1",
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
                 "shasum": ""
             },
             "require": {
@@ -3148,11 +3085,7 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
-            "time": "2017-03-19T16:52:12+00:00"
-=======
             "time": "2017-04-03T02:22:27+00:00"
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3837,18 +3770,6 @@
         },
         {
             "name": "symfony/yaml",
-<<<<<<< HEAD
-            "version": "v3.2.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "093e416ad096355149e265ea2e4cc1f9ee40ab1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/yaml/093e416ad096355149e265ea2e4cc1f9ee40ab1a.zip",
-                "reference": "093e416ad096355149e265ea2e4cc1f9ee40ab1a",
-=======
             "version": "v3.2.7",
             "source": {
                 "type": "git",
@@ -3859,7 +3780,6 @@
                 "type": "zip",
                 "url": "https://files.phpcomposer.com/files/symfony/yaml/62b4cdb99d52cb1ff253c465eb1532a80cebb621.zip",
                 "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621",
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
                 "shasum": ""
             },
             "require": {
@@ -3901,11 +3821,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-            "time": "2017-03-07T16:47:02+00:00"
-=======
             "time": "2017-03-20T09:45:15+00:00"
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
         },
         {
             "name": "webmozart/assert",
@@ -3960,13 +3876,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-<<<<<<< HEAD
-    "stability-flags": [],
-=======
     "stability-flags": {
         "zizaco/entrust": 20
     },
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

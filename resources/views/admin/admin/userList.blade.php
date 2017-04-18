@@ -15,9 +15,8 @@
             <!--快捷导航 开始-->
             <div class="result_content">
                 <div class="short_wrap">
-                    <a href="/user-add"><i class="fa fa-plus"></i>新增管理员</a>
-                    {{--<a href="#"><i class="fa fa-recycle"></i>批量删除</a>--}}
-                    {{--<a href="#"><i class="fa fa-refresh"></i>更新排序</a>--}}
+                    <a href="{{url("admin/user-add")}}"><i class="fa fa-plus"></i>新增管理员</a>
+
                 </div>
             </div>
             <!--快捷导航 结束-->
@@ -40,7 +39,6 @@
                         <td>{{$user->roles}}</td>
                         <td>
                             <a href="{{url('admin/attach-role'.'/'.$user->id)}}">分配角色</a>
-                            <a href="{{url('admin/admin-update'.'/'.$user->id)}}">修改</a>
                             <a href="{{url('admin/user-delete'.'/'.$user->id)}}">删除</a>
                         </td>
                     </tr>

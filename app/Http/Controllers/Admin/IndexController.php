@@ -17,31 +17,26 @@ class IndexController extends Controller
     //显示登录视图
     public function showLogin()
     {
-<<<<<<< HEAD
     	return view('admin.login');
-=======
-    	return view('admin/login');
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
     }
-
 
     //完成登录的处理
     public function doLogin(Request $request)
     {
-
+//        dd($request->all());
 //       //定义验证规则
         $rules = array(
-            'username' => 'required',
+            'name' => 'required',
             'password' => 'required',
         );
         $message = array(
-            'username.required' => '用户名不能为空',
+            'name.required' => '用户名不能为空',
             'password.required' => '密码不能为空',
 
         );
         $this->validate($request, $rules, $message);
         //获取表单提交的数据
-        $username = $request->input('username');
+        $name = $request->input('name');
         $password = $request->input('password');
         //原生的sql语句
         $link = mysqli_connect('localhost', 'root', '');
@@ -51,7 +46,8 @@ class IndexController extends Controller
         //设置字符集
         mysqli_set_charset($link, 'utf8');
         //准备sql和执行sql
-        $sql = "select * from admin where username = '{$username}' and password='{$password}'";
+        $sql = "select * from  users where  name = '{$name}' and password='{$password}'";
+//        dd($sql);
         $res = mysqli_query($link, $sql);
         $user = mysqli_fetch_assoc($res);
         if ($user) {
@@ -66,13 +62,11 @@ class IndexController extends Controller
 //        return '登录';
     }
 
-<<<<<<< HEAD
-=======
     //注销
     public function logout()
     {
         Auth::logout();
         return redirect('admin/login');
     }
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
+
 }

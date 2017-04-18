@@ -177,11 +177,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-<<<<<<< HEAD
-=======
         Mews\Captcha\CaptchaServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
 
     ],
 
@@ -230,12 +227,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-<<<<<<< HEAD
-
-=======
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
         'Entrust' => Zizaco\Entrust\EntrustFacade::class,
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
     ],
 
 ];

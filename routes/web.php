@@ -10,44 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
+
 
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::get('admin/user', function () {
-//    return view('admin.user.user');
-//});
-
-Route::get('admin/login','Admin\IndexController@showLogin');
-Route::post('doLogin','Admin\IndexController@doLogin');
-Route::get('admin/user','Admin\UserController@user');
-Route::get('admin/index','Admin\IndexController@index');
-
-
-
-
-
-=======
-//Route::get('admin/index',function(){
-//   return "11";
-////    return view('admin.index');
-//});
-
 
 Route::group(['middleware'=>'check.login'],function() {
     //后台用户
-    Route::get('admin/user','Admin\UserController@user');
-    Route::get('admin/user-delete/{id}', 'Admin\UserController@userDelete');
-    Route::get('admin/user-update/{id}', 'Admin\UserController@showUpdate');
-    Route::post('admin/user-update/{id}', 'Admin\UserController@doUpdate');
-    Route::post('admin/user-add','Admin\UserController@userAdd');
-    Route::get('admin/user-add', 'Admin\UserController@showAdd');
+    Route::get('admin/vip','Admin\VipController@viplist');
+    Route::post('admin/vip-add','Admin\VipController@vipadd');
+    Route::get('admin/vip-add', 'Admin\VipController@showAdd');
+    Route::get('admin/vip-update/{id}', 'Admin\VipController@showUpdate');
+    Route::post('admin/vip-update/{id}', 'Admin\VipController@doUpdate');
+    Route::get('admin/vip-delete/{id}', 'Admin\VipController@vipDelete');
 
     //后台首页
     Route::get('admin/index','Admin\IndexController@index');
     Route::get('admin/logout','Admin\IndexController@logout');
-
 
     //权限管理
     Route::get('admin/permission', 'Admin\PermissionController@permissionList');
@@ -63,39 +43,66 @@ Route::group(['middleware'=>'check.login'],function() {
     Route::any('admin/attach-permission/{role_id}', 'Admin\RoleController@attachPermission')->middleware('rbac');
 
     //管理员管理
-    Route::get('admin/admin-list', 'Admin\AdminController@adminList')->middleware('rbac');
-    Route::any('admin/admin-add', 'Admin\AdminController@adminAdd');
-    Route::any('admin/attach-role/{user_id}', 'Admin\AdminController@attachRole');
+    Route::get('admin/user-list', 'Admin\UserController@userList')->middleware('rbac');
+    Route::any('admin/user-add', 'Admin\UserController@userAdd');
+    Route::any('admin/user-delete/{user_id}', 'Admin\UserController@userDelete');
+    Route::any('admin/attach-role/{user_id}', 'Admin\UserController@attachRole');
 });
 //后台登录
 Route::get('admin/login','Admin\IndexController@showLogin');
 Route::post('doLogin','Admin\IndexController@doLogin');
 
+//职位分类管理
+Route::get('admin/category-list','Admin\CategoryController@category');
+Route::get('admin/category-add','Admin\CategoryController@showAdd');
+Route::post('admin/category-add','Admin\CategoryController@categoryAdd');
+Route::get('admin/category-add/{id}','Admin\CategoryController@showAdd');
+Route::post('admin/category-add/{id}','Admin\CategoryController@categoryAdd');
+Route::get('admin/category-list/{id}/{path}','Admin\CategoryController@category');
+Route::get('admin/category-update/{id}','Admin\CategoryController@update');
+Route::post('admin/category-update/{id}','Admin\CategoryController@showupdate');
+Route::get('admin/category-del/{id}','Admin\CategoryController@del');
+
 
 
 //前台首页
 Route::get('/','Home\IndexController@index');
+Route::get('home/two',function(){
+    return view('home.two');
+});
+//Route::get('home/index','Home\IndexController@index');
 //前台注册
 Route::get('home/register','Home\RegisterController@register');
+Route::post('home/register','Home\RegisterController@doregister');
+//Route::get('home/jihuo','RegisterController@sendMail');
+Route::get('mail','Home\RegisterController@sendMail');
+Route::get('aa/{id}','Home\RegisterController@jihuo');
 //前台登录
 Route::get('home/login','Home\LoginController@login');
+Route::post('home/doLogin','Home\LoginController@doLogin');
+
 //找回密码
 Route::get('retrievepassword','Home\IndexController@retrievepassword');
-//// 发送密码重置链接路由
-//Route::get('password/email', 'Auth\PasswordController@getEmail');
-//Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+//找回密码
+// 发送密码重置链接路由
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+// 密码重置路由
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+
 
 //我的简历
 Route::get('myresume','Home\MyresumeController@myresume');
-<<<<<<< HEAD
+
 
 //公司注册首页
-=======
->>>>>>> fd64f2ca690193169edc18b84418d2b9fc2cb7e1
+
 Route::get('company','Home\CompanyController@company');
 Route::get('CompanyShow','Home\CompanyShowController@CompanyShow');
 
-<<<<<<< HEAD
 //公司主页
 Route::get('CompanyShow','Home\CompanyShowController@CompanyShow');
 
@@ -110,8 +117,6 @@ Route::get('jobShow','Home\JobShowController@jobShow');
 
 //个人简介
 Route::get('personal','Home\PersonalController@personal');
-=======
-
 
 
 //Route::get('/', 'IndexController@index');
@@ -124,5 +129,4 @@ Route::get('personal','Home\PersonalController@personal');
 //Route::get('/sendSMS', 'UserController@sendSMS');
 //Route::get('admin/index', 'AdminController@index');
 
->>>>>>> fd64f2ca690193169edc18b84418d2b9fc2cb7e1
->>>>>>> 8b6225fb2776ae8486b67e766e73ca63cf4ec475
+
