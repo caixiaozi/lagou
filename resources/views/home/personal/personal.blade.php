@@ -12,7 +12,7 @@
     <title>找工作-互联网招聘求职网-拉勾网</title>
 
     <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
-
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/fk.css')}}">
 
     <!-- global_domain FE_base... -->
 
@@ -57,13 +57,16 @@
 
     <link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/layout_903ac4c.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/mCustomScrollbar_ac2fb8b.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/layout_1ef51b1.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/layout_903ac4c.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/main.html_aio_7852bd5.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/widgets_d89a168.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/index.css')}}">
+
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/myself/css/loginpop_113e5e2.css')}}">
 
-    <link rel="stylesheet" type="text/css" href="{{url('home/personal/binding/css/index.css')}}">
+    {{--<link rel="stylesheet" type="text/css" href="{{url('home/personal/binding/css/index.css')}}">--}}
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/binding/css/mCustomScrollbar_ac2fb8b.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/binding/css/layout_903ac4c.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/binding/css/main.css')}}">
@@ -74,7 +77,12 @@
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/modify/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('home/personal/modify/css/widgets_d89a168.css')}}">
 
-    <script src="{{url('home/personal/myself/js/userinfo_7f28f39.js')}}" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/chance/css/mCustomScrollbar_ac2fb8b.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/chance/css/layout_903ac4c.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/chance/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/personal/chance/css/widgets_d89a168.css')}}">
+
+     <script src="{{url('home/personal/myself/js/userinfo_7f28f39.js')}}" type="text/javascript"></script>
      <script src="{{url('home/personal/myself/js/main.html_aio_2_e7624b3.js')}}" type="text/javascript"></script>
     <script src="{{url('home/personal/myself/js/jquery-1.js')}}" type="text/javascript"></script>
     <script charset="utf-8" class="lazyload" src="{{url('home/personal/myself/js/jquery.js')}}"></script>
@@ -83,7 +91,7 @@
     <script async="" src="{{url('home/personal/myself/js/main_e08c2f2.js')}}" data-require-id="common/components/template-helper/main"></script>
 
 
-    {{--<script src="{{url('home/personal/myself/js/vendor_e3ddeee.js')}}" type="text/javascript"></script>--}}
+    <script src="{{url('home/personal/myself/js/vendor_e3ddeee.js')}}" type="text/javascript"></script>
 <body>
 <!--导航  -->
 <div id="lg_header">
@@ -203,7 +211,6 @@
         <img src="{{url('home/personal/myself/images/default.png')}}" alt="">
     </div>
     <!-- 个人信息 -->
-
     <div class="y_nav" style="display:none">
         <dl class="c_section">
             <dt id="autofiletitle">
@@ -217,26 +224,27 @@
                 <div class="userinfo_edit" id="userinfoEdit">
                     <form id="userinfoEditForm" action="/personal/message" method="post">
                         <div class="avatar">
-                            <img class="avatar_img" src="//www.lgstatic.com/images/myresume/default_headpic.png" width="80" height="80" alt="杜玉玲" />
-                            <input type="hidden" name="portrait" value="images/myresume/default_headpic.png" />
+                            <img class="avatar_img" src="http://www.lgstatic.com/images/myresume/default_headpic.png"  alt="" height="80" width="80">
+                            <input name="portrait" value="" type="hidden">
                         </div>
-                        <input type="file" class="avatar_upload" id="avatarUpload" name="headPic" defaultValue="https://www.lagou.com/images/myresume/default_headpic.png" title="支持jpg、jpeg、gif、png格式，文件小于10M" />
+                        <input class="avatar_upload" id="avatarUpload" name="headPic" defaultvalue="default_headpic.png" title="支持jpg、jpeg、gif、png格式，文件小于10M" type="file">
                         <div class="username input_box">
                             <label class="label_input_box" for="userinfoEditUserName">昵称</label>
-                            <input type="text" id="userinfoEditUserName" name="userName" placeholder="昵称" value="Exclusive You" maxlength="15" data-maxlength="15" />
+                            <input id="username" name="userName" placeholder="昵称" value="Exclusive You" maxlength="15" data-maxlength="15" type="text">
                         </div>
-
                         <div class="userinfo_sex input_box">
                             <span class="label_input_box">性别</span>
-                            <input type="radio" class="magic-radio" id="userinfoEditSexMale" name="sex" value="MALE"  />
+                            <input type="radio" class="magic-radio" id="userinfoEditSexMale" name="sex" value="MALE">
                             <label for="userinfoEditSexMale">男</label>
-                            <input type="radio" class="magic-radio" id="userinfoEditSexFemale" name="sex" value="FEMALE"  checked="checked"  />
+                            <input type="radio" class="magic-radio" id="userinfoEditSexFemale" name="sex" value="FEMALE" checked="checked">
                             <label for="userinfoEditSexFemale">女</label>
+
                         </div>
+                        {{csrf_field()}}
 
 
                         <div class="toolbar">
-                           {{-- <a class="btn userinfo_save" href="javascript:;" data-lg-tj-id="18k0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">保存</a>--}}<!-- <a class="btn btn_cancel userinfo_cancel" href="javascript:;">取消</a> -->
+                            <!-- <a href="javascript:;" class="btn userinfo_save">保存</a> -->
                             <button class="btn userinfo_save">保存</button>
                         </div>
                     </form>
@@ -245,26 +253,27 @@
         </dl>
     </div>
     <!-- 账号绑定-->
-    <div class="y_nav" style="display:none" >
-        <dl class="c_section">
+    <div class="y_nav" style="display:none"><dl class="c_section">
             <form action="" method="post">
                 <dt id="autofiletitle">
                 <h1>
                     <em></em>
                     帐号绑定
                 </h1>
+
                 </dt>
+
                 <dd>
-                    <br><br><br>
                     <ul class="user_noModify">
-                        <li align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前登录帐号：<span>1655399007@qq.com</span> </li>
-                        <li align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绑定后，你可以同时使用以下方式登录拉勾</li>
-                        <br><br>
+                        <br><br><br>
+                        <li>当前登录帐号：<span><b>1655399007@qq.com</b></span> </li>
+                        <br>
+                        <li>绑定后，你可以同时使用以下方式登录拉勾</li>
                     </ul>
                     <dl class="user_thirdLogin">
                         <dt><img src="{{url('home/personal/binding/images/mail-bding_18f930a.png')}}" alt="mail"></dt>
 
-                        <dd><a href="javascript:;" id="bindindPhoneBtn">已绑定邮箱  </a><span>1655399007@qq.com </span>
+                        <dd>已绑定邮箱 <span>1655399007@qq.com </span>
 
 
                         </dd>
@@ -275,75 +284,24 @@
                     </dl>
                     <dl class="user_thirdLogin">
                         <dt><img src="{{url('home/personal/binding/images/qq-bding_575a91d.png')}}" alt="qq"></dt>
-                        <dd><a href="javascript:;" id="bindindPhoneBtn">已绑定QQ帐号</a> </dd>
 
-                    </dl>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="{{url('home/personal/binding/images/weibo-bding_8ece355.png')}}" alt="weibo"></dt>
-                        <dd><a href="https://passport.lagou.com/oauth20/auth_sinaWeiboProvider.html?state=bind">绑定新浪微博帐号</a></dd>
-                    </dl>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="{{url('home/personal/binding/images/wechat-bding_390a7b0.png')}}" alt="weixin"></dt>
-                        <!-- 判断微信帐号 -->
-                        <dd><a href="https://passport.lagou.com/oauth20/auth_weixinProvider.html?state=bind">绑定微信帐号</a></dd>
-                    </dl>
+                        <dd>已绑定QQ帐号  <span></span><br><br><br>
 
-    </div>
+                        </dd>
+                    </dl>
 
     </form>
-    <!-- 机会+ -->
-{{--    <div class="new_section resumePrivacy fr">
+        </div>
+    <!-- 拉钩PLUS -->
+    <div class="y_nav" style="display:none">
         <dl class="c_section">
             <dt>
             <h1><em></em>机会+</h1>
             </dt>
             <dd>
-                <div class="switch_resume">
-                    <span>开启机会+，亮出你自己，让心仪的企业主动来找你</span>
-                    <div class="openresume">
-                        <div  class="toggle" >
-                            <label class="toggle-radio" for="toggleOption2"><i class="checked"></i></label>
-                            <input type="radio" name="toggleOptions" id="toggleOption2" value="option2"  data-lg-tj-id="6Y00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-method="send" data-lg-gatj-msgtype="event" data-lg-gatj-msg="plus,开启,radio">
-                            <label class="toggle-radio" for="toggleOption1"><i class="uncheck"></i></label>
-                            <input type="radio" name="toggleOptions" id="toggleOption1" value="option1" checked="checked" data-lg-tj-id="6Z00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-method="send" data-lg-gatj-msgtype="event" data-lg-gatj-msg="plus,关闭,radio">
-                        </div>
-                    </div>
-                    <!-- <div class="openresume_tip dn">
-                        <span class="triangle_border tb_border"></span>
-                        <span class="triangle_border tb_background"></span>
-                      开启拉勾PLUS，将自己匿名展示给职位发布者，并可以收到来自企业的主动邀请；</br>关闭此功能你不会被任何企业发现，但可能错过匹配的职位。
-                    </div> -->
-                    <p class="resume_open_tip">腾讯、网易、滴滴快的、豆瓣、大疆、唯品会、魅族、蘑菇街、什么值得买、熊猫拿拿、微盟⋯</p>
-                </div>
 
-                <div  class="open_resume_notice dn" >
-                    <span>完善基本信息，机会即刻找上门。</span>
-                    <a href="https://www.lagou.com/resume/threestep.html" data-lg-tj-id="6W00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-msg="resume,完善,button">去完善简历</a>
-                </div>
 
-                <div class="block_company">
-                    <label>对这些企业不可见：</label>
-                    <div class="cmail_lists">
-                        <ul id='companyLists'>
-                        </ul>
-                        <a href="javascript:;"  class="add_mail" >新增</a>
-                        <form id="mailForm" class="dn">
-                            <i></i>
-                            <input type="text" placeholder="请输入你想屏蔽的公司简称" maxlength="45" />
-                            <input type="submit" value="确定" />
-                            <a href="javascript:;">取消</a>
-                            <p>提示：请输入你想屏蔽的公司简称，设置后，含有该简称的公司都将被屏蔽。</p>
-                            <p>例如：输入“3W”,则“3W”、“3W咖啡”、“3W空间”等都将被屏蔽。</p>
-                            <ul id='companySuggestion'>
-                                <li>屏蔽“哈哈哈哈”公司</li>
-                                <li>啦啦啦啦</li>
-                                <li>啊啊啊啊啊</li>
-                            </ul>
-                        </form>
-                    </div>
-                </div>
-
-                <img src="//www.lgstatic.com/www/static/plus-c/modules/common/img/flowchart1_06ce08e.png" width="665"  class="progress_img" />
+                <img src="{{url('home/personal/chance/images/flowchart1_06ce08e.png')}}" width="665"  class="progress_img" />
 
                 <div class="open_resume_description">
                     <span>说明：</span>
@@ -355,19 +313,8 @@
                 </div>
 
             </dd>
-        </dl>
-    </div>--}}
-
-    <!-- 确定关闭plus弹窗 by honge -->
-    <div style="display:none;">
-        <div id="closeplus" class="popup" style="overflow:hidden">
-            <h3>关闭后将错失许多职业机会</h2>
-                <a href="javascript:;" class="btn" data-lg-tj-id="6X00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-msg="plus,关闭,button">关 闭</a>
-        </div>
+        </dl>                                                                           </p>
     </div>
-
-</div>
-
     <!--修改密码  -->
     <div class="y_nav" style="display:none"><dl class="c_section">
             <dt id="autofiletitle">
@@ -380,9 +327,10 @@
                 <form id="updatePswForm" method="post" action="/personal/update">
                     <table class="savePassword">
                         <tbody><tr>
-                            <td>登录帐号</td>
+                            <td  class="label">登录帐号</td>
                             <td class="c7">
-                                <input name="username" id="oldpassword" maxlength="16" value="" autocomplete="off" type="text">                       </td>
+                                <input name="username" id="oldpassword" maxlength="10" value="" autocomplete="off" type="text">
+                            </td>
                         </tr>
                         <tr>
                             <td class="label">当前密码</td>
@@ -399,7 +347,8 @@
                         <tr>
                             <td>&nbsp;</td>
                             {{csrf_field()}}
-                            <td><input value="保 存" type="submit"></td>
+
+                            <td><br><br><input value="保 存" type="submit" class="btn userinfo_save"></td>
                         </tr>
                         </tbody></table>
                 </form>

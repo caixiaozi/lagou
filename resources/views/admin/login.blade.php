@@ -58,7 +58,7 @@
             <div class="controls">
                 <div class="input-icon left">
                     <i class="icon-user"></i>
-                    <input class="m-wrap placeholder-no-fix" type="text" placeholder="Username" name="username"/>
+                    <input class="m-wrap placeholder-no-fix" type="text" placeholder="Username" name="name"/>
                 </div>
             </div>
         </div>
@@ -71,6 +71,10 @@
                 </div>
             </div>
         </div>
+        {{--<div class="form-group">--}}
+            {{--<input type="text" class="form-control" name="code" placeholder="请输入验证码"/>--}}
+            {{--{!! captcha_img()!!}--}}
+        {{--</div>--}}
         {{--<div class="form-group">--}}
             {{--<input type="text" class="form-control" name="code" placeholder="请输入验证码"/>--}}
             {{--{!! captcha_img()!!}--}}

@@ -1,82 +1,53 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Role;
+use App\User;
 use App\Http\Controllers\Controller;
-use App\Model\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-    //
-    //显示用户信息列表
-    public function user()
+    //用户列表
+    public function userList()
     {
-
-        $users =DB::table('users')->paginate(10);
-//        dd($users);
-        return view('admin.user.user')->with('users',$users);
-    }
-
-    //删除用户
-    public function userDelete($id)
-    {
-        //获取用户模型
-        $user = User::find($id);
-        $user->delete();
-        return redirect('admin/user');
-    }
-
-    //显示修改的表单
-    public function showUpdate($id)
-    {
-        //dd($id);
-        //根据id获取单个模型
-        $user = User::find($id);
-        return view('admin.user.update', compact('user'));
-    }
-
-    //修改用户的数据
-    public function doUpdate(Request $request, $id)
-    {
-//        dd($request->all());
-        //获取当前用户的实例
-        $user = User::find($id);
-        $user->name = $request->input('name', '');
-        $user->email = $request->input('email', '');
-        $user->status = $request->input('status', '');
-        $user->password = $request->input('password', '');
-
-        $result = $user->save();
-        //判断是否修改成功
-        if ($result) {
-            return redirect('admin/user');
-        } else {
-            return back();
+//        return view('admin.admin.userlist');
+        $users = User::all();
+        foreach ($users as $user) {
+            $roles = array();
+            foreach ($user->roles as $role) {
+                $roles[] = $role->display_name;
+            }
+            $user->roles= implode(',', $roles);
         }
-    }
-
-    public function showAdd()
-    {
-        return view('admin.user.add');
+        return view('admin.admin.userlist', compact('users'));
     }
     //添加用户
     public function userAdd(Request $request)
     {
-//        dd($request->all());
-//        return "添加成功";
-        $result = $request->all();
-        $result['created_at'] = date("Y-m-d H:i:s");
-        //执行数据插入
-        $res = DB::table('users')->insert($result);
-        if($res){
-            //成功 重定向 页面跳转到列表页
-            return redirect('admin/user');
-        }else{
-            //失败 回到添加页
-            return back();
+        if ($request->isMethod('post')) {
+            User::create(array_merge($request->all(),['avatar'=>'image/default.jpg']));
+            return redirect('admin/user-list');
         }
+        return view('admin.admin.userAdd');
     }
+
+    //分配角色
+    public function attachRole(Request $request,$user_id)
+    {
+        if ($request->isMethod('post')) {
+            //获取当前用户的角色
+            $user = User::find($user_id);
+            DB::table('role_user')->where('user_id', $user_id)->delete();
+            foreach ($request->input('role_id') as $role_id){
+                $user->attachRole(Role::find($role_id));
+            }
+            return redirect('admin/user-list');
+        }
+        //查询所有的权限
+        $roles = Role::all();
+        return view('admin.admin.attachRole', compact('roles'));
+    }
+
 }

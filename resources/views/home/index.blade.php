@@ -9,8 +9,13 @@
     <meta content="拉勾网是最权威的互联网行业招聘网站,提供全国真实的互联网招聘信息,工资不面议当面谈,找工作,招聘网,寻人才就来拉勾网,互联网行业找工作首选拉勾网" name="description">
     <title>拉勾网-最专业的互联网招聘平台_找工作_招聘_人才网_求职</title>
     <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
+
+
+
 <!-- global_domain FE_base... -->
+
 <script type="text/javascript">
+
     (function() {
         var protocol = window.location.protocol;
         var host = window.location.host;
@@ -32,12 +37,17 @@
                 FE_frontLogout: baseUrl + '/frontLogout.do',
                 FE_frontRegister: baseUrl + '/frontRegister.do'
             };
+
         window.GLOBAL_CDN_DOMAIN = 'www.lgstatic.com';
     })();
 </script>
 
+
+
+
 <!-- SEO 需求-->
 <link rel="canonical" href="">
+
 <!-- 公共样式 -->
 <!-- header样式 -->	<!-- footer样式 -->
 <!-- 页面样式 -->
@@ -46,6 +56,7 @@
     window.X_Anti_Forge_Token = '';
     window.X_Anti_Forge_Code = '';
 </script>
+
 
 <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/layout_903ac4c.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/main.html_aio_2_f8a294e.css')}}">
@@ -63,36 +74,52 @@
 
 <!-- 公共html -->
 <!-- 页面公用结构、velocity变量 --><input type="hidden" value="" name="userid" id="userid" />
+
 <!-- 城市分站 -->
+
+
 <!-- header -->
 <!--C端头部通栏广告位-->
+
+
 <!--验证注册邮箱-->
 <!--
     @require "common/widgets/header_c/modules/emailvalid/main.less"
 -->
+
+
 <div id="lg_header">
+
     <!--C端头部黑色导航-->
     <div id="lg_tbar">
+
         <div class="inner">
+
             <div class="lg_tbar_l">
                 <a rel="nofollow" href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
                 <a rel="nofollow" href="#hr.#dashboard" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
             </div>
 
+
+
             <ul class="lg_tbar_r">
                 <li>
-                    <a href="home/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
+                    <a href="/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
                 </li>
                 <li>
-                    <a href="home/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
+                    <a href="/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
                 </li>
             </ul>
+
+
         </div>
+
     </div><!--end #lg_tbar-->
 
 
     <!--C端头部白色导航-->
     <div id="lg_tnav">
+
         <div class="inner">
             <div class="lg_tnav_l">
                 <a href="#/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
@@ -117,16 +144,29 @@
                     <a rel="nofollow" href="dajing"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
                 </li>
             </ul>
+
         </div>
+
     </div><!--end #lg_tnav-->
+
+
 </div><!--end #header-->
 
 <input type="hidden" id="serverTime" value="1491548212273" />
 
 <!-- 页面主体START -->
 <div class="container clearfix" id="container">
+
     <div id="sidebar" class="sidebar" data-lg-tj-track-code="index_navigation" data-lg-tj-track-type="1">
+
+
+
+
+
+
         <div class="mainNavs">
+
+
             <div class="menu_box">
                 <div class="menu_main job_hopping">
                     <h2>
@@ -134,71 +174,204 @@
                         <!-- 跳槽月 -->
                         <span></span>
                     </h2>
+
+
+
                     <a href="https://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4A00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">Java</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4A00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">PHP</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/C++/" data-lg-tj-id="4A00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">C++</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4A00" data-lg-tj-no="0004" data-lg-tj-cid="idnull">Android</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4A00" data-lg-tj-no="0005" data-lg-tj-cid="idnull">iOS</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/shujuwajue/" data-lg-tj-id="4A00" data-lg-tj-no="0006" data-lg-tj-cid="idnull">数据挖掘</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/ceshi/" data-lg-tj-id="4A00" data-lg-tj-no="0007" data-lg-tj-cid="idnull">测试</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4A00" data-lg-tj-no="0008" data-lg-tj-cid="idnull">前端开发</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/html51/" data-lg-tj-id="4A00" data-lg-tj-no="0009" data-lg-tj-cid="idnull">html5</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/jishuzongjian/" data-lg-tj-id="4A00" data-lg-tj-no="0010" data-lg-tj-cid="idnull">技术总监</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/jiagoushi/" data-lg-tj-id="4A00" data-lg-tj-no="0011" data-lg-tj-cid="idnull">架构师</a>
+
+
                     <a href="https://www.lagou.com/zhaopin/CTO/" data-lg-tj-id="4A00" data-lg-tj-no="0012" data-lg-tj-cid="idnull">CTO</a>
                 </div>
                 <div class="menu_sub dn">
                     <dl>
                         <dt>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/houduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">后端开发</a>
                         </dt>
                         <dd>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4O00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr">Java</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Python/" data-lg-tj-id="4O00" data-lg-tj-no="0102" data-lg-tj-cid="idnull" class="">Python</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4O00" data-lg-tj-no="0103" data-lg-tj-cid="idnull" class="curr">PHP</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/.NET/" data-lg-tj-id="4O00" data-lg-tj-no="0104" data-lg-tj-cid="idnull" class="">.NET</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/C%23/" data-lg-tj-id="4O00" data-lg-tj-no="0105" data-lg-tj-cid="idnull" class="">C#</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/C%2B%2B/" data-lg-tj-id="4O00" data-lg-tj-no="0106" data-lg-tj-cid="idnull" class="curr">C++</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/C/" data-lg-tj-id="4O00" data-lg-tj-no="0107" data-lg-tj-cid="idnull" class="">C</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/VB/" data-lg-tj-id="4O00" data-lg-tj-no="0108" data-lg-tj-cid="idnull" class="">VB</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Delphi/" data-lg-tj-id="4O00" data-lg-tj-no="0109" data-lg-tj-cid="idnull" class="">Delphi</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Perl/" data-lg-tj-id="4O00" data-lg-tj-no="0110" data-lg-tj-cid="idnull" class="">Perl</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Ruby/" data-lg-tj-id="4O00" data-lg-tj-no="0111" data-lg-tj-cid="idnull" class="">Ruby</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Hadoop/" data-lg-tj-id="4O00" data-lg-tj-no="0112" data-lg-tj-cid="idnull" class="">Hadoop</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Node.js/" data-lg-tj-id="4O00" data-lg-tj-no="0113" data-lg-tj-cid="idnull" class="">Node.js</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/shujuwajue/" data-lg-tj-id="4O00" data-lg-tj-no="0114" data-lg-tj-cid="idnull" class="curr">数据挖掘</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/ziranyuyanchuli/" data-lg-tj-id="4O00" data-lg-tj-no="0115" data-lg-tj-cid="idnull" class="">自然语言处理</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/sousuosuanfa/" data-lg-tj-id="4O00" data-lg-tj-no="0116" data-lg-tj-cid="idnull" class="">搜索算法</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/jingzhuntuijian/" data-lg-tj-id="4O00" data-lg-tj-no="0117" data-lg-tj-cid="idnull" class="">精准推荐</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/quanzhangongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0118" data-lg-tj-cid="idnull" class="">全栈工程师</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/go/" data-lg-tj-id="4O00" data-lg-tj-no="0119" data-lg-tj-cid="idnull" class="">Go</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/asp/" data-lg-tj-id="4O00" data-lg-tj-no="0120" data-lg-tj-cid="idnull" class="">ASP</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/shell/" data-lg-tj-id="4O00" data-lg-tj-no="0121" data-lg-tj-cid="idnull" class="">Shell</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/houduankaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0122" data-lg-tj-cid="idnull" class="">后端开发其它</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/yidongkaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">移动开发</a>
                         </dt>
                         <dd>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/HTML5/" data-lg-tj-id="4O00" data-lg-tj-no="0201" data-lg-tj-cid="idnull" class="">HTML5</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4O00" data-lg-tj-no="0202" data-lg-tj-cid="idnull" class="curr">Android</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4O00" data-lg-tj-no="0203" data-lg-tj-cid="idnull" class="curr">iOS</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/WP/" data-lg-tj-id="4O00" data-lg-tj-no="0204" data-lg-tj-cid="idnull" class="">WP</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/yidongkaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0205" data-lg-tj-cid="idnull" class="">移动开发其它</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">前端开发</a>
                         </dt>
                         <dd>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/webqianduan/" data-lg-tj-id="4O00" data-lg-tj-no="0301" data-lg-tj-cid="idnull" class="">web前端</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/Flash/" data-lg-tj-id="4O00" data-lg-tj-no="0302" data-lg-tj-cid="idnull" class="">Flash</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/html51/" data-lg-tj-id="4O00" data-lg-tj-no="0303" data-lg-tj-cid="idnull" class="curr">html5</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/JavaScript/" data-lg-tj-id="4O00" data-lg-tj-no="0304" data-lg-tj-cid="idnull" class="">JavaScript</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/U3D/" data-lg-tj-id="4O00" data-lg-tj-no="0305" data-lg-tj-cid="idnull" class="">U3D</a>
+
+
+
                             <a href="https://www.lagou.com/zhaopin/COCOS2D-X/" data-lg-tj-id="4O00" data-lg-tj-no="0306" data-lg-tj-cid="idnull" class="">COCOS2D-X</a>
 
 
@@ -3108,11 +3281,11 @@
         <div class="inner_wrapper">
             <a class="footer_app" href="#/app/download.html" rel="nofollow">拉勾APP
                 <span>new</span>
-                <img data-delay-src="#/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" width="256" height="256" src="{{url('home/shou/css/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG')}}">
+                <img data-delay-src="#/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" width="256" height="256" src="{{url('home/shou/css/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.jpg')}}">
             </a>
             <a href="#e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
             <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信
-                <img data-delay-src="#/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" width="242" height="242" src="{{url('home/shou/css/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG')}}"></a>
+                <img data-delay-src="#/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" width="242" height="242" src="{{url('home/shou/css/CgpzWlZNl0qAZitPAABXEpAOJx0071.jpg')}}"></a>
             <a href="#/topic/whatisnew.html" target="_blank" rel="nofollow">版本更新</a>
             <a href="#/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a>
             <a href="#/about.html" target="_blank" rel="nofollow">联系我们</a>

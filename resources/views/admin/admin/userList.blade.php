@@ -15,9 +15,8 @@
             <!--快捷导航 开始-->
             <div class="result_content">
                 <div class="short_wrap">
-                    <a href="/user-add"><i class="fa fa-plus"></i>新增管理员</a>
-                    {{--<a href="#"><i class="fa fa-recycle"></i>批量删除</a>--}}
-                    {{--<a href="#"><i class="fa fa-refresh"></i>更新排序</a>--}}
+                    <a href="{{url("admin/user-add")}}"><i class="fa fa-plus"></i>新增管理员</a>
+
                 </div>
             </div>
             <!--快捷导航 结束-->

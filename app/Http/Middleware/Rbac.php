@@ -17,9 +17,8 @@ class Rbac
      */
     public function handle($request, Closure $next)
     {
-//        dd ($request->all());
 //        $route = Route::current()->uri();
-////        dump($route);
+//        dump($route);
 //        $user = User::find(8);
 //        //dump($user->can($route));
 //        if(!$user->can($route)){

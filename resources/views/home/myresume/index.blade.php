@@ -1888,8 +1888,8 @@
         </table>
     </div>
 
-    <!--/#deliverResumeConfirm--></div>
-<!------------------------------------- end ----------------------------------------->
+</div>
+
 
 <!-- <div id="profileOverlay"></div> -->
 <div class="" id="qr_cloud_resume" style="display: none;">
