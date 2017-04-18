@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Route::group(['middleware'=>'check.login'],function() {
     //后台用户
+<<<<<<< HEAD
 
 //    Route::get('admin/vip','Admin\UserController@user');
 //    Route::get('admin/user-delete/{id}', 'Admin\UserController@userDelete');
@@ -25,6 +26,14 @@ Route::group(['middleware'=>'check.login'],function() {
 //    Route::post('admin/user-update/{id}', 'Admin\UserController@doUpdate');
 //    Route::post('admin/user-add','Admin\UserController@userAdd');
 //    Route::get('admin/user-add', 'Admin\UserController@showAdd');
+=======
+    Route::get('admin/vip','Admin\VipController@viplist');
+    Route::post('admin/vip-add','Admin\VipController@vipadd');
+    Route::get('admin/vip-add', 'Admin\VipController@showAdd');
+    Route::get('admin/vip-update/{id}', 'Admin\VipController@showUpdate');
+    Route::post('admin/vip-update/{id}', 'Admin\VipController@doUpdate');
+    Route::get('admin/vip-delete/{id}', 'Admin\VipController@vipDelete');
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 
     //后台首页
     Route::get('admin/index','Admin\IndexController@index');
@@ -46,6 +55,7 @@ Route::group(['middleware'=>'check.login'],function() {
     //管理员管理
     Route::get('admin/user-list', 'Admin\UserController@userList')->middleware('rbac');
     Route::any('admin/user-add', 'Admin\UserController@userAdd');
+<<<<<<< HEAD
     Route::any('admin/attach-role/{user_id}', 'Admin\UserController@attachRole');
 
     //公司模块
@@ -99,10 +109,25 @@ Route::group(['middleware'=>'check.login'],function() {
     //删除广告
     Route::get('admin/ad/delete/{id}','Admin\AdController@adDelete');
 
+=======
+    Route::any('admin/user-delete/{user_id}', 'Admin\UserController@userDelete');
+    Route::any('admin/attach-role/{user_id}', 'Admin\UserController@attachRole');
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 });
 //后台登录
 Route::get('admin/login','Admin\IndexController@showLogin');
 Route::post('doLogin','Admin\IndexController@doLogin');
+
+//职位分类管理
+Route::get('admin/category-list','Admin\CategoryController@category');
+Route::get('admin/category-add','Admin\CategoryController@showAdd');
+Route::post('admin/category-add','Admin\CategoryController@categoryAdd');
+Route::get('admin/category-add/{id}','Admin\CategoryController@showAdd');
+Route::post('admin/category-add/{id}','Admin\CategoryController@categoryAdd');
+Route::get('admin/category-list/{id}/{path}','Admin\CategoryController@category');
+Route::get('admin/category-update/{id}','Admin\CategoryController@update');
+Route::post('admin/category-update/{id}','Admin\CategoryController@showupdate');
+Route::get('admin/category-del/{id}','Admin\CategoryController@del');
 
 
 Route::get('admin/vip',function(){
@@ -127,20 +152,50 @@ Route::get('admin/vip-add',function(){
 
 //前台首页
 Route::get('/','Home\IndexController@index');
+Route::get('home/two',function(){
+    return view('home.two');
+});
+//Route::get('home/index','Home\IndexController@index');
 //前台注册
+<<<<<<< HEAD
 Route::get('register','Home\RegisterController@register');
 //前台登录
 Route::get('login','Home\LoginController@login');
+=======
+Route::get('home/register','Home\RegisterController@register');
+Route::post('home/register','Home\RegisterController@doregister');
+//Route::get('home/jihuo','RegisterController@sendMail');
+Route::get('mail','Home\RegisterController@sendMail');
+Route::get('aa/{id}','Home\RegisterController@jihuo');
+//前台登录
+Route::get('home/login','Home\LoginController@login');
+Route::post('home/doLogin','Home\LoginController@doLogin');
+
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 //找回密码
 Route::get('retrievepassword','Home\IndexController@retrievepassword');
-//// 发送密码重置链接路由
-//Route::get('password/email', 'Auth\PasswordController@getEmail');
-//Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+//找回密码
+// 发送密码重置链接路由
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+// 密码重置路由
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+
 
 //我的简历
 Route::get('myresume','Home\MyresumeController@myresume');
+<<<<<<< HEAD
 
 //公司注册首页
+=======
+
+
+//公司注册首页
+
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 Route::get('company','Home\CompanyController@company');
 
 //公司主页
@@ -157,11 +212,14 @@ Route::get('jobShow','Home\JobShowController@jobShow');
 
 //个人简介
 Route::get('personal','Home\PersonalController@personal');
+<<<<<<< HEAD
 
 //处理简历
 Route::get('resume','Home\ResumeController@resume');
 
 
+=======
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 
 
 //Route::get('/', 'IndexController@index');
@@ -174,3 +232,7 @@ Route::get('resume','Home\ResumeController@resume');
 //Route::get('/sendSMS', 'UserController@sendSMS');
 //Route::get('admin/index', 'AdminController@index');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5

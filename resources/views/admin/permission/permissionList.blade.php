@@ -43,7 +43,7 @@
                 <td>
                 <a href="{{url('admin/permission-update'.'/'.$permission->id)}}">修改</a>
                 <a href="{{url('admin/permission-delete'.'/'.$permission->id)}}">删除</a>
-                </td>
+                    </td>
                 </tr>
                 @endforeach
                 </table>

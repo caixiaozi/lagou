@@ -22,6 +22,30 @@ class UserController extends Controller
             $user->roles= implode(',', $roles);
         }
         return view('admin.admin.userlist', compact('users'));
+<<<<<<< HEAD
+    }
+    //添加用户
+    public function userAdd(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            User::create(array_merge($request->all(),['avatar'=>'image/default.jpg']));
+            return redirect('admin/user-list');
+        }
+        return view('admin.admin.userAdd');
+    }
+
+    //分配角色
+    public function attachRole(Request $request,$user_id)
+    {
+        if ($request->isMethod('post')) {
+            //获取当前用户的角色
+            $user = User::find($user_id);
+            DB::table('role_user')->where('user_id', $user_id)->delete();
+            foreach ($request->input('role_id') as $role_id){
+                $user->attachRole(Role::find($role_id));
+            }
+            return redirect('admin/user-list');
+=======
     }
     //添加用户
     public function userAdd(Request $request)
@@ -50,4 +74,26 @@ class UserController extends Controller
         return view('admin.admin.attachRole', compact('roles'));
     }
 
+    //删除权限
+    public function userDelete($user_id)
+    {
+        //删除信息
+        $user= DB::table('users')->where('id',$user_id)->delete();
+//        Role::destroy([$role_id]);
+//        dd ($role_id);
+        if($user){
+            return redirect('admin/user-list');
+        }else{
+            return back();
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
+        }
+        //查询所有的权限
+        $roles = Role::all();
+        return view('admin.admin.attachRole', compact('roles'));
+    }
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 }

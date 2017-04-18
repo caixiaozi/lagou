@@ -14,4 +14,9 @@ class IndexController extends Controller
         return view('home/index');
     }
 
+    public function retrievepassword()
+    {
+        return view('home.login.retrievepassword');
+    }
+
 }

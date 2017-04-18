@@ -9,120 +9,192 @@
     <meta content="拉勾网是最权威的互联网行业招聘网站,提供全国真实的互联网招聘信息,工资不面议当面谈,找工作,招聘网,寻人才就来拉勾网,互联网行业找工作首选拉勾网" name="description">
     <title>拉勾网-最专业的互联网招聘平台_找工作_招聘_人才网_求职</title>
     <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
+    <!-- global_domain FE_base... -->
+    <script type="text/javascript">
+        (function() {
+            var protocol = window.location.protocol;
+            var host = window.location.host;
+            var baseUrl = protocol + '//' + host;
 
+            window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
+                    ctx: 'https://www.lagou.com',
+                    rctx: 'https://hr.lagou.com',
+                    crctx: 'https://hr.lagou.com/company',
+                    pctx: 'https://passport.lagou.com',
+                    actx: 'https://account.lagou.com',
+                    paictx: 'https://pai.lagou.com',
+                    sctx: 'https://suggest.lagou.com',
+                    zctx: 'https://yanzhi.lagou.com',
+                    ectx: 'https://easy.lagou.com',
+                    proctx: 'https://pro.lagou.com',
+                    lgsctx: protocol + '//www.lgstatic.com',
+                    FE_frontLogin: baseUrl + '/frontLogin.do',
+                    FE_frontLogout: baseUrl + '/frontLogout.do',
+                    FE_frontRegister: baseUrl + '/frontRegister.do'
+                };
+            window.GLOBAL_CDN_DOMAIN = 'www.lgstatic.com';
+        })();
+    </script>
 
+    <!-- SEO 需求-->
+    <link rel="canonical" href="">
+    <!-- 公共样式 -->
+    <!-- header样式 -->	<!-- footer样式 -->
+    <!-- 页面样式 -->
+    <!-- 动态token，防御伪造请求，重复提交 -->
+    <script type="text/javascript">
+        window.X_Anti_Forge_Token = '';
+        window.X_Anti_Forge_Code = '';
+    </script>
 
-<!-- global_domain FE_base... -->
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/layout_903ac4c.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/main.html_aio_2_f8a294e.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/main.html_aio_39fa7a2.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/mCustomScrollbar_ac2fb8b.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/css/widgets_d89a168.css')}}">
+    <link href="{{url('home/shou/css/loginpopup_113e5e2.css')}}" rel="stylesheet" class="lazyload" charset="utf-8">
 
-<script type="text/javascript">
-
-    (function() {
-        var protocol = window.location.protocol;
-        var host = window.location.host;
-        var baseUrl = protocol + '//' + host;
-
-        window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
-                ctx: 'https://www.lagou.com',
-                rctx: 'https://hr.lagou.com',
-                crctx: 'https://hr.lagou.com/company',
-                pctx: 'https://passport.lagou.com',
-                actx: 'https://account.lagou.com',
-                paictx: 'https://pai.lagou.com',
-                sctx: 'https://suggest.lagou.com',
-                zctx: 'https://yanzhi.lagou.com',
-                ectx: 'https://easy.lagou.com',
-                proctx: 'https://pro.lagou.com',
-                lgsctx: protocol + '//www.lgstatic.com',
-                FE_frontLogin: baseUrl + '/frontLogin.do',
-                FE_frontLogout: baseUrl + '/frontLogout.do',
-                FE_frontRegister: baseUrl + '/frontRegister.do'
-            };
-
-        window.GLOBAL_CDN_DOMAIN = 'www.lgstatic.com';
-    })();
-</script>
-
-
-
-
-<!-- SEO 需求-->
-<link rel="canonical" href="">
-
-<!-- 公共样式 -->
-<!-- header样式 -->	<!-- footer样式 -->
-<!-- 页面样式 -->
-<!-- 动态token，防御伪造请求，重复提交 -->
-<script type="text/javascript">
-    window.X_Anti_Forge_Token = '';
-    window.X_Anti_Forge_Code = '';
-</script>
-
-
-<link rel="stylesheet" type="text/css" href="{{url('home/shou/css/layout_903ac4c.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url('home/shou/css/main.html_aio_2_f8a294e.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url('home/shou/css/main.html_aio_39fa7a2.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url('home/shou/css/mCustomScrollbar_ac2fb8b.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url('home/shou/css/widgets_d89a168.css')}}">
-<link href="{{url('home/shou/css/loginpopup_113e5e2.css')}}" rel="stylesheet" class="lazyload" charset="utf-8">
-
-<script src="{{url('home/shou/css/jquery.validate.min_68512c2.js')}}" class="lazyload" charset="utf-8"></script>
-<script data-require-id="common/widgets/common/msgPopup" src="{{url('home/shou/css/msgPopup_9611cae.js')}}" async=""></script>
-<script src="{{url('home/shou/css/lagou_5427c0e.js')}}" class="lazyload" charset="utf-8"></script>
-<script data-require-id="common/components/template-helper/main" src="{{url('home/shou/css/main_e08c2f2.js')}}" async=""></script>
+    <script src="{{url('home/shou/css/jquery.validate.min_68512c2.js')}}" class="lazyload" charset="utf-8"></script>
+    <script data-require-id="common/widgets/common/msgPopup" src="{{url('home/shou/css/msgPopup_9611cae.js')}}" async=""></script>
+    <script src="{{url('home/shou/css/lagou_5427c0e.js')}}" class="lazyload" charset="utf-8"></script>
+    <script data-require-id="common/components/template-helper/main" src="{{url('home/shou/css/main_e08c2f2.js')}}" async=""></script>
 </head>
 <body>
 
 <!-- 公共html -->
 <!-- 页面公用结构、velocity变量 --><input type="hidden" value="" name="userid" id="userid" />
-
 <!-- 城市分站 -->
-
-
 <!-- header -->
 <!--C端头部通栏广告位-->
-
-
 <!--验证注册邮箱-->
 <!--
     @require "common/widgets/header_c/modules/emailvalid/main.less"
 -->
-
-
 <div id="lg_header">
-
     <!--C端头部黑色导航-->
-    <div id="lg_tbar">
+    <div id="lg_header">
+        <!--C端头部黑色导航-->
+        <div id="lg_tbar">
+            <div class="inner">
+                <div class="lg_tbar_l">
+                    <a href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+                    <a href="#hr.#dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a></div>
 
-        <div class="inner">
-
-            <div class="lg_tbar_l">
-                <a rel="nofollow" href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a rel="nofollow" href="#hr.#dashboard" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
-            </div>
-
-
-
-            <ul class="lg_tbar_r">
-                <li>
-                    <a href="/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
-                </li>
-                <li>
-                    <a href="/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
-                </li>
-            </ul>
-
-
-        </div>
-
-    </div><!--end #lg_tbar-->
-
+                    <ul class="lg_tbar_r">
+                        <!-- if has unread message, add class unreaded -->
+                        <li class="msg_dropdown">
+                            <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">消息
+                                <em class="msg_amount" id="headMsgAmount" style="display: none;">6</em></a>
+                            <div class="lg_msg_popup">
+                                <div class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody" style="overflow: hidden;">
+                                    <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;">
+                                        <div class="mCSB_container" style="position: relative; top: 0px;">
+                                            <ul class="lg_top_msg_list">
+                                                <li class="lg_msg_item">
+                                                    <em>·</em>
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#">你投递给
+                                                            <span class="empha">广告门·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                                <li class="lg_msg_item">
+                                                    <em>·</em>
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#">你投递给
+                                                            <span class="empha">中科聚网·PHP开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                                <li class="lg_msg_item">
+                                                    <em>·</em>
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#">你投递给
+                                                            <span class="empha">五分旅游网·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                                <li class="lg_msg_item">
+                                                    <em>·</em>
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#">你投递给
+                                                            <span class="empha">优谱创新教育·PHP软件开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                                <li class="lg_msg_item">
+                                                    <em>·</em>
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#">你投递给
+                                                            <span class="empha">经研八·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                                <li class="lg_msg_item">
+                                                    <em>·</em>
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754297556275085312">你投递给
+                                                            <span class="empha">中少总社·PHP程序员</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                                <li class="lg_msg_item">
+                                                    <div>
+                                                        <!-- 投递反馈 -->
+                                                        <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754296559524536320">你投递给
+                                                            <span class="empha">天奇健·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="mCSB_scrollTools" style="position: absolute; display: block;">
+                                            <div class="mCSB_draggerContainer">
+                                                <div class="mCSB_dragger" style="position: absolute; height: 166px; top: 0px;" oncontextmenu="return false;">
+                                                    <div class="mCSB_dragger_bar" style="position: relative; line-height: 166px;"></div>
+                                                </div>
+                                                <div class="mCSB_draggerRail"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg_msg_pu_footer">
+                                    <a href="#settingsdetail.html" target="_blank" class="lg_msg_setting fl">
+                                        <i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+                                    <a href="#msgdetail.html" class="lg_msg_more fr">查看更多</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{{url('myresume')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a></li>
+                        <li>
+                            <a href="#/mycenter/delivery.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+                            <em class="noticeDot dn" id="noticeDot_delivery"></em>
+                        </li>
+                        <li>
+                            <a href="jobShow/cang" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a></li>
+                        <li class="user_dropdown">
+                            <span class="unick bl">拉勾用户4230</span>
+                            <em class="noticeDot dn" id="noticeDot_name"></em>
+                            <i>
+                            </i>
+                            <ul>
+                                <li>
+                                    <a href="" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                                <li>
+                                    <a href="" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                                    <em class="noticeDot dn" id="noticeDot_invitation"></em>
+                                </li>
+                                <li>
+                                    <a href="{{url('personal')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
+                                <li>
+                                    <a href="" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
+                                <li>
+                                    <a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </div><!--end #lg_tbar-->
+    </div>
+</div>
 
     <!--C端头部白色导航-->
     <div id="lg_tnav">
-
         <div class="inner">
             <div class="lg_tnav_l">
-                <a href="#/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+                <a href="{{url('home/two')}}" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
                     <h1 class="logo_birth_3rd">拉勾网</h1>
                 </a>
                 <div class="suggestCity"><strong>上海站</strong><em id="changeCity_btn">[切换城市]</em></div>
@@ -144,29 +216,16 @@
                     <a rel="nofollow" href="dajing"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
                 </li>
             </ul>
-
         </div>
-
     </div><!--end #lg_tnav-->
-
-
 </div><!--end #header-->
 
 <input type="hidden" id="serverTime" value="1491548212273" />
 
 <!-- 页面主体START -->
 <div class="container clearfix" id="container">
-
     <div id="sidebar" class="sidebar" data-lg-tj-track-code="index_navigation" data-lg-tj-track-type="1">
-
-
-
-
-
-
         <div class="mainNavs">
-
-
             <div class="menu_box">
                 <div class="menu_main job_hopping">
                     <h2>
@@ -174,204 +233,71 @@
                         <!-- 跳槽月 -->
                         <span></span>
                     </h2>
-
-
-
                     <a href="https://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4A00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">Java</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4A00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">PHP</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/C++/" data-lg-tj-id="4A00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">C++</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4A00" data-lg-tj-no="0004" data-lg-tj-cid="idnull">Android</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4A00" data-lg-tj-no="0005" data-lg-tj-cid="idnull">iOS</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/shujuwajue/" data-lg-tj-id="4A00" data-lg-tj-no="0006" data-lg-tj-cid="idnull">数据挖掘</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/ceshi/" data-lg-tj-id="4A00" data-lg-tj-no="0007" data-lg-tj-cid="idnull">测试</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4A00" data-lg-tj-no="0008" data-lg-tj-cid="idnull">前端开发</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/html51/" data-lg-tj-id="4A00" data-lg-tj-no="0009" data-lg-tj-cid="idnull">html5</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/jishuzongjian/" data-lg-tj-id="4A00" data-lg-tj-no="0010" data-lg-tj-cid="idnull">技术总监</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/jiagoushi/" data-lg-tj-id="4A00" data-lg-tj-no="0011" data-lg-tj-cid="idnull">架构师</a>
-
-
                     <a href="https://www.lagou.com/zhaopin/CTO/" data-lg-tj-id="4A00" data-lg-tj-no="0012" data-lg-tj-cid="idnull">CTO</a>
                 </div>
                 <div class="menu_sub dn">
                     <dl>
                         <dt>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/houduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">后端开发</a>
                         </dt>
                         <dd>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4O00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr">Java</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Python/" data-lg-tj-id="4O00" data-lg-tj-no="0102" data-lg-tj-cid="idnull" class="">Python</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4O00" data-lg-tj-no="0103" data-lg-tj-cid="idnull" class="curr">PHP</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/.NET/" data-lg-tj-id="4O00" data-lg-tj-no="0104" data-lg-tj-cid="idnull" class="">.NET</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/C%23/" data-lg-tj-id="4O00" data-lg-tj-no="0105" data-lg-tj-cid="idnull" class="">C#</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/C%2B%2B/" data-lg-tj-id="4O00" data-lg-tj-no="0106" data-lg-tj-cid="idnull" class="curr">C++</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/C/" data-lg-tj-id="4O00" data-lg-tj-no="0107" data-lg-tj-cid="idnull" class="">C</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/VB/" data-lg-tj-id="4O00" data-lg-tj-no="0108" data-lg-tj-cid="idnull" class="">VB</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Delphi/" data-lg-tj-id="4O00" data-lg-tj-no="0109" data-lg-tj-cid="idnull" class="">Delphi</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Perl/" data-lg-tj-id="4O00" data-lg-tj-no="0110" data-lg-tj-cid="idnull" class="">Perl</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Ruby/" data-lg-tj-id="4O00" data-lg-tj-no="0111" data-lg-tj-cid="idnull" class="">Ruby</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Hadoop/" data-lg-tj-id="4O00" data-lg-tj-no="0112" data-lg-tj-cid="idnull" class="">Hadoop</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Node.js/" data-lg-tj-id="4O00" data-lg-tj-no="0113" data-lg-tj-cid="idnull" class="">Node.js</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/shujuwajue/" data-lg-tj-id="4O00" data-lg-tj-no="0114" data-lg-tj-cid="idnull" class="curr">数据挖掘</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/ziranyuyanchuli/" data-lg-tj-id="4O00" data-lg-tj-no="0115" data-lg-tj-cid="idnull" class="">自然语言处理</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/sousuosuanfa/" data-lg-tj-id="4O00" data-lg-tj-no="0116" data-lg-tj-cid="idnull" class="">搜索算法</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/jingzhuntuijian/" data-lg-tj-id="4O00" data-lg-tj-no="0117" data-lg-tj-cid="idnull" class="">精准推荐</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/quanzhangongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0118" data-lg-tj-cid="idnull" class="">全栈工程师</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/go/" data-lg-tj-id="4O00" data-lg-tj-no="0119" data-lg-tj-cid="idnull" class="">Go</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/asp/" data-lg-tj-id="4O00" data-lg-tj-no="0120" data-lg-tj-cid="idnull" class="">ASP</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/shell/" data-lg-tj-id="4O00" data-lg-tj-no="0121" data-lg-tj-cid="idnull" class="">Shell</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/houduankaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0122" data-lg-tj-cid="idnull" class="">后端开发其它</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/yidongkaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">移动开发</a>
                         </dt>
                         <dd>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/HTML5/" data-lg-tj-id="4O00" data-lg-tj-no="0201" data-lg-tj-cid="idnull" class="">HTML5</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4O00" data-lg-tj-no="0202" data-lg-tj-cid="idnull" class="curr">Android</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4O00" data-lg-tj-no="0203" data-lg-tj-cid="idnull" class="curr">iOS</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/WP/" data-lg-tj-id="4O00" data-lg-tj-no="0204" data-lg-tj-cid="idnull" class="">WP</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/yidongkaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0205" data-lg-tj-cid="idnull" class="">移动开发其它</a>
                         </dd>
                     </dl>
                     <dl>
                         <dt>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">前端开发</a>
                         </dt>
                         <dd>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/webqianduan/" data-lg-tj-id="4O00" data-lg-tj-no="0301" data-lg-tj-cid="idnull" class="">web前端</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/Flash/" data-lg-tj-id="4O00" data-lg-tj-no="0302" data-lg-tj-cid="idnull" class="">Flash</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/html51/" data-lg-tj-id="4O00" data-lg-tj-no="0303" data-lg-tj-cid="idnull" class="curr">html5</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/JavaScript/" data-lg-tj-id="4O00" data-lg-tj-no="0304" data-lg-tj-cid="idnull" class="">JavaScript</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/U3D/" data-lg-tj-id="4O00" data-lg-tj-no="0305" data-lg-tj-cid="idnull" class="">U3D</a>
-
-
-
                             <a href="https://www.lagou.com/zhaopin/COCOS2D-X/" data-lg-tj-id="4O00" data-lg-tj-no="0306" data-lg-tj-cid="idnull" class="">COCOS2D-X</a>
 
 
@@ -3281,11 +3207,11 @@
         <div class="inner_wrapper">
             <a class="footer_app" href="#/app/download.html" rel="nofollow">拉勾APP
                 <span>new</span>
-                <img data-delay-src="#/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" width="256" height="256" src="{{url('home/shou/css/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.jpg')}}">
+                <img data-delay-src="#/image/M00/8A/35/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG" width="256" height="256" src="{{url('home/shou/css/Cgp3O1h0u3yAHBOLAAEEpK9-Koc621.JPG')}}">
             </a>
             <a href="#e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
             <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信
-                <img data-delay-src="#/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" width="242" height="242" src="{{url('home/shou/css/CgpzWlZNl0qAZitPAABXEpAOJx0071.jpg')}}"></a>
+                <img data-delay-src="#/image2/M00/18/45/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" width="242" height="242" src="{{url('home/shou/css/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG')}}"></a>
             <a href="#/topic/whatisnew.html" target="_blank" rel="nofollow">版本更新</a>
             <a href="#/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a>
             <a href="#/about.html" target="_blank" rel="nofollow">联系我们</a>
@@ -3304,22 +3230,6 @@
 <!--
     @require "common/widgets/login_toolbar/main.less"
 -->
-
-<div id="loginToolBar" class="loginToolBar">
-    <div>
-        <em></em>
-        <img src="//www.lgstatic.com/www/static/common/widgets/login_toolbar/img/footbar_logo_cccc78d.png" width="138" height="45" />
-        <span class="companycount"></span>
-        <span class="positioncount"></span>
-        <a class="bar_login passport_login_pop" href="javascript:;"><i></i></a>
-        <div class="right">
-            <a rel="nofollow" href="{{url("home/register")}}" onclick="_hmt.push(['_trackEvent', 'button', 'click', 'register'])" class="bar_register" id="bar_register" target="_blank" data-lg-tj-id="4t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"><i></i></a>
-        </div>
-        <input type="hidden" id="cc" value="180953" />
-        <input type="hidden" id="cp" value="2936879" />
-    </div>
-</div>
-
 
 <!-- jquery lib -->
 <!-- analytics js file -->	<!-- plat analytics js file -->

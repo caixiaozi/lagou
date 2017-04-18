@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -68,8 +68,8 @@
 <section class="content_box" id="findPwd2">
     <!-- 通过邮箱来找回密码 -->
     <div class="findPwd">
-        <h5 class="change_way"><a rel="nofollow" href="//passport.lagou.com/login/login.html">返回登录</a><span class="separate">|</span><a class="go_phone" rel="nofollow" href="javascript:;" id="go-phone">通过手机号找回</a></h5>
-        <form action="/password/email" method="post">
+
+        <form action="home/password/email" method="POST">
             <ul class="form_head clearfix">
                 <li class="active" style="margin-right:42px;">
                     <span class="icon_step step1"></span>
@@ -84,13 +84,13 @@
                     重置密码
                 </li>
             </ul>
-            <div class="form_body"  data-view="emailFindStep1">
-                <div class="input_item clearfix" data-propertyname="email" data-controltype="Email" style="display:block;">
-                    <input type="text" class="input input_white" id="" name="email" placeholder="请输入注册时使用的邮箱地址" data-required="required" autocomplete="off" value="{{ old('email') }}">
+            <div class="form_body" data-view="emailFindStep1">
+                <div style="display: block;" class="input_item clearfix" data-propertyname="email" data-controltype="Email">
+                    <input class="input input_white"  name="email" placeholder="请输入注册时使用的邮箱地址" data-required="required" autocomplete="off" type="text" value="{{ old('email') }}">
                 </div>
 
-                <div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display:block;">
-                    <input type="button" class="btn btn_green btn_active btn_block" value="找回密码" >
+                <div style="display: block;" class="input_item clearfix" data-propertyname="submit" data-controltype="Botton">
+                    <button type="submit">找回密码</button>
                 </div>
             </div>
             <div class="form_body" style="display:none">
@@ -99,15 +99,15 @@
                     <p class="reset_tips">请在24小时内登录你的邮箱接收邮件,链接激活后可重置密码。</p>
                 </div>
                 <div class="input_item clearfix" style="display:none;" id="gotoVerify">
-                    <input type="button" class="btn btn_green btn_active btn_block" value="登录邮箱查看" id="step2" >
+                    <input class="btn btn_green btn_active btn_block" value="登录邮箱查看" id="step2" type="button">
                 </div>
             </div>
             <div class="form_body" style="display:none">
                 <div class="input_item clearfix">
-                    <input type="text" class="input input_white" id="" name="" placeholder="请输入新密码" data-required="required" autocomplete="off" >
+                    <input class="input input_white" id="" name="" placeholder="请输入新密码" data-required="required" autocomplete="off" type="text">
                 </div>
                 <div class="input_item clearfix">
-                    <input type="text" class="input input_white" id="" name="" placeholder="请再次输入新密码" data-required="required" autocomplete="off" >
+                    <input class="input input_white" id="" name="" placeholder="请再次输入新密码" data-required="required" autocomplete="off" type="text">
                 </div>
                 <div class="input_item clearfix">
                     <input type="button" class="btn btn_green btn_active btn_block" value="确定" id="step3" onclick="findByMail('step3')">
