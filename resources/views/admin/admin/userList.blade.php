@@ -39,6 +39,7 @@
                         <td>{{$user->roles}}</td>
                         <td>
                             <a href="{{url('admin/attach-role'.'/'.$user->id)}}">分配角色</a>
+                            <a href="{{url('admin/admin-update'.'/'.$user->id)}}">修改</a>
                             <a href="{{url('admin/user-delete'.'/'.$user->id)}}">删除</a>
                         </td>
                     </tr>

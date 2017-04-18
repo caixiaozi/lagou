@@ -96,6 +96,7 @@
 <!-- header -->
 <!--C端头部通栏广告位-->
 
+
 <!--验证注册邮箱-->
 <!--
     @require "common/widgets/header_c/modules/emailvalid/main.less"
@@ -106,11 +107,15 @@
 
     <!--C端头部黑色导航-->
     <div id="lg_tbar">
+
         <div class="inner">
+
             <div class="lg_tbar_l">
                 <a rel="nofollow" href="https://www.lagou.com/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
                 <a rel="nofollow" href="/index.php/Home/companyJob/create.html" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
             </div>
+
+
             <ul class="lg_tbar_r">
                 <!-- if has unread message, add class unreaded -->
                 <li class="msg_dropdown" data-lg-tj-track-code="index_message">
@@ -118,6 +123,7 @@
                         消息
                         <em class="msg_amount hide" id="headMsgAmount"></em>
                     </a>
+
                 </li>
                 <li>
                     <a href="/myremuse" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
@@ -141,19 +147,25 @@
                             <a href="/index.php/Home/ResumeHandle/show.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
                             <em class="noticeDot dn" id="noticeDot_invitation"></em>
                         </li>
+
                         <li>
                             <a href="https://account.lagou.com/account/cuser/userInfo.html" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a>
                         </li>
+
                         <li>
                             <a href="/head" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
                         </li>
+
                         <li>
                             <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
                         </li>
                     </ul>
                 </li>
             </ul>
+
+
         </div>
+
     </div><!--end #lg_tbar-->
 
     <script type="text/javascript">
@@ -165,8 +177,10 @@
         });
     </script>
 
+
     <!--C端头部白色导航-->
     <div id="lg_tnav">
+
         <div class="inner">
             <div class="lg_tnav_l">
                 <a href="https://www.lagou.com/" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
@@ -194,6 +208,8 @@
         </div>
 
     </div><!--end #lg_tnav-->
+
+
 </div><!--end #header-->
 
 <input type="hidden" id="serverTime" value="1491793307122" />
@@ -206,24 +222,25 @@
                 <div class="nameShow fl">
                     <h1 title="jason的简历">{{session('name')}}</h1>
                     <span class="rename">重命名</span>|
-                    <a target="_blank" href="">预览</a>
-                </div>
+                    <a target="_blank" href="">预览</a></div>
                 <form class="fl dn" id="resumeNameForm">
                     <input type="text" value="{{session('name')}}" name="resumeName" class="nameEdit c9">
                     <input type="submit" value="保存">|
-                    <a target="_blank" href="h/resume/preview.html">预览</a>
-                </form>
+                    <a target="_blank" href="h/resume/preview.html">预览</a></form>
             </div>
             <!--end #resume_name-->
             <div class="fr c5" id="lastChangedTime">最后一次更新：
-                <span>{{session('time')}}</span>
-            </div>
+                <span>{{session('time')}}</span></div>
             <!--end #lastChangedTime-->
+
                 <div id="resumeScore">
                     <div class="mr_top_bg" id="baseinfo">
+
                         <img src="{{url('home/shou/myresume/resume/tou_42952f6.png')}}" height="170" width="702" class="opa" />
                     </div>
                 </div>
+
+
             <!--end #resumeScore-->
             <div class="profile_box" id="basicInfo">
                 <!-- <span class="c_edit"></span> -->
@@ -237,10 +254,10 @@
                     </div>
                     <div class="mr_head_r c_edit" style="">
                         <i class='jbxx'></i>
-                        <em>编辑</em>
-                    </div>
+                        <em>编辑</em></div>
                 </div>
                 <div class="basicShow">
+
                     <br></span>
                     <div class="m_portrait">
                         <div></div>
@@ -342,8 +359,7 @@
                                     <a class="btn_profile_cancel" href="javascript:void(0);">取 消</a></td>
                             </tr>
                             </tbody>
-                        </table>{{csrf_field()}}
-                    </form>
+                        </table>{{csrf_field()}}</form>
                     <!--end #profileForm-->
                     <div class="new_portrait">
                         <div class="portrait_upload" id="portraitNo">
@@ -358,7 +374,15 @@
                         <span style="display:none;" id="headPic_error" class="error"></span>
                     </div>
                     <!--end .new_portrait--></div>
-              </div>
+                <!--end .basicEdit-->
+            <!--<input type="hidden" id="nameVal" value="jason">
+              <input type="hidden" id="genderVal" value="男">
+              <input type="hidden" id="topDegreeVal" value="大专">
+              <input type="hidden" id="workyearVal" value="3年">
+              <input type="hidden" id="currentStateVal" value="">
+              <input type="hidden" id="emailVal" value="jason@qq.com">
+              <input type="hidden" id="telVal" value="18644444444">
+              <input type="hidden" id="pageType" value="1"> --></div>
             <!--end #basicInfo-->
             <div class="profile_box" id="expectJob">
                 <h2></h2>
@@ -377,8 +401,7 @@
                         <em>编辑</em></div>
                 </div>
                 <div class="expectShow {{session('hope_out')}}">
-                    <span></span>
-                </div>
+                    <span></span></div>
                 <!--end .expectShow-->
                 <div class="expectEdit dn">
                     <form id="expectForm" onsubmit="return $.sub(this)" action="{{url('myresume/resumeshow')}}" method="post">{{csrf_field()}}
@@ -523,16 +546,21 @@
                         </table>
                         <input type="hidden" name="history_id" class="expId" value=""></form>
                     </form>
-                    <!--end #expectForm-->
-                </div>
+                    <!--end #expectForm--></div>
                 <!--end .expectEdit-->
+
                     <div class="expectAdd pAdd ">
                         <p>期望城市:</p>
                         <p>工作:</p>
                         <p>期望月薪:</p>
                     </div>
 
-            </div>
+            <!--end .expectAdd-->
+                <!--<input type="hidden" id="expectJobVal" value="">
+                <input type="hidden" id="expectCityVal" value="">
+                <input type="hidden" id="typeVal" value="">
+                <input type="hidden" id="expectPositionVal" value="">
+                <input type="hidden" id="expectSalaryVal" value="">--></div>
             <!--end #expectJob-->
             <div class="profile_box" id="workExperience">
                 <!-- <h2>工作经历  <span> （投递简历时必填）</span></h2>
@@ -731,10 +759,10 @@
                         </tr>
                         </tbody>
                     </table>{{csrf_field()}}
-                    <input type="hidden" name="history_id" class="expId" value="">
-                </form>
+                    <input type="hidden" name="history_id" class="expId" value=""></form>
                 <!--end .experienceForm-->
-                         <ul class="wlist clearfix ">)
+
+                    <ul class="wlist clearfix ">)
                             <li data-id="">
                                 <a href="/myresume/delhistoryajax?">
                                     <i class="sm_del dn"></i></a>
@@ -744,11 +772,10 @@
                                 <div>
                                     <img src="/public/home/hua/myresume/images/logo_default.png" alt="苹果" height="56" width="56">
                                     <h3></h3>
-                                    <h4></h4>
-                                </div>
-                            </li>
-                         </ul>
-                 </div>
+                                    <h4></h4></div>
+                            </li></ul>
+
+            </div>
             <!--end .experienceShow-->
             <div class="experienceEdit ">
                 <form class="experienceForm" action="/resume/hisajax" method="post" onsubmit="return $.sub(this)" style="display:none">
@@ -931,8 +958,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <input type="hidden" class="expId" value="">{{csrf_field()}}
-                </form>
+                    <input type="hidden" class="expId" value="">{{csrf_field()}}</form>
                 <!--end .experienceForm--></div>
             <!--end .experienceEdit--></div>
         <!--end #workExperience-->
@@ -963,9 +989,7 @@
                                     <i class="sm_edit dn"></i>
                                     <div class="f16 mb10 fixed_width" data-proname="" data-posname="" data-starty="" data-startm="" data-endy="" data-endm="">
                                         <span class="c9"></span></div>
-                                    <div class="dl1"></div>
-                            </li>
-                    </ul>
+                                    <div class="dl1"></div></li></ul>
 
             </div>
             <!--end .projectShow-->

@@ -174,17 +174,10 @@
                 </a>
                 <ul class="sub-menu">
                     <li >
-<<<<<<< HEAD
                         <a href="{{url('admin/category/index')}}">分类列表</a>
                     </li>
                     <li >
                         <a href="{{url('admin/category/add')}}">添加职位</a>
-=======
-                        <a href="{{url("admin/category-list")}}">分类列表</a>
-                    </li>
-                    <li >
-                        <a href="{{url("admin/category-add")}}">添加职位</a>
->>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
                     </li>
                 </ul>
             </li>
@@ -198,29 +191,19 @@
                 </a>
 
                 <ul class="sub-menu">
-<<<<<<< HEAD
                     <li ><a href="{{url("admin/ad/index")}}">广告列表</a></li>
                     <li ><a href="{{url("admin/ad/add")}}">添加广告</a></li>
-=======
-                    <li ><a href="">广告列表</a></li>
-                    <li ><a href="">添加广告</a></li>
->>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
                 </ul>
             </li>
+
             <li class="">
                 <a href="javascript:;">
-<<<<<<< HEAD
                     <i class="icon-external-link"></i>
                     <span class="title">友情链接管理</span>
-=======
-                    <i class="icon-briefcase"></i>
-                    <span class="title">管理员管理</span>
->>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
                     <span class="arrow "></span>
                 </a>
 
                 <ul class="sub-menu">
-<<<<<<< HEAD
                     <li ><a href="{{url("admin/links/index")}}">链接列表</a></li>
                     <li ><a href="{{url("admin/links/add")}}">添加链接</a></li>
                 </ul>
@@ -241,15 +224,6 @@
                 </ul>
             </li>
 
-=======
-                    <li >
-                        <a href="{{url("admin/user-list")}}">
-                            <i class="icon-time"></i>管理员列表</a></a>
-                    </li>
-                </ul>
-            </li>
-
->>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
             <li class="">
                 <a href="javascript:;">
                     <i class="icon-list-ul"></i>
@@ -424,12 +398,9 @@
 <script src="{{url("admin/js/index.js")}}" type="text/javascript"></script>
 
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 49b084f7c01804336e629068c2429d8ee5969af5
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script>

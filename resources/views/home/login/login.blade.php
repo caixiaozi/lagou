@@ -71,19 +71,24 @@
         </div>
     @endif
     <div class="left_area fl">
-        <form action="{{url('home/doLogin')}}" method="post" id="forup">
+        <form action="login/check" method="post" id="forup">
             <div class="form_body"  data-view="loginView">
                 <div class="input_item clearfix" data-propertyname="username" data-controltype="Phone" style="display: block;">
-                    <input type="email" class="input input_white" id="username" name="email" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off" autofocus >
+                    <input type="text" class="input input_white" id="username" name="username" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off" autofocus >
                     <div id='userinfo' style="height:20px;line-height:20px;color:lightgreen"></div>
                 </div>
                 <div class="input_item clearfix" data-propertyname="password" data-controltype="Password" style="display: block;">
                     <input type="password" class="input input_white" id="password" name="password" placeholder="请输入密码" data-required="required" autocomplete="off" >
                     <div id='pwdinfo' style="height:20px;line-height:20px;color:lightgreen"></div>
                 </div>
-
+                <div class="input_item clearfix"  data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display:none;">
+                    <input type="text" class="input input_white fl" style="width:130px; display:block;" id="vcode" name="vcode" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" >
+                    <img src="/login/vcode" onclick="this.src=this.src+'?a=1'" style="cursor:pointer;" class="yzm">
+                    <div id='vcodeinfo' style="height:20px;line-height:20px;color:red"></div>
+                    <a rel="nofollow" href="javascript:;" class="reflash"></a>
+                </div>
                 <div class="input_item clearfix">
-                    <a rel="nofollow" href="{{url('retrievepassword')}}" class="forgot_pwd">忘记密码？</a>
+                    <a rel="nofollow" href="https://passport.lagou.com/accountPwd/toReset.html" class="forgot_pwd">忘记密码？</a>
                 </div>
                 {{csrf_field()}}
                 <div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton">

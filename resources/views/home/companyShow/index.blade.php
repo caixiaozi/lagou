@@ -406,6 +406,5 @@
 </div>
 </div><!-- end #container -->
 </div><!-- end #body -->
-</body>
 @extends('home.Public.footer')
 
