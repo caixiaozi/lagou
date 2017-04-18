@@ -2,7 +2,6 @@
 @section('title','友情链接修改')
 @section('content')
     <!--面包屑导航 开始-->
-
     <ul class="breadcrumb">
         <li>
             <i class="icon-list-ul"></i>
@@ -12,8 +11,6 @@
 
     </ul>
     <!--面包屑导航 结束-->
-
-
     <div class="portlet-body">
         <form action=""  method="post">
             {{csrf_field()}}
@@ -34,7 +31,6 @@
                 <tr>
                     <th><i class="require">*</i>状态</th>
                     <td>
-
                         <select class="small" name="state">
                             <option value="{{$links -> state}}">{{str_replace([0,1,-1],['申请中','前台显示','下架'],$links->state)}}</option>
                             @if($links -> state == 0)
@@ -53,7 +49,7 @@
 
                             @endif
                         <input type="hidden" name="id" value="{{$links->id}}">
-
+                        </select>
                     </td>
                 </tr>
 

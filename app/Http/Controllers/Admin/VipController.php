@@ -11,10 +11,17 @@ use Illuminate\Support\Facades\Validator;
 class VipController extends Controller
 {
     //显示用户信息列表
-    public function viplist()
+    public function viplist(Request $request)
     {
-        $vip = DB::table('vip')->paginate(10);
-        return view('admin.vip.vip')->with('vip',$vip);
+        $vip = DB::table('vip')->where(function($query)use($request){
+
+            $query->where('name','like','%'.$request->input('keywords').'%');
+        })->paginate($request->input('num',2));
+        return view('admin.vip.vip',['vip' => $vip,'request' => $request]);
+
+        //dd($res);
+
+        return view('admin.ad.index',['res' => $res,'request' => $request]);
     }
 
     public function showAdd()

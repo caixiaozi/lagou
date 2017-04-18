@@ -1,55 +1,135 @@
 @extends('layouts.master')
+@section('title','权限管理')
+        <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/plugins/colorpicker/colorpicker.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/my.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/custom-plugins/wizard/wizard.css')}}" media="screen">
+
+    <!-- Required Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/bootstrap/css/bootstrap.min.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/fonts/ptsans/stylesheet.css')}}" media="screen">
+    {{--    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/fonts/icomoon/style.css')}}" media="screen">--}}
+
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/mws-style.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/icons/icol16.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/icons/icol32.css')}}" media="scree">
+
+    <!-- Demo Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/demo.css')}}" media="screen">
+
+    <!-- jQuery-UI Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/jui/css/jquery.ui.all.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/jui/jquery-ui.custom.css')}}" media="screen">
+
+    <!-- Theme Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/mws-theme.css')}}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/themer.css')}}" media="screen">
+    <title>@yield('title', '后台首页')</title>
+    <link rel="shortcut icon" href="{{url("admin/image/log.png")}}" />
+</head>
+<body>
 @section('content')
-    <!--面包屑导航 开始-->
 
-    <ul class="breadcrumb">
-        <li>
-            <i class="icon-list-ul"></i>
-            <a href="">权限管理</a>
-        </li>
-    </ul>
-    <!--面包屑导航 结束-->
-
-    <!--搜索结果页面 列表 开始-->
-    <form action="#" method="post">
-        <div class="result_wrap">
-            <!--快捷导航 开始-->
-            <div class="">
-                <div class="">
-                    <a href="{{url("admin/permission-add")}}"><i class="icon-plus-sign"></i>新增权限</a>
-                    {{--<a href="#"><i class="icon-trash"></i>批量删除</a>--}}
-                    {{--<a href="#"><i class="icon-refresh"></i>更新排序</a>--}}
-                </div>
-            </div>
-            <!--快捷导航 结束-->
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span><i class="icon-list-ul"></i> 权限管理</span>
         </div>
+        <div class="mws-panel-body no-padding">
+            <div role="grid" class="dataTables_wrapper" id="DataTables_Table_1_wrapper">
+                <form action="" method="get">
+                    <div id="DataTables_Table_1_length" class="dataTables_length">
+                        <label>显示
+                            <select name="num" size="1" aria-controls="DataTables_Table_1">
 
+                                <option value="10" @if(!empty($request['num']) && $request['num'] == 10)
+                                selected
+                                        @endif
+                                >10</option>
+                                <option value="25" @if(!empty($request['num']) && $request['num'] == 25)
+                                selected
+                                        @endif>25</option>
+                                <option value="50" @if(!empty($request['num']) && $request['num'] == 50)
+                                selected
+                                        @endif>50</option>
+                                <option value="100" @if(!empty($request['num']) && $request['num'] == 100)
+                                selected
+                                        @endif>100</option>
+                            </select> 条</label>
+                    </div>
+                    <div class="dataTables_filter" id="DataTables_Table_1_filter">
+                        <label>关键字:
+                            <input name="keywords" type="text" aria-controls="DataTables_Table_1" value="{{$request['keywords'] or ''}}">
+                            <button class="btn btn_default ">查询</button>
+                        </label></div>
+                </form>
+                <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
+                    <thead>
 
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <tr>
-                        <th>ID</th>
-                        <th>权限路由</th>
-                        <th>权限名称</th>
-                        <th>权限描述</th>
-                        <th>操作</th>
+                    <tr role="row">
+                        <th   class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 10px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" >
+                            ID</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 80px;" aria-label="Browser: activate to sort column ascending">权限路由</th>
+
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 25px;" aria-label="Engine version: activate to sort column ascending"> 权限名称</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">权限描述</th>
+
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 75px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+
                     </tr>
+                    </thead>
+
+                    <tbody role="alert" aria-live="polite" aria-relevant="all">
+
                     @foreach($permissions as $permission)
-                <tr>
-                <td class="tc">{{$permission->id}}</td>
-                <td>{{$permission->name}}</td>
-                <td>{{$permission->display_name}}</td>
-                <td>{{$permission->description}}</td>
-                <td>
-                <a href="{{url('admin/permission-update'.'/'.$permission->id)}}">修改</a>
-                <a href="{{url('admin/permission-delete'.'/'.$permission->id)}}">删除</a>
-                    </td>
-                </tr>
-                @endforeach
-                </table>
+                        <tr class="odd">
+                            <td class="  sorting_1">{{$permission->id}}</td>
+                            <td class=" ">{{$permission->name}}</td>
+                            <td class=" ">{{$permission->display_name}}</td>
+                            <td class=" ">{{$permission->description}}</td>
+                            <td class=" ">
+                                <a class = 'rules' data= '30' href="{{url('admin/permission-update'.'/'.$permission->id)}}" style="color:blue;"><i class="icon-wrench"></i>修改</a>
+                                <br>
+                                <a class = 'rules' data= '31' href="{{url('admin/permission-delete'.'/'.$permission->id)}}" style="color:RED;"><i class="icon-trash"></i>删除</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody></table>
 
-            </div>
 
-    </form>
-    <!--搜索结果页面 列表 结束-->
+                <div class="dataTables_paginate paging_full_numbers" id="pages">
+                    {{--{{ $permission->links()}}--}}
+{{--                    {!! $res->appends($request->all())->render() !!}--}}
+                </div></div>
+        </div>
+    </div>
+
 @endsection
+
+<script src="{{url('admin/table/js/libs/jquery-1.8.3.min.js')}}"></script>
+<script src="{{url('admin/table/js/libs/jquery.mousewheel.min.js')}}"></script>
+<script src="{{url('admin/table/js/libs/jquery.placeholder.min.js')}}"></script>
+<script src="{{url('admin/table/custom-plugins/fileinput.js')}}"></script>
+
+<!-- jQuery-UI Dependent Scripts -->
+<script src="{{url('admin/table/jui/js/jquery-ui-1.9.2.min.js')}}"></script>
+<script src="{{url('admin/table/jui/jquery-ui.custom.min.js')}}"></script>
+<script src="{{url('admin/table/jui/js/jquery.ui.touch-punch.js')}}"></script>
+
+<!-- Plugin Scripts -->
+<script src="{{url('admin/table/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{url('admin/table/plugins/colorpicker/colorpicker-min.js')}}"></script>
+
+<!-- Core Script -->
+<script src="{{url('admin/table/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{url('admin/table/js/core/mws.js')}}"></script>
+
+<!-- Themer Script (Remove if not needed) -->
+<script src="{{url('admin/table/js/core/themer.js')}}"></script>
+</body>
+</html>

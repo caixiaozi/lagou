@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title','公司管理')
         <!doctype html>
 <html lang="en">
 <head>
@@ -29,7 +30,8 @@
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/mws-theme.css')}}" media="screen">
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/themer.css')}}" media="screen">
-    <title>Document</title>
+    <title>@yield('title', '后台首页')</title>
+    <link rel="shortcut icon" href="{{url("admin/image/log.png")}}" />
 </head>
 <body>
 @section('content')
@@ -97,9 +99,8 @@
                                 {{str_replace([-1,0,1,2,3,4],['未验证','禁用','已认证','未认证','正在申请','后台添加'],$v->state)}}
                             </td>
                             <td class=" ">
-                                &nbsp&nbsp
                                 <a class = 'rules' data= '11' href="{{url('admin/company/edit'.'/'.$v->id)}}" style="color:blue;"><i class="icon-wrench"></i>修改</a>
-                                &nbsp&nbsp
+                                <br>
                                 <a class = 'rules' data= '19' href="{{url('admin/company/delete'.'/'.$v->id)}}" style="color:RED;"><i class="icon-trash"></i>删除</a>
                             </td>
 

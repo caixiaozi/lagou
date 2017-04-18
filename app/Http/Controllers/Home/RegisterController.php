@@ -21,7 +21,7 @@ class RegisterController extends Controller
         $view = 'home.email.welecome';
         $data = $request->only('name', 'email', 'password', 'type');
         $data['password'] = Hash::make($data['password']);
-        $data['_token'] = str_random(50);
+        $data['_token'] = str_random(12);
         $email = $request->input('email');
 
         if (DB::table('vip')->where('email', $request->input('email'))->first()) {

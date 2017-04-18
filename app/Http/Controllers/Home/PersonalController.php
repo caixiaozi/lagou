@@ -14,8 +14,8 @@ class PersonalController extends Controller
     //
     public function personal(Request $request)
     {
-        $data = $request->session()->all();
-        dd($data);
+//        $data = $request->session()->all();
+//        dd($data);
 //        $id = session('vip')->id;
 //         dd($id);
 //        $com =  DB::table('vip')->where('id',$id)->first();

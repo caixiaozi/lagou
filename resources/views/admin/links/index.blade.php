@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','链接信息列表')
+@section('title','链接管理')
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,7 +30,8 @@
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/mws-theme.css')}}" media="screen">
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/themer.css')}}" media="screen">
-    <title>Document</title>
+    <title>@yield('title', '后台首页')</title>
+    <link rel="shortcut icon" href="{{url("admin/image/log.png")}}" />
 </head>
 <body>
 @section('content')
@@ -96,18 +97,14 @@
 
                             <td class=" ">{{ str_replace([-1,0,1],['已下架','申请中','前台显示'],$v->state)}}</td>
                             <td class=" ">
-                                &nbsp&nbsp
                                 <a class = 'rules' data= '30' href="{{url('/admin/links/edit'.'/'.$v->id)}}" style="color:blue;"><i class="icon-wrench"></i>修改</a>
-                                &nbsp&nbsp
+                                <br>
                                 <a class = 'rules' data= '31' href="{{url('/admin/links/delete'.'/'.$v->id)}}" style="color:RED;"><i class="icon-trash"></i>删除</a>
                             </td>
 
                         </tr>
                     @endforeach
-
-
                     </tbody></table>
-{{--                <div class="dataTables_info" id="DataTables_Table_1_info">Showing 1 to 10 of 57 entries</div>--}}
 
 
                 <div class="dataTables_paginate paging_full_numbers" id="pages">

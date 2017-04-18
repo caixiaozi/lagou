@@ -30,7 +30,8 @@
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/mws-theme.css')}}" media="screen">
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/themer.css')}}" media="screen">
-    <title>Document</title>
+    <title>@yield('title', '后台首页')</title>
+    <link rel="shortcut icon" href="{{url("admin/image/log.png")}}" />
 </head>
 <body>
 @section('content')
@@ -99,9 +100,8 @@
 
                             <td class=" ">{{str_replace([0,1],['已下架','正在显示'],$v->state)}}</td>
                             <td class=" ">
-                                &nbsp&nbsp
                                 <a class = 'rules' data= '26' href="{{url('/admin/ad/edit'.'/'.$v->id)}}" style="color:blue;"><i class="icon-wrench"></i>修改</a>
-                                &nbsp&nbsp
+                                <br>
                                 <a class = 'rules' data= '27' href="{{url('/admin/ad/delete'.'/'.$v->id)}}" style="color:RED;"><i class="icon-trash"></i>删除</a>
                             </td>
 

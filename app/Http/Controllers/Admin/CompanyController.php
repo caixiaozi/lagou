@@ -128,9 +128,4 @@ class CompanyController extends Controller
             return back()->with('error','数据修改失败');
             }
     }
-
-
-
-
-
 }
