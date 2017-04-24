@@ -10,7 +10,7 @@
             </h1>
             </dt>
             <dd>
-                <form action="alter" method="post" id="jobForm" name="jobForm" onsubmit="">
+                <form action="{{url('alter')}}" method="post" id="jobForm" name="jobForm" onsubmit="">
                     <input name="id" value="" type="hidden">
                     <table class="btm">
                         <tbody>
@@ -28,17 +28,18 @@
                                 <input style="font-size:15px" placeholder="请选择职位类别" id="select_category" class="selectr selectr_380" value="" type="button">
                                 <div class="dn" id="box_job" style="display:none">
                                     <dl>
-
-                                            <dt></dt>
+                                        @foreach($data['cate'] as $k => $v)
+                                            <dt>{{$k}}</dt>
                                             <dd>
-
+                                                @foreach($v as $ke => $val)
 
                                                     <ul class="reset job_main">
                                                         <li>
-                                                            <span></span>
+                                                            <span>{{$ke}}</span>
                                                             <ul class="reset job_sub dn">
-
-                                                                    <li></li>
+                                                                @foreach($val as $key => $value)
+                                                                    <li>{{$value}}</li>
+                                                                @endforeach
 
                                                             </ul>
                                                         </li>
@@ -46,9 +47,9 @@
 
 
                                                     </ul>
-
+                                                @endforeach
                                             </dd>
-
+                                        @endforeach
                                     </dl>
                                 </div>
                             </td></tr><tr>

@@ -26,8 +26,13 @@
         <br>
         <br><br><br><br><br><br><br><br><br><br><br>
         <h1>欢迎您注册招聘网,请</h1>
+<<<<<<< HEAD
 
         <a href ="{{url('/aa/'.$_token)}}">点击激活</a>
+=======
+       <a href ="{{url('/aa/'.$_token)}}">点击激活</a>
+    </div>
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
     </div>
 </div>

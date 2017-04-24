@@ -36,66 +36,53 @@
     <link href="{{url('home/firm/css/header.css')}}" rel="stylesheet">
     <!-- 未登录用户头部 -->
     <!-- 企业用户头部 -->
+    <!-- 企业用户头部 -->
     <div id="lg_tbar">
         <div class="inner">
+
+
             <div class="lg_tbar_l">
-                <a style="text-decoration:none;" href="/" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">
-                    拉勾APP
-                </a>
-                <a style="text-decoration:none;" href="/">
-                    企业版
-                </a>
+                <a style="text-decoration:none;" href="" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+
+                <a style="text-decoration:none;" href="url{{'login'}}">进入企业版</a>
             </div>
             <ul class="lg_tbar_r reset">
                 <li>
-                    <a style="text-decoration:none;" style = "text-decoration:none;" href="/firm/pebding" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                        收到的简历
-                    </a>
+                    <a style="text-decoration:none;" href="/resume/pending" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收到的简历</a>
                 </li>
                 <li>
-                    <a style="text-decoration:none;" href="/firm/job" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                        发布的职位
-                    </a>
-                    <em class="noticeDot dn" id="noticeDot_delivery">
-                    </em>
+                    <a style="text-decoration:none;" href="nd/index.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">发布的简历</a>
+                    <em class="noticeDot dn" id="noticeDot_delivery"></em>
                 </li>
                 <li class="user_dpdown">
-                            <span class="unick bl">
-
-                            </span>
-                    <em class="noticeDot dn" id="noticeDot_name">
-                    </em>
-                    <i>
-                    </i>
+                    <span class="unick bl" style="width:96px;">{{session('vip') -> name}}</span>
+                    <em class="noticeDot dn" id="noticeDot_name"></em>
+                    <i></i>
                     <ul class="reset">
                         <li>
-                            <a style="text-decoration:none;" href="/firm/job" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                                发布的职位
-                            </a>
+                            <a style="text-decoration:none;" href="ob/positions.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">发布的职位</a>
                         </li>
                         <li>
-                            <a style="text-decoration:none;" href="/firm/pebding" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">
-                                收到的简历
-                            </a>
-                            <em class="noticeDot dn" id="noticeDot_invitation">
-                            </em>
-                        </li>
-                        <li>
-                            <a style="text-decoration:none;" href="/head/index" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                                公司的首页
-                            </a>
+                            <a style="text-decoration:none;" href="ndle/show.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">收到的简历</a>
+                            <em class="noticeDot dn" id="noticeDot_invitation"></em>
                         </li>
 
                         <li>
-                            <a style="text-decoration:none;" href="/firm/lamp.cn/index.php/Home/Resume/index.html" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                                账号设置
-                            </a>
+                            <a style="text-decoration:none;" href="url{{'company'}}" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">公司的首页</a>
                         </li>
                         <li>
-                            <a style="text-decoration:none;" href="/login/logout" id="logouta" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                                退出
-                            </a>
-
+                            <a style="text-decoration:none;" href="url{{'personal'}}" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">账号设置</a>
+                        </li>
+                        <li>
+                            <a style="text-decoration:none;" href="/login/logout" id="logouta" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+                            <script type="text/javascript">
+                                $('#logouta').click(function(){
+                                    $.post('/index.php/Home/Login/logout.html',{},function(data){
+                                        window.location.reload();
+                                    });
+                                    return false;
+                                });
+                            </script>
                         </li>
                     </ul>
                 </li>
@@ -105,37 +92,25 @@
     <div id="lg_tnav">
         <div class="inner">
             <div class="lg_tnav_l">
-                <a style="text-decoration:none;" href="/" class="lg_logo" data-lg-tj-id="5t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                    <h1>
-                        拉勾网
-                    </h1>
-                    <span>
-                        企业版
-                    </span>
+                <a style="text-decoration:none;" href="http://www.our.com/" class="lg_logo" data-lg-tj-id="5t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+                    <h1>拉勾网</h1>
+                    <span>企业版</span>
                 </a>
             </div>
             <ul class="lg_tnav_wrap reset">
                 <li>
-                    <a style="text-decoration:none;" href="/head/index" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                        公司首页
-                    </a>
+                    <a style="text-decoration:none;" href="home/index" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司首页</a>
                 </li>
                 <li>
-                    <a style="text-decoration:none;" href="/resume/pending" data-lg-tj-id="5v00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                        简历管理
-                    </a>
-                    <b class="unhandleNum" id="unhandleNum">
-                    </b>
+                    <a style="text-decoration:none;" href="/resume/pending" data-lg-tj-id="5v00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">简历管理</a>
+                    <b class="unhandleNum" id="unhandleNum"></b>
                 </li>
                 <li>
-                    <a style="text-decoration:none;" href="/firm/jop" data-lg-tj-id="5w00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                        职位管理
-                    </a>
+                    <a style="text-decoration:none;" href="/resume/job" data-lg-tj-id="5w00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">职位管理</a>
                 </li>
+
                 <li>
-                    <a style="text-decoration:none;" href="" data-lg-tj-id="5y00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">
-                        一拍
-                    </a>
+                    <a style="text-decoration:none;" href="dex.html" data-lg-tj-id="5y00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">发布职位</a>
                 </li>
             </ul>
         </div>
@@ -171,12 +146,12 @@
                     我发布的职位
                 </dt>
                 <dd>
-                    <a style="text-decoration:none;" href="/firm/jop">
+                    <a style="text-decoration:none;" href="/firm/job">
                         有效职位
                     </a>
                 </dd>
                 <dd>
-                    <a style="text-decoration:none;" href="/firm/line">
+                    <a style="text-decoration:none;" href="/firm/offline">
                         已下线职位
                     </a>
                 </dd>

@@ -10,16 +10,16 @@
             </h1>
             </dt>
             <dd>
-
+                @if (count($errors) > 0)
                     <div class="alert alert-danger">
                         <ul>
-
-                                <li></li>
-
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
                         </ul>
                     </div>
-
-                <form action="inest" method="post" id="jobForm" name="jobForm" onsubmit="">
+                @endif
+                <form action="{{url('firm/success')}}" method="post" id="jobForm" name="jobForm" onsubmit="return $.sub(this);">
                     <input style="font-size:15px" name="id" value="" type="hidden">
                     <table class="btm">
                         <tbody>
@@ -39,17 +39,18 @@
                                        class="selectr selectr_380" value="" type="button">
                                 <div class="dn" id="box_job" style="display:none">
                                     <dl>
-
-                                            <dt></dt>
+                                        @foreach($data['cate'] as $k => $v)
+                                            <dt>{{$k}}</dt>
                                             <dd>
-
+                                                @foreach($v as $ke => $val)
 
                                                     <ul class="reset job_main">
                                                         <li>
-                                                            <span></span>
+                                                            <span>{{$ke}}</span>
                                                             <ul class="reset job_sub dn">
-
-                                                                    <li></li>
+                                                                @foreach($val as $key => $value)
+                                                                    <li>{{$value}}</li>
+                                                                @endforeach
 
                                                             </ul>
                                                         </li>
@@ -57,9 +58,9 @@
 
 
                                                     </ul>
-
+                                                @endforeach
                                             </dd>
-
+                                        @endforeach
                                     </dl>
                                 </div>
                             </td></tr><tr>

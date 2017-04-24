@@ -66,7 +66,7 @@ class AdController extends Controller
         $id = $request->input('id');
         $logo = self::upload($request,'pic');
 
-        //$zhuce['logo'] = $logo;
+
         $date['pic'] = $logo;
         //dd($date);
         //执行修改

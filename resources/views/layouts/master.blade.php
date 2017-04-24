@@ -13,6 +13,8 @@ $data = session('user');
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+    {{--<script src="{{url("admin/js/jquery-1.10.1.min.js")}}" type="text/javascript"></script>--}}
+
     <link href="{{url("admin/css/bootstrap.min.css")}}" rel="stylesheet" type="text/css"/>
     <link href="{{url("admin/css/bootstrap-responsive.min.css")}} rel="stylesheet" type="text/css"/>
     <link href="{{url("admin/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css"/>
@@ -151,10 +153,10 @@ $data = session('user');
                         <a href="{{url('admin/company/index')}}">公司信息列表</a>
                     </li>
                     <li >
-                        <a href="{{url('admin/company/add')}}">后台添加公司</a>
+                        <a href="{{url('admin/company/refcompany')}}">显示未审核公司</a>
                     </li>
                     <li >
-                        <a href="{{url('admin/company/apply')}}">申请认证列表</a>
+                        <a href="{{url('admin/company/index')}}">显示已审核公司</a>
                     </li>
                 </ul>
             </li>
@@ -171,6 +173,12 @@ $data = session('user');
                     </li>
                     <li >
                         <a href="{{url('admin/category/add')}}">添加职位</a>
+<<<<<<< HEAD
+=======
+                    </li>
+                    <li >
+                        <a href="{{url('admin/category/our')}}">dkd职位</a>
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     </li>
                 </ul>
             </li>
@@ -186,18 +194,29 @@ $data = session('user');
                 <ul class="sub-menu">
                     <li ><a href="{{url("admin/ad/index")}}">广告列表</a></li>
                     <li ><a href="{{url("admin/ad/add")}}">添加广告</a></li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                 </ul>
             </li>
+
             <li class="">
                 <a href="javascript:;">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     <i class="icon-external-link"></i>
                     <span class="title">友情链接管理</span>
                     <span class="arrow "></span>
                 </a>
 
                 <ul class="sub-menu">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     <li ><a href="{{url("admin/links/index")}}">链接列表</a></li>
                     <li ><a href="{{url("admin/links/add")}}">添加链接</a></li>
                 </ul>
@@ -218,6 +237,7 @@ $data = session('user');
                 </ul>
             </li>
 
+<<<<<<< HEAD
             <li class="">
                 <a href="javascript:;">
                     <i class="icon-briefcase"></i>
@@ -231,6 +251,8 @@ $data = session('user');
                 </ul>
             </li>
 
+=======
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
             <li class="">
                 <a href="javascript:;">
                     <i class="icon-list-ul"></i>
@@ -271,11 +293,10 @@ $data = session('user');
     </div>
 </div>
 
-<script src="{{url("admin/js/jquery-1.10.1.min.js")}}" type="text/javascript"></script>
 
 <script src="{{url("admin/js/jquery-migrate-1.2.1.min.js")}}" type="text/javascript"></script>
 
-<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custo?.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
 <script src="{{url("admin/js/jquery-ui-1.10.1.custom.min.js")}}" type="text/javascript"></script>
 
@@ -308,6 +329,12 @@ $data = session('user');
 
 <!--[if lt IE 9]>
 
+<<<<<<< HEAD
+=======
+<script src="{{url('admin/js/excanvas.min.js')}}"></script>
+
+<script src="{{url('admin/js/respond.min.js')}}"></script>
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 <![endif]-->
 
@@ -360,6 +387,12 @@ $data = session('user');
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 
 
+<<<<<<< HEAD
+=======
+{{--<script src="../admin/js/app.js" type="text/javascript"></script>--}}
+
+{{--<script src="../admin/js/index.js" type="text/javascript"></script>--}}
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 <script src="{{url("admin/js/app.js")}}" type="text/javascript"></script>
 
@@ -369,7 +402,10 @@ $data = session('user');
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script>

@@ -50,7 +50,7 @@
                         </li>
                     </ul>
 
-                    <form action="/head/shenqin" method="post" enctype="multipart/form-data">
+                    <form action="/head/Apply" method="post" enctype="multipart/form-data">
 
                         <div class="business_license">
                             <div class="license_upload">

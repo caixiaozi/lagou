@@ -1,26 +1,28 @@
+<link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/layout_903ac4c.css')}}" />
 @section('header')
     <div id="lg_header">
 
-       <!--C端头部黑色导航-->
+        <!--C端头部黑色导航-->
         <div id="lg_tbar">
 
             <div class="inner">
 
                 <div class="lg_tbar_l">
-                    <a rel="nofollow" href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                    <a rel="nofollow" href="#hr.#dashboard" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
+                    <a href="#/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+                    <a rel="nofollow" href="#.#/dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a>
                 </div>
 
-
-
-                <ul class="lg_tbar_r">
-                    <li>
-                        <a href="/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
-                    </li>
-                    <li>
-                        <a href="/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
-                    </li>
-                </ul>
+                @if(empty(session('vip') -> id))
+                    <ul class="lg_tbar_r">
+                        <li>
+                            <a href="/home/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
+                        </li>
+                        <li>
+                            <a href="/home/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
+                        </li>
+                    </ul>
+                @endif
+                @if(!empty(session('vip') -> id))
 
 
                     <ul class="lg_tbar_r">
@@ -77,57 +79,54 @@
 
 
 
-                                            </ul>
 
-                                 </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div class="mCSB_draggerContainer"><div oncontextmenu="return false;" style="position: absolute; height: 68px; top: 0px;" class="mCSB_dragger"><div style="position: relative; line-height: 68px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                                           </ul>
+
+                                        </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div class="mCSB_draggerContainer"><div oncontextmenu="return false;" style="position: absolute; height: 68px; top: 0px;" class="mCSB_dragger"><div style="position: relative; line-height: 68px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
                                 <div class="lg_msg_pu_footer">
-                                    <a class="lg_msg_setting fl" target="_blank" href="//#/message/settingsdetail.html"><i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
-                                    <a class="lg_msg_more fr" href="//#/message/msgdetail.html">查看更多</a>
-                                </div>
+                                    <a href="#settingsdetail.html" target="_blank" class="lg_msg_setting fl">
+                                        <i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+                                    <a href="#msgdetail.html" class="lg_msg_more fr">查看更多</a></div>
                             </div>
                         </li>
                         <li>
-                            <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5700" class="bl" href="/myresume">我的简历</a>
+                            <a href="{{url('myresume')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a></li>
+                        <li>
+                            <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+                            <em class="noticeDot dn" id="noticeDot_delivery"></em>
                         </li>
                         <li>
-                            <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5800" id="deliveryLink" class="bl" href="//#/mycenter/delivery.html">投递箱</a>
-                            <em id="noticeDot_delivery" class="noticeDot dn"></em>
-                        </li>
-                        <li>
-                            <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5900" class="bl" href="//#/mycenter/collections.html">收藏夹</a>
-                        </li>
-                        <li class="user_dpdown">
-                            <span class="unick bl">杜玉玲</span>
-                            <em id="noticeDot_name" class="noticeDot dn"></em>
-                            <i></i>
+                            <a href="jobShow/cang" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a></li>
+                        <li class="user_dropdown">
+                            <span class="unick bl">{{session('vip') -> name}}</span>
+                            <em class="noticeDot dn" id="noticeDot_name"></em>
+                            <i>
+                            </i>
                             <ul>
                                 <li>
-                                    <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5a00" href="/jobShow/cang">查看收藏</a>
+                                    <a href="#/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                                <li>
+                                    <a href="#/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                                    <em class="noticeDot dn" id="noticeDot_invitation"></em>
                                 </li>
                                 <li>
-                                    <a data-lg-gatj-msg="header_c,职位邀请,number" rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5b00" id="invitationLink" href="//#/mycenter/invitation.html">职位邀请</a>
-                                    <em id="noticeDot_invitation" class="noticeDot dn"></em>
-                                </li>
-
+                                    <a href="{{url('personal')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
                                 <li>
-                                    <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5c00" href="//account.#/account/cuser/userInfo.html">帐号设置</a>
-                                </li>
-
+                                    <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
                                 <li>
-                                    <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5d00" href="/head/">去企业版</a>
-                                </li>
-
-                                <li>
-                                    <a rel="nofollow" data-lg-tj-cid="idnull" data-lg-tj-no="idnull" data-lg-tj-id="5e00" href="/login/logout">退出</a>
-                                </li>
+                                    <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
                             </ul>
                         </li>
                     </ul>
-
-
+                @endif
+                @if(empty(session('vip')))
+                    <ul class="lg_tbar_r" style ="margin-right:110px">
+                        <li> <a href="home/login"  data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a> </li>
+                        <li> <a href="home/register"  class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a> </li>
+                    </ul>
+                @endif
             </div>
-
-        </div><!--end #lg_tbar-->
+        </div>
 
 
 
@@ -136,7 +135,7 @@
 
             <div class="inner">
                 <div class="lg_tnav_l">
-                    <a href="{{url('home/two')}}" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+                    <a href="#/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
                         <h1 class="logo_birth_3rd">拉勾网</h1>
                     </a>
 

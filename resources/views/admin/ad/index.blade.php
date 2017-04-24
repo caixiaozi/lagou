@@ -141,5 +141,9 @@
 
 <!-- Themer Script (Remove if not needed) -->
 <script src="{{url('admin/table/js/core/themer.js')}}"></script>
+
+
+
+
 </body>
 </html>

@@ -125,7 +125,7 @@
     <div id="lg_tnav">
         <div class="inner">
             <div class="lg_tnav_l">
-                <a href={{url('home/two')}}" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+                <a href="http://www.lagou.com/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
                     <h1 class="logo_birth_3rd">拉勾网</h1></a>
                 <div class="suggestCity">
                     <strong>上海站</strong>

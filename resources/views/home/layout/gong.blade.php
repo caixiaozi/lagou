@@ -11,27 +11,27 @@
     <meta content="搜股在拉勾网招聘等你,搜股(北京)科技有限公司2015年成立于北京中关村科技园.公司专注于人工智能和金融大数据交叉领域产品的研究和开发,通过全网碎片数据..." name="description">
 
     <title>【搜股_搜股招聘】搜股（北京）科技有限公司招聘信息-拉勾网</title>
-        <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
+    <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
 
-        <link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/widgets_d89a168.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/widgets_d89a168.css')}}" />
 
-        <script src="{{url('home/gong/js/analytics.js')}}" async=""></script>
-        <script src="{{url('home/gong/js/a.js')}}" async=""></script>
-        <link rel="stylesheet" type="text/css" href="{{url('home/gong/js/css/mCustomScrollbar_ac2fb8b.css')}}" />
-        <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/layout_f5df735.css')}}" />
-        <link rel="stylesheet" type="text/css" href={{url('home/gong/css/widgets_3990de9.css')}}" />
+    <script src="{{url('home/gong/js/analytics.js')}}" async=""></script>
+    <script src="{{url('home/gong/js/a.js')}}" async=""></script>
+    <link rel="stylesheet" type="text/css" href="{{url('home/gong/js/css/mCustomScrollbar_ac2fb8b.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/layout_f5df735.css')}}" />
+    <link rel="stylesheet" type="text/css" href={{url('home/gong/css/widgets_3990de9.css')}}" />
 
       <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/main.css')}}" />
-      <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/BMap_mask.css')}}" />
-      <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/loginpop_113e5e2.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/BMap_mask.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url('home/gong/css/loginpop_113e5e2.css')}}" />
 
-        <script charset="utf-8" class="lazyload" src="{{url('home/gong/js/jquery.js')}}"></script>
-        <script async="" src="{{url('home/gong/js/msgPopup_e0a866f.js')}}" data-require-id="common/widgets/common/msgPopup"></script>
-        <script charset="utf-8" class="lazyload" src="{{url('home/gong/js/lagou_5427c0e.js')}}"></script>
-        <script async="" src="{{url('home/gong/js/main_e08c2f2.js')}}" data-require-id="common/components/template-helper/main"></script>
+    <script charset="utf-8" class="lazyload" src="{{url('home/gong/js/jquery.js')}}"></script>
+    <script async="" src="{{url('home/gong/js/msgPopup_e0a866f.js')}}" data-require-id="common/widgets/common/msgPopup"></script>
+    <script charset="utf-8" class="lazyload" src="{{url('home/gong/js/lagou_5427c0e.js')}}"></script>
+    <script async="" src="{{url('home/gong/js/main_e08c2f2.js')}}" data-require-id="common/components/template-helper/main"></script>
 
 
-    </head>
+</head>
 <body style="width: 100%;">
 <script id="interviewExperiencesData" type="text/html">{"pageSize":5,"start":"0","result":[{"tagArray":["等得花儿都谢了"],"id":577258,"portrait":"images/myresume/default_headpic.png","username":"宋*清","userId":84002,"isAnonymous":false,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":3,"myScore":4,"describeScore":4,"interviewerScore":4,"companyScore":4,"comprehensiveScore":4.0,"content":"说实话面试题太抽象，偏偏要写出来，有些问题描述的，也得写出来","evaluation":"","positionId":2654762,"positionName":"PHP开发工程师","companyName":"搜股","positionType":"技术","hrId":3692350,"orderId":3875310,"companyId":112005,"replyCount":0,"isAllowReply":true,"tags":"[\"等得花儿都谢了\"]","type":1,"status":1,"source":3,"createTime":"2017-03-01 14:45:25"},{"tagArray":["面试效率高"],"id":572092,"portrait":"images/jd_portrait.png","username":"匿名","userId":4043201,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":3,"myScore":4,"describeScore":4,"interviewerScore":4,"companyScore":3,"comprehensiveScore":3.7,"content":"环境看起来还行，自身能力和期望不是很匹配公司，双向选择下，被刷也很正常。","evaluation":"","positionId":2654762,"positionName":"PHP开发工程师","companyName":"搜股","positionType":"技术","hrId":3692350,"orderId":3844719,"companyId":112005,"replyCount":0,"isAllowReply":true,"tags":"[\"面试效率高\"]","type":1,"status":1,"source":1,"createTime":"2017-02-24 23:52:12"},{"reply":{"id":128306,"interviewExperienceId":560156,"portrait":"i/image/M00/94/B3/Cgp3O1iays-AQKHdAADmaICO8eM862.jpg","username":"王浩","userId":3692350,"companyName":"搜股","positionName":"招聘主管","content":"这是公司的面试要求 如果连基本的面试题都达不到要求 接下来是没办法参加面试的 期望理解","type":1,"createTime":"2017-02-17 16:08:47"},"tagArray":["很吊的样子"],"id":560156,"portrait":"images/jd_portrait.png","username":"匿名","userId":6947371,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":0,"myScore":3,"describeScore":3,"interviewerScore":3,"companyScore":3,"comprehensiveScore":3.0,"content":"做了六道题，结果说不符合要求。","evaluation":"我觉得至少要面谈一下吧。 公司没几个人到时事实。","positionId":2654762,"positionName":"PHP开发工程师","companyName":"搜股","positionType":"技术","hrId":3692350,"orderId":3814836,"companyId":112005,"replyCount":1,"isAllowReply":false,"tags":"[\"很吊的样子\"]","type":1,"status":1,"source":1,"createTime":"2017-02-17 15:07:46"},{"tagArray":["面试效率高"],"id":558777,"portrait":"images/jd_portrait.png","username":"匿名","userId":2060379,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":1,"myScore":3,"describeScore":5,"interviewerScore":5,"companyScore":4,"comprehensiveScore":4.7,"content":"挺好，填单子+做题半个小时。。光填单子就话了20分钟，索性题目不难哈哈","evaluation":"","positionId":2654762,"positionName":"PHP开发工程师","companyName":"搜股","positionType":"技术","hrId":3692350,"orderId":3801325,"companyId":112005,"replyCount":0,"isAllowReply":true,"tags":"[\"面试效率高\"]","type":1,"status":1,"source":1,"createTime":"2017-02-16 18:32:16"},{"tagArray":["面试效率高"],"id":544987,"portrait":"images/jd_portrait.png","username":"匿名","userId":3615219,"isAnonymous":true,"isInterview":true,"noInterviewReason":"","noInterviewType":0,"usefulCount":5,"myScore":4,"describeScore":4,"interviewerScore":4,"companyScore":4,"comprehensiveScore":4.0,"content":"公司环境不错，貌似人不多。公司目前没有PHP人员，正在招聘中，所以面试也就几乎没有涉及到什么技术。跟HR、CEO聊完就结束了。","evaluation":"面试时间比较晚，过完年再做决定吧","positionId":2654762,"positionName":"PHP开发工程师","companyName":"搜股","positionType":"技术","hrId":3692350,"orderId":3716927,"companyId":112005,"replyCount":0,"isAllowReply":true,"tags":"[\"面试效率高\"]","type":1,"status":1,"source":1,"createTime":"2017-01-25 17:38:00"}],"totalCount":"19","pageNo":1}</script>
 <script id="companyInfoData" type="text/html">{"addressList":[{"id":98980,"companyId":112005,"userId":3692350,"province":"上海","city":"上海","district":"浦东新区","detailAddress":"金科路2889弄长泰广场C座804室","lat":"31.20623714","lng":"121.6013175","businessArea":"张江","createTime":"2016-01-08 11:48:00","updateTime":"2016-05-31 10:19:46","useTime":"2016-05-31 10:19:46","provinceCode":"020000000","cityCode":"020100000","districtCode":"020106000","businessAreaCode":"020106016","isDefault":false,"isEnable":true,"isDel":false,"isValid":true}],"labels":["年底双薪","股票期权","带薪年假","午餐补助","定期体检","弹性工作","节日礼物","美女多","扁平管理"],"baseInfo":{"companyId":112005,"industryField":"金融,移动互联网","companySize":"50-150人","city":"北京","financeStage":"不需要融资"},"leaders":[{"id":51660,"companyid":112005,"photo":"i/image/M00/02/95/Cgp3O1aUxq-ANlF5AADxLOjv8kY846.jpg","name":"于洪钧","position":"CEO","weibo":"","remark":"<p>美籍华人，在美国博士毕业后，在美国工作多年，曾经在摩根大通银行和黑石资产管理有限公司工作多年，具有深厚的技术背景和丰富的管理经验。</p>","createtime":"2016-01-12 17:26:44","isenable":0,"weibonickname":"","cyclopediaUrl":""}],"userType":false,"history":[{"id":153482,"companyid":112005,"year":"2017","month":"Mar","day":"01","eventtype":"产品","type":"4","eventdate":"2017-03-01","eventname":"股票卫士APP名称改为“快涨”","eventurl":"","eventprofile":"","financeStage":""},{"id":149131,"companyid":112005,"year":"2016","month":"Dec","day":"01","eventtype":"产品","type":"4","eventdate":"2016-12-01","eventname":"与海通证券达成战略协议","eventurl":"","eventprofile":"","financeStage":""},{"id":121282,"companyid":112005,"year":"2016","month":"May","day":"13","eventtype":"其他","type":"5","eventdate":"2016-05-13","eventname":"战略合作单位","eventurl":"","eventprofile":"<p>目前 &nbsp;搜股与海通证券 &nbsp;海量集团 麦子金服等机构建立了长期的战略协议。“股票卫士这款人工智能4.0时代行为为金融学软件估值已超过亿元。</p>","financeStage":""},{"id":118438,"companyid":112005,"year":"2016","month":"May","day":"01","eventtype":"资本","type":"2","eventdate":"2016-05-01","eventname":"","eventurl":"","eventprofile":"PRE-A轮投资方江西景普投资有限公司N千万","investMoney":"融资千万","financeStage":"A轮"},{"id":118437,"companyid":112005,"year":"2016","month":"Mar","day":"17","eventtype":"产品","type":"4","eventdate":"2016-03-17","eventname":"快涨APP正式上线","eventurl":"","eventprofile":"","financeStage":""},{"id":121281,"companyid":112005,"year":"2015","month":"Nov","day":"08","eventtype":"资本","type":"2","eventdate":"2015-11-08","eventname":"","eventurl":"","eventprofile":"海通创新 海量集团","investMoney":"融资金额N千万","financeStage":"天使轮"}],"pageType":1,"coreInfo":{"companyId":112005,"logo":"i/image/M00/BE/25/Cgp3O1jLq3qARePNAAAlbxoDcOY407.png","companyName":"搜股（北京）科技有限公司","companyShortName":"搜股","approve":4,"companyUrl":"http://www.sogukj.com/","companyIntroduce":"搜股科技专注于金融信息服务，是一家技术深厚的互联网公司！","isFirst":false},"dataInfo":{"positionCount":7,"resumeProcessRate":97,"resumeProcessTime":1,"experienceCount":19,"lastLoginTime":"今天"},"companyId":112005,"products":[{"id":67470,"companyid":112005,"producturl":"http://www.sogukj.com/","productprofile":"<p>快涨是一款基于金融大数据和人工智能技术的服务股民的移动端APP产品。主要功能有反映股票活跃程度的『热股榜』；反映研究员最新荐股及该研究员荐股准确度的『研究员排名』；有反映当天市场热点的『头条内参』；有包括但不限于微博，微信，股吧，贴吧，论坛，新闻等全渠道财经资讯的『异动监测』。在满足股民看盘、选股、交易的同时、围绕头条舆情监控、题材消息追踪、预警三方面特色内容，打造股市机构内参、股票异动情报。</p>\n<p><br /></p>","product":"股票卫士","productpicurl":"i/image/M00/AF/F4/CgqKkVi3mTeASsyiAACTTvYLNo0292.png","producttype":["移动app"]}],"introduction":{"companyId":112005,"companyProfile":"<p>&nbsp; &nbsp; &nbsp;</p>\n<p>&nbsp; &nbsp; &nbsp; 搜股(北京)科技有限公司2015年成立于北京中关村科技园。公司专注于人工智能和金融大数据交叉领域产品的研究和开发，通过全网碎片数据的结构化聚合，链条化关系模型分析，为个人投资者和基金、券商、信托、资管等金融机构提供专业的投资策略与情报服务。公司所开发的创新产品“快涨”APP为广大股民的股票投资保驾护航，&nbsp;目前有2款B端的产品，1款C端的产品。</p>\n<p>&nbsp; &nbsp; &nbsp;快涨APP（产品名称最近刚刚由股票卫士改为快涨） &nbsp;FOF私募基金管理系统 稻草人量化数据库</p>\n<p>&nbsp; &nbsp; &nbsp;快涨是一款服务股民的移动端APP，在满足股民随时随地看盘、选股、交易的同时，围绕头条舆情监控、题材消息追踪、个股买卖预警三方面特色内容，打造股市机构内参、股票异动情报。</p>\n<p>FOF私募基金管理系统 主要是用于私募&nbsp; 公募或者证券公司等的投资管理。</p>\n<p>&nbsp; &nbsp; &nbsp; 团队创始人兼CEO于洪钧博士先后在美国摩根大通银行总部及黑石资产管理公司总部担任要职数十年，在业界享有颇具高端专业水准和诚信谦和的卓越名望，同时其高瞻远瞩的行业分析能力，获得业内高度认可。目前，搜股科技已经获得国内多家顶级金融机构的投资，于洪钧博士凭借其丰厚的管理经验和创造卓越的理念将继续引领着搜股科技团队凝聚一方致力于打造国内第一个真正基于金融大数据的股票分析平台，力争做金融投资领域的开拓者与领跑者。</p>\n<p><br /></p>","pictures":[{"id":155287,"companyId":112005,"companyPicUrl":"i/image/M00/3B/4A/Cgp3O1drgW6AJzpLAAYrWz_M03k301.jpg","position":1,"createTime":"2016-06-23 14:28:51","updateTime":"2017-03-02 15:02:28","isdel":false},{"id":155288,"companyId":112005,"companyPicUrl":"i/image/M00/3B/4A/CgqKkVdrgXeAMaWvAAi_HqZWguw107.jpg","position":0,"createTime":"2016-06-23 14:28:51","updateTime":"2017-03-02 15:02:28","isdel":false},{"id":155289,"companyId":112005,"companyPicUrl":"i/image/M00/3B/4A/CgqKkVdrgX2ATsDKAAhhK1aEf0w637.jpg","position":0,"createTime":"2016-06-23 14:28:51","updateTime":"2017-03-02 15:02:28","isdel":false},{"id":155290,"companyId":112005,"companyPicUrl":"i/image/M00/3B/4A/CgqKkVdrgYeABioIAAE2a4RrUgg479.png","position":0,"createTime":"2016-06-23 14:28:51","updateTime":"2017-03-02 15:02:28","isdel":false}]},"isCompanyHr":false}</script>
@@ -125,20 +125,21 @@
 <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/basic-info/main.less"
--->
+--> @foreach($comp as $comp)
     <div class="item_container" id="basic_container">
         <div class="item_ltitle">
             公司基本信息
         </div>
         <div class="item_content">
             <ul>
-                <li> <i class="type"></i> <span>移动互联网</span> </li>
-                <li> <i class="process"></i> <span>['天使轮','A轮','B轮','C轮','D轮及以上','上市公司','不需要融资']</span> </li>
-                <li> <i class="number"></i> <span>['少于十五人','十五~五十人','五十~二百','二百~五百','五百~两千','大于两千人']</span> </li>
-                <li> <i class="address"></i> <span>北京</span> </li>
+                <li> <i class="type"></i> <span>{{$comp->trade}}</span> </li>
+                <li> <i class="process"></i> <span>{{str_replace([0,1,2,3,4,5,6],['天使轮','A轮','B轮','C轮','D轮及以上','上市公司','不需要融资'],$comp[0]->stage)}}</span> </li>
+                <li> <i class="number"></i> <span>{{str_replace([0,1,2,3,4,5],['少于十五人','十五~五十人','五十~二百','二百~五百','五百~两千','大于两千人'],$comp[0]->scale)}}</span> </li>
+                <li> <i class="address"></i> <span>{{$comp->city}}</span> </li>
             </ul>
         </div>
     </div>
+    @endforeach
 <!--
     @require "company-c/modules/common/main.less"
     @require "company-c/modules/managers/main.less"
@@ -149,34 +150,36 @@
         </div>
 
 
-            <div class="company_mangers_item">
-                <div class="managelist_wrap">
-                    <ul class="manager_list">
-                        <li class="item_has rotate_item  rotate_active ">
-                            <img class="item_manger_photo_show" src="{{url('home/gong/images/Cgp3O1hJA96AcS1VAABT3pTGMFw207.png')}}" alt="创始人头像" height="118" width="118" />
-                            <p class="item_manager_name"> <span>张绮轩</span>
-                                <a href="CEO" target="_blank" rel="nofollow" title="新浪微博"></a>
-                            </p> <p class="item_manager_title">CEO</p>
-                            <div class="item_manager_content mCustomScrollbar _mCS_2">
-                                <div class="mCustomScrollBox mCS-dark-2" id="mCSB_2" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-                                    <div class="mCSB_container" style="position:relative; top:0;">
-                                        <p>节日礼物 领导好 扁平管理</p>
-                                    </div>
-                                    <div class="mCSB_scrollTools" style="position: absolute; display: block;">
-                                        <div class="mCSB_draggerContainer">
-                                            <div class="mCSB_dragger" style="position: absolute; height: 135px; top: 0px;" oncontextmenu="return false;">
-                                                <div class="mCSB_dragger_bar" style="position: relative; line-height: 135px;"></div>
-                                            </div>
-                                            <div class="mCSB_draggerRail"></div>
+        @foreach ($team as $ttem)
+
+        <div class="company_mangers_item">
+            <div class="managelist_wrap">
+                <ul class="manager_list">
+                    <li class="item_has rotate_item  rotate_active ">
+                        <img class="item_manger_photo_show" src="{{$ttem->image}}" alt="创始人头像" height="118" width="118" />
+                        <p class="item_manager_name"> <span>{{$ttem->name}}</span>
+                            <a href="{{$ttem->position}}" target="_blank" rel="nofollow" title="新浪微博"></a>
+                        </p> <p class="item_manager_title">CEO</p>
+                        <div class="item_manager_content mCustomScrollbar _mCS_2">
+                            <div class="mCustomScrollBox mCS-dark-2" id="mCSB_2" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+                                <div class="mCSB_container" style="position:relative; top:0;">
+                                    <p>{{$ttem->desc}}</p>
+                                </div>
+                                <div class="mCSB_scrollTools" style="position: absolute; display: block;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div class="mCSB_dragger" style="position: absolute; height: 135px; top: 0px;" oncontextmenu="return false;">
+                                            <div class="mCSB_dragger_bar" style="position: relative; line-height: 135px;"></div>
                                         </div>
+                                        <div class="mCSB_draggerRail"></div>
                                     </div>
                                 </div>
-                            </div> </li>
-                    </ul>
-                </div>
+                            </div>
+                        </div> </li>
+                </ul>
             </div>
-            <br><br>
-
+        </div>
+        <br><br>
+        @endforeach
 
 
     </div>
@@ -195,7 +198,9 @@
                 <ul class="item_con_ul clearfix">
 
 
-                        <li class="con_ul_li"> 带薪年假</li>
+                    @foreach ($user as $user)
+                        <li class="con_ul_li"> {{$user->name}} </li>
+                    @endforeach
 
 
 

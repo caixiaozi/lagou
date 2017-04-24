@@ -10,7 +10,7 @@
                 <span>
             （共
             <i style="color:#fff;font-style:normal" id="positionNumber">
-           3</i>
+           {{count($user)}}</i>
             个）
         </span>
             </h1>
@@ -19,14 +19,14 @@
 
                 <ul class="reset my_jobs">
 
-
+                    @foreach ($user as $user)
 
                         <li data-id="301">
                             <h3>
                                 <a target="_blank" title="随便写" href="前台模板">
-                                    海通创新 海量集团</a>
+                                    {{$user->name}}</a>
                                 <span>
-                        上海
+                        [{{$user->city}}]
                     </span>
                             </h3>
                             <span class="receivedResumeNo">
@@ -34,21 +34,22 @@
                     </a>
                 </span>
                             <div>
-                                PHP开发工程师 / 2000k-5000k / 1年工作经验  / 不限                                    </div>
+                                {{$user->nature}} / {{$user->salary_low}}k-{{$user->salary_high}}k / {{$user->work_year}}  / {{$user->edu}}                                     </div>
                             <div class="c9">
-                                发布时间： 2017-02-09                                     </div>
+                                发布时间： {{date('Y-m-d H:i',$user->modify_time)}}                                       </div>
                             <div class="links">
-                                <a target="_blank" class="job_edit" href="edit">
+                                <a target="_blank" class="job_edit" href="edit?id={{$user->id}}">
                                     再发布
                                 </a>
-                                <a class="job_del" href="del?id=" data-id="301">
+                                <a class="job_del" href="del?id={{$user->id}}" data-id="301">
                                     删除
                                 </a>
                             </div>
                         </li>
-
+                    @endforeach
                 </ul>
             </dd>
         </dl>
     </div>
 @endsection
+

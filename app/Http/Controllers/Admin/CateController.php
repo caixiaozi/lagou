@@ -16,7 +16,7 @@ class CateController extends Controller
 
             $query->where('name','like','%'.$request->input('keywords').'%');
 
-        })->paginate($request->input('num',2));
+        })->paginate($request->input('num',10));
         //dd($res);
 
         return view('admin/category/index',['res' => $res,'request' => $request]);

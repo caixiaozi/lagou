@@ -1,3 +1,4 @@
+{{--
 @extends('home.layout.gong')
 @section('content')
     <!--C端头部白色导航-->
@@ -36,25 +37,27 @@
 
 
     <!-- /////////////////// -->
+
     <div class="top_info">
         <div class="top_info_wrap">
-            <img src="{{url('home/head/images/kuaizang.jpg')}}"
+
+            <img src="{{$comp->logo}}"
                  alt="Logo" heihgt="164" width="164" />
             <div class="company_info">
                 <div class="company_main">
-                    <h1> <a href="http://www.kongkonghu.com/" class="hovertips" target="_blank"
-                            rel="nofollow" title="搜股">搜股 </a> </h1>
-                    <a href="http://www.kongkonghu.com/" class="icon-wrap"
-                       target="_blank" rel="nofollow" title="http://www.sogukj.com"> <i></i> </a>
-                    <a class="identification" title=""> <i></i> <span>['未验证','禁用','已认证','未认证','申请认证']</span> </a>
+                    <h1> <a href="http://www.sogukj.com/#/home/" class="hovertips" target="_blank"
+                            rel="nofollow" title="{{$comp->name}}">{{$comp->short_name}}</a> </h1>
+                    <a href="http://www.sogukj.com/#/home" class="icon-wrap"
+                       target="_blank" rel="nofollow" title="{{$comp->web}}"> <i></i> </a>
+                    <a class="identification" title=""> <i></i> <span>{{str_replace([-1,0,1,2,3],['未验证','禁用','已认证','未认证','申请认证'],$comp->state)}}</span> </a>
                     <div class="company_word">
-                        搜股科技专注于金融信息服务，是一家技术深厚的互联网公司！
+                        {{$comp->one_desc}}
                     </div>
                 </div>
                 <div class="company_data">
                     <ul>
 
-                        <li> <strong> 7个 </strong> <br /> <span class="tipsys" original-title="该公司的在招职位数量">
+                        <li> <strong> {{count($use)}}个 </strong> <br /> <span class="tipsys" original-title="该公司的在招职位数量">
         <span>招聘职位</span>
         <span class="tip"></span>
          </span>
@@ -74,6 +77,7 @@
             </div>
         </div>
     </div>
+
     <!--
 
 
@@ -110,6 +114,7 @@
                     </div>
 
 
+<<<<<<< HEAD
 
 
                     <div class="item_content">
@@ -118,6 +123,15 @@
 
                             <img src="{{url('home/head/images/kuaizang.jpg')}}"
                                  alt="产品图片" height="180" width="300" />
+=======
+                    @foreach ($prod as $pro)
+                        <div class="item_content">
+                            <div class="product_content product_item clearfix"
+                                 data-id="13933" data-index="0">
+
+                                <img src="{{$pro->image}}"
+                                     alt="产品图片" height="180" width="300" />
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
                             <div class="product_details">
 
@@ -125,6 +139,7 @@
 
                                     <div class="product_url">
 
+<<<<<<< HEAD
                                         <a href="http://www.kongkonghu.com/" class="url_valid"
                                            target="_blank" rel="nofollow" title="">
                                             股票卫士
@@ -133,6 +148,16 @@
                                         <a href="http://www.kongkonghu.com/"
                                            target="_blank" rel="nofollow" title="">
                                             <i></i> </a>
+=======
+                                            <a href="http://www.sogukj.com/#/home" class="url_valid"
+                                               target="_blank" rel="nofollow" title="{{$pro->link}}">
+                                                {{$pro->name}}
+                                            </a>
+
+                                            <a href="http://www.sogukj.com/#/home"
+                                               target="_blank" rel="nofollow"  title="{{$pro->link}}">
+                                                <i></i> </a>
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
                                     </div> </h4>
 
@@ -146,7 +171,14 @@
                                          style="position:relative; height:100%; overflow:hidden; max-width:100%;">
                                         <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
 
+<<<<<<< HEAD
                                             <p>不限于微博，微信，股吧，贴吧，论坛，新闻等全渠道财经资讯的『异动监测』。在满足股民看盘、选股、交易的同时、围绕头条舆情监控、题材消息追踪、预警三方面特色内容，打造股市机构内参、股票异动情报。</p>
+=======
+                                                <p>{{$pro->desc}}</p>
+                                            </div>
+                                            <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+                                                <div class="mCSB_draggerContainer">
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
                                         </div>
                                         <div class="mCSB_scrollTools" style="position: absolute; display: none;">
@@ -178,7 +210,7 @@
                     </div>
                     <div class="item_content">
                         <div style="display: block;" class="company_intro_text">
-                            <span class="company_content"><p>&nbsp; &nbsp; &nbsp;搜股(北京)科技有限公司2015年成立于北京中关村科技园。公司专注于人工智能和金融大数据交叉领域产品的研究和开发，通过全网碎片数据的结构化聚合，链条化关系模型分析，为个人投资者和基金、券商、信托、资管等金融机构提供专业的投资策略与情报服务。公司所开发的创新产品“快涨”APP为广大股民的股票投资保驾护航， 目前有2款B端的产品，1款C端的产品。</p></span>
+                            <span class="company_content"><p>&nbsp; &nbsp; &nbsp;{{$comp->desc}}</p></span>
                             <span style="background-position: right top;" class="text_over"></span>
                         </div>
                         <div class="company_image_gallery">
@@ -187,6 +219,7 @@
                 </div>
                 <!--
            -->
+
                 <div class="item_container" id="history_container">
                     <div class="item_ltitle">
                         发展历程
@@ -194,6 +227,7 @@
                     <div class="item_content">
                         <ul class="history_ul">
 
+<<<<<<< HEAD
 
 
                             <li class="history_li clearfix " data-id="78445">
@@ -209,10 +243,24 @@
                                     <div class="desc_intro">
                                     </div>
                                 </div> <span class="history_ul_vspilt"></span> </li>
+=======
+                            @foreach ($ser as $ser)
+                                <li class="history_li clearfix " data-id="78445">
+                                    <div class="li_date">
+                                        <p class="date_year">{{$ser->time}}</p>
+                                    </div>
+                                    <div class="li_type_icon li_type_icon2"></div>
+                                    <div class="li_desc">
+                                        <p class="desc_title desc_hover clearfix" data-href="">
+                                          <span class="desc_real_title  desc_real_title_hover ">
+                                          <a  rel="nofollow"> {{$ser->develop}} </a>
+                                           <a rel="nofollow"> <i class="desc_link"></i> </a> </span> </p>
+                                        <div class="desc_intro">
+                                        </div>
+                                    </div> <span class="history_ul_vspilt"></span> </li>
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
-
-
-
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -223,6 +271,7 @@
                         招聘职位
                     </div>
 
+<<<<<<< HEAD
 
                     <a rel="nofollow" title="浏览职位" href="/JobShow">
                         <div class="item_content">
@@ -237,6 +286,22 @@
                             </div>
                         </div></a><hr>
 
+=======
+                    @foreach ($use as $use)
+                        <a rel="nofollow" title="浏览职位" href="/JobShow">
+                            <div class="item_content">
+                                <div style="display: block;" class="company_intro_text">
+                                    <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p>{{$use->name}}</span>
+                                    <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p><p class="fr">{{date('Y-m-d H:i',$use->modify_time)}}</p></span>
+                                    <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p>{{$use->salary_low}}K~{{$use->salary_high}}K
+        　{{$use->work_year}}&nbsp; &nbsp;{{$use->edu}}&nbsp; &nbsp;{{$use->welfare}}</span>
+                                    <span style="background-position: right top;" class="text_over"></span>
+                                </div>
+                                <div class="company_image_gallery">
+                                </div>
+                            </div></a><hr>
+                    @endforeach
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 
                 </div>
@@ -607,8 +672,8 @@
                                 <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
                                     <ul class="con_mlist_ul">
                                         <li class="mlist_ul_li mlist_li_open" data-locationi="" d="6182"> <p class="mlist_li_title"> <em class="li_title_iconinx">1</em>
-                                                <span class="li_title_text ellipsis">上海</span> <em class="li_title_corner"></em> </p>
-                                            <p class="mlist_li_desc"> 上海市浦东新区金科路2889弄长泰广场C座804室 </p> </li>
+                                                <span class="li_title_text ellipsis">{{$comp->city}}</span> <em class="li_title_corner"></em> </p>
+                                            <p class="mlist_li_desc"> {{$comp->city}}市浦东新区金科路2889弄长泰广场C座804室 </p> </li>
                                     </ul>
                                     <div class="mlist_total_desc">
                                         该公司共有
@@ -627,5 +692,7 @@
                         </div>
                     </div>
                 </div>
+            @endforeach
                 <!-- 推荐 -->
 @endsection
+--}}

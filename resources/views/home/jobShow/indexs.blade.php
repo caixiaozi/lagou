@@ -22,6 +22,14 @@
         console.log(1);
     </script>
 
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/layout_903ac4c.css')}}" />
+{{--    <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/css/mCustomScrollbar_ac2fb8b.css')}}">--}}
+{{--    <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/css/layout_75f191a.css')}}">--}}
+    <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/css/widgets_3990de9.css')}}">
+{{--    <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/css/loginpop_113e5e2.css')}}">--}}
+
+    <link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/layout_903ac4c.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/indexs/css/style.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/indexs/css/external.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{url('home/jobShow/indexs/css/popup.css')}}"/>
@@ -44,59 +52,100 @@
 
 <body>
 <div id="body">
-    <div id="lg_header">
+    <!--C端头部黑色导航-->
+    <div id="lg_tbar">
 
-        <!--end #lg_tnav-->
-        <div id="lg_tbar">
-            <div class="inner">
-                <!-- 未登录头部 -->
-                <div class="lg_tbar_l">
-                    <a href="http://www.lagou.com/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                    <a href="#">进入企业版</a>
-                </div>
+        <div class="inner">
 
-                <ul class="lg_tbar_r reset">
-                    <li>
-                        <a href="{:U('Home/Login/topLogin')}" target='_blank' data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
+            <div class="lg_tbar_l">
+                <a href="#/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+                <a rel="nofollow" href="#.lagou.com/dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a>
+            </div>
+
+            @if(!empty(session('vip')))
+                <ul class="lg_tbar_r">
+                    <!-- if has unread message, add class unreaded -->
+                    <li class="msg_dropdown">
+                        <a class="msg_group" href="javascript:%20void%200;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
+                            消息
+                            <em class="msg_amount hide" id="headMsgAmount"></em>
+                        </a>
+                        <div class="lg_msg_popup">
+                            <div style="overflow: hidden;" class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;"><div class="mCSB_container" style="position:relative; top:0;">
+                                        <ul class="lg_top_msg_list">
+
+
+                                            <li class="lg_msg_item "><div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#/message/businessDetail.html?type=DELIVER&amp;businessId=760404630256009216">
+
+                                                        你投递给<span class="empha">瓜子二手车直卖网·PHP初级开发工程师</span>职位的简历，已经投递成功，请静候佳音
+
+
+
+
+
+
+                                                    </a>
+                                                </div></li>
+
+
+
+                                        </ul>
+
+                                    </div><div class="mCSB_scrollTools" style="position: absolute; display: block;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; height: 57px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 57px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                            <div class="lg_msg_pu_footer">
+                                <a href="#/message/settingsdetail.html" target="_blank" class="lg_msg_setting fl"><i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+                                <a href="#/message/msgdetail.html" class="lg_msg_more fr">查看更多</a>
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <a href="{:U('Home/Register/register')}" target='_blank' class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
+                        <a href="#/resume/myresume.html" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a>
+                    </li>
+                    <li>
+                        <a href="#/mycenter/delivery.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+                        <em class="noticeDot dn" id="noticeDot_delivery"></em>
+                    </li>
+                    <li>
+                        <a href="{{url('collect')}}" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
+                    </li>
+                    <li class="user_dpdown">
+                        <span class="unick bl">{{session('vip') -> name}}</span>
+                        <em class="noticeDot dn" id="noticeDot_name"></em>
+                        <i></i>
+                        <ul>
+                            <li>
+                                <a href="#/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                            <li>
+                                <a href="#/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                                <em class="noticeDot dn" id="noticeDot_invitation"></em>
+                            </li>
+                            <li>
+                                <a href="{{url('personal')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
+                            <li>
+                                <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
+                            <li>
+                                <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                        </ul>
+                </ul>
+                </li>
+                </ul>
+
+            @endif
+            @if(empty(session('vip')))
+                <ul class="lg_tbar_r">
+                    <li>
+                        <a href="/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
+                    </li>
+                    <li>
+                        <a href="/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
                     </li>
                 </ul>
-            </div>
+            @endif
         </div>
-        <div id="lg_tnav">
-            <div class="inner">
 
-                <div class="lg_tnav_l">
-                    <a href="/" class="lg_logo" data-lg-tj-id="5t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                        <h1>拉勾网</h1>
-                        <span>普通版</span>
-                    </a>
-                </div>
-                <ul class="lg_tnav_wrap reset">
-                    <li>
-                        <a href="/" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
-                    </li>
-                    <li>
-                        <a href="{:U('Home/Company/index')}" data-lg-tj-id="5v00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a>
-                        <b class="unhandleNum" id="unhandleNum"></b>
-                    </li>
-
-                    <li>
-                        <a rel="nofollow" href="yipai" data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
-                    </li>
-                    <li>
-                        <a rel="nofollow" href="https://yanzhi.lagou.com/"  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
-                    </li>
-                    <li>
-                        <a rel="nofollow" href="https://pro.lagou.com"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
+    </div><!--end #lg_tbar-->
     <!-- end #header -->
     <div id="container">
         <div class="clearfix">
@@ -130,96 +179,51 @@
                     </div>
                     </dt>
 
-                    <dd class="job_request">
-                        <span class="red">5k-7k</span>
-                        <span>上海</span>
-                        <span>经验5-10年 </span>
-                        <span>本科及以上 </span>
-                        <span>全职</span><br />
-                        职位诱惑 : B轮,旅游,氛围好
 
-                    </dd>
-                    <!--</foreach>-->
+                        <dd class="job_request">
+                            <span class="red">{{$job->salary_low}}k-{{$job->salary_high}}k</span>
+                            <span>{{$job->city}}</span>
+                            <span>{{$job->work_year}}</span>
+                            <span>{{$job->edu}}</span>
+                            <span>{{$job->nature}}</span><br />
+                            职位诱惑 : {{$job->welfare}}
 
-                    <dd class="job_bt">
-                        <h3 class="description">
-                            职位描述
-                        </h3>
-                        <p>
-                            主要职责：
-                            <br><br>
+                        </dd>
+                        <!--</foreach>-->
 
-                            1、结合公司战略需求，负责客服部整体团队管理；
-
-                            2、建立客服体系，搭建客服平台系统，协调相关部门完善客服系统各项功能及业务流程；
-
-                            3、策划、建立、完善客服部实施方案、管理制度、业务标准及流程，根据公司发展情况，调整和完善项目内部的管理流程和规范；
-
-                            4、制定客服部发展规划，并根据规划编制预算，管控客服中心各项成本支出；
-
-                            5、制定投诉流转、定责、处理、回访环节，负责管理投诉解决方案；
-
-                            6、建立服务监控、风险预警机制，降低投诉率，提高投诉处理效率和精准度；
-
-                            7、提供全面的客服报告，对各客服团队的工作成绩进行评估，为部门的管理及决策提供数据支持；
-
-                            8、组织收集、整理客户资料，搭建和维护数据库，分析客户需求，提交分析报告；
-
-                            9、结合市场需求发展和客户需求变化，进行不断创新，提供优质客户服务；
-
-                            10、统筹管理部门的日常运营，不断提升质量和员工满意度极其凝聚力。
-
-                            <br>
-                            <br>
-
-
-
-                            任职要求：
-                            <br>
-                            <br>
-
-                            1、全日制本科或以上学历，8年以上呼叫中心管理经验，其中至少有2年及以上在创业型企业任职经历，熟悉呼叫中心运作流程，有旅游或酒店行业经验优先；
-
-                            2、拥有丰富的高端客户投诉处理经验，且具备一定危机公关处理能力；
-
-                            3、精通英文，英文口头及文笔表达能力优秀，能熟练使用英文与海外供应商直接沟通；
-
-                            4、形象优秀，具备良好的职业素养、商务礼仪；
-
-                            5、情商高，具备一定领导气质和领袖魅力；
-
-                            6、品行端正，性格开朗，责任心强，适应性强，勇于承担挑战性工作，团队协作能力佳；
-
-                            7、具有较强的协调、观察、分析研究及综合解决问题能力；
-
-                            8、熟练掌握办公软件操作，较强的数据分析能力。
-                        </p>
-                    </dd>
-                    <div class="saoma saoma_btm">
-                        <div class="dropdown_menu">
-                            <div class="drop_l">
-                                <img src="{{url('home/jobShow/indexs/images/job_qr_btm.png')}}" width="131" height="131"
-                                />
-                            </div>
-                            <div class="drop_r">
-                                <div class="drop_title">
+                        <dd class="job_bt">
+                            <h3 class="description">
+                                职位描述
+                            </h3>
+                            <p>
+                                {{$job->desc}}
+                            </p>
+                        </dd>
+                        <div class="saoma saoma_btm">
+                            <div class="dropdown_menu">
+                                <div class="drop_l">
+                                    <img src="{{url('home/jobShow/indexs/images/job_qr_btm.png')}}" width="131" height="131"
+                                    />
                                 </div>
-                                <p>
-                                    想知道HR在看简历嘛？
-                                    <br />
-                                    想在微信中收到面试通知？
-                                    <br />
-                                    <span>
+                                <div class="drop_r">
+                                    <div class="drop_title">
+                                    </div>
+                                    <p>
+                                        想知道HR在看简历嘛？
+                                        <br />
+                                        想在微信中收到面试通知？
+                                        <br />
+                                        <span>
                                                 << 扫一扫，给你解决</span>
-                                </p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <dd>
-                        <a href="/JobShow/resumesend" class="btn fr {$cl['cls']}" onclick="">
-
-                        </a>
-                    </dd>
+                        <dd>
+                            <a href="/jobShow/resumesend?jobid={{$job -> id}}&comid={{$company -> id}}" class="btn fr {$cl['cls']}" onclick="return {{$cl}}">
+                                {{$send}}
+                            </a>
+                        </dd>
                 </dl>
                 <div id="weibolist">
                 </div>
@@ -230,12 +234,12 @@
             <div class="content_r">
                 <dl class="job_company">
                     <dt>
-                        <a href="www.videojj.com" target="_blank">
-                            <img class="b2" src="{{url('home/jobShow/indexs/images/video.png')}}" style="width:80px; height:80px" title="上海极链网络科技有限公司招聘信息-拉勾网" />
+                        <a href="{:U('CompanyShow/Index',array('cid'=>$ayy['id']))}" target="_blank">
+                            <img class="b2" src="{{$company->logo}}" style="width:80px; height:80px" title="{{$company -> short_name}}" />
                             <div>
                                 <h2 class="fl">
-                                    Video++
-                                    <img src="{{url('home/jobShow/indexs/images/vaild.png')}}" width="15" height="19" alt="拉勾认证企业"
+                                    {{$company->name}}
+                                    <img src="/public/home/zhang/JobShow/images/valid.png" width="15" height="19" alt="拉勾认证企业"
                                     />
                                     <span class="dn">
                                                 拉勾认证企业
@@ -250,20 +254,20 @@
                                         <span>
                                             领域
                                         </span>
-                                数据服务,文化娱乐
+                                {{$company->trade}}
                             </li>
                             <li>
                                         <span>
                                             规模
                                         </span>
-                                150-500人
+                                {{ str_replace([0,1,2,3,4],['50人以下','50-100人','100-200人','300-500人','500人以上'],$company -> scale)}}
                             </li>
                             <li>
                                         <span>
                                             主页
                                         </span>
-                                <a href="www.videojj.com" target="_blank" title="" rel="nofollow">
-                                    www.videojj.com
+                                <a href="{{$company->web}}" target="_blank" title="" rel="nofollow">
+                                    {{$company->web}}
                                 </a>
                             </li>
                         </ul>
@@ -275,17 +279,18 @@
                                         <span>
                                             目前阶段
                                         </span>
-                                        B轮
+                                {{ str_replace([0,1,2,3],['A轮','B轮','C轮','D轮'],$company->stage)}}
                             </li>
                         </ul>
                         <h4>
                             工作地址
                         </h4>
                         <div>
-                            上海黄浦区中山南路幸福码头-6号楼
+                            {{$job->address}}
                         </div>
                     </dd>
                 </dl>
+
                 <a href="h/subject/s_zhouyou.html?utm_source=BD__lagou&utm_medium=&utm_campaign=zhouyou"
                    target="_blank" class="eventAd">
                     <img src="{{url('home/jobShow/indexs/images/lvyou.png')}}" width="280" height="135"

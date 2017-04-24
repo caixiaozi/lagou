@@ -94,7 +94,11 @@
 
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="{{url('myresume')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
+=======
+                    <a href="" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                 </li>
                 <li>
                     <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_deliver" data-lg-tj-track-type="1">投递箱</a>

@@ -104,59 +104,91 @@
         <div class="inner">
 
             <div class="lg_tbar_l">
-                <a rel="nofollow" href="https://www.lagou.com/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a rel="nofollow" href="/index.php/Home/companyJob/create.html" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
+                <a href="#/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+                <a rel="nofollow" href="#.lagou.com/dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a>
             </div>
 
-
-            <ul class="lg_tbar_r">
-                <!-- if has unread message, add class unreaded -->
-                <li class="msg_dropdown" data-lg-tj-track-code="index_message">
-                    <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                        消息
-                        <em class="msg_amount hide" id="headMsgAmount"></em>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="/myremuse" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
-                </li>
-                <li>
-                    <a href="/index.php/Home/ResumeSend/index.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_deliver" data-lg-tj-track-type="1">投递箱</a>
-                    <em class="noticeDot dn" id="noticeDot_delivery"></em>
-                </li>
-                <li>
-                    <a href="/index.php/Home/Favorite/index.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_favorite" data-lg-tj-track-type="1">收藏夹</a>
-                </li>
-                <li class="user_dropdown" data-lg-tj-track-code="index_user">
-                    <span class="unick bl">杜玉玲</span>
-                    <em class="noticeDot dn" id="noticeDot_name"></em>
-                    <i></i>
-                    <ul>
-                        <li>
-                            <a href="https://www.lagou.com/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a>
-                        </li>
-                        <li>
-                            <a href="/index.php/Home/ResumeHandle/show.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
-                            <em class="noticeDot dn" id="noticeDot_invitation"></em>
-                        </li>
-
-                        <li>
-                            <a href="https://account.lagou.com/account/cuser/userInfo.html" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a>
-                        </li>
-
-                        <li>
-                            <a href="/head" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
-                        </li>
-
-                        <li>
-                            <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            @if(!empty(session('vip')))
+                <ul class="lg_tbar_r">
+                    <!-- if has unread message, add class unreaded -->
+                    <li class="msg_dropdown">
+                        <a class="msg_group" href="javascript:%20void%200;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
+                            消息
+                            <em class="msg_amount hide" id="headMsgAmount"></em>
+                        </a>
+                        <div class="lg_msg_popup">
+                            <div style="overflow: hidden;" class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody"><div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;"><div class="mCSB_container" style="position:relative; top:0;">
+                                        <ul class="lg_top_msg_list">
 
 
+                                            <li class="lg_msg_item "><div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#/message/businessDetail.html?type=DELIVER&amp;businessId=760404630256009216">
+
+                                                        你投递给<span class="empha">瓜子二手车直卖网·PHP初级开发工程师</span>职位的简历，已经投递成功，请静候佳音
+
+
+
+
+
+
+                                                    </a>
+                                                </div></li>
+
+
+
+                                        </ul>
+
+                                    </div><div class="mCSB_scrollTools" style="position: absolute; display: block;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; height: 57px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 57px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                            <div class="lg_msg_pu_footer">
+                                <a href="#/message/settingsdetail.html" target="_blank" class="lg_msg_setting fl"><i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+                                <a href="#/message/msgdetail.html" class="lg_msg_more fr">查看更多</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#/resume/myresume.html" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a>
+                    </li>
+                    <li>
+                        <a href="#/mycenter/delivery.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+                        <em class="noticeDot dn" id="noticeDot_delivery"></em>
+                    </li>
+                    <li>
+                        <a href="#/mycenter/collections.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
+                    </li>
+                    <li class="user_dpdown">
+                        <span class="unick bl">{{session('vip') -> name}}</span>
+                        <em class="noticeDot dn" id="noticeDot_name"></em>
+                        <i></i>
+                        <ul>
+                            <li>
+                                <a href="#/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                            <li>
+                                <a href="#/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                                <em class="noticeDot dn" id="noticeDot_invitation"></em>
+                            </li>
+                            <li>
+                                <a href="{{url('personal')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
+                            <li>
+                                <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
+                            <li>
+                                <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                        </ul>
+                        </ul>
+                    </li>
+                </ul>
+
+            @endif
+            @if(empty(session('vip')))
+                <ul class="lg_tbar_r">
+                    <li>
+                        <a href="/login" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
+                    </li>
+                    <li>
+                        <a href="/register" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
+                    </li>
+                </ul>
+            @endif
         </div>
 
     </div><!--end #lg_tbar-->
@@ -223,14 +255,15 @@
                         <ul class="reset my_collections">
 
 
+                            @foreach($data as $v)
                                 <li data-id="1869489" data-company="6616">
-                                    <a href="https://www.lagou.com/mycenter/collections.html" target="_blank" title=""> <img src="{{url('home/jobShow/images/qirui.png')}}" alt="">
+                                    <a href="{{$v -> web}}" target="_blank" title=""> <img src="{{$v -> logo}}" alt="">
                                     </a>
                                     <div class="co_item">
                                         <h2 title="PHP开发工程师">
                                             <a href="#/jobs/1869489.html" target="_blank">
-                                                <em style="max-width: 200px;">上海屹瑞科技</em>
-                                                <span>7k-12k</span>
+                                                <em style="max-width: 200px;">{{$v -> branch}}</em>
+                                                <span>（{{$v -> salary_low}}k-{{$v -> salary_high}}k）</span>
 
                                                 <!-- <span class="tcy"></span> -->
 
@@ -238,14 +271,14 @@
                                             </a>
                                         </h2>
 
-                                        <div class="co_cate">上海 / 1年 / 大专</div>
-                                        <span class="co_youhuo c7">五险一金,带薪年假,扁平管理,技能培训</span>
+                                        <div class="co_cate">{{$v -> short_name}} / {{$v -> city}} / {{$v -> work_year}} / {{$v -> edu}}</div>
+                                        <span class="co_youhuo c7">{{$v -> welfare}}</span>
 
-                                        <a href="/JobShow" target="_blank" class="collection_link">投个简历</a>
-                                        <i></i> <a href="#"  data = ""  class="collectionCancel collection_link collected shoucang"> 取消收藏 </a>
+                                        <a href="/jobShow?job={{$v -> job_id}}" target="_blank" class="collection_link">投个简历</a>
+                                        <i></i> <a href="#"  data = "{{$v -> job_id}}"  class="collectionCancel collection_link collected shoucang"> 取消收藏 </a>
                                     </div>
                                 </li>
-
+                            @endforeach
 
                         </ul>
                     </form>
@@ -341,99 +374,7 @@
             });
 
 
-            //alert
-            //a/*lert($);
-            /* $(function(){
 
-             $('#shoucang').click(function(){
-
-             //alert($(this).html());
-             //$()
-             });
-             });*/
-            /* $(function(){
-
-             var Y = false;
-             $('#shoucang')click(function(){
-             alert($);
-
-             if(Y){
-
-
-             var data = $(this).attr('data');
-             // alert(data);
-             var X = $(this);
-             $.ajax({
-             type: 'POST',
-             async:true,
-             url: '/jobShow/canginsert',
-             data: { 'job_id' : data},
-             dataType: 'json',
-             headers: {
-             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-             },
-             success: function(data){
-             //console.log(data.status);
-             if(data.status == 1)
-             {
-             //return true;
-             // X = true;
-             // X.find('span').html('查看收藏');
-             X.html('取消收藏')
-             // X.attr('class','jd_collection collection_hover collected');
-             }else{
-             alert('收藏失败');
-             // X = false;
-             }
-             },
-             error: function(xhr, type){
-             alert('收藏失败');
-             }
-             });
-             //$(this).find('span').html('查看收藏');
-             Y = false;
-
-             }else{
-
-             var data = $(this).attr('data');
-             // alert(data);
-             var X = $(this);
-             $.ajax({
-             type: 'POST',
-             async:true,
-             url: '/jobShow/cangdelete',
-             data: { 'job_id' : data},
-             dataType: 'json',
-             headers: {
-             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-             },
-             success: function(data){
-             //console.log(data.status);
-             if(data.status == 1)
-             {
-             //return true;
-             // X = true;
-
-
-             // X.find('span').html('收藏已取消');
-             X.html('收藏已取消')
-             }else{
-             alert('取消收藏失败');
-             // X = false;
-             }
-             },
-             error: function(xhr, type){
-             alert('取消收藏失败');
-             }
-             });
-             Y = true;
-             }
-
-
-             });
-
-
-             });*/
         </script>
         <!--广告位-->
 

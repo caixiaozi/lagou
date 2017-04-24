@@ -51,114 +51,120 @@
 
 @section('content')
     <!-- 页面主体START -->
-    <div class="container clearfix" id="container">
-        <div class="content_l fl">
 
-            <dl class="job_detail" id="job_detail">
-                <dt class="clearfix join_tc_icon">
-                <h1 title="Java">
-                    <em></em>
-                    <div>Exclusive You Web</div>
-                    JAVA架构师
-                </h1>
+        <div class="container clearfix" id="container">
+            <div class="content_l fl">
 
-
-                <a class="jd_collection passport_login_pop" id="login_position" rel="nofollow" data = ''>
-                    <span class="dn" id="collection_pos" >收藏职位</span>
-                </a>
-                <script type="text/javascript">
-                    $(function(){
-
-                        var Y = true;
-                        $('#login_position').click(function(){
-                            // alert($);
-
-                            if(Y){
+                <dl class="job_detail" id="job_detail">
+                    <dt class="clearfix join_tc_icon">
+                    <h1 title="Java">
+                        <em></em>
+                        <div>{{$company -> name}}</div>
+                        {{$job -> name}}
+                    </h1>
 
 
-                                var data = $(this).attr('data');
-                                // alert(data);
-                                var X = $(this);
-                                $.ajax({
-                                    type: 'POST',
-                                    async:true,
-                                    url: '/jobShow/canginsert',
-                                    data: { 'job_id' : data},
-                                    dataType: 'json',
-                                    headers: {
-                                        'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                                    },
-                                    success: function(data){
-                                        //console.log(data.status);
-                                        if(data.status == 1)
-                                        {
-                                            //return true;
-                                            // X = true;
-                                            X.find('span').html('查看收藏');
-                                            X.attr('class','jd_collection collection_hover collected');
-                                        }else if( data.status == 0)
-                                        {
-                                            alert('请先登录');
-                                        }else{
+                    <a class="jd_collection passport_login_pop {{$dn}}" id="login_position" rel="nofollow" data = {{$job -> id}}>
+                        <span class="dn" id="collection_pos" >收藏职位</span>收藏
+                    </a>
+                 {{--   <a class="jd_collection passport_login_pop " id="login_position" rel="nofollow" href="javascript:;">
+                        <i class="icon-glyph-hollow-star"> </i>收藏
+
+                    </a>--}}
+                    <script type="text/javascript">
+                        $(function(){
+
+                            var Y = true;
+                            $('#login_position').click(function(){
+                                // alert($);
+
+                                if(Y){
+
+
+                                    var data = $(this).attr('data');
+                                    // alert(data);
+                                    var X = $(this);
+                                    $.ajax({
+                                        type: 'POST',
+                                        async:true,
+                                        url: '/jobShow/canginsert',
+                                        data: { 'job_id' : data},
+                                        dataType: 'json',
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                        },
+                                        success: function(data){
+                                            //console.log(data.status);
+                                            if(data.status == 1)
+                                            {
+                                                //return true;
+                                                // X = true;
+                                                X.find('span').html('查看收藏');
+                                                X.attr('class','jd_collection collection_hover collected');
+                                            }else if( data.status == 0)
+                                            {
+                                                alert('请先登录');
+                                            }else{
+                                                alert('收藏失败');
+                                                // X = false;
+                                            }
+                                        },
+                                        error: function(xhr, type){
                                             alert('收藏失败');
-                                            // X = false;
                                         }
-                                    },
-                                    error: function(xhr, type){
-                                        alert('收藏失败');
-                                    }
-                                });
-                                //$(this).find('span').html('查看收藏');
-                                Y = false;
+                                    });
+                                    //$(this).find('span').html('查看收藏');
+                                    Y = false;
 
-                            }else{
+                                }else{
 
-                                var data = $(this).attr('data');
-                                // alert(data);
-                                var X = $(this);
-                                $.ajax({
-                                    type: 'POST',
-                                    async:true,
-                                    url: '/jobShow/cangdelete',
-                                    data: { 'job_id' : data},
-                                    dataType: 'json',
-                                    headers: {
-                                        'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                                    },
-                                    success: function(data){
-                                        //console.log(data.status);
-                                        if(data.status == 1)
-                                        {
-                                            //return true;
-                                            // X = true;
-                                            X.attr('class','jd_collection passport_login_pop');
+                                    var data = $(this).attr('data');
+                                    // alert(data);
+                                    var X = $(this);
+                                    $.ajax({
+                                        type: 'POST',
+                                        async:true,
+                                        url: '/jobShow/cangdelete',
+                                        data: { 'job_id' : data},
+                                        dataType: 'json',
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                        },
+                                        success: function(data){
+                                            //console.log(data.status);
+                                            if(data.status == 1)
+                                            {
+                                                //return true;
+                                                // X = true;
+                                                X.attr('class','jd_collection passport_login_pop');
 
-                                            X.find('span').html('收藏已取消');
-                                        }else if(data.status == 0)
-                                        {
-                                            alert('请先登录');
-                                        }else{
-                                            alert('请先登录');
-                                            // X = false;
+                                                X.find('span').html('收藏已取消');
+                                            }else if(data.status == 0)
+                                            {
+                                                alert('请先登录');
+                                            }else{
+                                                alert('请先登录');
+                                                // X = false;
+                                            }
+                                        },
+                                        error: function(xhr, type){
+                                            alert('取消收藏失败');
                                         }
-                                    },
-                                    error: function(xhr, type){
-                                        alert('取消收藏失败');
-                                    }
-                                });
-                                Y = true;
-                            }
+                                    });
+                                    Y = true;
+                                }
 
 
-                        });
-                        $('#login_position').mouseover(function(){
-                            $(this).find('span').attr('class','');
+                            });
+                            $('#login_position').mouseover(function(){
+                                $(this).find('span').attr('class','');
 
-                        });
-                        $('#login_position').mouseout(function(){
-                            $(this).find('span').attr('class','dn');
-                        });
+                            });
+                            $('#login_position').mouseout(function(){
+                                $(this).find('span').attr('class','dn');
+                            });
 
+<<<<<<< HEAD
                     });
                 </script>
                 <!-- 举报按钮 -->
@@ -555,6 +561,379 @@
         </div>
     </div>
     <!-- 页面主体END -->
+=======
+                        });
+                    </script>
+                    <!-- 举报按钮 -->
+                    <a rel="nofollow" href="javascript:;" class="report_button passport_login_pop" data-lg-tj-id="9500" data-lg-tj-no="0002" data-lg-tj-cid="idnull">
+                        <span class="dn" id="report_jd">举报职位</span>
+                    </a>
+
+                    <!-- 分享至微信 -->
+                    <div class="jd_share" data-lg-tj-id="9500" data-lg-tj-no="0003" data-lg-tj-cid="idnull">
+                        <span class="dn" id="share_jd">分享到微信</span>
+                        <div class="jd_share_success"><div class="weixin_img" id="weixin_img_id"><canvas height="130" width="130"></canvas></div></div>
+                    </div>
+                    </dt>
+
+                    <dd class="job_request">
+                        <p>
+                            <span class="red">15k-25k</span>
+                            <span>{{$job -> city}}</span>
+                            <span>经验{{$job -> work_year}}</span>
+                            <span>{{$job -> edu}}及以上</span>
+                            <span>{{$job -> nature }}</span>
+                        </p>
+                        <p>职位诱惑 : {{$job -> welfare}}</p>
+                        <p class="publish_time">2天前&nbsp; 发布于拉勾网</p>
+                    </dd>
+                    <dd class="job_bt">
+                        <h3 class="description">职位描述</h3>
+                        {{htmlentities($job -> desc)}}
+                        <p><br></p>
+                    </dd>
+
+                    <!-- 职位发布者 -->
+                    <dd class="jd_publisher">
+                        <h3>职位发布者</h3>
+                        <div class="border clearfix">
+                            <i class="initial_avatar c4">吴</i>
+                            <!-- 没头像 C 1到4 随机数 -->
+                            <div class="publisher_name">
+                                <a title="吴女士">
+                                    <span class="name">吴女士</span>
+                                </a>
+                                <span class="pos"> {{$company -> short_name}}  </span>
+                            </div>
+                            <div class="publisher_data">
+                                <div>
+                                    <span class="data">39%</span>
+                                    <span class="tip">
+                    简历及时处理率
+                    <span class="tip_text">投递后7天内处理完成的简历所占比例</span>
+                    </span>
+                                </div>
+                                <div>
+                                    <span class="data">6天</span>
+                                    <span class="tip">
+                    简历处理用时
+                    <span class="tip_text">完成简历处理的平均用时</span>
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+
+                    <dd class="jd_resume clearfix">
+                        <div class="resume_status fl">
+                            <i class="jd-icon resume_status_none"></i>
+                            <span>你在拉勾还没有简历呢，你可以</span><a href="#/resume/basic.html" target="_blank" title="完善在线简历">完善在线简历</a>，<span>也可</span><a class="passport_login_pop" rel="nofollow" href="javascript:;">上传附件简历</a><span>直接投递</span>
+                        </div>
+                    </dd>
+                    <!-- 职位发布者 end -->
+
+                    <dd class="jd_deliver clearfix">
+                        <a rel="nofollow" href="/jobShow/resumesend?jobid={{$job -> id}}&comid={{$company -> id}}" title="登录" class="passport_login_pop btn fr btn_apply" onclick="return {{$cl}}">{{$send}}</a>
+
+                    </dd>
+                </dl>
+
+                <dl class="interview_experience module-container">
+                    <div id="review_anchor" class="module-title">
+                        面试评价
+                    </div>
+                    <a href="#/gongsi/interviewExperiences.html?companyId=485" target="_blank" class="checkAll" style="display:none">查看该公司全部面试评价</a>
+                    <div class="reviews-area"><!-- 面试评价列表-空 -->
+                        <div class="list-empty">
+                            <i></i>
+                            <span>该职位尚未收到面试评价</span>
+                            <span class="list_empty_tips" style=""> ,看看该公司<a href="#/gongsi/interviewExperiences.html?companyId=485" target="_blank" class="list_empty_link">其他职位的面试评价</a></span>
+                        </div>
+                    </div>
+                </dl>
+
+                <dl class="view_again module-container">
+                    <div class="module-title">看了此职位的人还会看</div>
+                    <a href="#/recommend/reView/1993280.html" target="_blank" class="checkAll">查看更多</a>
+                    <div class="view_again_area"></div>
+                    <!-- <ul>
+                    </ul> -->
+                </dl>
+
+
+                <!-- 推荐 -->
+            <!--
+            @require "common/widgets/recommend/main.less"
+-->
+                <!-- 公司详情页、职位详情页 推荐-->
+
+
+
+                <div class="popular_recom hide-recom">
+                    <a rel="nofollow" href="javascript:;" class="expansion">展开<i></i></a>
+                    <dl class="popular_company clearfix">
+                        <dt>推荐公司：</dt>
+                        <dd>
+                            <a href="#/gongsi/9251.html">美柚</a>
+                            <a href="#/gongsi/1373.html">喜马拉雅fm</a>
+                            <a href="#/gongsi/14229.html">微盟</a>
+                            <a href="#/gongsi/49369.html">淘粉吧</a>
+                            <a href="#/gongsi/80170.html">三目猴</a>
+                            <a href="#/gongsi/37236.html">斗鱼tv</a>
+                            <a href="#/gongsi/40738.html">小红唇</a>
+                            <a href="#/gongsi/97631.html">汽车超人</a>
+                            <a href="#/gongsi/32615.html">小奥</a>
+                            <a href="#/gongsi/36996.html">三好网</a>
+                            <a href="#/gongsi/94866.html">金卖网</a>
+                            <a href="#/gongsi/68524.html">编程猫</a>
+                            <a href="#/gongsi/23014.html">快法务</a>
+                            <a href="#/gongsi/1575.html">百度招聘</a>
+                            <a href="#/gongsi/81491.html">蚂蚁金服</a>
+                            <a href="#/gongsi/62.html">今日头条</a>
+                            <a href="#/gongsi/2474.html">滴滴</a>
+                            <a href="#/gongsi/20909.html">AcFun</a>
+                            <a href="#/gongsi/5858.html">安居客</a>
+                            <a href="#/gongsi/59251.html">映客</a>
+                            <a href="#/gongsi/3712.html">京东</a>
+                        </dd>
+                    </dl>
+                    <dl class="popular_city clearfix">
+                        <dt class="title">推荐城市：</dt>
+                        <dd>
+                            <a href="#/beijing/">北京找工作</a>
+                            <a href="#/beijing-zhaopin/">北京招聘</a>
+                            <a href="#/shanghai/">上海找工作</a>
+                            <a href="#/shanghai-zhaopin/">上海招聘</a>
+                            <a href="#/hangzhou/">杭州找工作</a>
+                            <a href="#/hangzhou-zhaopin/">杭州招聘</a>
+                            <a href="#/guangzhou/">广州找工作</a>
+                            <a href="#/guangzhou-zhaopin/">广州招聘</a>
+                            <a href="#/shenzhen/">深圳找工作</a>
+                            <a href="#/shenzhen-zhaopin/">深圳招聘</a>
+                            <a href="#/chengdu/">成都找工作</a>
+                            <a href="#/chengdu-zhaopin/">成都招聘</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 公司详情页、职位详情页 推荐-->
+            </div>
+            <div class="content_r">
+                <dl class="job_company">
+                    <dt>
+                        <a href="/company/inser?id={{$company -> id}}" target="_blank">
+                            <img class="b2" src="{{$company -> logo}}" alt="北京慧聪互联信息技术有限公司" height="80" width="80">
+                            <div>
+                                <h2 class="fl">
+                                    {{$company -> short_name}}
+                                    <img src="{{$company -> logo}}" alt="拉勾认证企业" height="19" width="15">
+                                    <span class="dn">拉勾认证企业</span>
+                                </h2>
+                            </div>
+                        </a>
+                    </dt>
+                    <dd>
+                        <ul class="c_feature">
+                            <li>
+                                <span>领域</span> {{$company -> trade}}
+                            </li>
+                            <li>
+                                <span>规模</span> {{$company -> scale}}
+                            </li>
+                            <li>
+                                <span>主页</span>
+                                <a href="#/" target="_blank" title="#" rel="nofollow">{{$company -> web}}</a>
+                            </li>
+                        </ul>
+                        <h4>发展阶段</h4>
+                        <ul class="c_feature">
+                            <li><span>目前阶段</span> {{$company -> stage}}</li>
+                        </ul>
+
+                        <h4>工作地址</h4>
+                        <div class="work_addr">
+                            <a href="#/jobs/list_?city=%E5%85%A8%E5%9B%BD#filterBox"></a>
+                            - {{$job -> address}}
+                        </div>
+                        <div style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;" id="smallmap"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: grab;"><div style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; width: 280px; height: 200px;" class="BMap_mask"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span title="" class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px none; -moz-user-select: none; cursor: pointer; background: transparent url(&quot;#.map.bdimg.com/images/blank.gif&quot;) repeat scroll 0% 0%; width: 19px; height: 25px; left: 130px; top: 75px; z-index: -7995450;"></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"><label style="position: absolute; -moz-user-select: none; display: none; cursor: inherit; background-color: rgb(190, 190, 190); border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font: 12px arial,simsun,sans-serif; z-index: -20000; color: rgb(190, 190, 190);" unselectable="on" class="BMapLabel">shadow</label></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px none; width: 0px; height: 0px; -moz-user-select: none; left: 130px; top: 75px; z-index: -7995450;"><div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden;">
+                          <img src="{{url('home/jobShow/index/images/ditu.jpg')}}" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"><span unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px none; width: 20px; height: 11px; -moz-user-select: none; left: 134px; top: 89px;"><div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden;">
+                          <img src="{{url('home/jobShow/index/images/ditu.jpg')}}" style="display: block; border:none;margin-left:-19px; margin-top:-13px; "></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;"><div style="position: absolute; overflow: visible; z-index: -100; left: 140px; top: 100px; display: block;">
+                                        <img src="{{url('home/jobShow/index/images/di1.png')}}" style="-moz-user-select: none; position: absolute; border: medium none; width: 256px; height: 256px; left: -5px; top: -100px; max-width: none; opacity: 1;">
+                                        <img src="{{url('home/jobShow/index/images/di2.png')}}" style="-moz-user-select: none; position: absolute; border: medium none; width: 256px; height: 256px; left: -261px; top: -100px; max-width: none; opacity: 1;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: none;"><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 0; display: none;"></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 10; display: none;"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div></div><div title="退出全景" style="z-index: 1201; display: none;" class="pano_close"></div><a title="退出室内景" style="z-index: 1201; display: none;" class="pano_pc_indoor_exit"><span style="float:right;margin-right:12px;">出口</span></a><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:-moz-grab"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div class=" anchorBL" style="height: 32px; position: absolute; z-index: 30; -moz-user-select: none; bottom: 0px; right: auto; top: auto; left: 1px; display: none;"><a style="outline: medium none;" href="#.baidu.com/?sr=1" target="_blank" title="到百度地图查看此区域">
+                                    <img style="border:none;width:77px;height:32px" src="{{url('home/jobShow/index/images/copyright_logo.png')}}"></a></div><div style="cursor: default; white-space: nowrap; -moz-user-select: none; color: black; background: transparent none repeat scroll 0% 0%; font: 11px/15px arial,simsun,sans-serif; bottom: 2px; right: auto; top: auto; left: 4px; position: absolute; z-index: 10;" class=" BMap_cpyCtrl BMap_noprint anchorBL" unselectable="on"><span style="display: inline;" _cid="1"><span style="font-size:11px">© 2016 Baidu&nbsp;- Data © <a target="_blank" href="#/" style="display:inline;">NavInfo</a> &amp; <a target="_blank" href="#.cn/" style="display:inline;">CenNavi</a> &amp; <a target="_blank" href="#/" style="display:inline;">道道通</a></span></span></div></div>
+                        <a rel="nofollow" href="javascript:;" id="mapPreview">查看完整地图</a>
+                    </dd>
+                </dl>
+
+                <div id="jobs_similar">
+                    <h4 class="jobs_similar_header">
+                        <span>相似职位</span>
+                    </h4>
+                    <input value="true" id="similarPosition" type="hidden">
+                    <div class="jobs_similar_content" id="jobs_similar_content">
+                        <div class="jobs_similar_detail" id="jobs_similar_detail">
+                            <ul class="similar_list reset">
+                                <!--source=rec-->
+                                <li class="similar_list_item  clearfix" data-jobid="2136356">
+                                    <a class="position_link clearfix" href="#/jobs/2136356.html" target="_blank" data-index="0" data-lg-tj-id="9600" data-lg-tj-no="0001" data-lg-tj-cid="idnull" data-lg-tj-abt="default|0">
+                                        <div class="similar_list_item_logo">
+                                            <img style="display: block;" src="{{url('home/jobShow/index/images/hpk.png')}}" class="lazy_img" data-original="//#/thumbnail_120x120/image1/M00/2E/E8/CgYXBlV_4paAOS3zAAAZrdlLsyw968.jpg" alt="海拍客" height="56" width="56">
+                                        </div>
+                                        <div class="similar_list_item_pos">
+                                            <h2 title="Java">高级Java工程师</h2>
+                                            <p>15k-25k</p>
+                                            <p class="similar_company_name"><span class="similar_company_name_span">海拍客 </span>
+
+
+
+
+                                                <span>[杭州 - 西湖区] </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <!-- 鼠标划过时展示的公司信息 -->
+                                    <div class="similar_company_info dn">
+                                        <div class="arr"><span></span></div>
+                                        <p><span>领域：</span><span>电子商务</span></p>
+                                        <p><span>创始人：</span><span>赵晨</span></p>
+                                        <p><span>阶段：</span><span>B轮</span></p>
+                                        <p><span>规模：</span><span>150-500人</span></p>
+                                        <div class="similar_company_label">
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="similar_list_item  clearfix" data-jobId="2987469">
+                                    <a class="position_link clearfix" href="#/jobs/2987469.html" target="_blank" data-index="1" data-lg-tj-id="9600" data-lg-tj-no="0002" data-lg-tj-cid="idnull" data-lg-tj-abt="default|0">
+                                        <div class="similar_list_item_logo">
+                                            <img style="display: block;" src="{{url('home/jobShow/index/images/weita.png')}}" class="lazy_img" data-original="//#/thumbnail_120x120/i/image/M00/8A/5F/Cgp3O1h1mc-AVtrwAAFcOVs6i84056.JPG" alt="唯它时代" width="56" height="56" />
+                                        </div>
+                                        <div class="similar_list_item_pos">
+                                            <h2 title="Java架构">Java架构</h2>
+                                            <p>25K-40K</p>
+
+
+                                            <p class="similar_company_name" title="唯它时代 [杭州·西湖]">
+                                                唯它时代 [杭州·西湖]
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <!-- 鼠标划过时展示的公司信息 -->
+                                    <div class="similar_company_info dn">
+                                        <div class="arr"><span></span></div>
+                                        <p><span>领域：</span><span>电子商务,移动互联网</span></p>
+                                        <p><span>创始人：</span><span>Black Chen</span></p>
+                                        <p><span>阶段：</span><span>天使轮</span></p>
+                                        <p ><span>规模：</span><span>50-150人</span></p>
+                                        <div class="similar_company_label">
+                                            <span>年底双薪</span>
+                                            <span>交通补助</span>
+                                            <span>绩效奖金</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="similar_list_item  clearfix" data-jobId="2883923">
+                                    <a class="position_link clearfix" href="#/jobs/2883923.html" target="_blank" data-index="2" data-lg-tj-id="9600" data-lg-tj-no="0003" data-lg-tj-cid="idnull" data-lg-tj-abt="default|0">
+                                        <div class="similar_list_item_logo">
+                                            <img style="display: block;" src="{{url('home/jobShow/index/images/chwl.png')}}" class="lazy_img" data-original="//#/thumbnail_120x120/i/image/M00/99/DB/CgqKkVihIkCAF2F_AADC_XVDU-U678.jpg" alt="传化物流集团" width="56" height="56" />
+                                        </div>
+                                        <div class="similar_list_item_pos">
+                                            <h2 title="JAVA架构/专家">JAVA架构/专家</h2>
+                                            <p>18k-35k</p>
+
+
+                                            <p class="similar_company_name" title="传化物流集团 [杭州·萧山区]">
+                                                传化物流集团 [杭州·萧山区]
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <!-- 鼠标划过时展示的公司信息 -->
+                                    <div class="similar_company_info dn">
+                                        <div class="arr"><span></span></div>
+                                        <p><span>领域：</span><span>移动互联网,金融</span></p>
+                                        <p><span>创始人：</span><span>徐冠巨</span></p>
+                                        <p><span>阶段：</span><span>上市公司</span></p>
+                                        <p ><span>规模：</span><span>2000人以上</span></p>
+                                        <div class="similar_company_label">
+                                            <span>行业爆炸</span>
+                                            <span>扁平管理</span>
+                                            <span>“家”文化</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="similar_list_item  clearfix" data-jobId="2865560">
+                                    <a class="position_link clearfix" href="#/jobs/2865560.html" target="_blank" data-index="3" data-lg-tj-id="9600" data-lg-tj-no="0004" data-lg-tj-cid="idnull" data-lg-tj-abt="default|0">
+                                        <div class="similar_list_item_logo">
+                                            <img style="display: block;" src="{{url('home/jobShow/index/images/watiao.png')}}" class="lazy_img" data-original="/#/thumbnail_120x120/i/image/M00/01/ED/Cgp3O1Z7gh-Aapg5AAAM8GB41B4988.jpg" alt="跳蛙科技" width="56" height="56" />
+                                        </div>
+                                        <div class="similar_list_item_pos">
+                                            <h2 title="Java">Java</h2>
+                                            <p>16k-28k</p>
+
+
+                                            <p class="similar_company_name" title="跳蛙科技 [杭州·西湖区]">
+                                                跳蛙科技 [杭州·西湖区]
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <!-- 鼠标划过时展示的公司信息 -->
+                                    <div class="similar_company_info dn">
+                                        <div class="arr"><span></span></div>
+                                        <p><span>领域：</span><span>移动互联网,金融</span></p>
+                                        <p><span>创始人：</span><span></span></p>
+                                        <p><span>阶段：</span><span>A轮</span></p>
+                                        <p ><span>规模：</span><span>50-150人</span></p>
+                                        <div class="similar_company_label">
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="similar_list_item  clearfix" data-jobId="2861634">
+                                    <a class="position_link clearfix" href="#/jobs/2861634.html" target="_blank" data-index="4" data-lg-tj-id="9600" data-lg-tj-no="0005" data-lg-tj-cid="idnull" data-lg-tj-abt="default|0">
+                                        <div class="similar_list_item_logo">
+                                            <img style="display: block;" src="{{url('home/jobShow/index/images/dd.png')}}" class="lazy_img" data-original="//#/thumbnail_120x120/image1/M00/42/DC/Cgo8PFXNdImAA0hiAACBD0dX7Ds225.png?cc=0.6919486154416709" alt="滴滴出行（小桔科技）" width="56" height="56" />
+                                        </div>
+                                        <div class="similar_list_item_pos">
+                                            <h2 title="高级Java工程师">高级Java工程师</h2>
+                                            <p>15k-30k</p>
+
+
+                                            <p class="similar_company_name" title="滴滴出行（小桔科技） [杭州·西湖区]">
+                                                滴滴出行（小桔科技） [杭州·西湖区]
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <!-- 鼠标划过时展示的公司信息 -->
+                                    <div class="similar_company_info dn">
+                                        <div class="arr"><span></span></div>
+                                        <p><span>领域：</span><span>移动互联网,电子商务</span></p>
+                                        <p><span>创始人：</span><span></span></p>
+                                        <p><span>阶段：</span><span>D轮及以上</span></p>
+                                        <p ><span>规模：</span><span>2000人以上</span></p>
+                                        <div class="similar_company_label">
+                                            <span>节日礼物</span>
+                                            <span>绩效奖金</span>
+                                            <span>年度旅游</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#/jobs/list_Java?kd=Java&amp;spc=1&amp;pl=&amp;gj=1-3%E5%B9%B4&amp;xl=&amp;yx=&amp;gx=&amp;st=&amp;labelWords=&amp;lc=&amp;workAddress=&amp;city=%E5%8C%97%E4%BA%AC" class="jobs_similar_footer" target="_blank" data-lg-tj-id="9700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多相似职位</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--广告位-->
+                <div key="ZHIWEIYE_YOUCEERWEIMA" class="lgad_jsonp" style="margin-top: 20px;"><img style="width: 282px; height: 130px;" src="{{url('home/jobShow/index/images/ggw.png')}}"></div>
+            </div>
+        </div>
+        <!-- 页面主体END -->
+>>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 @endsection
 
 <!-- footer -->

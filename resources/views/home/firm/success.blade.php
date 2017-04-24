@@ -14,7 +14,7 @@
                     <h2>
                         恭喜你，职位发布成功!
                     </h2>
-                    <a target="_blank" href="browse">
+                    <a target="_blank" href="browse?id={{$request->id}}">
                         预览职位
                     </a>
                     <br>
