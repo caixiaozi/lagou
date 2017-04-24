@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Hash;
 use Session;
-use Gregwar\Captcha\CaptchaBuilder;
+
 use App\Http\Requests;
 class LoginController extends Controller
 {
@@ -19,21 +19,23 @@ class LoginController extends Controller
     //执行登录
     public function doLogin(Request $request)
     {
+
       $vip = DB::table('vip')->where(['email' => $request->input('email'),'password' => $request->input('password'),'status' => 2]);
         //检测密码是否一致
         if (true) {
             if ($vip) {
                 if (true) {
                     //登录成功将用户存入session
-                    session(['vip' => $vip]);
+
                     //判断用户类型/个人/企业
                     $vip = DB::table('vip')->where('email', $request->input('email'))->first();
                     $type = $vip->type;
                     if ($type == 1) {
-                        return view('home/two');
+                        session(['vip' => $vip]);
+                        return redirect('/');
                     }
                     if ($type == 2) {
-                        return view('/company/index?id=" . $tyid . ');
+                        return view('home.CompanyShow.index ');
                     }
                 } else {
                     return view('home/login');
@@ -42,5 +44,13 @@ class LoginController extends Controller
                 return view('home/login');
             }
         }
+    }
+
+    public function getLogout()
+    {
+        session(['vip' => null]);
+        // dd(session('user'));
+        echo "<script>alert('退出成功');</script> ";
+        return redirect('/');
     }
 }

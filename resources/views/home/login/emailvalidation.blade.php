@@ -49,8 +49,8 @@
                 <a href="/index.php/Home/companyJob/create.html">进入企业版</a>
             </div>
             <ul class="lg_tbar_r reset">
-                <li> <a href="/index.php/Home/Login/topLogin.html" target="_blank" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a> </li>
-                <li> <a href="/index.php/Home/Register/register.html" target="_blank" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a> </li>
+                <li> <a href="{{url('home/login')}}" target="_blank" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a> </li>
+                <li> <a href="{{url('register')}}" target="_blank" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a> </li>
             </ul>
         </div>
     </div>
@@ -60,7 +60,7 @@
                 <a href="/" class="lg_logo" data-lg-tj-id="5t00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"> <h1>拉勾网</h1> <span>普通版</span> </a>
             </div>
             <ul class="lg_tnav_wrap reset">
-                <li> <a href="/" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a> </li>
+                <li> <a href="{{url('/')}}" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a> </li>
                 <li> <a href="/index.php/Home/Company/index.html" data-lg-tj-id="5v00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a> <b class="unhandleNum" id="unhandleNum"></b> </li>
                 <li> <a href="/index.php/Home/YiPai/index.html" data-lg-tj-id="5w00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">一拍</a> </li>
             </ul>

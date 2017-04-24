@@ -65,7 +65,7 @@
                             <input name="licenes" id="businessLicenes"  type="file">
                         </div>
 
-                        <input type="hidden" name="id" value="">
+                        <input type="hidden" name="id" value="{{$request->id}}">
                         {{csrf_field()}}
                         <input type="submit" value="提交" class="fr">
                     </form>

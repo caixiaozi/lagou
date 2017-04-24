@@ -10,6 +10,6 @@ class FirmController extends Controller
     //
     public function firm()
     {
-        return view('home.firm.success');
+        return view('home.firm.edit');
     }
 }

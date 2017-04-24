@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,14 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta content="拉勾,拉勾网,拉勾招聘,拉钩, 拉钩网 ,互联网招聘,拉勾互联网招聘, 移动互联网招聘, 垂直互联网招聘, 微信招聘, 微博招聘, 拉勾官网, 拉勾百科,跳槽, 高薪职位, 互联网圈子, IT招聘, 职场招聘, 猎头招聘,O2O招聘, LBS招聘, 社交招聘, 校园招聘, 校招,社会招聘,社招" name="keywords">
-
     <meta content="拉勾网是3W旗下的互联网领域垂直招聘网站" name="description">
-
     <title>找工作-互联网招聘求职网-拉勾网</title>
-
     <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
-
-
     <!-- global_domain FE_base... -->
 
     <script type="text/javascript">
@@ -43,9 +39,6 @@
             window.GLOBAL_CDN_DOMAIN = 'www.lgstatic.com';
         })();
     </script>
-
-
-
 
     <!-- 公共样式 -->
     <!-- header样式 -->	<!-- footer样式 -->
@@ -81,24 +74,18 @@
     <script async="" src="{{url('home/personal/myself/js/msgPopup_9611cae.js')}}" data-require-id="common/widgets/common/msgPopup"></script>
     <script charset="utf-8" class="lazyload" src="{{url('home/personal/myself/js/lagou_5427c0e.js')}}"></script>
     <script async="" src="{{url('home/personal/myself/js/main_e08c2f2.js')}}" data-require-id="common/components/template-helper/main"></script>
-
-
 {{--<script src="{{url('home/personal/myself/js/vendor_e3ddeee.js')}}" type="text/javascript"></script>--}}
 <body>
 <!--导航  -->
 <div id="lg_header">
     <div id="lg_tbar">
-
         <div class="inner">
-
             <div class="lg_tbar_l">
-                <a rel="nofollow" href="https://www.lagou.com/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a rel="nofollow" href="/index.php/Home/companyJob/create.html" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
+                <a rel="nofollow" href="" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+                <a rel="nofollow" href="" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
             </div>
 
-
             <ul class="lg_tbar_r">
-                <!-- if has unread message, add class unreaded -->
                 <li class="msg_dropdown" data-lg-tj-track-code="index_message">
                     <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
                         消息
@@ -107,38 +94,33 @@
 
                 </li>
                 <li>
-                    <a href="/myremuse" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
+                    <a href="{{url('myresume')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
                 </li>
                 <li>
-                    <a href="/index.php/Home/ResumeSend/index.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_deliver" data-lg-tj-track-type="1">投递箱</a>
+                    <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_deliver" data-lg-tj-track-type="1">投递箱</a>
                     <em class="noticeDot dn" id="noticeDot_delivery"></em>
                 </li>
                 <li>
-                    <a href="/index.php/Home/Favorite/index.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_favorite" data-lg-tj-track-type="1">收藏夹</a>
+                    <a href="" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_favorite" data-lg-tj-track-type="1">收藏夹</a>
                 </li>
                 <li class="user_dropdown" data-lg-tj-track-code="index_user">
-                    <span class="unick bl">杜玉玲</span>
+                    <span class="unick bl">{{$com->name}}</span>
                     <em class="noticeDot dn" id="noticeDot_name"></em>
                     <i></i>
                     <ul>
                         <li>
-                            <a href="https://www.lagou.com/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a>
+                            <a href="" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a>
                         </li>
                         <li>
-                            <a href="/index.php/Home/ResumeHandle/show.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                            <a href="" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
                             <em class="noticeDot dn" id="noticeDot_invitation"></em>
                         </li>
 
                         <li>
-                            <a href="https://account.lagou.com/account/cuser/userInfo.html" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a>
+                            <a href="" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a>
                         </li>
-
                         <li>
-                            <a href="/head" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
-                        </li>
-
-                        <li>
-                            <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+                            <a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
                         </li>
                     </ul>
                 </li>
@@ -160,24 +142,22 @@
             </div>
             <ul class="lg_tnav_wrap">
                 <li>
-                    <a href="#/" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
+                    <a href="{{url('home/two')}}" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
                 </li>
                 <li>
-                    <a href="#/googsi"  data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_company">公司</a>
+                    <a href=""  data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_company">公司</a>
                 </li>
                 <li>
-                    <a rel="nofollow" href="yipai"  data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank" data-lg-tj-track-code="index_yipai">一拍</a>
+                    <a rel="" href=""  data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank" data-lg-tj-track-code="index_yipai">一拍</a>
                 </li>
                 <li>
-                    <a rel="nofollow" href="yanzhi"  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
+                    <a rel="" href=""  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
                 </li>
                 <li>
-                    <a rel="nofollow" href="dajing"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
+                    <a rel="" href=""  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
                 </li>
             </ul>
-
         </div>
-
     </div>
 </div>
 
@@ -198,9 +178,9 @@
     </div>
     <!-- 右边内容 -->
     <div class="y_nav" style="display:block">
-        {{--<p>欢迎您,{{session('user') -> username}}</p>--}}
+        <p><h2>欢迎您,{{session('vip') -> name}}</h2></p>
         <br>
-        <img src="http://wanzao2.b0.upaiyun.com/xbimg/1007/noral/usercontent/2003/1/20/1043028035734394.png" alt="">
+        {{--<img src="http://wanzao2.b0.upaiyun.com/xbimg/1007/noral/usercontent/2003/1/20/1043028035734394.png" alt="">--}}
     </div>
     <!-- 个人信息 -->
     <div class="y_nav" style="display:none"><dl class="c_section">
@@ -212,7 +192,7 @@
             </dt>
             <dd>
                 <div class="userinfo_edit" id="userinfoEdit">
-                    <form id="userinfoEditForm" action="/personal/message" method="post">
+                    <form id="userinfoEditForm" action="postMessage" method="post">
                         <div class="avatar">
                             <img class="avatar_img" src="http://www.lgstatic.com/images/myresume/default_headpic.png"  alt="" height="80" width="80">
                             <input name="portrait" value="" type="hidden">
@@ -220,24 +200,21 @@
                         <input class="avatar_upload" id="avatarUpload" name="headPic" defaultvalue="default_headpic.png" title="支持jpg、jpeg、gif、png格式，文件小于10M" type="file">
                         <div class="username input_box">
                             <label class="label_input_box" for="userinfoEditUserName">昵称</label>
-                            <input id="username" name="userName" placeholder="昵称" value="" maxlength="15" data-maxlength="15" type="text">
+                            <input id="username" name="name" placeholder="昵称" value="{{$com->name}}" maxlength="15" data-maxlength="15" type="text">
                         </div>
                         <div class="userinfo_sex input_box">
                             <span class="label_input_box">性别</span>
-                            {{--@if($data->sex == 1)--}}
-                                {{--<input  name="sex" value="1"  type="radio" checked="checked">男--}}
-                                {{--<input name="sex" value="2" type="radio">女--}}
-                            {{--@endif--}}
-                            {{--@if($data->sex == 2)--}}
+                            @if($com->sex == 1)
+                                <input  name="sex" value="1"  type="radio" checked="checked">男
+                                <input name="sex" value="2" type="radio">女
+                            @endif
+                            @if($com->sex == 2)
                                 <input  name="sex" value="1"  type="radio" >男
                                 <input  name="sex" value="2" type="radio" checked="checked">女
-                            {{--@endif--}}
+                            @endif
                         </div>
                         {{csrf_field()}}
-
-
                         <div class="toolbar">
-                            <!-- <a href="javascript:;" class="btn userinfo_save">保存</a> -->
                             <button class="btn userinfo_save">保存</button>
                         </div>
                     </form>
@@ -256,13 +233,14 @@
                 </dt>
                 <dd>
                     <ul class="user_noModify">
-                        <li>当前登录帐号：<span>1933224230@qq.com</span> </li>
+                        <br><br>
+                        <li>当前登录帐号：<span>{{$com->email}} </span> </li><br><br><br>
                         <li>绑定后，你可以同时使用以下方式登录拉勾</li>
                     </ul>
                     <dl class="user_thirdLogin">
                         <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/mail-bding_3e4986b.png" alt="mail"></dt>
 
-                        <dd>已绑定邮箱  <span>1933224230@qq.com </span>
+                        <dd>已绑定邮箱  <span>{{$com->email}} </span>
                         </dd>
                     </dl>
                     <dl class="user_thirdLogin">
@@ -274,15 +252,7 @@
 
                         <dd><a href="https://passport.lagou.com/oauth20/auth_qqProvider.html?state=bind">绑定QQ帐号</a> </dd>
                     </dl>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/weibo-bding_206018d.png" alt="weibo"></dt>
-                        <dd><a href="https://passport.lagou.com/oauth20/auth_sinaWeiboProvider.html?state=bind">绑定新浪微博帐号</a></dd>
-                    </dl>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/wechat-bding_a598bf4.png" alt="weixin"></dt>
-                        <!-- 判断微信帐号 -->
-                        <dd><a href="https://passport.lagou.com/oauth20/auth_weixinProvider.html?state=bind">绑定微信帐号</a></dd>
-                    </dl>
+
                 </dd>
             </dl>
     </div>
@@ -300,12 +270,14 @@
             </h1>
             </dt>
             <dd>
-                <form id="updatePswForm">
+                <form id="updatePswForm" method="post" action="postUpdate">
+                    {{csrf_field()}}
                     <table class="savePassword">
                         <tr>
                             <td>登录帐号</td>
                             <td class="c7">
-                                1933224230@qq.com </td>
+                                <input name="name" id="oldpassword" maxlength="16" value="{{$com->email}}" autocomplete="off" type="text">
+                            </td>
                         </tr>
                         <tr>
                             <td class="label">当前密码</td>
@@ -318,13 +290,14 @@
                             <td class="label">新密码</td>
                             <td><input type="password" name="newpassword" id="newpassword"  maxlength="16" autocomplete="off"/></td>
                         </tr>
-                        <tr>
-                            <td class="label">确认密码</td>
-                            <td><input type="password" name="comfirmpassword" id="comfirmpassword"  maxlength="16" autocomplete="off"/></td>
-                        </tr>
+                        {{--<tr>--}}
+                            {{--<td class="label">确认密码</td>--}}
+                            {{--<td><input type="password" name="comfirmpassword" id="comfirmpassword"  maxlength="16" autocomplete="off"/></td>--}}
+                        {{--</tr>--}}
                         <tr>
                             <td>&nbsp;</td>
-                            <td><input type="submit" value="保 存" /></td>
+                            <td>
+                               <button class="btn userinfo_save">保存</button></td>
                         </tr>
                     </table>
                 </form>

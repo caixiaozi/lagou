@@ -18,12 +18,13 @@ class RegisterController extends Controller
 
     public function doregister(Request $request)
     {         //提取数据进行处理
+
         $view = 'home.email.welecome';
         $data = $request->only('name', 'email', 'password', 'type');
-        $data['password'] = Hash::make($data['password']);
+        $data['password'] = md5($data['password']);
         $data['_token'] = str_random(12);
         $email = $request->input('email');
-
+        //dd($data);
         if (DB::table('vip')->where('email', $request->input('email'))->first()) {
             echo "<script>alert('邮箱已存在');top.location='register';</script> ";
         } else {
@@ -60,10 +61,12 @@ class RegisterController extends Controller
             //激活用户
             $res = DB::table('vip')->where('_token',$id)->update(['status'=>2]);
             if ($res) {
-                echo "激活成功";
-                echo "<script>alert('激活成功');top.location='/';</script> ";
+//                echo "激活成功";
+                echo "<script>alert('激活成功');</script> ";
+                return view('home/two');
             }else{
                 echo "激活失败";
+                return view('home/register');
             }
         }else{
             echo "非法请求";

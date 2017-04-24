@@ -95,6 +95,29 @@
 <body>
 <!-- header -->
 <!--C端头部通栏广告位-->
+<script type="text/javascript">
+    $(function () {
+
+
+
+        //即时显示上传的头像
+        $("input[name=headPic]").change(function () {
+            var $file = $(this);
+//            console.log($file);
+            var objUrl = $file[0].files[0];
+            //获得一个http格式的url路径:mozilla(firefox)||webkit or chrome
+            var windowURL = window.URL || window.webkitURL;
+            //createObjectURL创建一个指向该参数对象(图片)的URL
+            var dataURL;
+            dataURL = windowURL.createObjectURL(objUrl);
+            $("#mypic").attr("src",dataURL);
+            $("#portraitShow").css('display', 'block');
+        });
+
+
+    });
+</script>
+
 
 <!--验证注册邮箱-->
 <!--
@@ -103,100 +126,158 @@
 
 
 <div id="lg_header">
-
     <!--C端头部黑色导航-->
-    <div id="lg_tbar">
-        <div class="inner">
-            <div class="lg_tbar_l">
-                <a rel="nofollow" href="https://www.lagou.com/app/download.html" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a rel="nofollow" href="/index.php/Home/companyJob/create.html" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_qiyeban">进入企业版</a>
+    <div id="lg_header">
+        <!--C端头部黑色导航-->
+        <div id="lg_tbar">
+            <div class="inner">
+                <div class="lg_tbar_l">
+                    <a href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+                    <a href="#hr.#dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a></div>
+
+                <ul class="lg_tbar_r">
+                    <!-- if has unread message, add class unreaded -->
+                    <li class="msg_dropdown">
+                        <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">消息
+                            <em class="msg_amount" id="headMsgAmount" style="display: none;">6</em></a>
+                        <div class="lg_msg_popup">
+                            <div class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody" style="overflow: hidden;">
+                                <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;">
+                                    <div class="mCSB_container" style="position: relative; top: 0px;">
+                                        <ul class="lg_top_msg_list">
+                                            <li class="lg_msg_item">
+                                                <em>·</em>
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#">你投递给
+                                                        <span class="empha">广告门·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                            </li>
+                                            <li class="lg_msg_item">
+                                                <em>·</em>
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#">你投递给
+                                                        <span class="empha">中科聚网·PHP开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                            </li>
+                                            <li class="lg_msg_item">
+                                                <em>·</em>
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#">你投递给
+                                                        <span class="empha">五分旅游网·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                            </li>
+                                            <li class="lg_msg_item">
+                                                <em>·</em>
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#">你投递给
+                                                        <span class="empha">优谱创新教育·PHP软件开发工程师</span>职位的简历，已经投递成功，请静候佳音
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="lg_msg_item">
+                                                <em>·</em>
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#">你投递给
+                                                        <span class="empha">经研八·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                            </li>
+                                            <li class="lg_msg_item">
+                                                <em>·</em>
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754297556275085312">你投递给
+                                                        <span class="empha">中少总社·PHP程序员</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                            </li>
+                                            <li class="lg_msg_item">
+                                                <div>
+                                                    <!-- 投递反馈 -->
+                                                    <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754296559524536320">你投递给
+                                                        <span class="empha">天奇健·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mCSB_scrollTools" style="position: absolute; display: block;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div class="mCSB_dragger" style="position: absolute; height: 166px; top: 0px;" oncontextmenu="return false;">
+                                                <div class="mCSB_dragger_bar" style="position: relative; line-height: 166px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg_msg_pu_footer">
+                                <a href="" target="_blank" class="lg_msg_setting fl">
+                                    <i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+                                <a href="" class="lg_msg_more fr">查看更多</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{url('myresume')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a></li>
+                    <li>
+                        <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+                        <em class="noticeDot dn" id="noticeDot_delivery"></em>
+                    </li>
+                    <li>
+                        <a href="" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a></li>
+                    <li class="user_dropdown">
+                        <span class="unick bl">{{session('vip') -> name}}</span>
+                        <em class="noticeDot dn" id="noticeDot_name"></em>
+                        <i>
+                        </i>
+                        <ul>
+                            <li>
+                                <a href="" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                            <li>
+                                <a href="" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                                <em class="noticeDot dn" id="noticeDot_invitation"></em>
+                            </li>
+                            <li>
+                                <a href="{{url('personal')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
+                            <li>
+                                <a href="" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
+                            <li>
+                                <a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <ul class="lg_tbar_r">
-                <!-- if has unread message, add class unreaded -->
-                <li class="msg_dropdown" data-lg-tj-track-code="index_message">
-                    <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
-                        消息
-                        <em class="msg_amount hide" id="headMsgAmount"></em>
-                    </a>
-                </li>
-                <li>
-                    <a href="/myremuse" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_resume">我的简历</a>
-                </li>
-                <li>
-                    <a href="/index.php/Home/ResumeSend/index.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_deliver" data-lg-tj-track-type="1">投递箱</a>
-                    <em class="noticeDot dn" id="noticeDot_delivery"></em>
-                </li>
-                <li>
-                    <a href="/index.php/Home/Favorite/index.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-tj-track-code="index_favorite" data-lg-tj-track-type="1">收藏夹</a>
-                </li>
-                <li class="user_dropdown" data-lg-tj-track-code="index_user">
-                    <span class="unick bl">杜玉玲</span>
-                    <em class="noticeDot dn" id="noticeDot_name"></em>
-                    <i></i>
-                    <ul>
-                        <li>
-                            <a href="https://www.lagou.com/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a>
-                        </li>
-                        <li>
-                            <a href="/index.php/Home/ResumeHandle/show.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
-                            <em class="noticeDot dn" id="noticeDot_invitation"></em>
-                        </li>
-                        <li>
-                            <a href="https://account.lagou.com/account/cuser/userInfo.html" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a>
-                        </li>
-                        <li>
-                            <a href="/head" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
-                        </li>
-                        <li>
-                            <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+        </div><!--end #lg_tbar-->
+    </div>
+</div>
+
+<!--C端头部白色导航-->
+<div id="lg_tnav">
+    <div class="inner">
+        <div class="lg_tnav_l">
+            <a href="{{url('home/two')}}" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+                <h1 class="logo_birth_3rd">拉勾网</h1>
+            </a>
+            <div class="suggestCity"><strong>上海站</strong><em id="changeCity_btn">[切换城市]</em></div>
         </div>
-    </div><!--end #lg_tbar-->
+        <ul class="lg_tnav_wrap">
+            <li>
+                <a href="#/" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
+            </li>
+            <li>
+                <a href="#/googsi"  data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_company">公司</a>
+            </li>
+            <li>
+                <a rel="nofollow" href=""  data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank" data-lg-tj-track-code="index_yipai">一拍</a>
+            </li>
+            <li>
+                <a rel="nofollow" href=""  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
+            </li>
+            <li>
+                <a rel="nofollow" href=""  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-    <script type="text/javascript">
-        $('#logouta').click(function(){
-            $.post('/index.php/Home/Login/logout.html',{},function(data){
-                window.location.reload();
-            });
-            return false;
-        });
-    </script>
+<!--endC端头部白色导航-->
 
-    <!--C端头部白色导航-->
-    <div id="lg_tnav">
-        <div class="inner">
-            <div class="lg_tnav_l">
-                <a href="https://www.lagou.com/" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                    <h1>拉勾网</h1>
-                </a>
-            </div>
-            <ul class="lg_tnav_wrap">
-                <li>
-                    <a href="/" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
-                </li>
-                <li>
-                    <a href="/index.php/Home/Company/index.html" data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_company">公司</a>
-                </li>
-                <li>
-                    <a rel="nofollow" href="/index.php/Home/YiPai/index.html"  data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank" data-lg-tj-track-code="index_yipai">一拍</a>
-                </li>
-                <li>
-                    <a rel="nofollow" href="https://yanzhi.lagou.com/"  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
-                </li>
-                <li>
-                    <a rel="nofollow" href="https://pro.lagou.com"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
-                </li>
-            </ul>
-
-        </div>
-
-    </div><!--end #lg_tnav-->
-</div><!--end #header-->
-
-<input type="hidden" id="serverTime" value="1491793307122" />
 
 <!-- 页面主体START -->
 <div id="container">
@@ -205,25 +286,30 @@
             <div class="fl" id="resume_name">
                 <div class="nameShow fl">
                     <h1 title="jason的简历">{{session('name')}}</h1>
-                    <span class="rename">重命名</span>|
-                    <a target="_blank" href="">预览</a>
+
+                    <a target="_blank" href="">预览</a>|
+                    <a target="_blank" href="{{url('add')}}">编辑</a>
                 </div>
                 <form class="fl dn" id="resumeNameForm">
                     <input type="text" value="{{session('name')}}" name="resumeName" class="nameEdit c9">
                     <input type="submit" value="保存">|
-                    <a target="_blank" href="h/resume/preview.html">预览</a>
-                </form>
+                    <a target="_blank" href="h/resume/preview.html">预览</a></form>
             </div>
             <!--end #resume_name-->
-            <div class="fr c5" id="lastChangedTime">最后一次更新：
-                <span>{{session('time')}}</span>
-            </div>
+
             <!--end #lastChangedTime-->
-                <div id="resumeScore">
-                    <div class="mr_top_bg" id="baseinfo">
-                        <img src="{{url('home/shou/myresume/resume/tou_42952f6.png')}}" height="170" width="702" class="opa" />
-                    </div>
+
+            <div id="resumeScore">
+                <div class="mr_top_bg" id="baseinfo">
+
+                    <img src="{{url('home/shou/myresume/resume/tou_42952f6.png')}}" height="170" width="702" class="opa" />
                 </div>
+            </div>
+            {{--<div class="m_portrait">--}}
+                {{--<div></div>--}}
+                {{--<img width="702" height="120" alt="jason" src="{{ asset('home/shou/myresume/resume/tou_42952f6.png') }}">--}}
+            {{--</div>--}}
+
             <!--end #resumeScore-->
             <div class="profile_box" id="basicInfo">
                 <!-- <span class="c_edit"></span> -->
@@ -237,133 +323,30 @@
                     </div>
                     <div class="mr_head_r c_edit" style="">
                         <i class='jbxx'></i>
-                        <em>编辑</em>
                     </div>
-                </div>
-                <div class="basicShow">
-                    <br></span>
-                    <div class="m_portrait">
-                        <div></div>
-                        <img id="show_image" width="120" height="120" alt="jason" src="/Uploads/User/image/"></div>
-                </div>
-                <!--end .basicShow-->
-                <div class="basicEdit dn">
-                    <form id="profileForm" action="{{url('myresume/userupdate')}}" method="post" onsubmit="return $.sub(this)">
-                        <!--<input type="hidden" name="uid" value="{$Think.session.id}">-->
+                    <div class="basicShow">
                         <table>
-                            <tbody>
                             <tr>
-                                <td valign="top">
-                                    <span class="redstar">*</span></td>
-                                <td>
-                                    <input type="hidden" placeholder="" id='name'>
-                                    <input type="text" placeholder="姓名" name="name" id="name" value=""></td>
-                                <td valign="top"></td>
-                                <td>
-                                    <ul class="profile_radio clearfix reset">
-                                        <li class="current">男
-                                            <em></em>
-                                            <input type="radio" checked="checked" name="sex" value="1"></li>
-                                        <li>女
-                                            <em></em>
-                                            <input type="radio" name="sex" value="0"></li>
-                                    </ul>
-                                </td>
+                                <td>姓名:{{$data['username']}}</td>
+                                <td>性别:{{ str_replace([0,1],['女','男'],$data['sex'])}}</td>
                             </tr>
                             <tr>
-                                <td valign="top">
-                                    <span class="redstar">*</span></td>
-                                <td>
-                                    <input type="hidden" id="topDegree" value="" name="education">
-                                    <input type="button" value="" id="select_topDegree" class="profile_select_190 profile_select_normal">
-                                    <div class="boxUpDown boxUpDown_190 dn" id="box_topDegree" style="display: none;">
-                                        <ul>
-                                            <li>大专</li>
-                                            <li>本科</li>
-                                            <li>硕士</li>
-                                            <li>博士</li>
-                                            <li>其他</li></ul>
-                                    </div>
-                                </td>
-                                <td valign="top">
-                                    <span class="redstar">*</span></td>
-                                <td>
-                                    <input type="hidden" id="workyear" value="" name="work_year">
-                                    <input type="button" value="" id="select_workyear" class="profile_select_190 profile_select_normal">
-                                    <div class="boxUpDown boxUpDown_190 dn" id="box_workyear" style="display: none;">
-                                        <ul>
-                                            <li>应届毕业生</li>
-                                            <li>1年</li>
-                                            <li>2年</li>
-                                            <li>3年</li>
-                                            <li>4年</li>
-                                            <li>5年</li>
-                                            <li>6年</li>
-                                            <li>7年</li>
-                                            <li>8年</li>
-                                            <li>9年</li>
-                                            <li>10年</li>
-                                            <li>10年以上</li></ul>
-                                    </div>
-                                </td>
+                                <td>学历:{{$data['education']}}</td>
+                                <td>工作经验:{{$data['work_year']}}</td>
                             </tr>
                             <tr>
-                                <td valign="top">
-                                    <span class="redstar">*</span></td>
-                                <td colspan="3">
-                                    <input type="hidden" placeholder="手机号码" value="" id="phone">
-                                    <input type="text" placeholder="手机号码" value="" name="phone" id="tel"></td>
+                                <td>电话:{{$data['phone']}}</td>
+                                <td>Email:{{$data['email']}}</td>
                             </tr>
-                            <tr>
-                                <td valign="top">
-                                    <span class="redstar">*</span></td>
-                                <td colspan="3">
-                                    <input type="hidden" placeholder="接收面试通知的邮箱" value="" id="email">
-                                    <input type="text" placeholder="接收面试通知的邮箱" value="" name="email" id="email"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top"></td>
-                                <td colspan="3">
-                                    <input type="hidden" id="currentState" value="" name="now_state">
-                                    <input type="button" value="目前状态" id="select_currentState" class="profile_select_410 profile_select_normal">
-                                    <div class="boxUpDown boxUpDown_410 dn" id="box_currentState" style="display: none;">
-                                        <ul>
-                                            <li>我目前已离职，可快速到岗</li>
-                                            <li>我目前正在职，正考虑换个新环境</li>
-                                            <li>我暂时不想找工作</li>
-                                            <li>我是应届毕业生</li></ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="3">
-                                    <input type="submit" value="保 存" class="btn_profile_save">
-                                    <a class="btn_profile_cancel" href="javascript:void(0);">取 消</a></td>
-                            </tr>
-                            </tbody>
-                        </table>{{csrf_field()}}
-                    </form>
-                    <!--end #profileForm-->
-                    <div class="new_portrait">
-                        <div class="portrait_upload" id="portraitNo">
-                            <span>上传自己的头像</span></div>
-                        <div class="portraitShow" id="portrait">
-                            <img width="120" height="120" src="/image">
-                            <span>更换头像</span></div>
-                        <input type="file" value="" title="支持jpg、jpeg、gif、png格式，文件小于5M" onchange="uploadFile();" name="image" id="headPic" class="myfiles">
-                        <!--<input type="hidden" id="headPicHidden" />-->
-                        <em>尺寸：120*120px
-                            <br>大小：小于5M</em>
-                        <span style="display:none;" id="headPic_error" class="error"></span>
+                        </table>
                     </div>
-                    <!--end .new_portrait--></div>
-              </div>
-            <!--end #basicInfo-->
-            <div class="profile_box" id="expectJob">
-                <h2></h2>
-                <span class="c_edit"></span>
-                <div class="mr_moudle_head clearfixs mr_w604" style='height:30px;'>
+                </div>
+            </div>
+<br><br><br>
+            <!-- 期望工作 -->
+            <div class="profile_box" id="basicInfo">
+                <!-- <span class="c_edit"></span> -->
+                <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
                     <div class="mr_head_l">
                         <div class="mr_title">
                             <span class="mr_title_l"></span>
@@ -371,1502 +354,319 @@
                             <span class="mr_title_r"></span>
                         </div>
                     </div>
-                    <div class="mr_head_r i c_edit">
-                        <i>
-                        </i>
-                        <em>编辑</em></div>
-                </div>
-                <div class="expectShow {{session('hope_out')}}">
-                    <span></span>
-                </div>
-                <!--end .expectShow-->
-                <div class="expectEdit dn">
-                    <form id="expectForm" onsubmit="return $.sub(this)" action="{{url('myresume/resumeshow')}}" method="post">{{csrf_field()}}
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <input type="hidden" id="expectCity" value="" name="city">
-                                    <input type="button" value="期望城市，如：北京" id="select_expectCity" name="city" class="profile_select_287 profile_select_normal">
-                                    <div class="boxUpDown boxUpDown_596 dn" id="box_expectCity" style="display: none;">
-                                        <dl>
-                                            <dt>热门城市</dt>
-                                            <dd>
-                                                <span>北京</span>
-                                                <span>上海</span>
-                                                <span>广州</span>
-                                                <span>深圳</span>
-                                                <span>成都</span>
-                                                <span>杭州</span></dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>ABCDEF</dt>
-                                            <dd>
-                                                <span>北京</span>
-                                                <span>长春</span>
-                                                <span>成都</span>
-                                                <span>重庆</span>
-                                                <span>长沙</span>
-                                                <span>常州</span>
-                                                <span>东莞</span>
-                                                <span>大连</span>
-                                                <span>佛山</span>
-                                                <span>福州</span></dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>GHIJ</dt>
-                                            <dd>
-                                                <span>贵阳</span>
-                                                <span>广州</span>
-                                                <span>哈尔滨</span>
-                                                <span>合肥</span>
-                                                <span>海口</span>
-                                                <span>杭州</span>
-                                                <span>惠州</span>
-                                                <span>金华</span>
-                                                <span>济南</span>
-                                                <span>嘉兴</span></dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>KLMN</dt>
-                                            <dd>
-                                                <span>昆明</span>
-                                                <span>廊坊</span>
-                                                <span>宁波</span>
-                                                <span>南昌</span>
-                                                <span>南京</span>
-                                                <span>南宁</span>
-                                                <span>南通</span></dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>OPQR</dt>
-                                            <dd>
-                                                <span>青岛</span>
-                                                <span>泉州</span></dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>STUV</dt>
-                                            <dd>
-                                                <span>上海</span>
-                                                <span>石家庄</span>
-                                                <span>绍兴</span>
-                                                <span>沈阳</span>
-                                                <span>深圳</span>
-                                                <span>苏州</span>
-                                                <span>天津</span>
-                                                <span>太原</span>
-                                                <span>台州</span></dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>WXYZ</dt>
-                                            <dd>
-                                                <span>武汉</span>
-                                                <span>无锡</span>
-                                                <span>温州</span>
-                                                <span>西安</span>
-                                                <span>厦门</span>
-                                                <span>烟台</span>
-                                                <span>珠海</span>
-                                                <span>中山</span>
-                                                <span>郑州</span></dd>
-                                        </dl>
-                                    </div>
-                                </td>
-                                <td>
-                                    <ul class="profile_radio clearfix reset" id='fo2_1'>
-                                        <input type="hidden" name="nature" value="12">
-
-                                        <li>全职</li>
-                                        <li>兼职</li>
-                                        <li>实习</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <script type="text/javascript">
-                                        //alert($);
-                                        $(function(){
-                                            var li = $('#fo2_1').find('li');
-                                            li.click(function(){
-                                                li.css('border','2px solid #c8e6de');
-                                                $(this).css('border', '2px solid #91cebe');
-                                                $(this).parents('ul').find('input').val($(this).html());
-                                                // alert($(this).html());
-                                                //alert($(this).parents('ul:first-child'));
-                                                //console.log($(this).parents('ul').find('input').val());
-                                            });
-                                        })
-                                    </script>
-                                    <input type="text" placeholder="期望职位，如：产品经理" value="" name="job" id="expectPosition"></td>
-                                <td>
-                                    <input type="hidden" id="expectSalary" value="" name="salary">
-                                    <input type="button" value="期望月薪" id="select_expectSalary" class="profile_select_287 profile_select_normal">
-                                    <div class="boxUpDown boxUpDown_287 dn" id="box_expectSalary" style="display: none;">
-                                        <ul>
-                                            <li>2k以下</li>
-                                            <li>2k-5k</li>
-                                            <li>5k-10k</li>
-                                            <li>10k-15k</li>
-                                            <li>15k-25k</li>
-                                            <li>25k-50k</li>
-                                            <li>50k以上</li></ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <input type="submit" id="fo2" value="保 存" class="btn_profile_save">
-                                    <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <input type="hidden" name="history_id" class="expId" value=""></form>
-                    </form>
-                    <!--end #expectForm-->
-                </div>
-                <!--end .expectEdit-->
-                    <div class="expectAdd pAdd ">
-                        <p>期望城市:</p>
-                        <p>工作:</p>
-                        <p>期望月薪:</p>
+                    <div class="mr_head_r c_edit" style="">
+                        <i class='jbxx'></i>
                     </div>
+                    <div class="basicShow">
+                        <table>
+                            <tr>
+                                <td>期望城市:{{$data['hope']->city}}</td>
+                                <td>  {{$data['hope']->nature}}</td>
 
+                            </tr>
+                            <tr>
+                                <td>工作:{{$data['hope'] -> job}}</td>
+                                <td>期望月薪:{{$data['hope'] -> salary}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <!--end #expectJob-->
-            <div class="profile_box" id="workExperience">
-                <!-- <h2>工作经历  <span> （投递简历时必填）</span></h2>
-                <span class="c_add"></span> -->
-                <div class="mr_moudle_head clearfixs mr_w604" style='height:30px;'>
+
+            <br>
+            <!-- 工作经历 -->
+            <div class="profile_box" id="basicInfo">
+                <!-- <span class="c_edit"></span> -->
+                <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
                     <div class="mr_head_l">
                         <div class="mr_title">
                             <span class="mr_title_l"></span>
                             <span class="mr_title_c">工作经历</span>
+
                             <span class="mr_title_r"></span>
                         </div>
                     </div>
-                    <div class="mr_head_r c_add">
-                        <i>
-                        </i>
-                        <em>添加</em></div>
-                </div>
-                <div class="experienceShow" >
-                <form class="experienceForm borderBtm dn" action="{{url('myresume/hisajax')}}" method="post" onsubmit="return $.sub(this)">{{csrf_field()}}
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="公司名称" name="companyName" class="companyName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="职位名称，如：产品经理" name="positionName" class="positionName"></td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="companyYearStart" value="" name="companyYearStart">
-                                    <input type="button" value="开始年份" class="profile_select_139 profile_select_normal select_companyYearStart">
-                                    <div class="box_companyYearStart boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="companyMonthStart" value="" name="companyMonthStart">
-                                    <input type="button" value="开始月份" class="profile_select_139 profile_select_normal select_companyMonthStart">
-                                    <div style="display: none;" class="box_companyMonthStart boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>01</li>
-                                            <li>02</li>
-                                            <li>03</li>
-                                            <li>04</li>
-                                            <li>05</li>
-                                            <li>06</li>
-                                            <li>07</li>
-                                            <li>08</li>
-                                            <li>09</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="companyYearEnd" value="" name="companyYearEnd">
-                                    <input type="button" value="结束年份" class="profile_select_139 profile_select_normal select_companyYearEnd">
-                                    <div class="box_companyYearEnd  boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>至今</li>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="companyMonthEnd" value="1" name="companyMonthEnd">
-                                    <input type="button" value="结束月份" class="profile_select_139 profile_select_normal select_companyMonthEnd">
-                                    <div style="display: none;" class="box_companyMonthEnd boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>01</li>
-                                            <li>02</li>
-                                            <li>03</li>
-                                            <li>04</li>
-                                            <li>05</li>
-                                            <li>06</li>
-                                            <li>07</li>
-                                            <li>08</li>
-                                            <li>09</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td colspan="3">{{csrf_field()}}
-                                <input type="submit" value="保 存" class="btn_profile_save">
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>{{csrf_field()}}
-                    <input type="hidden" name="history_id" class="expId" value="">
-                </form>
-                <!--end .experienceForm-->
-                         <ul class="wlist clearfix ">)
-                            <li data-id="">
-                                <a href="/myresume/delhistoryajax?">
-                                    <i class="sm_del dn"></i></a>
-                                <i class="sm_edit dn"></i>
-                                <span class="c9" data-startyear="2013" data-endyear="至今" data-startmonth="03" data-endmonth="至今"></span>
-                                <!-- {begin_yeartime}.{$.begin_monthtime}- {$.end_yeartime}.{o.end_monthtime} -->
-                                <div>
-                                    <img src="/public/home/hua/myresume/images/logo_default.png" alt="苹果" height="56" width="56">
-                                    <h3></h3>
-                                    <h4></h4>
-                                </div>
-                            </li>
-                         </ul>
-                 </div>
-            <!--end .experienceShow-->
-            <div class="experienceEdit ">
-                <form class="experienceForm" action="/resume/hisajax" method="post" onsubmit="return $.sub(this)" style="display:none">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="公司名称" name="companyName" class="companyName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="职位名称，如：产品经理" name="positionName" class="positionName"></td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="companyYearStart" value="" name="companyYearStart">
-                                    <input type="button" value="开始年份" class="profile_select_139 profile_select_normal select_companyYearStart">
-                                    <div class="box_companyYearStart boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="companyMonthStart" value="" name="companyMonthStart">
-                                    <input type="button" value="开始月份" class="profile_select_139 profile_select_normal select_companyMonthStart">
-                                    <div style="display: none;" class="box_companyMonthStart boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>01</li>
-                                            <li>02</li>
-                                            <li>03</li>
-                                            <li>04</li>
-                                            <li>05</li>
-                                            <li>06</li>
-                                            <li>07</li>
-                                            <li>08</li>
-                                            <li>09</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="companyYearEnd" value="" name="companyYearEnd">
-                                    <input type="button" value="结束年份" class="profile_select_139 profile_select_normal select_companyYearEnd">
-                                    <div class="box_companyYearEnd  boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>至今</li>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="companyMonthEnd" value="" name="companyMonthEnd">
-                                    <input type="button" value="结束月份" class="profile_select_139 profile_select_normal select_companyMonthEnd">
-                                    <div style="display: block;" class="box_companyMonthEnd boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>01</li>
-                                            <li>02</li>
-                                            <li>03</li>
-                                            <li>04</li>
-                                            <li>05</li>
-                                            <li>06</li>
-                                            <li>07</li>
-                                            <li>08</li>
-                                            <li>09</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td colspan="3">
-                                <input type="submit" value="保 存" class="btn_profile_save">
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <input type="hidden" class="expId" value="">{{csrf_field()}}
-                </form>
-                <!--end .experienceForm--></div>
-            <!--end .experienceEdit--></div>
-        <!--end #workExperience-->
-        <div class="profile_box" id="projectExperience">
-            <!-- <h2>项目经验</h2>
-
-            -->
-            <div class="mr_moudle_head clearfixs mr_w604" style='height:30px;'>
-                <div class="mr_head_l">
-                    <div class="mr_title">
-                        <span class="mr_title_l"></span>
-                        <span class="mr_title_c">项目经验</span>
-                        <span class="mr_title_r"></span>
+                    <div class="mr_head_r c_edit" style="">
+                        <i class='jbxx'></i>
+                    </div>
+                    <div class="basicShow">
+                        @foreach($data['res_his'] as $v)
+                                <p>公司：{{$v-> company}}
+                                职位： {{$v-> job}}
+                                工作时间：{{$v-> begin_yeartime}}.{{$v-> begin_monthtime}} -{{$v-> end_yeartime}}.{{$v-> end_monthtime}}
+                                    <button><a href="{{url('myresume/del'.'/'.$v -> id)}}">删除</a></button></p>
+                        @endforeach
                     </div>
                 </div>
-                <div class="mr_head_r c_add ">
-                    <i>
-                    </i>
-                    <em>添加</em></div>
             </div>
-            <div class="projectShow">
 
-                    <ul class="plist clearfix">)
-                            <li data-id="">
-                                <div class="projectList">
-                                    <a href="/myresume/prodel/">
-                                        <i class="sm_del dn"></i></a>
-                                    <i class="sm_edit dn"></i>
-                                    <div class="f16 mb10 fixed_width" data-proname="" data-posname="" data-starty="" data-startm="" data-endy="" data-endm="">
-                                        <span class="c9"></span></div>
-                                    <div class="dl1"></div>
-                            </li>
-                    </ul>
+            <br>
+            <!-- 项目经验 -->
+            <div class="profile_box" id="basicInfo">
+                <!-- <span class="c_edit"></span> -->
+                <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
+                    <div class="mr_head_l">
+                        <div class="mr_title">
+                            <span class="mr_title_l"></span>
+                            <span class="mr_title_c">项目经验</span>
+                            <span class="mr_title_r"></span>
+                        </div>
+                    </div>
+                    <div class="mr_head_r c_edit" style="">
+                        <i class='jbxx'></i>
+                    </div>
+                    <div class="basicShow">
+                        @foreach($data['pro'] as $v)
+                      <p> 时间：{{$v->begin_yeartime}}.{{$v -> begin_monthtime}}-{{$v -> end_yeartime}}.{{$v -> end_monthtime}}
+                               项目名称：{{$v -> name}}
+                                 职务：{{$v->job}}
+                          <button><a href="{{url('myresume/delproject'.'/'.$v -> id)}}">删除</a></button>
+                      </p>
+                            </tr>
 
-            </div>
-            <!--end .projectShow-->
-            <div class="projectEdit dn">
-                <form class="projectForm" action="/myresume/project" method="post" onsubmit="return $.sub(this)">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="项目名称" name="name" class="projectName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="担任职务，如：产品负责人" name="job" class="thePost"></td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="projectYearStart" value="" name="begin_yeartime">
-                                    <input type="button" value="开始年份" class="profile_select_139 profile_select_normal select_projectYearStart">
-                                    <div class="box_projectYearStart  boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="projectMonthStart" value="" name="begin_monthtime">
-                                    <input type="button" value="开始月份" class="profile_select_139 profile_select_normal select_projectMonthStart">
-                                    <div style="display: none;" class="box_projectMonthStart boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>01</li>
-                                            <li>02</li>
-                                            <li>03</li>
-                                            <li>04</li>
-                                            <li>05</li>
-                                            <li>06</li>
-                                            <li>07</li>
-                                            <li>08</li>
-                                            <li>09</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="projectYearEnd" value="" name="end_yeartime">
-                                    <input type="button" value="结束年份" class="profile_select_139 profile_select_normal select_projectYearEnd">
-                                    <div class="box_projectYearEnd  boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>至今</li>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>{{csrf_field()}}
-                                <div class="fl">
-                                    <input type="hidden" class="projectMonthEnd" value="" name="end_monthtime">
-                                    <input type="button" value="结束月份" class="profile_select_139 profile_select_normal select_projectMonthEnd">
-                                    <div style="display: none;" class="box_projectMonthEnd boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>01</li>
-                                            <li>02</li>
-                                            <li>03</li>
-                                            <li>04</li>
-                                            <li>05</li>
-                                            <li>06</li>
-                                            <li>07</li>
-                                            <li>08</li>
-                                            <li>09</li>
-                                            <li>10</li>
-                                            <li>11</li>
-                                            <li>12</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top"></td>
-                            <td colspan="3">
-                                <textarea class="projectDescription s_textarea" name="description" placeholder="项目描述"></textarea>
-                                <div class="word_count">你还可以输入
-                                    <span>500</span>字</div></td>
-                        </tr>
-                        <!-- <tr>
-                        <td colspan="2">
-                        <textarea placeholder="职责描述" name="ResponsDescription" class="ResponsDescription s_textarea"></textarea>
-                        <div class="word_count">你还可以输入 <span>500</span> 字</div></td>
-                        </tr> -->
-                        <tr>
-                            <td valign="top"></td>
-                            <td colspan="3">
-                                <input type="submit" value="保 存" class="btn_profile_save">
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <input type="hidden" value="" name="project_id" class="projectId"></form>
-                <!--end .projectForm--></div>
-            <!--end .projectEdit--></div>
-        <!--end #projectExperience-->
-        <div class="profile_box" id="educationalBackground">
-            <!-- <h2>教育背景<span>（投递简历时必填）</span></h2>
-            <span class="c}"></span> -->
-            <div class="mr_moudle_head clearfixs mr_w604" style='height:30px;'>
-                <div class="mr_head_l">
-                    <div class="mr_title">
-                        <span class="mr_title_l"></span>
-                        <span class="mr_title_c">教育背景</span>
-                        <span class="mr_title_r"></span>
+                        </table>
+                        @endforeach
                     </div>
                 </div>
-                <div class="mr_head_r c_add">
-                    <i>
-                    </i>
-                    <em>添加</em></div>
             </div>
-            <div class="educationalShow ">
-                <form class="educationalForm borderBtm dn" action="/myresume/edu" method="post" onsubmit="return $.sub(this)">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="学校名称" name="school" class="schoolName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="hidden" class="degree" value="" name="education">
-                                <input type="button" value="学历" class="profile_select_287 profile_select_normal select_degree">
-                                <div class="box_degree boxUpDown boxUpDown_287 dn" style="display: none;">
-                                    <ul>
-                                        <li>大专</li>
-                                        <li>本科</li>
-                                        <li>硕士</li>
-                                        <li>博士</li>
-                                        <li>其他</li></ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="专业名称" name="professional" class="professionalName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="schoolYearStart" value="" name="begin_time">
-                                    <input type="button" value="开始年份" class="profile_select_139 profile_select_normal select_schoolYearStart">
-                                    <div class="box_schoolYearStart boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="schoolYearEnd" value="" name="end_time">
-                                    <input type="button" value="结束年份" class="profile_select_139 profile_select_normal select_schoolYearEnd">
-                                    <div style="display: none;" class="box_schoolYearEnd  boxUpDown boxUpDown_139 dn">
-                                        <ul>
-                                            <li>2021</li>
-                                            <li>2020</li>
-                                            <li>2019</li>
-                                            <li>2018</li>
-                                            <li>2017</li>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td colspan="3">
-                                <input type="submit" value="保 存" class="btn_profile_save">
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <input type="hidden" name="edu_id" class="eduId">{{csrf_field()}}</form>
-                <!--end .educationalForm-->
 
-                    <ul class="elist clearfix">
-
-
-                            <li data-id="">
-                                <a href="/myresume/edudel/">
-                                    <i class="sm_del dn"></i></a>
-                                <i class="sm_edit dn" style="display:block"></i>
-                                <span class="c9" data-starty="" data-endy=""></span>
-                                <div>
-                                    <h3 data-schname=""></h3>
-                                    <h4 data-proname="" data-degree=""></h4></div>
-                            </li>
-                    </ul>
-
-            </div>
-            <!--end .educationalShow-->
-            <div class="educationalEdit dn">
-                <form class="educationalForm" action="/myresume/edu" method="post" onsubmit="return $.sub(this)">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="学校名称" name="schoolName" class="schoolName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="hidden" class="degree" value="" name="degree">
-                                <input type="button" value="学历" class="profile_select_287 profile_select_normal select_degree">
-                                <div class="box_degree boxUpDown boxUpDown_287 dn" style="display: none;">
-                                    <ul>
-                                        <li>大专</li>
-                                        <li>本科</li>
-                                        <li>硕士</li>
-                                        <li>博士</li>
-                                        <li>其他</li></ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <input type="text" placeholder="专业名称" name="professionalName" class="professionalName"></td>
-                            <td valign="top">
-                                <span class="redstar">*</span></td>
-                            <td>
-                                <div class="fl">
-                                    <input type="hidden" class="schoolYearStart" value="" name="schoolYearStart">
-                                    <input type="button" value="开始年份" class="profile_select_139 profile_select_normal select_schoolYearStart">
-                                    <div class="box_schoolYearStart boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="fl">
-                                    <input type="hidden" class="schoolYearEnd" value="" name="schoolYearEnd">
-                                    <input type="button" value="结束年份" class="profile_select_139 profile_select_normal select_schoolYearEnd">
-                                    <div class="box_schoolYearEnd  boxUpDown boxUpDown_139 dn" style="display: none;">
-                                        <ul>
-                                            <li>2016</li>
-                                            <li>2015</li>
-                                            <li>2014</li>
-                                            <li>2013</li>
-                                            <li>2012</li>
-                                            <li>2011</li>
-                                            <li>2010</li>
-                                            <li>2009</li>
-                                            <li>2008</li>
-                                            <li>2007</li>
-                                            <li>2006</li>
-                                            <li>2005</li>
-                                            <li>2004</li>
-                                            <li>2003</li>
-                                            <li>2002</li>
-                                            <li>2001</li>
-                                            <li>2000</li>
-                                            <li>1999</li>
-                                            <li>1998</li>
-                                            <li>1997</li>
-                                            <li>1996</li>
-                                            <li>1995</li>
-                                            <li>1994</li>
-                                            <li>1993</li>
-                                            <li>1992</li>
-                                            <li>1991</li>
-                                            <li>1990</li>
-                                            <li>1989</li>
-                                            <li>1988</li>
-                                            <li>1987</li>
-                                            <li>1986</li>
-                                            <li>1985</li>
-                                            <li>1984</li>
-                                            <li>1983</li>
-                                            <li>1982</li>
-                                            <li>1981</li>
-                                            <li>1980</li>
-                                            <li>1979</li>
-                                            <li>1978</li>
-                                            <li>1977</li>
-                                            <li>1976</li>
-                                            <li>1975</li>
-                                            <li>1974</li>
-                                            <li>1973</li>
-                                            <li>1972</li>
-                                            <li>1971</li>
-                                            <li>1970</li></ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td colspan="3">
-                                <input type="submit" value="保 存" class="bt_profile_save">
-                                <script type="text/javascript">$(function() {
-                                        $('input[type=submit]').removeAttr('disabled');
-                                    })</script>
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <input type="hidden" class="eduId" value="">{{csrf_field()}}</form>
-                <!--end .educationalForm--></div>
-            <!--end .educationalEdit--></div>
-        <!--end #educationalBackground-->
-        <div class="profile_box" id="selfDescription">
-            <!-- <h2>自我描述</h2>
-            <span class="c_edit {ntroduction_third']}"></span> -->
-            <div class="mr_head_l" style="float:left;margin-left:20px">
-                <div class="mr_title">
-                    <span class="mr_title_l"></span>
-                    <span class="mr_title_c">自我描述</span>
-                    <span class="mr_title_r"></span>
-                </div>
-            </div>
-            <span class="mr_head_r i c_edit " style='margin:10px 0px 0px 10px;height:30px;    cursor: pointer;'>
-                  <i class='jbxx'></i>
-                  <em style='color: #00b88d;font-size: 16px;'>编辑</em></span>
-            <div style="clear:both"></div>
-            <!-- <span class="mr_head_r c_edittroduction_third']}"></span> -->
-            <div class="descriptionShow "></div>
-            <!--end .descriptionShow-->
-            <div class="descriptionEdit dn">
-                <form class="descriptionForm" action="/myresume/intro" method="post" onsubmit="return $.sub(this)">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td colspan="2">
-                                <textarea class="selfDescription s_textarea" name="introduction" placeholder=""></textarea>
-                                <div class="word_count">你还可以输入
-                                    <span>500</span>字</div></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <input type="submit" value="保 存" class="btn_profile_save">
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>{{csrf_field()}}</form>
-                <!--end .descriptionForm--></div>
-            <!--end .descriptionEdit--></div>
-        <!--end #selfDescription-->
-        <div class="profile_box" id="worksShow">
-            <!-- <h2>作品展示</h2>
-            <span class="c_add {['show_works_third']}"></span> -->
-            <div class="mr_moudle_head clearfixs mr_w604" style='height:30px;'>
-                <div class="mr_head_l">
-                    <div class="mr_title">
-                        <span class="mr_title_l"></span>
-                        <span class="mr_title_c">作品展示</span>
-                        <span class="mr_title_r"></span>
+            <br>
+            <!-- 教育背景 -->
+            <div class="profile_box" id="basicInfo">
+                <!-- <span class="c_edit"></span> -->
+                <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
+                    <div class="mr_head_l">
+                        <div class="mr_title">
+                            <span class="mr_title_l"></span>
+                            <span class="mr_title_c">教育背景</span>
+                            <span class="mr_title_r"></span>
+                        </div>
+                    </div>
+                    <div class="mr_head_r c_edit" style="">
+                        <i class='jbxx'></i>
+                    </div>
+                    <div class="basicShow">
+                        @foreach ($data['edu'] as $v)
+                            <table>
+                                <tr>
+                                    <td>学校：{{$v->school}}</td>
+                                    <td>时间：{{$v->begin_time}}-{{$v->end_time}}</td>
+                                </tr>
+                                <tr>
+                                    <td>  学历：{{$v->education}}</td>
+                                    <td> 专业：{{$v->professional}}</td>
+                                </tr>
+                            </table>
+                        @endforeach
                     </div>
                 </div>
-                <div class="mr_head_r c_add ">
-                    <i>
-                    </i>
-                    <em>添加</em></div>
             </div>
-            <div class="workShow ">
 
-                    <ul class="slist clearfix">
-
-
-                            <li data-id="">
-                                <div class="workList c7">
-                                    <a href="/myresume/workdel">
-                                        <i class="sm_del dn"></i></a>
-                                    <i class="sm_edit dn"></i>
-                                    <div class="f16">
-                                        <span>网址：</span>
-                                        <a href="" target="_blank"></a></div>
-                                    <p></p>
-                                </div>
-                            </li>
-
-                    </ul>
-
+            <br>
+            <!-- 自我描述 -->
+            <div class="profile_box" id="basicInfo">
+                <!-- <span class="c_edit"></span> -->
+                <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
+                    <div class="mr_head_l">
+                        <div class="mr_title">
+                            <span class="mr_title_l"></span>
+                            <span class="mr_title_c">自我描述</span>
+                            <span class="mr_title_r"></span>
+                        </div>
+                    </div>
+                    <div class="mr_head_r c_edit" style="">
+                        <i class='jbxx'></i>
+                    </div>
+                    <div class="basicShow">
+                            <table>
+                                <tr>
+                                    <td>描述:{{$data['introduction']}}</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
             </div>
-            <!--end .workShow-->
-            <div class="workEdit dn">
-                <form class="workForm" action="/myresume/works" method="post" onsubmit="return $.sub(this)">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <input type="text" placeholder="请输入作品链接" name="link" class="workLink"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea maxlength="100" class="workDescription s_textarea" name="description" placeholder="请输入说明文字"></textarea>
-                                <div class="word_count">你还可以输入
-                                    <span>100</span>字</div></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="保 存" class="btn_profile_save">
-                                <a class="btn_profile_cancel" href="javascript:;">取 消</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <input type="hidden" name="show_id" class="showId">{{csrf_field()}}</form>
-                <!--end .workForm--></div>
-            <!--end .workEdit--></div>
-        <!--end #worksShow-->
-        <input type="hidden" id="resumeId" value="268472"></div>
-    <!--end .content_l-->
-    <div class="mr_myresume_r" style="margin-left:40px;">
-        <div class="mr_r_nav">
-            <ul class="clearfixs">
-                <li>
-                    <a href="{:U('Home/ResumeSend/index')}" target="_blank" data-lg-tj-id="7e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-msg="resume,投递箱,button">投递箱
-                        <i class="td"></i></a>
-                    <!-- <a href="http://www.lagou.com/mycenter/delivery.html" target="_blank">我的投递<i class="td"></i><em class="count2">99</em></a> --></li>
-                <li>
-                    <a href="http://www.lagou.com/mycenter/invitation.html" target="_blank" data-lg-tj-id="7f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-msg="resume,邀请函,button">邀请函
-                        <i class="yq"></i></a>
-                </li>
-                <li>
-                    <a href="http://www.lagou.com/mycenter/collections.html" target="_blank" data-lg-tj-id="7g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-msg="resume,收藏夹,button">收藏夹
-                        <i class="sc"></i></a>
-                </li>
-                <li class="mr_none">
-                    <a href="http://www.lagou.com/s/subscribe.html" target="_blank" data-lg-tj-id="7h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-gatj-msg="resume,订阅栏,button">订阅栏
-                        <i class="dy"></i></a>
-                </li>
-            </ul>
+
+            <br>
+            <!-- 作品展示 -->
+            <div class="profile_box" id="basicInfo">
+                <!-- <span class="c_edit"></span> -->
+                <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
+                    <div class="mr_head_l">
+                        <div class="mr_title">
+                            <span class="mr_title_l"></span>
+                            <span class="mr_title_c">作品展示</span>
+                            <span class="mr_title_r"></span>
+                        </div>
+                    </div>
+                    <div class="mr_head_r c_edit" style="">
+                        <i class='jbxx'></i>
+                    </div>
+                    <div class="basicShow">
+                        @foreach($data['show_works_value'] as $v)
+                           <p> 网址：{{$v->link}}
+                              说明：{{$v->desc}}
+                               <button><a href="{{url('myresume/worksdel'.'/'.$v -> id)}}">删除</a></button></p>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+<a href="">把这份简历下载到本地</a>
         </div>
-        <div class="mr_upload dn">
-            <i>
-            </i>
-            <a class="inline cboxElement" href="#uploadFile" title="上传附件简历">我要上传附件简历</a></div>
-        <div class="mr_uploaded clearfixs">
-            <div class="mr_set_default">
-                <div class="set_default_wrap">
-                    <input id="default_resume" class="mr_button" value="默认投递：附件简历" type="button">
-                    <span>
-                      <i class="mr_sj"></i>
-                    </span>
-                    <div class="xl_list dn">
-                        <ul class="ul_resume_type">
-                            <li data-type="1">默认投递：在线简历</li>
-                            <li data-type="0">默认投递：附件简历</li></ul>
-                    </div>
+
+
+<div class="content_r">
+    <div class="mycenterR" id="myInfo">
+        <h2>我的信息</h2>
+        <a target="_blank" href="">我收藏的职位</a>
+        <br>
+        <a target="_blank" href="">我订阅的职位</a>
+    </div><!--end #myInfo-->
+
+
+    <div class="mr_uploaded clearfixs">
+        <div class="mr_set_default">
+            <div class="set_default_wrap">
+                <a class="inline cboxElement" href="#uploadFile" title="上传附件简历">我要上传附件简历</a>
+                <div class="xl_list dn">
+                    <ul class="ul_resume_type">
+                        <li data-type="1">默认投递：在线简历</li>
+                        <li data-type="0">默认投递：附件简历</li></ul>
                 </div>
             </div>
         </div>
-        <div class="scroll_fix">
-            <div class="mr_integrity">
-                <div class="mr_top clearfixs">
-                    <span class="mr_tip_l">
-                      <em class="mr_tip">简历完整度：</em>
-                      <em class="mr_bfb">77%</em></span>
-                    <a class="mr_tip_r" target="_blank" href="http://www.lagou.com/resume/preview.html">预览简历</a></div>
-                <div class="mr_integrity_m">
-                    <div style="width: 192.5px;" class="mr_solid"></div>
-                    <div style="width: 192.5px;" class="mr_dashed"></div>
-                </div>
-            </div>
-            <div class="mr_module">
-                <ul id='lili'>
-                    <li class="active md_flag" data-md="baseinfo">
-                        <a class="clearfixs">
-                            <i class="mr_base_i"></i>
-                            <span class="mr_m_name">基本信息</span></a>
-                    </li>
-                    <li data-md="workExperience" class="md_flag">
-                        <a class="clearfixs">
-                            <span class="mr_require flag_work dn">必填</span>
-                            <i class="mr_works_i"></i>
-                            <span class="mr_m_name">期望工作</span></a>
-                    </li>
-                    <li data-md="educationalBackground" class="md_flag">
-                        <a class="clearfixs">
-                            <span class="mr_require flag_edu dn">必填</span>
-                            <i class="mr_edu_i"></i>
-                            <span class="mr_m_name">工作经历</span></a>
-                    </li>
-                    <li data-md="projectExperience" class="m_hide md_flag">
-                        <a class="clearfixs">
-                            <span class="mr_hide_del"></span>
-                            <i class="mr_project_i"></i>
-                            <span class="mr_m_name">项目经验</span></a>
-                    </li>
-                    <li data-md="worksShow" class="dn m_hide">
-                        <a class="clearfixs">
-                            <span class="mr_hide_del"></span>
-                            <i class="mr_production_i"></i>
-                            <span class="mr_m_name">教育背景</span></a>
-                    </li>
-                    <li data-md="selfDescription" class="m_hide md_flag">
-                        <a class="clearfixs">
-                            <span class="mr_hide_del"></span>
-                            <i class="mr_self_i"></i>
-                            <span class="mr_m_name">自我描述</span></a>
-                    </li>
-                    <li data-md="expectJob" class="m_hide md_flag">
-                        <a class="clearfixs">
-                            <span class="mr_hide_del"></span>
-                            <i class="mr_hopework_i"></i>
-                            <span class="mr_m_name">作品展示</span></a>
-                    </li>
-                    <li data-md="projectExperience" class="hide_md mr_hide dn">
-                        <a class="clearfixs">
-                            <span class="mr_hide_addic"></span>
-                            <i class="mr_project_i"></i>
-                            <span class="mr_m_name">项目经验</span></a>
-                    </li>
-                    <li data-md="worksShow" class="hide_md dn">
-                        <a class="clearfixs">
-                            <span class="mr_hide_addic"></span>
-                            <i class="mr_production_i"></i>
-                            <span class="mr_m_name">作品展示</span></a>
-                    </li>
-                    <li data-md="selfDescription" class="hide_md mr_hide dn">
-                        <a class="clearfixs">
-                            <span class="mr_hide_addic"></span>
-                            <i class="mr_self_i"></i>
-                            <span class="mr_m_name">自我描述</span></a>
-                    </li>
-                    <li data-md="expectJob" class="hide_md mr_hide dn">
-                        <a class="clearfixs">
-                            <span class="mr_hide_addic"></span>
-                            <i class="mr_hopework_i"></i>
-                            <span class="mr_m_name">期望工作</span></a>
-                    </li>
-                    <li data-md="skillsAssess" class="hide_md dn">
-                        <a class="clearfixs">
-                            <span class="mr_hide_addic"></span>
-                            <i class="mr_skill_i"></i>
-                            <span class="mr_m_name">技能评价</span></a>
-                    </li>
-                    <li data-md="customBlock" class="hide_md mr_hide dn">
-                        <a class="clearfixs">
-                            <span class="mr_hide_addic"></span>
-                            <i class="mr_moudle_i"></i>
-                            <span class="mr_m_name">自定义板块</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--通过button 设置disable的思路控制按钮是否控制事件解绑与恢复 <input type="button" style="width:100px;height:20px;background-color: #000;" id="a"/>
-        <input type="button" style="width:100px;height:20px;background-color: #999;" onclick="alert(2);" disabled="disabled" />--></div></div>
+    </div><!--end #resumeSet-->
+
+    <div class="mycenterR" id="myShare">
+        <h2>当前每日投递量：10个</h2>
+        <a target="_blank" href="">邀请好友，提升投递量</a>
+    </div><!--end #myShare-->
+
+
+    <div class="greybg qrcode mt20">
+        <img width="242" height="242" alt="拉勾微信公众号二维码" src="{{url('home/jianli/images/qr_resume.png')}}">
+        <span class="c7">微信扫一扫，轻松找工作</span>
+    </div>
+</div><!--end .content_r-->
+</div>
+
 <input type="hidden" id="userid" name="userid" value="314873">
+
 <!-------------------------------------弹窗lightbox ----------------------------------------->
 <div style="display:none;">
     <!-- 上传简历 -->
     <div class="popup" id="uploadFile">
         <table width="100%">
-            <tbody>
-            <tr>
+            <tbody><tr>
                 <td align="center">
                     <form>
                         <a class="btn_addPic" href="javascript:void(0);">
                             <span>选择上传文件</span>
-                            <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload')" class="filePrew" id="resumeUpload" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" tabindex="3"></a>
+                            <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload')" class="filePrew" id="resumeUpload" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" tabindex="3">
+                        </a>
                     </form>
                 </td>
             </tr>
             <tr>
-                <td align="left">支持word、pdf、ppt、txt、wps格式文件
-                    <br>文件大小需小于10M</td></tr>
-            <tr>
-                <td align="left" style="color:#dd4a38; padding-top:10px;">注：若从其它网站下载的word简历，请将文件另存为.docx格式后上传</td></tr>
-            <tr>
-                <td align="center">
-                    <img width="55" height="16" alt="loading" style="visibility: hidden;" id="loadingImg" src="/public/home/hua/myresume/images/loading.gif"></td>
+                <td align="left">支持word、pdf、ppt、txt、wps格式文件<br>文件大小需小于10M</td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-    <!--/#uploadFile-->
+            <tr>
+                <td align="left" style="color:#dd4a38; padding-top:10px;">注：若从其它网站下载的word简历，请将文件另存为.docx格式后上传</td>
+            </tr>
+            <tr>
+                <td align="center"><img width="55" height="16" alt="loading" style="visibility: hidden;" id="loadingImg" src="style/images/loading.gif"></td>
+            </tr>
+            </tbody></table>
+    </div><!--/#uploadFile-->
+
     <!-- 简历上传成功 -->
     <div class="popup" id="uploadFileSuccess">
         <h4>简历上传成功！</h4>
         <table width="100%">
-            <tbody>
-            <tr>
-                <td align="center">
-                    <p>你可以将简历投给你中意的公司了。</p>
-                </td>
+            <tbody><tr>
+                <td align="center"><p>你可以将简历投给你中意的公司了。</p></td>
             </tr>
             <tr>
-                <td align="center">
-                    <a class="btn_s" href="javascript:;">确&nbsp;定</a></td>
+                <td align="center"><a class="btn_s" href="javascript:;">确&nbsp;定</a></td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-    <!--/#uploadFileSuccess-->
+            </tbody></table>
+    </div><!--/#uploadFileSuccess-->
+
     <!-- 没有简历请上传 -->
     <div class="popup" id="deliverResumesNo">
         <table width="100%">
-            <tbody>
-            <tr>
-                <td align="center">
-                    <p class="font_16">你在拉勾还没有简历，请先上传一份</p></td>
+            <tbody><tr>
+                <td align="center"><p class="font_16">你在拉勾还没有简历，请先上传一份</p></td>
             </tr>
             <tr>
                 <td align="center">
                     <form>
                         <a class="btn_addPic" href="javascript:void(0);">
                             <span>选择上传文件</span>
-                            <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload1')" class="filePrew" id="resumeUpload1" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M"></a>
+                            <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload1')" class="filePrew" id="resumeUpload1" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M">
+                        </a>
                     </form>
                 </td>
             </tr>
             <tr>
-                <td align="center">支持word、pdf、ppt、txt、wps格式文件，大小不超过10M</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <!--/#deliverResumesNo-->
+                <td align="center">支持word、pdf、ppt、txt、wps格式文件，大小不超过10M</td>
+            </tr>
+            </tbody></table>
+    </div><!--/#deliverResumesNo-->
+
     <!-- 上传附件简历操作说明-重新上传 -->
     <div class="popup" id="fileResumeUpload">
         <table width="100%">
-            <tbody>
-            <tr>
+            <tbody><tr>
                 <td>
-                    <div class="f18 mb10">请上传标准格式的word简历</div></td>
+                    <div class="f18 mb10">请上传标准格式的word简历</div>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <div class="f16">操作说明：
-                        <br>打开需要上传的文件 - 点击文件另存为 - 选择.docx - 保存</div></td>
+                    <div class="f16">
+                        操作说明：<br>
+                        打开需要上传的文件 - 点击文件另存为 - 选择.docx - 保存
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td align="center">
-                    <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a></td>
+                    <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a>
+                </td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-    <!--/#fileResumeUpload-->
+            </tbody></table>
+    </div><!--/#fileResumeUpload-->
+
     <!-- 上传附件简历操作说明-重新上传 -->
     <div class="popup" id="fileResumeUploadSize">
         <table width="100%">
-            <tbody>
-            <tr>
+            <tbody><tr>
                 <td>
-                    <div class="f18 mb10">上传文件大小超出限制</div></td>
+                    <div class="f18 mb10">上传文件大小超出限制</div>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <div class="f16">提示：
-                        <br>单个附件不能超过10M，请重新选择附件简历！</div></td>
+                    <div class="f16">
+                        提示：<br>
+                        单个附件不能超过10M，请重新选择附件简历！
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td align="center">
-                    <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a></td>
+                    <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a>
+                </td>
             </tr>
-            </tbody>
-        </table>
-    </div>
+            </tbody></table>
+    </div><!--/#deliverResumeConfirm-->
 
 </div>
+<!------------------------------------- end ----------------------------------------->
 
-
+<script src="{{url('home/jianli/js/Chart.min.js')}}" type="text/javascript"></script>
+<script src="{{url('home/jianli/js/profile.min.js')}}" type="text/javascript"></script>
 <!-- <div id="profileOverlay"></div> -->
 <div class="" id="qr_cloud_resume" style="display: none;">
     <div class="cloud">
@@ -1874,99 +674,129 @@
         <a class="close" href="javascript:;"></a>
     </div>
 </div>
-<div class="clear"></div>
-<input type="hidden" value="97fd449bcb294153a671f8fe6f4ba655" id="resubmitToken">
-{{--<a rel="nofollow" title="回到顶部" id="backtop" style="display: none;"></a>--}}
-</div>
-
-<!-- footer -->
-<a id="backtop" title="回到顶部" rel="nofollow"></a>
-<!-- feedback -->
-<!--
-    @require "common/widgets/footer_c/modules/feedback/feedback.less"
--->
-
-<div id="product-fk">
-    <div id="feedback-icon">
-        <div class="fb-icon"></div>
-        <span>我要反馈</span>
-    </div>
-</div>
-
-<!-- end #container --></div>
-<!-- end #body -->
-@extends('home.Public.footer')
-
-<!-- -->
-<style type="text/css">.cur{position: fixed;top:0px;} .notcur{}</style>
-<script>//单选框按钮变色
-    $('#fo2_1').find('li').click(function() {
-        var fo2_res = $(this).html();
-        $('input[name=type]').val(fo2_res);
-        $('#fo2_1').children('li').removeClass('current');
-        $(this).addClass('current');
-    });
-
-    //AJAX提交表单
-    jQuery(function($) {
-        //表单验证
-        $.extend({
-            sub: function(obj) {
-                var obj = $(obj);
-                $.ajax({
-                    url: obj.attr('action'),
-                    type: 'post',
-                    data: obj.serialize(),
-                    success: function(data) {
-                        eval("var data=" + data);
-                        if (data == 1) {
-                            location.reload();
-                        } else {
-                            alert('输入错误,重新填写');
-                        }
-                    }
-                }) return false;
+<script>
+    $(function(){
+        $.ajax({
+            url:ctx+"/mycenter/showQRCode",
+            type:"GET",
+            async:false
+        }).done(function(data){
+            if(data.success){
+                $('#qr_cloud_resume img').attr("src",data.content);
             }
         });
-
-    });
-    //图片上传
-    function uploadFile() {
-        $.ajaxFileUpload({
-                url: '{:U('Home / Resume / upload ')}',
-            secureuri: false,
-            fileElementId: 'headPic',
-            dataType: 'json',
-            success: function(data) //服务器成功响应处理函数
-        {
-            // eval("var data="+data);
-            if (data.code > 0) {
-                $('#portrait').removeClass('dn');
-                data.msg = data.msg + '?' + parseInt(Math.random() * 1000);
-                $('#portrait').children('img').attr('src', data.msg);
-            } else {
-                alert(data.msg);
-            }
-        },
-    })
-    }
-
-    var lsT = $('.scroll_fix').offset().top;
-    var maxH = $(document).height();
-    $(window).scroll(function() {
-        var nsT = $('.scroll_fix').offset().top;
-        var scT = $(document).scrollTop();
-        if (scT >= 277) {
-            $('.scroll_fix').addClass('cur');
-        } else {
-            $('.scroll_fix').removeClass('cur');
+        var sessionId = "resumeQR"+314873;
+        if(!$.cookie(sessionId)){
+            $.cookie(sessionId, 0, {expires: 1});
         }
-
+        if($.cookie(sessionId) &amp;&amp; $.cookie(sessionId) != 5){
+            $('#qr_cloud_resume').removeClass('dn');
+        }
+        $('#qr_cloud_resume .close').click(function(){
+            $('#qr_cloud_resume').fadeOut(200);
+            resumeQR = parseInt($.cookie(sessionId)) + 1;
+            $.cookie(sessionId, resumeQR, {expires: 1});
+        });
     });
-    $('#lili li').click(function() {
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        // alert(444444);
-    });</script>
 
+
+</script>
+
+<div class="clear"></div>
+<input type="hidden" value="97fd449bcb294153a671f8fe6f4ba655" id="resubmitToken">
+<a rel="nofollow" title="回到顶部" id="backtop" style="display: none;"></a>
+</div><!-- end #container -->
+</div>
+<!-- 主体部分 结束-->
+
+<!-- 结尾部分 开始-->
+<div id="footer">
+    <div class="wrapper">
+        <a rel="nofollow" target="_blank" href="">联系我们</a>
+        <a target="_blank" href="">互联网公司导航</a>
+        <a rel="nofollow" target="_blank" href="">拉勾微博</a>
+        <a rel="nofollow" href="" class="footer_qr">拉勾微信<i></i></a>
+        <div class="copyright">&copy;2013-2014 Lagou <a href="" target="_blank">京ICP备14023790号-2</a></div>
+    </div>
+</div>
+<!-- 结尾部分 结束-->
+
+<script src="{{url('home/jianli/js/core.min.js')}}" type="text/javascript"></script>
+<script src="{{url('home/jianli/js/popup.min.js')}}" type="text/javascript"></script>
+
+<!--  -->
+
+<script type="text/javascript">
+    $(function(){
+        $('#noticeDot-1').hide();
+        $('#noticeTip a.closeNT').click(function(){
+            $(this).parent().hide();
+        });
+    });
+    var index = Math.floor(Math.random() * 2);
+    var ipArray = new Array('42.62.79.226','42.62.79.227');
+    var url = "ws://" + ipArray[index] + ":18080/wsServlet?code=314873";
+    var CallCenter = {
+        init:function(url){
+            var _websocket = new WebSocket(url);
+            _websocket.onopen = function(evt) {
+                console.log("Connected to WebSocket server.");
+            };
+            _websocket.onclose = function(evt) {
+                console.log("Disconnected");
+            };
+            _websocket.onmessage = function(evt) {
+                //alert(evt.data);
+                var notice = jQuery.parseJSON(evt.data);
+                if(notice.status[0] == 0){
+                    $('#noticeDot-0').hide();
+                    $('#noticeTip').hide();
+                    $('#noticeNo').text('').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
+                    $('#noticeNoPage').text('').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
+                }else{
+                    $('#noticeDot-0').show();
+                    $('#noticeTip strong').text(notice.status[0]);
+                    $('#noticeTip').show();
+                    $('#noticeNo').text('('+notice.status[0]+')').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
+                    $('#noticeNoPage').text(' ('+notice.status[0]+')').show().parent('a').attr('href',ctx+'/mycenter/delivery.html');
+                }
+                $('#noticeDot-1').hide();
+            };
+            _websocket.onerror = function(evt) {
+                console.log('Error occured: ' + evt);
+            };
+        }
+    };
+    CallCenter.init(url);
+
+</script>
+<div id="cboxOverlay" style="display: none;"></div>
+<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+    <div id="cboxWrapper"><div>
+            <div id="cboxTopLeft" style="float: left;"></div>
+            <div id="cboxTopCenter" style="float: left;"></div>
+            <div id="cboxTopRight" style="float: left;"></div>
+        </div>
+        <div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div>
+            <div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div>
+                <div id="cboxCurrent" style="float: left;"></div>
+                <button type="button" id="cboxPrevious"></button>
+                <button type="button" id="cboxNext"></button>
+                <button id="cboxSlideshow"></button>
+                <div id="cboxLoadingOverlay" style="float: left;"></div>
+                <div id="cboxLoadingGraphic" style="float: left;"></div>
+            </div>
+            <div id="cboxMiddleRight" style="float: left;"></div>
+        </div>
+        <div style="clear: left;">
+            <div id="cboxBottomLeft" style="float: left;"></div>
+            <div id="cboxBottomCenter" style="float: left;"></div>
+            <div id="cboxBottomRight" style="float: left;"></div>
+        </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
+</div>
+</div>
+</div>
+</body>
 </html>

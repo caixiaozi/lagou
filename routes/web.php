@@ -104,22 +104,25 @@ Route::get('admin/login','Admin\IndexController@showLogin');
 Route::post('doLogin','Admin\IndexController@doLogin');
 
 
-//职位分类管理
-//Route::get('admin/category-list',function(){
-//   return view('admin\category\category');
-//});
-//Route::get('admin/category-list','Admin\CategoryController@category');
-//Route::get('admin/category-add','Admin\CategoryController@categoryAdd');
+//后台轮播图管理
+    Route::get('admin/carousel ', 'Admin\CarouselController@carousel');
+    Route::get('admin/firmcarousel ', 'Admin\CarouselController@firmcarousel');
+    Route::get('admin/carousel/add', 'Admin\CarouselController@carousel_add');
+    Route::post('admin/carousel/add2', 'Admin\CarouselController@carousel_add2');
+    Route::get('admin/carousel/edit/{id} ', 'Admin\CarouselController@carousel_edit');
+    Route::post('admin/carousel/edit2', 'Admin\CarouselController@carousel_edit2');
+    Route::get('admin/carousel/del/{id} ', 'Admin\CarouselController@carousel_del');
+    Route::get('admin/carousel/onsale', 'Admin\CarouselController@carousel_onsale');
 
-//Route::get('admin/category-add',function(){
-//    return view('admin\category\categoryAdd');
-//});
+
+
+
+
+
+
 
 //前台首页
 Route::get('/','Home\IndexController@index');
-Route::get('home/two',function(){
-    return view('home.two');
-});
 
 
 //前台注册
@@ -130,7 +133,8 @@ Route::get('aa/{id}','Home\RegisterController@jihuo');
 //前台登录
 Route::get('home/login','Home\LoginController@login');
 Route::post('home/doLogin','Home\LoginController@doLogin');
-
+//前台退出登录
+Route::get('getLogout','home\LoginController@getLogout');
 //找回密码
 // 发送密码重置链接路由
 Route::get('password/email', 'Auth\PasswordController@getEmail');
@@ -140,13 +144,33 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
-
 //我的简历
 Route::get('myresume','Home\MyresumeController@myresume');
+Route::get('add','Home\MyresumeController@addmyresume');
+Route::post('myresume/hisajax','Home\MyresumeController@anyHisajax');
+Route::post('myresume/userupdate','Home\MyresumeController@postUserupdate');
+Route::post('myresume/resumeshow','Home\MyresumeController@postResumeshow');
+Route::any('myresume/hisajax','Home\MyresumeController@anyHisajax');
+Route::any('myresume/del/{id}','Home\MyresumeController@getDelhistoryajax');
+Route::any('myresume/project','Home\MyresumeController@anyProject');
+Route::any('myresume/delproject/{id}','Home\MyresumeController@getProdel');
+Route::any('myresume/edu','Home\MyresumeController@anyEdu');
+Route::any('myresume/intro','Home\MyresumeController@anyIntro');
+Route::any('myresume/works','Home\MyresumeController@anyWorks');
+Route::any('myresume/worksdel/{id}','Home\MyresumeController@getWorkdel');
+
+
+
+
+
+
+
 
 //公司注册首页
-
 Route::get('company','Home\CompanyController@company');
+Route::get('company','Home\CompanyController@getIndex');
+Route::post('company','Home\CompanyController@postZhuce');
+Route::post('company','Home\CompanyController@getInsert');
 
 //公司主页
 Route::get('CompanyShow','Home\CompanyShowController@CompanyShow');
@@ -156,30 +180,38 @@ Route::get('firm','Home\FirmController@firm');
 
 //公司首页
 Route::get('head','Home\HeadController@head');
+Route::get('head','Home\HeadController@getIndex');
+Route::get('head','Home\HeadController@getApply');
+Route::post('head','Home\HeadController@postApply');
+Route::post('head','Home\HeadController@postLogo');
+Route::post('head','Home\HeadController@postEdd');
+Route::post('head','Home\HeadController@postTag');
+Route::post('head','Home\HeadController@postTtag');
+Route::post('head','Home\HeadController@postGgta');
+Route::post('head','Home\HeadController@postProduct');
+Route::post('head','Home\HeadController@postProd');
+Route::post('head','Home\HeadController@getDell');
+Route::post('head','Home\HeadController@postState');
+Route::post('head','Home\HeadController@postDesc');
+Route::post('head','Home\HeadController@postInfor');
+Route::post('head','Home\HeadController@postTeams');
+Route::get('head','Home\HeadController@getRemove');
+Route::post('head','Home\HeadController@postDevelop');
+Route::post('head','Home\HeadController@postDevelo');
+Route::get('head','Home\HeadController@getDevel');
+
 
 //公司简介
 Route::get('jobShow','Home\JobShowController@jobShow');
 
-//个人简介
-Route::get('personal','Home\PersonalController@personal');
 
+//个人中心
+Route::get('personal','Home\PersonalController@personal');
+Route::post('postMessage','Home\PersonalController@postMessage');
+Route::post('postUpdate','Home\PersonalController@postUpdate');
 
 //处理简历
 Route::get('resume','Home\ResumeController@resume');
-
-
-
-
-
-//Route::get('/', 'IndexController@index');
-//Route::get('/register', 'UserController@register');
-//Route::get('/login', 'UserController@login');
-//Route::post('/singin', 'UserController@singin');
-//Route::get('/logout', 'UserController@logout');
-//Route::post('/store', 'UserController@store');
-//Route::get('/verify/{confirmed_code}', 'UserController@emailConfirm');
-//Route::get('/sendSMS', 'UserController@sendSMS');
-//Route::get('admin/index', 'AdminController@index');
 
 
 

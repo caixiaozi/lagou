@@ -1,3 +1,7 @@
+<?php
+$data = session('user');
+//dd($data['name']);
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -49,11 +53,6 @@
     <link href="{{url("admin/css/fullcalendar.css")}}" rel="stylesheet" type="text/css"/>
     <link href="{{url("admin/css/jqvmap.css")}}" rel="stylesheet" type="text/css" media="screen"/>
     <link href="{{url("admin/css/jquery.easy-pie-chart.css")}}" rel="stylesheet" type="text/css" media="screen"/>
-
-  
-
-
-2
     <!-- END PAGE LEVEL STYLES -->
     <link rel="shortcut icon" href="{{url("admin/image/log.png")}}" />
 <style>
@@ -81,15 +80,9 @@
                 <li class="dropdown user">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img alt="" src="../admin/image/avatar1_small.jpg" />
-                        <span class="username">蔡蔡</span>
+                        <span class="username">{{$data['name']}}</span>
                         <i class="icon-angle-down"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="extra_profile.html"><i class="icon-user"></i> 个人资料</a></li>
-                        <li class="divider"></li>
-                        <li><a href="extra_lock.html"><i class="icon-lock"></i> 锁屏</a></li>
-                        <li><a href="login.html"><i class="icon-key"></i> 注销</a></li>
-                    </ul>
                     <ul class="dropdown-menu">
                         <li><a href=""><i class="icon-user"></i> 个人资料</a></li>
                         <li class="divider"></li>
@@ -210,6 +203,21 @@
                 </ul>
             </li>
 
+             <li class="">
+                <a href="javascript:;">
+
+                    <i class="icon-external-link"></i>
+                    <span class="title">轮播图管理</span>
+                    <span class="arrow "></span>
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li ><a href="{{url("admin/carousel")}}">轮播图列表</a></li>
+                    <li ><a href="{{url("admin/carousel/add")}}">添加轮播图</a></li>
+                </ul>
+            </li>
+
             <li class="">
                 <a href="javascript:;">
                     <i class="icon-briefcase"></i>
@@ -300,9 +308,6 @@
 
 <!--[if lt IE 9]>
 
-<script src="{{url("admin/js/excanvas.min.js")}}"></script>
-
-<script src="{{url("admin/js/respond.min.js")}}"></script>
 
 <![endif]-->
 
@@ -318,37 +323,6 @@
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 
-<script src="../admin/js/jquery.vmap.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.vmap.russia.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.vmap.world.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.vmap.europe.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.vmap.germany.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.vmap.usa.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.vmap.sampledata.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.flot.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.flot.resize.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.pulsate.min.js" type="text/javascript"></script>
-
-<script src="../admin/js/date.js" type="text/javascript"></script>
-
-<script src="../admin/js/daterangepicker.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.gritter.js" type="text/javascript"></script>
-
-<script src="../admin/js/fullcalendar.min.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
-
-<script src="../admin/js/jquery.sparkline.min.js" type="text/javascript"></script>
 <script src="{{url("admin/js/jquery.vmap.js")}}" type="text/javascript"></script>
 
 <script src="{{url("admin/js/jquery.vmap.russia.js")}}" type="text/javascript"></script>
@@ -386,9 +360,6 @@
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 
 
-<script src="../admin/js/app.js" type="text/javascript"></script>
-
-<script src="../admin/js/index.js" type="text/javascript"></script>
 
 <script src="{{url("admin/js/app.js")}}" type="text/javascript"></script>
 

@@ -7,9 +7,9 @@
 
 
                     <div style="background-color:#fff;" class="c_logo">
-                        <form action="/head/logo" method="post" enctype="multipart/form-data">
+                        <form action="" method="post" enctype="multipart/form-data">
                             <a title="上传公司LOGO" id="logoShow">
-                                <img id='imgg' alt="公司logo" src="{{url('home/head/images/CgqKkVcYgQqAITsCAAB8Y9K2ODM523.png')}}" height="190" width="190">
+                                <img id='imgg' alt="公司logo" src="{{$company[0]->logo}}" height="190" width="190">
                                 <span>
             更换公司图片
             <br>
@@ -17,7 +17,7 @@
         </span>
                                 <input required title="支持jpg、jpeg、gif、png格式，文件小于5M"  name="logo" type="file">
                                 <!-- 公司id session获取 -->
-                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="id" value="{{$company[0]->id}}">
                                 {{csrf_field()}}
                                 <input type="submit" value="更换logo" style="position: absolute; left: 133px; top: 170px;">
                             </a>
@@ -31,19 +31,19 @@
                     <!-- ///////////////// -->
                     <!-- 修改公司名 -->
 
-                    <div class="c_box companyName">
-                        <h2 title="不知道叫啥">
-                            叫啥重要吗 </h2>
-                        <em class="unvalid"></em>
-                        <span style="display: none;" class="va dn">
-               '未验证','禁用','已认证','未认证','申请认证'
-            </span>
-                        <a style="text-decoration:none;" target="_blank" class="applyC" href="/head/shenqing">
-
-                        </a><div class="clear"></div>
-                        <h1 title="" class="fullname">
-                          不知道叫啥&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a style="font-size:13px" id="firm_title">编辑</a></h1>
+                        <div class="c_box companyName">
+                            <h2 title="{{$company[0]->name}}">
+                                {{$company[0]->name}} </h2>
+                              <em class="unvalid"></em>
+                                <span style="display: none;" class="va dn">
+                                   {{str_replace([-1,0,1,2,3],['未验证','禁用','已认证','未认证','申请认证'],$company[0]->state)}}
+                                </span>
+                                <a style="text-decoration:none;" target="_blank" class="applyC" href="/head/shenqing?id={{$company[0]->id}}">
+                                    {{str_replace([-1,0,1,2,3],['未验证','禁用','已认证','未认证','申请认证'],$company[0]->state)}}
+                                </a><div class="clear"></div>
+                            <h1 title="{{$company[0]->short_name}}" class="fullname">
+                                {{$company[0]->short_name}}&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a style="font-size:13px" id="firm_title">编辑</a></h1>
                         <!--  -->
 
 
@@ -57,11 +57,11 @@
                             <img src="/home/head/images/yh2.png" height="15" width="17">
                         </div>
                         <!-- 修改公司名 -->
-                        <form id ='firm_titform'; style = "display:none" action="/head/edd" method="post"  class="" >
+                        <form id ='firm_titform'; style = "display:none" action="" method="post"  class="" >
                             <input required style="width:390px;" placeholder="请输入公司名称" maxlength="15" value="" name="name"  type="text">
                         {{csrf_field()}}
                         <!-- 合项目时session获取 -->
-                            <input type="hidden" name='id' value = "">
+                            <input type="hidden" name='id'value = "{{$company[0]->id}}">
                             <input required style="width:390px;" placeholder="请输入公司简称" maxlength="15" value="" name="short_name"  type="text">
                             <input required style="width:390px;" placeholder="一句话描述公司优势，核心价值，限50字" maxlength="50" value="" name="one_desc"  type="text">
                             <input value="保存"  class="btn_small" type="submit">
@@ -107,13 +107,15 @@
 
 
 
-                                <form action="/head/ttag" method="post" class="fl">
+                                @foreach ($user as $user)
+                                <form action="" method="post" class="fl">
                                     <!-- 企业idsession获取 -->
-                                    <input type="hidden" name="company_id" value="">
+                                    <input type="hidden" name="company_id" value="{{$company[0]->id}}">
                                     {{csrf_field()}}
-                                    <input type="hidden" name="tag_id" value="">
-                                    <li><span><button>FireWork</button></span></li>
+                                    <input type="hidden" name="tag_id" value="{{$user->id}}">
+                                    <li><span><button>{{$user->name}}</button></span></li>
                                 </form>
+                             @endforeach
 
 
                             <li class="link">
@@ -122,11 +124,11 @@
 
                         </ul>
                         <div class="dn" id="addLabels">
-                            <form action="/head/ggta" method="post">
+                            <form action="" method="post">
 
                             {{csrf_field()}}
                             <!-- 企业idsession获取 -->
-                                <input type="hidden" name="company_id" value="" >
+                                <input type="hidden" name="company_id" value="{{$company[0]->id}}" >
                                 <tr>
                                     <input value="贴上" class="fr"  type="submit" style="width:50px">
                                     <input placeholder="添加自定义标签" name="name" class=" fr" type="text" style="width:110px" required>
@@ -137,13 +139,17 @@
                             <ul>
 
 
-                                    <form action="/head/tag" method="post" class='fr'>
+                                    @foreach ($tag as $tag)
+
+                                        <form action="" method="post" class='fr'>
                                         <!-- 企业idsession获取 -->
-                                        <input type="hidden" name="company_id" value="">
+                                        <input type="hidden" name="company_id" value="{{$company[0]->id}}">
                                         {{csrf_field()}}
-                                        <input type="hidden" name="tag_id" value="">
-                                        <li><button>Haha</button></li>
-                                    </form>
+                                        <input type="hidden" name="tag_id" value="{{$tag->id}}">
+                                        <li><button>{{$tag->name}}</button></li>
+                                        </form>
+                                   
+                                    @endforeach
 
 
                             </ul>
@@ -171,7 +177,7 @@
 
 
 
-
+                        @foreach ($product as $pro)
                             <div class="qwq">
                                 <dl class="c_section">
                                     <dt>
@@ -184,16 +190,16 @@
 
                                     <dd style = "display:block" class="chpi">
 
-                                        <div ><img alt="" src="{{url('home/head/images/yh1.png')}}" height="220" width="380">
-                                            <div style="width: 220px; height: 220px; float: right;">
-
-                                                <div style="height: 30px; overflow:hidden;" >产品名称:&nbsp;&nbsp;手机</div>
+                                        <div ><img alt="" src="{{$pro->image}}" height="220" width="380">
+                                                <div style="width: 220px; height: 220px; float: right;">
+                                                
+                                                <div style="height: 30px; overflow:hidden;" >产品名称:&nbsp;&nbsp;{{$pro->name}}</div>
                                                 <br>产品定位
-                                                <div style="height: 100px; overflow: auto;">大众群体</div>
+                                                <div style="height: 100px; overflow: auto;">{{$pro->desc}}</div>
                                                 <br>
                                                 <a title="编辑公司产品" class="xiugai">编辑公司产品
                                                 </a>&nbsp;&nbsp;
-                                                <a title="删除公司产品" href="/head/dell">删除公司产品
+                                                <a title="删除公司产品" href="/head/dell?id={{$pro->id}}">删除公司产品
                                                 </a>
 
                                             </div></div>
@@ -202,24 +208,24 @@
                                     <!-- ////////////// -->
 
                                     <dd style = "display:none" class="prod">
-                                        <form method="post"  action="/head/prod" enctype="multipart/form-data">
+                                        <form method="post"  action="" enctype="multipart/form-data">
                                             <div >
 
-                                                <img alt="" src="{{url('home/head/images/yh2.png')}}" height="220" width="380">
+                                                <img alt="" src="{{$pro->image}}" height="220" width="380">
 
                                                 <div style="width: 220px; height: 220px; float: right;">
-                                                    <input type="hidden" name="id" value="{">
-                                                    <input required type="file" name="image" value="">
-                                                    <input type="hidden" name="company_id" value="">
+                                                <input type="hidden" name="id" value="{{$pro->id}}">
+                                                <input required type="file" name="image" value=""> 
+                                                <input type="hidden" name="company_id" value="{{$company[0]->id}}">
                                                     <!-- 公司id以后获取session -->
-                                                    产品名称:
-                                                    <input required type="text" name="name" value="手提包" style="font-size:15px; width:130px; height:15px">
-                                                    产品网址<input required type="text" name="link" value="www.taobao.com"  style="font-size:15px; width:130px; height:15px">
-                                                    <br>产品定位
-                                                    <input type="text" required name="desc" value="大众群体"  style="font-size:20px; width:130px; height:25px;">
-                                                    <br>
-                                                    <br>
-                                                    {{csrf_field()}}
+                                                产品名称:
+                                                <input required type="text" name="name" value="{{$pro->name}}" style="font-size:15px; width:130px; height:15px">
+                                                产品网址<input required type="text" name="link" value="{{$pro->link}}"  style="font-size:15px; width:130px; height:15px">
+                                                <br>产品定位
+                                                <input type="text" required name="desc" value="{{$pro->desc}}"  style="font-size:20px; width:130px; height:25px;">
+                                                <br>
+                                                <br>
+                                                {{csrf_field()}}
 
                                                     <input type="submit" value="保存">
                                                     &nbsp;&nbsp;
@@ -231,7 +237,7 @@
                                         </form>
                                     </dd></dl></div>
 
-
+                        @endforeach
 
                     <!--无产品 -->
                         <dl id="chanpin" style = "display:block" class="c_section">
@@ -243,7 +249,7 @@
                             </dt>
                             <dd>
                                 <div class="addnew">
-                                    酒香不怕巷子深已经过时啦！
+                                    亲，譔晒晒了
                                     <br>
                                     把自己优秀的产品展示出来吸引人才围观吧！
                                     <br>
@@ -266,7 +272,7 @@
                             </h2>
                             </dt>
                             <dd>
-                                <form method="post" class="productForm"  action="/head/product" enctype="multipart/form-data">
+                                <form method="post" class="productForm"  action="" enctype="multipart/form-data">
                                     <div class="new_product">
                                         <div class="product_upload  productNo">
                                             <div>
@@ -290,7 +296,7 @@
                                     <div class="cp_intro">
                                         <input required placeholder="请输入产品名称" name="name" type="text">
                                         <input required placeholder="请输入产品网址" name="link" type="text">
-                                        <input type="hidden" name="company_id" value="">
+                                         <input type="hidden" name="company_id" value="{{$company[0]->id}}">
                                         <!-- 公司id以后获取session -->
                                         <textarea required placeholder="请简短描述该产品定位、产品特色、用户群体等" maxlength="500" value="" class="s_textarea" name="desc"></textarea>
                                         <div class="word_count fr">
@@ -395,7 +401,7 @@
                             </dt>
                             <dd>
                                 <div class="addnew" style="height:75px; overflow: auto;">
-                                   大众群体
+                                    {{$company[0]->desc}}
                                 </div><br>
                                 <div>
                                     <a style="color:#0d9572;" class="addnew" id="tjjs">
@@ -425,7 +431,7 @@
                                     </div>
                                     <div class="clear"></div>
                                     {{csrf_field()}}
-                                    <input type="hidden" name="id" value="">
+                                    <input type="hidden" name="id" value="{{$company[0]->id}}">
                                     <input value="保存" id="submitProfile" class="btn_small" type="submit">
                                     <a  class="btn_cancel_s" id="quiao">
                                         取消
@@ -475,40 +481,43 @@
 
 
 
+                        @foreach ($ser as $ser)
                                 <div class="viiv">
                                     <li class="lcfy" style = "display:block">
                                         <a style="text-decoration:none;" class="llvv">
                                             <h3>
-                        <span class="pos" title="2017-04-11">
-                           2017-08-22</span>
+                                                <span class="pos" title="{{$ser->time}}">
+                                                    {{$ser->time}}</span>
                                                 <span>
-
-                        </span>
+                                                    
+                                                </span>
                                             </h3>
                                             <div>
-                                                家里有事                                          </div>
+                                                {{$ser->develop}}                                          
+                                             </div>
                                         </a>
-                                    </li>
+                                        </li>
+                                        
+                                            <form action=" " method="post" class="ixi" style = "display:none">
+                                                <input required type="text" name='time' value="{{date('Y-m-d',time())}}" placeholder="历程时间">
+                                                <input required type="text" name='shijian' value="{{$ser->develop}}" placeholder="历程事件">
+                                                <br><br>
+                                                {{csrf_field()}}
+                                                <input type="hidden" name="id" value='{{$ser->id}}'>
+                                                <input type="submit" value="&nbsp;&nbsp;添加&nbsp;&nbsp;" class="fr">
+                                                <input type="submit" formaction="/head/lichen" value="&nbsp;&nbsp;修改&nbsp;&nbsp;" class="fr">
+                                                <a href="/head/lich?id={{$ser->id}}" class="fr">删除</a>
+                                                <a class="ffh fr">返回</a><br><br><br>
+                                            </form>
 
-                                    <form action="/head/licheng" method="post" class="ixi" style = "display:none">
-                                        <input required type="text" name='time' value="2017-04-11" placeholder="历程时间">
-                                        <input required type="text" name='shijian' value="家中有事" placeholder="历程事件">
-                                        <br><br>
-                                        {{csrf_field()}}
-                                        <input type="hidden" name="id" value=''>
-                                        <input type="submit" value="&nbsp;&nbsp;添加&nbsp;&nbsp;" class="fr">
-                                        <input type="submit" formaction="/head/lichen" value="&nbsp;&nbsp;修改&nbsp;&nbsp;" class="fr">
-                                        <a href="/head/lich" class="fr">删除</a>
-                                        <a class="ffh fr">返回</a><br><br><br>
-                                    </form>
-
-                                </div>
+                                </div>    
+                        @endforeach
 
 
                             <a id="qil">+添加</a>
 
-                            <form action="/head/licheng" method="post" id="ixi" style = "display:none">
-                                <input required type="text" name='time' value="2017-04-11" placeholder="历程时间">
+                            <form action="" method="post" id="ixi" style = "display:none">
+                                <input required type="text" name='time' value="{{date('Y-m-d H:i',time())}}" placeholder="历程时间">
                                 <input required type="text" name='shijian' placeholder="历程事件">
                                 <br><br>
                                 {{csrf_field()}}
@@ -573,51 +582,51 @@
                     <div id="c_tags_show" class="c_tags solveWrap" style = "display:block">
 
                         <form action=""></form>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td width="60">
-                                    地点
-                                </td>
-                                <td class="companyCity">
-                                    江苏</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    领域
-                                </td>
-                                <!-- 支持多选 -->
-                                <td title="贸易" class="companyTrade">
-                                   软件</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    规模
-                                </td>
-                                <td class="companyScale">
-                                   '少于十五人','十五~五十人','五十~二百','二百~五百','五百~两千','大于两千人'
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    主页
-                                </td>
-                                <td>
-                                    <a style="text-decoration:none;" rel="nofollow" title="http://www.weimob.com" target="_blank" href="http://www.xiaoxiaozixun.com/" class="companyWeb">
-                                        http://www.xiaoxiaozixun.com/</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    操作
-                                </td>
-                                <td>
-                                    <a id="qweeq" style="text-decoration:none;" rel="nofollow" title="修改" class="companyWeb">
-                                        修改</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                       <table>
+                <tbody>
+                    <tr>
+                        <td width="60">
+                            地点
+                        </td>
+                        <td class="companyCity">
+                        {{$company[0]->city}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            领域
+                        </td>
+                        <!-- 支持多选 -->
+                        <td title="{{$company[0]->trade}}" class="companyTrade">
+                            {{$company[0]->trade}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            规模
+                        </td>
+                        <td class="companyScale">
+                       {{str_replace([0,1,2,3,4,5],['少于十五人','十五~五十人','五十~二百','二百~五百','五百~两千','大于两千人'],$company[0]->scale)}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            主页
+                        </td>
+                        <td>
+                            <a style="text-decoration:none;" rel="nofollow" title="http://www.weimob.com" target="_blank" href="http://www.xiaoxiaozixun.com/" class="companyWeb">
+                              {{$company[0]->web}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            操作
+                        </td>
+                        <td>
+                            <a id="qweeq" style="text-decoration:none;" rel="nofollow" title="修改" class="companyWeb">
+                            修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
                         <a style="text-decoration:none;" id="editTags" class="c_edit" href="javascript:void(0)">
                         </a>
                     </div>
@@ -669,7 +678,7 @@
                                         主页
                                     </td>
                                     <td>
-                                        <input required placeholder="请输入网址" value="http://www.lagou.com" name="web" id="companyUrl" type="text">
+                                        <input required placeholder="请输入网址" value="{{$company[0]->web}}" name="web" id="companyUrl" type="text">
                                     </td>
                                 </tr>
                                 </tbody>
@@ -677,7 +686,7 @@
 
 
                             {{csrf_field()}}
-                            <input type="hidden" name="id" value="">
+                            <input type="hidden" name="id" value="{{$company[0]->id}}">
                             <input value="保存" id="submitFeatures" class="btn_small" type="submit">
 
 
@@ -725,8 +734,9 @@
                         <ul class="reset stageshow" id="rongrzi" style = "display:block">
                             <li>
                                 目前阶段：
-                                <span class="c5">
-                   '天使轮','A轮','B轮','C轮','D轮及以上','上市公司','不需要融资'</span>
+                                 <span class="c5">
+                                    {{str_replace([0,1,2,3,4,5,6],['天使轮','A轮','B轮','C轮','D轮及以上','上市公司','不需要融资'],$company[0]->stage)}}
+                                </span>
                             </li>
                             <li>
                                 <a class="qwert">
@@ -737,12 +747,12 @@
 
 
                         <!-- //////// -->
-                        <form id="stageform" action="/head/state" method="post" style = "display:none">
+                        <form id="stageform" action="" method="post" style = "display:none">
                             <div class="stageSelect">
                                 <label>
 
                                 </label>
-                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="id" value="{{$company[0]->id}}">
                                 <select required name="stage" class="select_tags_short fl" style="width:160px;">
                                     <option value="0">天使轮</option>
                                     <option value="1">A轮</option>
@@ -808,33 +818,34 @@
                                 <!-- ////////////// -->
 
 
+                                   @foreach ($team as $ttem)
                                     <div class="member_info qaza" >
-                                        <div class="vvvtt" style = "display:black">
-                                            <div class="m_portrait">
-                                                <div></div>
-                                                <img alt="" src="{{url('home/head/images/yh1.png')}}" height="120" width="120">
-                                            </div>
-                                            <div class="m_name">
-                                               蔡小净
-                                            </div>
+                                    <div class="vvvtt" style = "display:black">
+                                        <div class="m_portrait">
+                                            <div></div>
+                                            <img alt="" src="{{$ttem->image}}" height="120" width="120">
+                                        </div>
+                                        <div class="m_name">
+                                         {{$ttem->name}}                           
+                                       </div>
 
-                                            <div class="m_position">
-                                                董事长
-                                            </div>
-                                            <div class="m_intro">
+                                        <div class="m_position">
+                                        {{$ttem->position}}
+                                       </div>
+                                        <div class="m_intro">
 
-                                                来自浙江温州
-                                            </div>
-                                            <br>
-                                            <br>
+                                        {{$ttem->desc}}
+                                        </div>
+                                        <br>
+                                        <br>
 
-                                            <a>操作</a>
-                                            <a class="fr member_edit" href="/head/shan">
-                                                +删除成员
-                                            </a>
-                                            <a  class="fr tuandui" id="">
-                                                +修改成员
-                                            </a>
+                                      <a>操作</a>
+                                    <a class="fr member_edit" href="/head/shan?id={{$ttem->id}}">
+                                        +删除成员
+                                    </a>
+                                    <a  class="fr tuandui" id="{{$ttem->id}}">
+                                        +修改成员
+                                    </a>
 
 
                                             <hr><br>
@@ -885,7 +896,7 @@
                                                     字
                                                 </div>
                                                 <div class="clear"></div>
-                                                <input type="hidden" name="company_id" value="">
+                                                <input type="hidden" name="company_id" value="{{$company[0]->id}}">
                                                 <input value="保存" class="btn_small" type="submit">
                                                 <a style="text-decoration:none;" class="btn_cancel_s tti">
                                                     返回
@@ -945,7 +956,7 @@
                                         字
                                     </div>
                                     <div class="clear"></div>
-                                    <input type="hidden" name="company_id" value="">
+                                    <input type="hidden" name="company_id" value="{{$company[0]->id}}">
                                     <input style="width:85px;" value="保存" class="btn_small" type="submit">
                                     <a style="text-decoration:none;" class="btn_cancel_s ttiii">
                                         返回

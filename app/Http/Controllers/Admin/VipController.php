@@ -21,7 +21,7 @@ class VipController extends Controller
 
         //dd($res);
 
-        return view('admin.ad.index',['res' => $res,'request' => $request]);
+//        return view('admin.ad.index',['res' => $res,'request' => $request]);
     }
 
     public function showAdd()
@@ -32,6 +32,7 @@ class VipController extends Controller
     public function vipadd(Request $request)
     {
         $result = $request->all();
+
         $result['created_at'] = date("Y-m-d H:i:s");
 //        执行数据插入
         $res = DB::table('vip')->insert($result);
@@ -68,6 +69,21 @@ class VipController extends Controller
     //修改用户的数据
     public function doUpdate(Request $request)
     {
+        //接收数据
+        $date = $request->only(['name','email','status','password']);
+
+        $id = $request->input('id');
+//        dd($date);
+        //执行修改
+        $res = DB::table('vip')->where('id',$id)->update($date);
+        // dd($res);
+        if($res){
+            //成功 重定向 页面跳转到列表页
+            return redirect('admin/vip');
+        }else{
+            //失败 回到修改页
+            return back();
+        }
 
 
     }

@@ -112,63 +112,63 @@
 
 
 
-                        <div class="item_content">
-                            <div class="product_content product_item clearfix"
-                                 data-id="13933" data-index="0">
+                    <div class="item_content">
+                        <div class="product_content product_item clearfix"
+                             data-id="13933" data-index="0">
 
-                                <img src="{{url('home/head/images/kuaizang.jpg')}}"
-                                     alt="产品图片" height="180" width="300" />
+                            <img src="{{url('home/head/images/kuaizang.jpg')}}"
+                                 alt="产品图片" height="180" width="300" />
 
-                                <div class="product_details">
+                            <div class="product_details">
 
-                                    <h4 class="product_url_all">
+                                <h4 class="product_url_all">
 
-                                        <div class="product_url">
+                                    <div class="product_url">
 
-                                            <a href="http://www.kongkonghu.com/" class="url_valid"
-                                               target="_blank" rel="nofollow" title="">
-                                                股票卫士
-                                            </a>
+                                        <a href="http://www.kongkonghu.com/" class="url_valid"
+                                           target="_blank" rel="nofollow" title="">
+                                            股票卫士
+                                        </a>
 
-                                            <a href="http://www.kongkonghu.com/"
-                                               target="_blank" rel="nofollow" title="">
-                                                <i></i> </a>
+                                        <a href="http://www.kongkonghu.com/"
+                                           target="_blank" rel="nofollow" title="">
+                                            <i></i> </a>
 
-                                        </div> </h4>
+                                    </div> </h4>
 
-                                    <ul class="clearfix">
-                                        <li>客户端</li>
-                                        <li>移动app</li>
-                                    </ul>
+                                <ul class="clearfix">
+                                    <li>客户端</li>
+                                    <li>移动app</li>
+                                </ul>
 
-                                    <div class="product_profile mCustomScrollbar _mCS_1">
-                                        <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1"
-                                             style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-                                            <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
+                                <div class="product_profile mCustomScrollbar _mCS_1">
+                                    <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1"
+                                         style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+                                        <div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;">
 
-                                                <p>不限于微博，微信，股吧，贴吧，论坛，新闻等全渠道财经资讯的『异动监测』。在满足股民看盘、选股、交易的同时、围绕头条舆情监控、题材消息追踪、预警三方面特色内容，打造股市机构内参、股票异动情报。</p>
+                                            <p>不限于微博，微信，股吧，贴吧，论坛，新闻等全渠道财经资讯的『异动监测』。在满足股民看盘、选股、交易的同时、围绕头条舆情监控、题材消息追踪、预警三方面特色内容，打造股市机构内参、股票异动情报。</p>
 
-                                            </div>
-                                            <div class="mCSB_scrollTools" style="position: absolute; display: none;">
-                                                <div class="mCSB_draggerContainer">
+                                        </div>
+                                        <div class="mCSB_scrollTools" style="position: absolute; display: none;">
+                                            <div class="mCSB_draggerContainer">
 
-                                                    <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
-                                                        <div class="mCSB_dragger_bar" style="position:relative;"></div>
-                                                    </div>
-
-                                                    <div class="mCSB_draggerRail"></div>
+                                                <div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;">
+                                                    <div class="mCSB_dragger_bar" style="position:relative;"></div>
                                                 </div>
+
+                                                <div class="mCSB_draggerRail"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br><br>
+                    </div>
+                    <br><br>
 
 
 
-                <!-- ///// -->
+                    <!-- ///// -->
                 </div>
                 <!--
            -->
@@ -196,19 +196,19 @@
 
 
 
-                                <li class="history_li clearfix " data-id="78445">
-                                    <div class="li_date">
-                                        <p class="date_year">2015-08</p>
-                                    </div>
-                                    <div class="li_type_icon li_type_icon2"></div>
-                                    <div class="li_desc">
-                                        <p class="desc_title desc_hover clearfix" data-href="">
+                            <li class="history_li clearfix " data-id="78445">
+                                <div class="li_date">
+                                    <p class="date_year">2015-08</p>
+                                </div>
+                                <div class="li_type_icon li_type_icon2"></div>
+                                <div class="li_desc">
+                                    <p class="desc_title desc_hover clearfix" data-href="">
           <span class="desc_real_title  desc_real_title_hover ">
           <a  rel="nofollow"> 获得融资金额N千万天使轮融资 </a>
            <a rel="nofollow"> <i class="desc_link"></i> </a> </span> </p>
-                                        <div class="desc_intro">
-                                        </div>
-                                    </div> <span class="history_ul_vspilt"></span> </li>
+                                    <div class="desc_intro">
+                                    </div>
+                                </div> <span class="history_ul_vspilt"></span> </li>
 
 
 
@@ -224,18 +224,18 @@
                     </div>
 
 
-                        <a rel="nofollow" title="浏览职位" href="/JobShow">
-                            <div class="item_content">
-                                <div style="display: block;" class="company_intro_text">
-                                    <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p>大客户销售经理 </span>
-                                    <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p><p class="fr">经验1-3年</p></span>
-                                    <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p>5000K~100000K
+                    <a rel="nofollow" title="浏览职位" href="/JobShow">
+                        <div class="item_content">
+                            <div style="display: block;" class="company_intro_text">
+                                <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p>大客户销售经理 </span>
+                                <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p><p class="fr">经验1-3年</p></span>
+                                <span class="company_content"><p>&nbsp; &nbsp; &nbsp;</p>5000K~100000K
         　&nbsp; &nbsp;大专&nbsp; &nbsp;带薪年假</span>
-                                    <span style="background-position: right top;" class="text_over"></span>
-                                </div>
-                                <div class="company_image_gallery">
-                                </div>
-                            </div></a><hr>
+                                <span style="background-position: right top;" class="text_over"></span>
+                            </div>
+                            <div class="company_image_gallery">
+                            </div>
+                        </div></a><hr>
 
 
 
