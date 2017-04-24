@@ -110,7 +110,7 @@
       this.canvas.style.position = 'absolute';
     }
 
-    this.setSize(width, height);
+    // this.setSize(width, height);
   };
 
   VectorCanvas.prototype = {
@@ -120,7 +120,7 @@
     height: 0,
     canvas: null,
 
-    setSize: function (width, height) {
+   /* setSize: function (width, height) {
       if (this.mode == 'svg') {
         this.canvas.setAttribute('width', width);
         this.canvas.setAttribute('height', height);
@@ -143,7 +143,7 @@
       }
       this.width = width;
       this.height = height;
-    },
+    },*/
 
     createPath: function (config) {
       var node;

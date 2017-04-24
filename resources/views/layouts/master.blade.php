@@ -9,6 +9,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+    {{--<script src="{{url("admin/js/jquery-1.10.1.min.js")}}" type="text/javascript"></script>--}}
+
     <link href="{{url("admin/css/bootstrap.min.css")}}" rel="stylesheet" type="text/css"/>
     <link href="{{url("admin/css/bootstrap-responsive.min.css")}} rel="stylesheet" type="text/css"/>
     <link href="{{url("admin/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css"/>
@@ -158,10 +160,10 @@
                         <a href="{{url('admin/company/index')}}">公司信息列表</a>
                     </li>
                     <li >
-                        <a href="{{url('admin/company/add')}}">后台添加公司</a>
+                        <a href="{{url('admin/company/refcompany')}}">显示未审核公司</a>
                     </li>
                     <li >
-                        <a href="{{url('admin/company/apply')}}">申请认证列表</a>
+                        <a href="{{url('admin/company/index')}}">显示已审核公司</a>
                     </li>
                 </ul>
             </li>
@@ -179,6 +181,9 @@
                     <li >
                         <a href="{{url('admin/category/add')}}">添加职位</a>
                     </li>
+                    <li >
+                        <a href="{{url('admin/category/our')}}">dkd职位</a>
+                    </li>
                 </ul>
             </li>
 
@@ -193,6 +198,7 @@
                 <ul class="sub-menu">
                     <li ><a href="{{url("admin/ad/index")}}">广告列表</a></li>
                     <li ><a href="{{url("admin/ad/add")}}">添加广告</a></li>
+
                 </ul>
             </li>
 
@@ -266,11 +272,10 @@
     </div>
 </div>
 
-<script src="{{url("admin/js/jquery-1.10.1.min.js")}}" type="text/javascript"></script>
 
 <script src="{{url("admin/js/jquery-migrate-1.2.1.min.js")}}" type="text/javascript"></script>
 
-<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custo?.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
 <script src="{{url("admin/js/jquery-ui-1.10.1.custom.min.js")}}" type="text/javascript"></script>
 
@@ -303,9 +308,9 @@
 
 <!--[if lt IE 9]>
 
-<script src="{{url("admin/js/excanvas.min.js")}}"></script>
+<script src="{{url('admin/js/excanvas.min.js')}}"></script>
 
-<script src="{{url("admin/js/respond.min.js")}}"></script>
+<script src="{{url('admin/js/respond.min.js')}}"></script>
 
 <![endif]-->
 
@@ -389,9 +394,9 @@
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 
 
-<script src="../admin/js/app.js" type="text/javascript"></script>
+{{--<script src="../admin/js/app.js" type="text/javascript"></script>--}}
 
-<script src="../admin/js/index.js" type="text/javascript"></script>
+{{--<script src="../admin/js/index.js" type="text/javascript"></script>--}}
 
 <script src="{{url("admin/js/app.js")}}" type="text/javascript"></script>
 

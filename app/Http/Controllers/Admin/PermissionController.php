@@ -15,6 +15,8 @@ class PermissionController extends Controller
         $permissions = Permission::all();
 
         return view('admin.permission.permissionList',compact('permissions'));
+
+
     }
     //添加权限表单
     public function permissionAdd(Request $request)

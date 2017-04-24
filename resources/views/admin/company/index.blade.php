@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -29,7 +30,75 @@
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/mws-theme.css')}}" media="screen">
     <link rel="stylesheet" type="text/css" href="{{url('admin/HTML_b/css/themer.css')}}" media="screen">
-    <title>Document</title>
+    <script src="{{url('admin/js/jquery-1.8.3.min.js')}}"></script>
+
+    <title>公司信息显示</title>
+
+        <script type="text/javascript">
+
+            $(function () {
+
+                var buttons = $("button[name = status]");
+//                alert(buttons.length);
+                for(var i=0;i<buttons.length;i++){
+
+                    (function (i) {
+                        buttons[i].onclick = function () {
+
+                            if(confirm("确定审核该公司吗")){                                var btn_class = buttons[i].getAttribute('class');
+                                var id = $(buttons[i]).parent().parent().children(':first').text();
+                                if(btn_class == 'icon-ok') {
+                                    //修改对应的登录权限信息
+                                    $.ajax({
+                                        url:"{{ asset('admin/company/auditedt') }}",
+                                        type:'post',
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                        },
+                                        data:{status:btn_class,id:id},
+                                        success:function (data) {
+//                                    alert(data);
+                                        },
+                                        error:function () {
+                                            alert("错误");
+                                        }
+                                    });
+                                    buttons[i].setAttribute('class', 'icon-remove');
+                                }else{
+                                    //修改对应的登录权限信息
+                                    $.ajax({
+                                        url:"{{ asset('admin/company/auditedt') }}",
+                                        type:'post',
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                        },
+                                        data:{status:btn_class,id:id},
+                                        success:function (data) {
+                                  alert(data);
+                                        },
+                                        error:function () {
+                                            alert("错误");
+                                        }
+                                    });
+                                    buttons[i].setAttribute('class', 'icon-ok');
+                                }
+                            }
+
+                        }
+                    })(i)
+                }
+
+
+
+
+
+
+            })
+        </script>
+
+
+
+
 </head>
 <body>
 @section('content')
@@ -75,11 +144,11 @@
                             id</th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 80px;" aria-label="Browser: activate to sort column ascending">公司LOGO</th>
 
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 25px;" aria-label="Engine version: activate to sort column ascending"> 公司简称</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">一句话介绍</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">查看职位</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 25px;" aria-label="Engine version: activate to sort column ascending"> 公司名称</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">公司网站</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">公司描述</th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 75px;" aria-label="CSS grade: activate to sort column ascending">状态</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+
 
                     </tr>
                     </thead>
@@ -88,20 +157,15 @@
 
                     @foreach($res as $k => $v)
                         <tr class="odd">
-                            <td class="  sorting_1">{{$v->id}}</td>
+                            <td class="  sorting_1">{{$v->vip_id}}</td>
                             <td class=" ">{{$v->logo}}</td>
-                            <td class=" ">{{$v->short_name}}</td>
-                            <td class=" ">{{$v->one_desc}}</td>
-                            <td class=" ">{{$v->id}}</td>
+                            <td class=" ">{{$v->name}}</td>
+                            <td class=" "><a href="{{ $v->web }}">{{ $v->web }}</a></td>
+                            <td class=" ">{{$v->desc}}</td>
                             <td class=" ">
-                                {{str_replace([-1,0,1,2,3,4],['未验证','禁用','已认证','未认证','正在申请','后台添加'],$v->state)}}
+                                <button name="status" id="status" class="icon-{{ $v->audit == 0 ? 'remove' : 'ok' }}"></button>
                             </td>
-                            <td class=" ">
-                                &nbsp&nbsp
-                                <a class = 'rules' data= '11' href="{{url('admin/company/edit'.'/'.$v->id)}}" style="color:blue;"><i class="icon-wrench"></i>修改</a>
-                                &nbsp&nbsp
-                                <a class = 'rules' data= '19' href="{{url('admin/company/delete'.'/'.$v->id)}}" style="color:RED;"><i class="icon-trash"></i>删除</a>
-                            </td>
+
 
                         </tr>
                     @endforeach
@@ -117,6 +181,12 @@
         </div>
     </div>
 @endsection
+
+
+
+
+
+
 
 
 <script src="{{url('admin/table/js/libs/jquery-1.8.3.min.js')}}"></script>

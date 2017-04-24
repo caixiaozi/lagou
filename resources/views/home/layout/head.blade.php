@@ -36,9 +36,12 @@
     <!-- 企业用户头部 -->
     <div id="lg_tbar">
         <div class="inner">
+
+
             <div class="lg_tbar_l">
                 <a style="text-decoration:none;" href="" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a style="text-decoration:none;" href="ob/create.html">进入企业版</a>
+
+                <a style="text-decoration:none;" href="url{{'login'}}">进入企业版</a>
             </div>
             <ul class="lg_tbar_r reset">
                 <li>
@@ -62,10 +65,10 @@
                         </li>
 
                         <li>
-                            <a style="text-decoration:none;" href="ndex.html" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">公司的首页</a>
+                            <a style="text-decoration:none;" href="url{{'company'}}" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">公司的首页</a>
                         </li>
                         <li>
-                            <a style="text-decoration:none;" href="ndex.html" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">账号设置</a>
+                            <a style="text-decoration:none;" href="url{{'personal'}}" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">账号设置</a>
                         </li>
                         <li>
                             <a style="text-decoration:none;" href="/login/logout" id="logouta" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
@@ -93,7 +96,7 @@
             </div>
             <ul class="lg_tnav_wrap reset">
                 <li>
-                    <a style="text-decoration:none;" href="/head/index" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司首页</a>
+                    <a style="text-decoration:none;" href="home/index" data-lg-tj-id="5u00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司首页</a>
                 </li>
                 <li>
                     <a style="text-decoration:none;" href="/resume/pending" data-lg-tj-id="5v00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">简历管理</a>
@@ -104,7 +107,7 @@
                 </li>
 
                 <li>
-                    <a style="text-decoration:none;" href="dex.html" data-lg-tj-id="5y00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
+                    <a style="text-decoration:none;" href="dex.html" data-lg-tj-id="5y00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">发布简历</a>
                 </li>
             </ul>
         </div>

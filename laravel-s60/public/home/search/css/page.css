@@ -1,5 +1,0 @@
-.Pagination{margin:20px 0; overflow:hidden;line-height:30px;}
-.Pagination a,.Pagination span{height:30px; line-height:30px;margin:0 10px 10px 0; float:left;padding:0 10px; border: 1px solid #e8e8e8;-webkit-transition: .2s;-moz-transition: .2s;transition: .2s;}
-.Pagination a:hover,.Pagination span:hover{color:#fff; background:#009875;-webkit-transition: .2s;-moz-transition: .2s;transition: .2s;}
-.Pagination a.current,.Pagination span.current,.Pagination span.disabled{background:#009875;cursor:pointer;}
-.Pagination input{border:1px solid #cbcbcb;margin:0 5px; height:28px;font-size:16px;line-height:28px;}

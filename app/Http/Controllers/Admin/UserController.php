@@ -22,6 +22,7 @@ class UserController extends Controller
             $user->roles= implode(',', $roles);
         }
         return view('admin.admin.userlist', compact('users'));
+
     }
     //添加用户
     public function userAdd(Request $request)
@@ -32,6 +33,8 @@ class UserController extends Controller
         }
         return view('admin.admin.userAdd');
     }
+
+
 
     //分配角色
     public function attachRole(Request $request,$user_id)
@@ -50,4 +53,15 @@ class UserController extends Controller
         return view('admin.admin.attachRole', compact('roles'));
     }
 
+    //删除权限
+    public function userDelete($user_id)
+    {
+        //删除信息
+        $user= DB::table('users')->where('id',$user_id)->delete();
+        if($user){
+            return redirect('admin/user-list');
+        }else{
+            return back();
+        }
+    }
 }

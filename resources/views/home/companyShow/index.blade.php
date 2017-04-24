@@ -80,15 +80,15 @@
             <div class="top_info">
                 <!-- 展示 -->
                 <div class="top_info_wrap">
-                    <img src="">
+                    <img src="{{$data -> logo}}">
                     <div class="company_info">
                         <div class="company_main">
                             <h1 class="ellipsis">
-                                <a href="" class="hovertips" target="_blank" rel="nofollow" title="">
-
+                                <a href="{{$data -> web}}" class="hovertips" target="_blank" rel="nofollow" title="{{$data -> name}}">
+                                    {{$data -> name}}
                                 </a>
                             </h1>
-                            <a href="" target="_blank" rel="nofollow" class="icon-wrap"  title=""><i></i></a>
+                            <a href="{{$data -> web}}" target="_blank" rel="nofollow" class="icon-wrap"  title="{{$data -> web}}"><i></i></a>
                             <if condition="$com_more.state eq 1">                                                       <!-- 已认证 -->
                                 <a href="javascript:;" class="identification" title="拉勾认证企业" >
                                     <i></i>
@@ -102,13 +102,13 @@
 
 
                             <div class="company_word clear">
-
+                                {{$data -> one_desc}}
                             </div>
                         </div>
                         <div class="company_data">
                             <ul>
                                 <li>
-                                    <strong></strong><br>
+                                    <strong>{:count($zpjob)}</strong><br>
                                     <span class="tipsys" original-title="该公司的在招职位数量">
                                 <span>招聘职位</span><span class="tip"></span>
                             </span>
@@ -280,25 +280,35 @@
 
                         <!-- 展示模式 -->
                         <div class="item_content">
-                            <ul class="info_list_with_icon">
-                                <li class="industry">
-                                    <i></i>
-                                    <span></span>
-                                </li>
-                                <li class="financing">
-                                    <i></i>
-                                    <span></span>
-                                </li>
-                                <li class="scale">
-                                    <i></i>
-                                    <span></span>
-                                </li>
-                                <li class="location">
-                                    <i></i>
-                                    <span></span>
-                                </li>
-                            </ul>
+                            <!-- 展示模式 -->
+                            <volist name='product' id='vo'>
+                                <div class="product_content" data-id="4627">
+                                    <img src="{$vo.image}">
+                                    <div class="product_details">
+                                        <h4 title="{{$data -> web}}" class="product_url_all"><div class="{{$data -> web}}" title="{{$data -> web}}"><a href="{{$data -> web}}" class="url_valid" target="_blank" rel="nofollow">{$vo.name}</a><a title="http://leancloud.cn" href="http://leancloud.cn/" target="_blank" rel="nofollow"><i class="product_url"></i></a></div></h4>
+
+                                        <ul>
+                                        </ul>
+                                        <div class="product_profile mCustomScrollbar _mCS_1"><div id="mCSB_1" class="mCustomScrollBox mCS-dark-2 mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: -99px; left: 0px;" dir="ltr">
+                                                    <br><br><br><br><br>{$vo.desc}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end .item_content-->
+
+                                </div><!--end #company_products-->
+                            </volist>
+                            <!-- 公司介绍 -->
+                            <div class="item_container" id="company_intro">
+                                <h3 class="item_ltitle">公司介绍</h3>
+
+                                <!-- 展示模式 -->
+                                <div class="item_content">
+                                    <p>{{$data -> desc}}</p>
+                                </div><!-- 444 -->
+                            </div>
                         </div>
+                    </div>
 
                         <!-- 编辑模式 -->
                         <div class="item_content_edit_wrap dn">

@@ -26,7 +26,7 @@
         <br>
         <br><br><br><br><br><br><br><br><br><br><br>
         <h1>欢迎您注册招聘网,请</h1>
-        <a href="http://www.forbetter.top/jihuo">点击激活</a>
+       <a href ="{{url('/aa/'.$_token)}}">点击激活</a>
     </div>
 
 </body>

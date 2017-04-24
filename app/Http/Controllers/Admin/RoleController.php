@@ -68,9 +68,12 @@ class RoleController extends Controller
     public function doDelete($role_id)
     {
         //删除信息
-        Role::destroy([$role_id]);
-//        dd ($role_id);
-        return redirect('admin/
-        role-list');
+        $role= DB::table('roles')->where('id',$role_id)->delete();
+
+        if($role){
+            return redirect('admin/role-list');
+        }else{
+            return back();
+        }
     }
 }

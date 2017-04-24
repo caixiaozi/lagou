@@ -153,6 +153,11 @@ class CategoryController extends Controller
         }
     }
 
+    public function categoryOur()
+    {
+        return view ('admin.category.our');
+    }
+
 
 
 }

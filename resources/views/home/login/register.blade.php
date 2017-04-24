@@ -67,22 +67,23 @@
 <input type="hidden" value="" id="isVisiable_request_form_verifyCode" />
 <section class="content_box cleafix">
     <div class="left_area fl">
-        <form action="{{url('register')}}" method="post" id="forup">
+        <form action="{{url('home/register')}}" method="post" id="forup">
             <ul class="form_head clearfix">
                 <li> <i class="icon icon_mail"></i> 邮箱注册 </li>
                 <span class="tab_active"></span>
             </ul>
-
-
-
             <div class="form_body" data-view="usernameRegister">
                 <div class="input_item clearfix" style="display: block;">
-                    <input type="text" class="input input_white" name="username" placeholder="请输入常用邮箱地址" data-required="required" autocomplete="off" id="username" />
+                    <input type="type" class="input input_white" name="name" placeholder="请输入用户名" data-required="required" autocomplete="off" id="name" />
+
+                </div>
+                <div class="input_item clearfix" style="display: block;">
+                    <input type="email" class="input input_white" name="email" placeholder="请输入常用邮箱地址" data-required="required" autocomplete="off" id="email" />
                     <div id="usernameinfo" style="height:20px;line-height:20px;color:limegreen"></div>
                 </div>
                 <div class="input_item clearfix" style="display: block;">
                     <input type="password" class="input input_white" name="password" placeholder="请输入密码" data-required="required" autocomplete="off" id="password" />
-                    <div id="passinfo" style="height:20px;line-height:20px;color:color:limegreen"></div>
+                    <div id="passinfo"></div>
                 </div>
                 <div class="input_item clearfix" style="display: block;">
                     <input type="button" class="btn btn_outline btn_lg" value="找工作" data-myvalue="1" love='ut'>
@@ -103,9 +104,9 @@
                 var usernameres = false;
                 var Cpwd = false;
                 var Ctype = false;
-                $('#username').blur(function(){
+                $('#email').blur(function(){
                     var reg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                    var v = $('#username').val();
+                    var v = $('#email').val();
                     var ere = reg.test(v);
                     if(ere && v){
                         $('#usernameinfo').html('');
@@ -138,7 +139,7 @@
                     if(Ctype == false){
                         $('#typeinfo').html('请选择使用拉钩的目的');
                     }
-                    $('#username').blur();
+                    $('#eamil').blur();
                     $('#password').blur();
                     if(usernames && Cpwd && Ctype){
                         $('#forup').submit();
@@ -158,7 +159,7 @@
     </div>
     <div class="right_area fl">
         <h5>已有拉勾帐号:</h5>
-        <a href="/login" class="login_now" data-lg-tj-id="18N0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">直接登录</a>
+        <a href="{{url("home/login")}}" class="login_now" data-lg-tj-id="18N0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">直接登录</a>
         <h5>使用以下帐号直接登录:</h5>
         <ul class="vender_login clearfix">
             <li><a rel="nofollow" href="/oauth20/auth_sinaWeiboProvider.html" title="使用新浪微博帐号登录" class="vender_icon icon_sina" target="_blank" data-lg-tj-id="1910" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"></a></li>
