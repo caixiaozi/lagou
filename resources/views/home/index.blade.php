@@ -3237,6 +3237,19 @@
 <!-- 页面主体END -->
 
 <!-- footer <-->
+<div class="" id="qr_cloud_resume" style="display: none;">
+    <div class="cloud">
+        <img width="134" height="134" src="">
+        <a class="close" href="javascript:;"></a>
+    </div>
+</div>
+<div class="clear"></div>
+<input type="hidden" value="97fd449bcb294153a671f8fe6f4ba655" id="resubmitToken">
+
+</div>
+
+<!-- footer -->
+<a id="backtop" title="回到顶部" rel="nofollow"></a>
 
 
 <!-- feedback -->
