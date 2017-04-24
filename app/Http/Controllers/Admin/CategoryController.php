@@ -1,11 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -157,21 +152,10 @@ class CategoryController extends Controller
         }
     }
 
-<<<<<<< HEAD
-
-
-}
-
-
-
-=======
-    public function categoryOur()
-    {
-        return view ('admin.category.our');
-    }
 
 
 
 }
 
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
+
+

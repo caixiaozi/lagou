@@ -8,13 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class FirmController extends Controller
 {
-    //
-    /*public function firm()
-    {
-        return view('home.firm.edit');
-<<<<<<< HEAD
-=======
-    }*/
+
     //企业版/发布新职位
     public function getRecruit(){
         //return view('home.firm.recruit');
@@ -135,7 +129,7 @@ class FirmController extends Controller
         //dd($user);
 
         return view('home.firm.browse',['user'=>$user]);
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
+
     }
 
     //修改职位
@@ -232,8 +226,4 @@ class FirmController extends Controller
             return back()->with('error','数据插入失败');
         }
     }
-
-
-
-
 }

@@ -107,10 +107,10 @@
                     </tbody></table>
 
 
-                <div class="dataTables_paginate paging_full_numbers" id="pages">
-                    <?php echo $vip->appends($request->all())->render(); ?>
-
-                </div></div>
+                
+                    
+                
+            </div>
         </div>
     </div>
 

@@ -173,12 +173,9 @@ $data = session('user');
                     </li>
                     <li >
                         <a href="{{url('admin/category/add')}}">添加职位</a>
-<<<<<<< HEAD
-=======
                     </li>
                     <li >
                         <a href="{{url('admin/category/our')}}">dkd职位</a>
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     </li>
                 </ul>
             </li>
@@ -194,29 +191,17 @@ $data = session('user');
                 <ul class="sub-menu">
                     <li ><a href="{{url("admin/ad/index")}}">广告列表</a></li>
                     <li ><a href="{{url("admin/ad/add")}}">添加广告</a></li>
-<<<<<<< HEAD
-=======
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                 </ul>
             </li>
 
             <li class="">
                 <a href="javascript:;">
-<<<<<<< HEAD
-
-=======
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     <i class="icon-external-link"></i>
                     <span class="title">友情链接管理</span>
                     <span class="arrow "></span>
                 </a>
 
                 <ul class="sub-menu">
-<<<<<<< HEAD
-
-=======
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     <li ><a href="{{url("admin/links/index")}}">链接列表</a></li>
                     <li ><a href="{{url("admin/links/add")}}">添加链接</a></li>
                 </ul>
@@ -237,7 +222,6 @@ $data = session('user');
                 </ul>
             </li>
 
-<<<<<<< HEAD
             <li class="">
                 <a href="javascript:;">
                     <i class="icon-briefcase"></i>
@@ -251,8 +235,6 @@ $data = session('user');
                 </ul>
             </li>
 
-=======
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
             <li class="">
                 <a href="javascript:;">
                     <i class="icon-list-ul"></i>
@@ -304,9 +286,9 @@ $data = session('user');
 
 <!--[if lt IE 9]>
 
-<script src="{{url("admin/js/excanvas.min.js")}}"></script>
+<!--<script src="{{url("admin/js/excanvas.min.js")}}"></script>-->
 
-<script src="{{url("admin/js/respond.min.js")}}"></script>
+<!--<script src="{{url("admin/js/respond.min.js")}}"></script>-->
 
 <![endif]-->
 
@@ -329,12 +311,7 @@ $data = session('user');
 
 <!--[if lt IE 9]>
 
-<<<<<<< HEAD
-=======
-<script src="{{url('admin/js/excanvas.min.js')}}"></script>
 
-<script src="{{url('admin/js/respond.min.js')}}"></script>
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 <![endif]-->
 
@@ -387,12 +364,6 @@ $data = session('user');
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 
 
-<<<<<<< HEAD
-=======
-{{--<script src="../admin/js/app.js" type="text/javascript"></script>--}}
-
-{{--<script src="../admin/js/index.js" type="text/javascript"></script>--}}
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 <script src="{{url("admin/js/app.js")}}" type="text/javascript"></script>
 
@@ -402,10 +373,6 @@ $data = session('user');
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script>

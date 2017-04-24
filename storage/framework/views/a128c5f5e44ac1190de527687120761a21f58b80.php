@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="_token" content="<?php echo e(csrf_token()); ?>"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -31,6 +32,66 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('admin/HTML_b/css/themer.css')); ?>" media="screen">
     <title><?php echo $__env->yieldContent('title', '后台首页'); ?></title>
     <link rel="shortcut icon" href="<?php echo e(url("admin/image/log.png")); ?>" />
+
+    <script src="<?php echo e(url('admin/js/jquery-1.8.3.min.js')); ?>"></script>
+
+    <title>公司信息显示</title>
+
+        <script type="text/javascript">
+
+            $(function () {
+
+                var buttons = $("button[name = status]");
+//                alert(buttons.length);
+                for(var i=0;i<buttons.length;i++){
+
+                    (function (i) {
+                        buttons[i].onclick = function () {
+
+                            if(confirm("确定审核该公司吗")){                                var btn_class = buttons[i].getAttribute('class');
+                                var id = $(buttons[i]).parent().parent().children(':first').text();
+                                if(btn_class == 'icon-ok') {
+                                    //修改对应的登录权限信息
+                                    $.ajax({
+                                        url:"<?php echo e(asset('admin/company/auditedt')); ?>",
+                                        type:'post',
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                        },
+                                        data:{status:btn_class,id:id},
+                                        success:function (data) {
+//                                    alert(data);
+                                        },
+                                        error:function () {
+                                            alert("错误");
+                                        }
+                                    });
+                                    buttons[i].setAttribute('class', 'icon-remove');
+                                }else{
+                                    //修改对应的登录权限信息
+                                    $.ajax({
+                                        url:"<?php echo e(asset('admin/company/auditedt')); ?>",
+                                        type:'post',
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                        },
+                                        data:{status:btn_class,id:id},
+                                        success:function (data) {
+                                  alert(data);
+                                        },
+                                        error:function () {
+                                            alert("错误");
+                                        }
+                                    });
+                                    buttons[i].setAttribute('class', 'icon-ok');
+                                }
+                            }
+
+                        }
+                    })(i)
+                }
+            })
+        </script>
 </head>
 <body>
 <?php $__env->startSection('content'); ?>
@@ -76,11 +137,11 @@
                             id</th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 80px;" aria-label="Browser: activate to sort column ascending">公司LOGO</th>
 
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 25px;" aria-label="Engine version: activate to sort column ascending"> 公司简称</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">一句话介绍</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">查看职位</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 25px;" aria-label="Engine version: activate to sort column ascending"> 公司名称</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">公司网站</th>
+                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">公司描述</th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 75px;" aria-label="CSS grade: activate to sort column ascending">状态</th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 87px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+
 
                     </tr>
                     </thead>
@@ -89,11 +150,11 @@
 
                     <?php $__currentLoopData = $res; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $k => $v): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
                         <tr class="odd">
-                            <td class="  sorting_1"><?php echo e($v->id); ?></td>
+                            <td class="  sorting_1"><?php echo e($v->vip_id); ?></td>
                             <td class=" "><?php echo e($v->logo); ?></td>
-                            <td class=" "><?php echo e($v->short_name); ?></td>
-                            <td class=" "><?php echo e($v->one_desc); ?></td>
-                            <td class=" "><?php echo e($v->id); ?></td>
+                            <td class=" "><?php echo e($v->name); ?></td>
+                            <td class=" "><a href="<?php echo e($v->web); ?>"><?php echo e($v->web); ?></a></td>
+                            <td class=" "><?php echo e($v->desc); ?></td>
                             <td class=" ">
                                 <?php echo e(str_replace([-1,0,1,2,3,4],['未验证','禁用','已认证','未认证','正在申请','后台添加'],$v->state)); ?>
 
@@ -102,7 +163,9 @@
                                 <a class = 'rules' data= '11' href="<?php echo e(url('admin/company/edit'.'/'.$v->id)); ?>" style="color:blue;"><i class="icon-wrench"></i>修改</a>
                                 <br>
                                 <a class = 'rules' data= '19' href="<?php echo e(url('admin/company/delete'.'/'.$v->id)); ?>" style="color:RED;"><i class="icon-trash"></i>删除</a>
+                                <button name="status" id="status" class="icon-<?php echo e($v->audit == 0 ? 'remove' : 'ok'); ?>"></button>
                             </td>
+
 
                         </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
@@ -119,6 +182,12 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
+
+
+
+
+
+
 
 
 <script src="<?php echo e(url('admin/table/js/libs/jquery-1.8.3.min.js')); ?>"></script>

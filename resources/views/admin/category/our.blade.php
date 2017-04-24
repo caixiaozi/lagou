@@ -154,21 +154,6 @@
                 </ul>
             </li>
 
-            {{--<li >
-                <a href="javascript:;" class="dropdown-toggle">
-                    <i class="icon-camera"></i>
-                    <span class="menu-text">一拍管理</span>
-                    <b class="arrow icon-angle-down"></b>
-                </a>
-                <ul class="submenu">
-                    <li>
-                        <a href=/index.php/Admin/Pat/index.html>
-                            <i class="icon-double-angle-right"></i>
-                            一拍列表
-                        </a>
-                    </li>
-                </ul>
-            </li>--}}
 
             <li >
                 <a href="javascript:;" class="dropdown-toggle">

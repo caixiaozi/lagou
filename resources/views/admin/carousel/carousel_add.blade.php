@@ -12,6 +12,7 @@
             <br/><br/>
             <form action="{{asset('admin/carousel/add2')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
+                {{--<input type="hidden" name="id" value="" class="biaodan">--}}
                 <label>跳转地址</label>
                 <input type="text" name="url" value="" class="biaodan" placeholder="路由">
                 <br/><br/>
@@ -37,12 +38,4 @@
             </form>
         </div>
     </div>
-@endsection
-@section('bottom')
-{{--判断错误信息--}}
-        @if (session('status'))
-
-            <script>$("#boxx").fadeOut(3000);</script>
-        @endif
-
 @endsection

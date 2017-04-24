@@ -13,6 +13,8 @@ $data = session('user');
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+    
+
     <link href="<?php echo e(url("admin/css/bootstrap.min.css")); ?>" rel="stylesheet" type="text/css"/>
     <link href="<?php echo e(url("admin/css/bootstrap-responsive.min.css")); ?> rel="stylesheet" type="text/css"/>
     <link href="<?php echo e(url("admin/css/font-awesome.min.css")); ?>" rel="stylesheet" type="text/css"/>
@@ -151,10 +153,10 @@ $data = session('user');
                         <a href="<?php echo e(url('admin/company/index')); ?>">公司信息列表</a>
                     </li>
                     <li >
-                        <a href="<?php echo e(url('admin/company/add')); ?>">后台添加公司</a>
+                        <a href="<?php echo e(url('admin/company/refcompany')); ?>">显示未审核公司</a>
                     </li>
                     <li >
-                        <a href="<?php echo e(url('admin/company/apply')); ?>">申请认证列表</a>
+                        <a href="<?php echo e(url('admin/company/index')); ?>">显示已审核公司</a>
                     </li>
                 </ul>
             </li>
@@ -172,6 +174,9 @@ $data = session('user');
                     <li >
                         <a href="<?php echo e(url('admin/category/add')); ?>">添加职位</a>
                     </li>
+                    <li >
+                        <a href="<?php echo e(url('admin/category/our')); ?>">dkd职位</a>
+                    </li>
                 </ul>
             </li>
 
@@ -188,16 +193,15 @@ $data = session('user');
                     <li ><a href="<?php echo e(url("admin/ad/add")); ?>">添加广告</a></li>
                 </ul>
             </li>
+
             <li class="">
                 <a href="javascript:;">
-
                     <i class="icon-external-link"></i>
                     <span class="title">友情链接管理</span>
                     <span class="arrow "></span>
                 </a>
 
                 <ul class="sub-menu">
-
                     <li ><a href="<?php echo e(url("admin/links/index")); ?>">链接列表</a></li>
                     <li ><a href="<?php echo e(url("admin/links/add")); ?>">添加链接</a></li>
                 </ul>
@@ -271,11 +275,10 @@ $data = session('user');
     </div>
 </div>
 
-<script src="<?php echo e(url("admin/js/jquery-1.10.1.min.js")); ?>" type="text/javascript"></script>
 
 <script src="<?php echo e(url("admin/js/jquery-migrate-1.2.1.min.js")); ?>" type="text/javascript"></script>
 
-<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custo?.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
 <script src="<?php echo e(url("admin/js/jquery-ui-1.10.1.custom.min.js")); ?>" type="text/javascript"></script>
 
@@ -283,9 +286,9 @@ $data = session('user');
 
 <!--[if lt IE 9]>
 
-<script src="<?php echo e(url("admin/js/excanvas.min.js")); ?>"></script>
+<!--<script src="<?php echo e(url("admin/js/excanvas.min.js")); ?>"></script>-->
 
-<script src="<?php echo e(url("admin/js/respond.min.js")); ?>"></script>
+<!--<script src="<?php echo e(url("admin/js/respond.min.js")); ?>"></script>-->
 
 <![endif]-->
 
@@ -307,6 +310,7 @@ $data = session('user');
 <script src="<?php echo e(url("admin/js/bootstrap.min.js")); ?>" type="text/javascript"></script>
 
 <!--[if lt IE 9]>
+
 
 
 <![endif]-->
@@ -364,7 +368,6 @@ $data = session('user');
 <script src="<?php echo e(url("admin/js/app.js")); ?>" type="text/javascript"></script>
 
 <script src="<?php echo e(url("admin/js/index.js")); ?>" type="text/javascript"></script>
-
 
 
 

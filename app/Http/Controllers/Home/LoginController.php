@@ -32,23 +32,12 @@ class LoginController extends Controller
                     $type = $vip->type;
                     if ($type == 1) {
                         session(['vip' => $vip]);
-<<<<<<< HEAD
-                        return redirect('/');
-                    }
-                    if ($type == 2) {
-                        return view('home.CompanyShow.index ');
-=======
-                     //$data = $request->session()->all();
-                     //dd($data);
-                        //dd('index');
-//                        return view('home/index');
                         return redirect('/');
                     }
                     if ($type == 2) {
                         session(['vip' => $vip]);
                         /*return view('/company/index?id=" . $tyid . ');*/
                         return redirect('/');
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
                     }
                 } else {
                     return view('home/login');

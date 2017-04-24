@@ -63,11 +63,7 @@ class RegisterController extends Controller
             if ($res) {
 //                echo "激活成功";
                 echo "<script>alert('激活成功');</script> ";
-<<<<<<< HEAD
-                return view('home/two');
-=======
                 return redirect('/');
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
             }else{
                 echo "激活失败";
                 return view('home/register');

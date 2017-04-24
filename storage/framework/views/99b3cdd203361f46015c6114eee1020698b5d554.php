@@ -226,36 +226,36 @@
     <!-- 账号绑定-->
     <div class="y_nav" style="display:none"><dl class="c_section">
 
-                <dt id="autofiletitle">
-                <h1>
-                    <em></em>
-                    帐号绑定
-                </h1>
-                </dt>
-                <dd>
-                    <ul class="user_noModify">
-                        <br><br>
-                        <li>当前登录帐号：<span><?php echo e($com->email); ?> </span> </li><br><br><br>
-                        <li>绑定后，你可以同时使用以下方式登录拉勾</li>
-                    </ul>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/mail-bding_3e4986b.png" alt="mail"></dt>
+            <dt id="autofiletitle">
+            <h1>
+                <em></em>
+                帐号绑定
+            </h1>
+            </dt>
+            <dd>
+                <ul class="user_noModify">
+                    <br><br>
+                    <li>当前登录帐号：<span><?php echo e($com->email); ?> </span> </li><br><br><br>
+                    <li>绑定后，你可以同时使用以下方式登录拉勾</li>
+                </ul>
+                <dl class="user_thirdLogin">
+                    <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/mail-bding_3e4986b.png" alt="mail"></dt>
 
-                        <dd>已绑定邮箱  <span><?php echo e($com->email); ?> </span>
-                        </dd>
-                    </dl>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/tel-bding_8f995d5.png" alt="tel"></dt>
-                        <dd><a href="javascript:;" id="bindindPhoneBtn">绑定手机帐号</a> </dd>
-                    </dl>
-                    <dl class="user_thirdLogin">
-                        <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/qq-bding_9361c39.png" alt="qq"></dt>
+                    <dd>已绑定邮箱  <span><?php echo e($com->email); ?> </span>
+                    </dd>
+                </dl>
+                <dl class="user_thirdLogin">
+                    <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/tel-bding_8f995d5.png" alt="tel"></dt>
+                    <dd><a href="javascript:;" id="bindindPhoneBtn">绑定手机帐号</a> </dd>
+                </dl>
+                <dl class="user_thirdLogin">
+                    <dt><img src="//www.lgstatic.com/www/static/account-c/modules/common/img/user/qq-bding_9361c39.png" alt="qq"></dt>
 
-                        <dd><a href="https://passport.lagou.com/oauth20/auth_qqProvider.html?state=bind">绑定QQ帐号</a> </dd>
-                    </dl>
+                    <dd><a href="https://passport.lagou.com/oauth20/auth_qqProvider.html?state=bind">绑定QQ帐号</a> </dd>
+                </dl>
 
-                </dd>
-            </dl>
+            </dd>
+        </dl>
     </div>
 
     <!-- 拉钩PLUS -->
@@ -293,13 +293,13 @@
                             <td><input type="password" name="newpassword" id="newpassword"  maxlength="16" autocomplete="off"/></td>
                         </tr>
                         
-                            
-                            
+                        
+                        
                         
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-                               <button class="btn userinfo_save">保存</button></td>
+                                <button class="btn userinfo_save">保存</button></td>
                         </tr>
                     </table>
                 </form>

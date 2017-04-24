@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','管理员管理')
-        <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

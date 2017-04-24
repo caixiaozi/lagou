@@ -10,11 +10,14 @@ use Illuminate\Support\Facades\DB;
 class CarouselController extends Controller
 {
     //首页轮播图管理//////////////////////////////////////////////////
-    public function carousel() {
-        $result = DB::table('carousels')->orderBy('id')->where('cate',0)->paginate(4);
-        $where = ['cate'=>'0'];
-        return view('Admin/carousel/carousel')->with('result',$result)->with('where',$where);
+    public function carousel(Request $request) {
+        $result = DB::table('carousels')->where(function($query)use($request){
+//            $where = ['cate'=>'0'];
+            $query->where('title','like','%'.$request->input('keywords').'%');
+        })->paginate($request->input('num',2));
+        return view('admin/carousel/carousel',['result'=>$result,'request' => $request]);
     }
+
     //公司轮播图管理/////////////////////////////////////////////
     public function firmcarousel() {
         $result = DB::table('carousels')->orderBy('id')->where('cate',1)->paginate(4);
@@ -24,7 +27,7 @@ class CarouselController extends Controller
     //添加轮播图////////////////////////////////////////////////////
     public function carousel_add() {
         // return '111';
-        return view('admin.carousels.carousel_add');
+        return view('admin.carousel.carousel_add');
     }
     //添加的操作///////////////////////////////////////////////////
     public function carousel_add2(Request $request) {
@@ -38,7 +41,7 @@ class CarouselController extends Controller
         $onsale = $request->onsale;
         $title = $request->title;
         $abc = time().mt_rand(1000, 9999).'.'.$ext;
-        $request->pic->move(public_path().'/Admin/images/carousel', $abc);
+        $request->pic->move(public_path().'/admin/image/carousel', $abc);
         if($request->hasFile('pic')){
             $sss = DB::table('carousels')->insert([
                 'pic' => $abc,
@@ -51,9 +54,9 @@ class CarouselController extends Controller
 
             if($sss){
                 if($cate == '0'){
-                    return redirect('admin/carousels/carousel');
+                    return redirect('admin/carousel');
                 }else{
-                    return redirect('admin/firmcarousel');
+                    return redirect('admin/carousel');
                 }
             }
         }
@@ -61,7 +64,7 @@ class CarouselController extends Controller
     //修改轮播图//////////////////////////////////////////////////////
     public function carousel_edit($id){
         $result = DB::table('carousels')->where('id',$id)->get()->first();
-        return view('admin/carousels/carousel_edit')->with('arr',$result);
+        return view('admin/carousel/carousel_edit')->with('arr',$result);
     }
     //修改的操作//////////////////////////////////////////////////////
     public function carousel_edit2(Request $request){
@@ -73,7 +76,7 @@ class CarouselController extends Controller
         if($request->file('pic')){
             $ext = $request->file('pic')->getClientOriginalExtension();
             $abc = time().mt_rand(1000, 9999).'.'.$ext;
-            $request->pic->move(public_path().'/Admin/images/carousel', $abc);
+            $request->pic->move(public_path().'/admin/image/carousel', $abc);
             if($request->hasFile('pic')){
                 $sss = DB::table('carousels')
                     ->where('id',$id)
@@ -105,7 +108,7 @@ class CarouselController extends Controller
             if($cate == '0'){
                 return redirect('admin/carousel');
             }else{
-                return redirect('admin/firmcarousel');
+                return redirect('admin/carousel');
             }
         }else{
             return back()->with('status', '修改失败！ :(');

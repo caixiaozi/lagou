@@ -1,6 +1,9 @@
+<?php
+$data=session()->all();
+dd($data);
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -33,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('home/shou/myresume/css/layout_903ac4c.css')); ?>" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('home/hua/css/mCustomScrollbar_ac2fb8b.css')); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo e(url('home/hua/css/layout_7503fdc.css')); ?>">
+
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('home/hua/css/main.html_aio_673afd3.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('home/hua/css/widgets_3990de9.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('home/hua/css/main.html_aio_2_415b727.css')); ?>">
@@ -51,161 +54,161 @@
 <!-- 城市分站 -->
 <!-- header -->
 <!--C端头部通栏广告位-->
-<!--验证注册邮箱-->
-<!-- @require  "common/widgets/header_c/modules/emailvalid/main.less" -->
+
 <div id="lg_header">
-    <!--C端头部黑色导航-->
-    <div id="lg_tbar">
-        <div class="inner">
-            <div class="lg_tbar_l">
-                <a href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a href="#hr.#dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a></div>
-            <?php if(!empty(session('vip'))): ?>
-                <ul class="lg_tbar_r">
-                    <!-- if has unread message, add class unreaded -->
-                    <li class="msg_dropdown">
-                        <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">消息
-                            <em class="msg_amount" id="headMsgAmount" style="display: none;">6</em></a>
-                        <div class="lg_msg_popup">
-                            <div class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody" style="overflow: hidden;">
-                                <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;">
-                                    <div class="mCSB_container" style="position: relative; top: 0px;">
-                                        <ul class="lg_top_msg_list">
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">广告门·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">中科聚网·PHP开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">五分旅游网·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">优谱创新教育·PHP软件开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">经研八·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754297556275085312">你投递给
-                                                        <span class="empha">中少总社·PHP程序员</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754296559524536320">你投递给
-                                                        <span class="empha">天奇健·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="mCSB_scrollTools" style="position: absolute; display: block;">
-                                        <div class="mCSB_draggerContainer">
-                                            <div class="mCSB_dragger" style="position: absolute; height: 166px; top: 0px;" oncontextmenu="return false;">
-                                                <div class="mCSB_dragger_bar" style="position: relative; line-height: 166px;"></div>
-                                            </div>
-                                            <div class="mCSB_draggerRail"></div>
+<!--C端头部黑色导航-->
+<div id="lg_tbar">
+    <div class="inner">
+        <div class="lg_tbar_l">
+            <a href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
+            <a href="#hr.#dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a></div>
+        <?php if(!empty(session('vip'))): ?>
+            <ul class="lg_tbar_r">
+                <!-- if has unread message, add class unreaded -->
+                <li class="msg_dropdown">
+                    <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">消息
+                        <em class="msg_amount" id="headMsgAmount" style="display: none;">6</em></a>
+                    <div class="lg_msg_popup">
+                        <div class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody" style="overflow: hidden;">
+                            <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;">
+                                <div class="mCSB_container" style="position: relative; top: 0px;">
+                                    <ul class="lg_top_msg_list">
+                                        <li class="lg_msg_item">
+                                            <em>·</em>
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#">你投递给
+                                                    <span class="empha">广告门·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                        <li class="lg_msg_item">
+                                            <em>·</em>
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#">你投递给
+                                                    <span class="empha">中科聚网·PHP开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                        <li class="lg_msg_item">
+                                            <em>·</em>
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#">你投递给
+                                                    <span class="empha">五分旅游网·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                        <li class="lg_msg_item">
+                                            <em>·</em>
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#">你投递给
+                                                    <span class="empha">优谱创新教育·PHP软件开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                        <li class="lg_msg_item">
+                                            <em>·</em>
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#">你投递给
+                                                    <span class="empha">经研八·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                        <li class="lg_msg_item">
+                                            <em>·</em>
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754297556275085312">你投递给
+                                                    <span class="empha">中少总社·PHP程序员</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                        <li class="lg_msg_item">
+                                            <div>
+                                                <!-- 投递反馈 -->
+                                                <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754296559524536320">你投递给
+                                                    <span class="empha">天奇健·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mCSB_scrollTools" style="position: absolute; display: block;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div class="mCSB_dragger" style="position: absolute; height: 166px; top: 0px;" oncontextmenu="return false;">
+                                            <div class="mCSB_dragger_bar" style="position: relative; line-height: 166px;"></div>
                                         </div>
+                                        <div class="mCSB_draggerRail"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="lg_msg_pu_footer">
-                                <a href="#settingsdetail.html" target="_blank" class="lg_msg_setting fl">
-                                    <i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
-                                <a href="#msgdetail.html" class="lg_msg_more fr">查看更多</a></div>
                         </div>
-                    </li>
-                    <li>
-                        <a href="<?php echo e(url('myresume')); ?>" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a></li>
-                    <li>
-                        <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
-                        <em class="noticeDot dn" id="noticeDot_delivery"></em>
-                    </li>
-                    <li>
-                        <a href="jobShow/cang" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a></li>
-                    <li class="user_dropdown">
-                        <span class="unick bl"><?php echo e(session('vip') -> name); ?></span>
-                        <em class="noticeDot dn" id="noticeDot_name"></em>
-                        <i>
-                        </i>
-                        <ul>
-                            <li>
-                                <a href="#/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
-                            <li>
-                                <a href="#/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
-                                <em class="noticeDot dn" id="noticeDot_invitation"></em>
-                            </li>
-                            <li>
-                                <a href="<?php echo e(url('personal')); ?>" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
-                            <li>
-                                <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
-                            <li>
-                                <a href="<?php echo e(url('getLogout')); ?>" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            <?php endif; ?>
-            <?php if(empty(session('vip'))): ?>
-                <ul class="lg_tbar_r" style ="margin-right:110px">
-                    <li> <a href="home/login"  data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a> </li>
-                    <li> <a href="home/register"  class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a> </li>
-                </ul>
-            <?php endif; ?>
-        </div>
-    </div>
-
-    <!--end #lg_tbar-->
-    <!--C端头部白色导航-->
-    <div id="lg_tnav">
-        <div class="inner">
-            <div class="lg_tnav_l">
-                <a href="#/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                    <h1 class="logo_birth_3rd">拉勾网</h1></a>
-                <div class="suggestCity">
-                    <strong>上海站</strong>
-                    <em id="changeCity_btn">[切换城市]</em></div>
-            </div>
-            <ul class="lg_tnav_wrap">
-                <li>
-                    <a href="#/" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
+                        <div class="lg_msg_pu_footer">
+                            <a href="#settingsdetail.html" target="_blank" class="lg_msg_setting fl">
+                                <i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+                            <a href="#msgdetail.html" class="lg_msg_more fr">查看更多</a></div>
+                    </div>
                 </li>
                 <li>
-                    <a href="#/gongsi/" data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a>
+                    <a href="<?php echo e(url('myresume')); ?>" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a></li>
+                <li>
+                    <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+                    <em class="noticeDot dn" id="noticeDot_delivery"></em>
                 </li>
                 <li>
-                    <a href="/yipai" data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
-                </li>
-                <li>
-                    <a href="/yanzhi"  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
-                </li>
-                <li>
-                    <a  href="/dajing"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
+                    <a href="jobShow/collect" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a></li>
+                <li class="user_dropdown">
+                    <span class="unick bl"><?php echo e(session('vip') -> name); ?></span>
+                    <em class="noticeDot dn" id="noticeDot_name"></em>
+                    <i>
+                    </i>
+                    <ul>
+                        <li>
+                            <a href="" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                        <li>
+                            <a href="" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                            <em class="noticeDot dn" id="noticeDot_invitation"></em>
+                        </li>
+                        <li>
+                            <a href="<?php echo e(url('personal')); ?>" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
+                        <li>
+                            <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
+                        <li>
+                            <a href="<?php echo e(url("getLogout")); ?>" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                    </ul>
                 </li>
             </ul>
-        </div>
+        <?php endif; ?>
+        <?php if(empty(session('vip'))): ?>
+            <ul class="lg_tbar_r" style ="margin-right:110px">
+                <li> <a href="home/login"  data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a> </li>
+                <li> <a href="home/register"  class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a> </li>
+            </ul>
+        <?php endif; ?>
     </div>
+</div>
+
+
+<!--end #lg_tbar-->
+<!--C端头部白色导航-->
+<div id="lg_tnav">
+    <div class="inner">
+        <div class="lg_tnav_l">
+            <a href="#/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+                <h1 class="logo_birth_3rd">拉勾网</h1></a>
+            <div class="suggestCity">
+                <strong>上海站</strong>
+                <em id="changeCity_btn">[切换城市]</em></div>
+        </div>
+        <ul class="lg_tnav_wrap">
+            <li>
+                <a href="#/" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
+            </li>
+            <li>
+                <a href="<?php echo e(url('company')); ?>" data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a>
+            </li>
+            <li>
+                <a href="" data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
+            </li>
+            <li>
+                <a href=""  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
+            </li>
+            <li>
+                <a  href=""  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
+            </li>
+        </ul>
+    </div>
+</div>
     <!--end #lg_tnav-->
     <div class="slide_banner" style="display: none; height: 0px; background: url(&quot;##/www/static/index/modules/event/birth-3rd/img/slider-banner-0720_0d4a667.jpg&quot;) 50% 0% no-repeat rgb(3, 17, 40);">
         <a class="activity_link" href="#/topic/#" target="_blank" data-lg-tj-id="z900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
@@ -325,46 +328,24 @@
 
         <div id="home_banner" class="home_banner" data-lg-tj-track-code="index_bannerad" data-lg-tj-track-type="1">
             <ul class="banner_bg">
-                <li  class="banner_bg_1 current" >
-
-
-
-                    <a class="tj_exposure" rel="nofollow" href="#/topic/#" target="_blank" data-lg-tj-id="et00" data-lg-tj-no="0001" data-lg-tj-cid="3355">
-                        <img src="<?php echo e(url('home/shou/css/CgpEMljeBseAK-o-AAXIu8vaOz8993.JPG')); ?>" width="612" height="160" alt="红星美凯龙" />
-                    </a>
-                </li>
-                <li  class="banner_bg_2" >
-
-
-
-                    <a class="tj_exposure" rel="nofollow" href="https://activity.lagou.com/activity/dist/dreamMarket/pc/" target="_blank" data-lg-tj-id="et00" data-lg-tj-no="0002" data-lg-tj-cid="3254">
-                        <img src="<?php echo e(url('home/shou/css/Cgp3O1jcgLSAbFpPAAOO8uXcack174.JPG')); ?>" width="612" height="160" alt="梦想者市集上海" />
-                    </a>
-                </li>
-                <li  class="banner_bg_3" >
-
-
-
-                    <a class="tj_exposure" rel="nofollow" href="https://activity.lagou.com/topic/lagouoffers2.html" target="_blank" data-lg-tj-id="et00" data-lg-tj-no="0003" data-lg-tj-cid="3330">
-                        <img src="<?php echo e(url('home/shou/css/CgqKkVjU236ABGWLAANFEisE6jM314.JPG')); ?>" width="612" height="160" alt="校园offer节" />
-                    </a>
-                </li>
+                <?php $__currentLoopData = $arr1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $arr): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                    <li class="banner_bg_1 current">
+                        <a href="<?php echo e(asset($arr->url)); ?>" target="_blank" class="tj_exposure" rel="nofollow" data-lg-tj-id="et00" data-lg-tj-no="0001" data-lg-tj-cid="3355"><img
+                                    src="<?php echo e(asset('admin/image/carousel/'.$arr->pic)); ?>" width="612" height="160"
+                                    alt="<?php echo e($arr->descr); ?>"/></a>
+                    </li>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
             </ul>
             <div class="banner_control">
                 <em></em>
                 <ul class="thumbs">
-                    <li  class="thumbs_1 current" >
-                        <i></i>
-                        <img src="<?php echo e(url('home/shou/css/CgpFT1jeBsmAaGaMAABPBhhTiPA509.JPG')); ?>" width="113" height="42" />
-                    </li>
-                    <li  class="thumbs_2" >
-                        <i></i>
-                        <img src="<?php echo e(url('home/shou/css/CgqKkVjbjCCAehv9AAAyyQv9awg887.JPG')); ?>" width="113" height="42" />
-                    </li>
-                    <li  class="thumbs_3" >
-                        <i></i>
-                        <img src="<?php echo e(url('home/shou/css/Cgp3O1jU24OAI6QyAAA0xbK07k4629.JPG')); ?>" width="113" height="42" />
-                    </li>
+                    <?php $__currentLoopData = $arr1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $arr): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+                        <li class="thumbs_<?php echo e($loop->iteration); ?>">
+                            <i></i>
+                            <img src="<?php echo e(asset('admin/image/carousel/'.$arr->pic)); ?>" width="113" height="42"/>
+                        </li>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+
                 </ul>
             </div>
         </div>

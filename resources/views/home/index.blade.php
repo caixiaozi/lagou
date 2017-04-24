@@ -1,17 +1,6 @@
+
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta content="互联网招聘,找工作,招聘网,人才网" name="keywords">
-    <meta content="拉勾网是最权威的互联网行业招聘网站,提供全国真实的互联网招聘信息,工资不面议当面谈,找工作,招聘网,寻人才就来拉勾网,互联网行业找工作首选拉勾网" name="description">
-    <title>拉勾网-最专业的互联网招聘平台_找工作_招聘_人才网_求职</title>
-    <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
-=======
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -62,8 +51,7 @@
 <!-- 城市分站 -->
 <!-- header -->
 <!--C端头部通栏广告位-->
-<!--验证注册邮箱-->
-<!-- @require "common/widgets/header_c/modules/emailvalid/main.less" -->
+
 <div id="lg_header">
 <!--C端头部黑色导航-->
 <div id="lg_tbar">
@@ -163,9 +151,9 @@
                     </i>
                     <ul>
                         <li>
-                            <a href="#/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
+                            <a href="" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
                         <li>
-                            <a href="#/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+                            <a href="" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
                             <em class="noticeDot dn" id="noticeDot_invitation"></em>
                         </li>
                         <li>
@@ -173,7 +161,7 @@
                         <li>
                             <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
                         <li>
-                            <a href="/login/logout" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                            <a href="{{url("getLogout")}}" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
                     </ul>
                 </li>
             </ul>
@@ -186,215 +174,7 @@
         @endif
     </div>
 </div>
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
-
-    <!-- global_domain FE_base... -->
-    <script charset="utf-8" src="{{url('home/hua/css/v.js')}}"></script>
-    <script async="" src="{{url('home/hua/css/analytics.js')}}"></script>
-    <script async="" src="{{url('home/hua/css/a.js')}}"></script>
-    <script type="text/javascript">(function() {
-            var protocol = window.location.protocol;
-            var host = window.location.host;
-            var baseUrl = protocol + '//' + host;
-
-
-        })();</script>
-    <!-- 公共样式 -->
-    <!-- header样式 -->
-    <!-- footer样式 -->
-    <!-- 页面样式 -->
-    <!-- 动态token，防御伪造请求，重复提交 -->
-    <script type="text/javascript">window.X_Anti_Forge_Token = '';
-        window.X_Anti_Forge_Code = '';</script>
-    {{--<link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/mCustomScrollbar_ac2fb8b.css')}}" />--}}
-    <link rel="stylesheet" type="text/css" href="{{url('home/shou/myresume/css/layout_903ac4c.css')}}" />
-
-    <link rel="stylesheet" type="text/css" href="{{url('home/hua/css/mCustomScrollbar_ac2fb8b.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('home/hua/css/layout_7503fdc.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('home/hua/css/main.html_aio_673afd3.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('home/hua/css/widgets_3990de9.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('home/hua/css/main.html_aio_2_415b727.css')}}">
-    <script src="{{url('home/hua/css/jquery.validate.min_68512c2.js')}}" class="lazyload" charset="utf-8"></script>
-    <link href="{{url('home/hua/css/loginpop_113e5e2.css')}}" rel="stylesheet" class="lazyload" charset="utf-8">
-    <script data-require-id="common/widgets/common/msgPopup" src="{{url('home/hua/css/msgPopup_9611cae.js')}}" async=""></script>
-    <script src="{{url('home/hua/css/lagou_5427c0e.js')}}" class="lazyload" charset="utf-8"></script>
-    <script data-require-id="common/components/template-helper/main" src="{{url('home/hua/css/main_e08c2f2.js')}}" async=""></script>
-</head>
-
-<<<<<<< HEAD
-<body style="width: 100%;">
-<!-- 公共html -->
-<!-- 页面公用结构、velocity变量 -->
-<input type="hidden" value="3787269" name="userid" id="userid">
-<!-- 城市分站 -->
-<!-- header -->
-<!--C端头部通栏广告位-->
-<!--验证注册邮箱-->
-<!-- @require "common/widgets/header_c/modules/emailvalid/main.less" -->
-<div id="lg_header">
-    <!--C端头部黑色导航-->
-    <div id="lg_tbar">
-        <div class="inner">
-            <div class="lg_tbar_l">
-                <a href="#" class="lg_app" data-lg-tj-id="5500" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">拉勾APP</a>
-                <a href="#hr.#dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a></div>
-            @if(!empty(session('vip')))
-                <ul class="lg_tbar_r">
-                    <!-- if has unread message, add class unreaded -->
-                    <li class="msg_dropdown">
-                        <a class="msg_group" href="javascript: void 0;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">消息
-                            <em class="msg_amount" id="headMsgAmount" style="display: none;">6</em></a>
-                        <div class="lg_msg_popup">
-                            <div class="lg_msg_pu_body mCustomScrollbar _mCS_1" id="lgPopupMsgBody" style="overflow: hidden;">
-                                <div class="mCustomScrollBox mCS-dark-2" id="mCSB_1" style="position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 250px;">
-                                    <div class="mCSB_container" style="position: relative; top: 0px;">
-                                        <ul class="lg_top_msg_list">
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">广告门·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">中科聚网·PHP开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">五分旅游网·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">优谱创新教育·PHP软件开发工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#">你投递给
-                                                        <span class="empha">经研八·PHP</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <em>·</em>
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754297556275085312">你投递给
-                                                        <span class="empha">中少总社·PHP程序员</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                            <li class="lg_msg_item">
-                                                <div>
-                                                    <!-- 投递反馈 -->
-                                                    <a class="detail" target="_blank" href="#businessDetail.html?type=DELIVER&amp;businessId=754296559524536320">你投递给
-                                                        <span class="empha">天奇健·PHP工程师</span>职位的简历，已经投递成功，请静候佳音</a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="mCSB_scrollTools" style="position: absolute; display: block;">
-                                        <div class="mCSB_draggerContainer">
-                                            <div class="mCSB_dragger" style="position: absolute; height: 166px; top: 0px;" oncontextmenu="return false;">
-                                                <div class="mCSB_dragger_bar" style="position: relative; line-height: 166px;"></div>
-                                            </div>
-                                            <div class="mCSB_draggerRail"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lg_msg_pu_footer">
-                                <a href="#settingsdetail.html" target="_blank" class="lg_msg_setting fl">
-                                    <i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
-                                <a href="#msgdetail.html" class="lg_msg_more fr">查看更多</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{{url('myresume')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a></li>
-                    <li>
-                        <a href="" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
-                        <em class="noticeDot dn" id="noticeDot_delivery"></em>
-                    </li>
-                    <li>
-                        <a href="jobShow/cang" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a></li>
-                    <li class="user_dropdown">
-                        <span class="unick bl">{{session('vip') -> name}}</span>
-                        <em class="noticeDot dn" id="noticeDot_name"></em>
-                        <i>
-                        </i>
-                        <ul>
-                            <li>
-                                <a href="#/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a></li>
-                            <li>
-                                <a href="#/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
-                                <em class="noticeDot dn" id="noticeDot_invitation"></em>
-                            </li>
-                            <li>
-                                <a href="{{url('personal')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a></li>
-                            <li>
-                                <a href="#hr.#dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
-                            <li>
-                                <a href="{{url('getLogout')}}" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            @endif
-            @if(empty(session('vip')))
-                <ul class="lg_tbar_r" style ="margin-right:110px">
-                    <li> <a href="home/login"  data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a> </li>
-                    <li> <a href="home/register"  class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a> </li>
-                </ul>
-            @endif
-        </div>
-    </div>
-
-    <!--end #lg_tbar-->
-    <!--C端头部白色导航-->
-    <div id="lg_tnav">
-        <div class="inner">
-            <div class="lg_tnav_l">
-                <a href="#/topic/3years.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-                    <h1 class="logo_birth_3rd">拉勾网</h1></a>
-                <div class="suggestCity">
-                    <strong>上海站</strong>
-                    <em id="changeCity_btn">[切换城市]</em></div>
-            </div>
-            <ul class="lg_tnav_wrap">
-                <li>
-                    <a href="#/" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
-                </li>
-                <li>
-                    <a href="#/gongsi/" data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a>
-                </li>
-                <li>
-                    <a href="/yipai" data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
-                </li>
-                <li>
-                    <a href="/yanzhi"  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
-                </li>
-                <li>
-                    <a  href="/dajing"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--end #lg_tnav-->
-    <div class="slide_banner" style="display: none; height: 0px; background: url(&quot;##/www/static/index/modules/event/birth-3rd/img/slider-banner-0720_0d4a667.jpg&quot;) 50% 0% no-repeat rgb(3, 17, 40);">
-        <a class="activity_link" href="#/topic/#" target="_blank" data-lg-tj-id="z900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-            <div class="slide_content">
-                <h3>理想之上</h3>
-                <span class="close"></span>
-            </div>
-        </a>
-    </div>
-=======
 
 <!--end #lg_tbar-->
 <!--C端头部白色导航-->
@@ -415,27 +195,26 @@
                 <a href="{{url('company')}}" data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a>
             </li>
             <li>
-                <a href="/yipai" data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
+                <a href="" data-lg-tj-id="5k00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" target="_blank">一拍</a>
             </li>
             <li>
-                <a href="/yanzhi"  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
+                <a href=""  data-lg-tj-id="ic00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_yanzhi">言职</a>
             </li>
             <li>
-                <a  href="/dajing"  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
+                <a  href=""  target="_blank" data-lg-tj-id="1NI0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">大鲲</a>
             </li>
         </ul>
     </div>
 </div>
-<!--end #lg_tnav-->
-<div class="slide_banner" style="display: none; height: 0px; background: url(&quot;##/www/static/index/modules/event/birth-3rd/img/slider-banner-0720_0d4a667.jpg&quot;) 50% 0% no-repeat rgb(3, 17, 40);">
-    <a class="activity_link" href="#/topic/#" target="_blank" data-lg-tj-id="z900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-        <div class="slide_content">
-            <h3>理想之上</h3>
-            <span class="close"></span>
-        </div>
-    </a>
-</div>
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
+    <!--end #lg_tnav-->
+    <div class="slide_banner" style="display: none; height: 0px; background: url(&quot;##/www/static/index/modules/event/birth-3rd/img/slider-banner-0720_0d4a667.jpg&quot;) 50% 0% no-repeat rgb(3, 17, 40);">
+        <a class="activity_link" href="#/topic/#" target="_blank" data-lg-tj-id="z900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+            <div class="slide_content">
+                <h3>理想之上</h3>
+                <span class="close"></span>
+            </div>
+        </a>
+    </div>
 </div>
 <!--end #header-->
 <input type="hidden" id="serverTime" value="1468805525380">
@@ -543,46 +322,24 @@
 
         <div id="home_banner" class="home_banner" data-lg-tj-track-code="index_bannerad" data-lg-tj-track-type="1">
             <ul class="banner_bg">
-                <li  class="banner_bg_1 current" >
-
-
-
-                    <a class="tj_exposure" rel="nofollow" href="#/topic/#" target="_blank" data-lg-tj-id="et00" data-lg-tj-no="0001" data-lg-tj-cid="3355">
-                        <img src="{{url('home/shou/css/CgpEMljeBseAK-o-AAXIu8vaOz8993.JPG')}}" width="612" height="160" alt="红星美凯龙" />
-                    </a>
-                </li>
-                <li  class="banner_bg_2" >
-
-
-
-                    <a class="tj_exposure" rel="nofollow" href="https://activity.lagou.com/activity/dist/dreamMarket/pc/" target="_blank" data-lg-tj-id="et00" data-lg-tj-no="0002" data-lg-tj-cid="3254">
-                        <img src="{{url('home/shou/css/Cgp3O1jcgLSAbFpPAAOO8uXcack174.JPG')}}" width="612" height="160" alt="梦想者市集上海" />
-                    </a>
-                </li>
-                <li  class="banner_bg_3" >
-
-
-
-                    <a class="tj_exposure" rel="nofollow" href="https://activity.lagou.com/topic/lagouoffers2.html" target="_blank" data-lg-tj-id="et00" data-lg-tj-no="0003" data-lg-tj-cid="3330">
-                        <img src="{{url('home/shou/css/CgqKkVjU236ABGWLAANFEisE6jM314.JPG')}}" width="612" height="160" alt="校园offer节" />
-                    </a>
-                </li>
+                @foreach($arr1 as $arr)
+                    <li class="banner_bg_1 current">
+                        <a href="{{asset($arr->url)}}" target="_blank" class="tj_exposure" rel="nofollow" data-lg-tj-id="et00" data-lg-tj-no="0001" data-lg-tj-cid="3355"><img
+                                    src="{{asset('admin/image/carousel/'.$arr->pic)}}" width="612" height="160"
+                                    alt="{{$arr->descr}}"/></a>
+                    </li>
+                @endforeach
             </ul>
             <div class="banner_control">
                 <em></em>
                 <ul class="thumbs">
-                    <li  class="thumbs_1 current" >
-                        <i></i>
-                        <img src="{{url('home/shou/css/CgpFT1jeBsmAaGaMAABPBhhTiPA509.JPG')}}" width="113" height="42" />
-                    </li>
-                    <li  class="thumbs_2" >
-                        <i></i>
-                        <img src="{{url('home/shou/css/CgqKkVjbjCCAehv9AAAyyQv9awg887.JPG')}}" width="113" height="42" />
-                    </li>
-                    <li  class="thumbs_3" >
-                        <i></i>
-                        <img src="{{url('home/shou/css/Cgp3O1jU24OAI6QyAAA0xbK07k4629.JPG')}}" width="113" height="42" />
-                    </li>
+                    @foreach($arr1 as $arr)
+                        <li class="thumbs_{{$loop->iteration}}">
+                            <i></i>
+                            <img src="{{asset('admin/image/carousel/'.$arr->pic)}}" width="113" height="42"/>
+                        </li>
+                    @endforeach
+
                 </ul>
             </div>
         </div>

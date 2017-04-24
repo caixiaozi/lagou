@@ -238,7 +238,7 @@
                             <li>
                                 <a href="" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a></li>
                             <li>
-                                <a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
+                                <a href="<?php echo e(url("getLogout")); ?>" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -258,7 +258,7 @@
         </div>
         <ul class="lg_tnav_wrap">
             <li>
-                <a href="#/" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
+                <a href="<?php echo e(url("/")); ?>" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
             </li>
             <li>
                 <a href="#/googsi"  data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" data-lg-tj-track-code="index_company">公司</a>
@@ -305,12 +305,12 @@
                     <img src="<?php echo e(url('home/shou/myresume/resume/tou_42952f6.png')); ?>" height="170" width="702" class="opa" />
                 </div>
             </div>
-            
-                
-                
-            
+        
+        
+        
+        
 
-            <!--end #resumeScore-->
+        <!--end #resumeScore-->
             <div class="profile_box" id="basicInfo">
                 <!-- <span class="c_edit"></span> -->
                 <div class="mr_moudle_head clearfixs mr_w604" style='height:50px;'>
@@ -342,7 +342,7 @@
                     </div>
                 </div>
             </div>
-<br><br><br>
+            <br><br><br>
             <!-- 期望工作 -->
             <div class="profile_box" id="basicInfo">
                 <!-- <span class="c_edit"></span> -->
@@ -391,13 +391,13 @@
                     </div>
                     <div class="basicShow">
                         <?php $__currentLoopData = $data['res_his']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                                <p>公司：<?php echo e($v-> company); ?>
+                            <p>公司：<?php echo e($v-> company); ?>
 
                                 职位： <?php echo e($v-> job); ?>
 
                                 工作时间：<?php echo e($v-> begin_yeartime); ?>.<?php echo e($v-> begin_monthtime); ?> -<?php echo e($v-> end_yeartime); ?>.<?php echo e($v-> end_monthtime); ?>
 
-                                    <button><a href="<?php echo e(url('myresume/del'.'/'.$v -> id)); ?>">删除</a></button></p>
+                                <button><a href="<?php echo e(url('myresume/del'.'/'.$v -> id)); ?>">删除</a></button></p>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                     </div>
                 </div>
@@ -420,17 +420,17 @@
                     </div>
                     <div class="basicShow">
                         <?php $__currentLoopData = $data['pro']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                      <p> 时间：<?php echo e($v->begin_yeartime); ?>.<?php echo e($v -> begin_monthtime); ?>-<?php echo e($v -> end_yeartime); ?>.<?php echo e($v -> end_monthtime); ?>
+                            <p> 时间：<?php echo e($v->begin_yeartime); ?>.<?php echo e($v -> begin_monthtime); ?>-<?php echo e($v -> end_yeartime); ?>.<?php echo e($v -> end_monthtime); ?>
 
-                               项目名称：<?php echo e($v -> name); ?>
+                                项目名称：<?php echo e($v -> name); ?>
 
-                                 职务：<?php echo e($v->job); ?>
+                                职务：<?php echo e($v->job); ?>
 
-                          <button><a href="<?php echo e(url('myresume/delproject'.'/'.$v -> id)); ?>">删除</a></button>
-                      </p>
+                                <button><a href="<?php echo e(url('myresume/delproject'.'/'.$v -> id)); ?>">删除</a></button>
+                            </p>
                             </tr>
 
-                        </table>
+                            </table>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                     </div>
                 </div>
@@ -484,11 +484,11 @@
                         <i class='jbxx'></i>
                     </div>
                     <div class="basicShow">
-                            <table>
-                                <tr>
-                                    <td>描述:<?php echo e($data['introduction']); ?></td>
-                                </tr>
-                            </table>
+                        <table>
+                            <tr>
+                                <td>描述:<?php echo e($data['introduction']); ?></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -510,209 +510,209 @@
                     </div>
                     <div class="basicShow">
                         <?php $__currentLoopData = $data['show_works_value']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                           <p> 网址：<?php echo e($v->link); ?>
+                            <p> 网址：<?php echo e($v->link); ?>
 
-                              说明：<?php echo e($v->desc); ?>
+                                说明：<?php echo e($v->desc); ?>
 
-                               <button><a href="<?php echo e(url('myresume/worksdel'.'/'.$v -> id)); ?>">删除</a></button></p>
+                                <button><a href="<?php echo e(url('myresume/worksdel'.'/'.$v -> id)); ?>">删除</a></button></p>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                     </div>
                 </div>
             </div>
-<a href="">把这份简历下载到本地</a>
+
         </div>
 
 
-<div class="content_r">
-    <div class="mycenterR" id="myInfo">
-        <h2>我的信息</h2>
-        <a target="_blank" href="">我收藏的职位</a>
-        <br>
-        <a target="_blank" href="">我订阅的职位</a>
-    </div><!--end #myInfo-->
+        <div class="content_r">
+            <div class="mycenterR" id="myInfo">
+                <h2>我的信息</h2>
+                <a target="_blank" href="">我收藏的职位</a>
+                <br>
+                <a target="_blank" href="">我订阅的职位</a>
+            </div><!--end #myInfo-->
 
 
-    <div class="mr_uploaded clearfixs">
-        <div class="mr_set_default">
-            <div class="set_default_wrap">
-                <a class="inline cboxElement" href="#uploadFile" title="上传附件简历">我要上传附件简历</a>
-                <div class="xl_list dn">
-                    <ul class="ul_resume_type">
-                        <li data-type="1">默认投递：在线简历</li>
-                        <li data-type="0">默认投递：附件简历</li></ul>
+            <div class="mr_uploaded clearfixs">
+                <div class="mr_set_default">
+                    <div class="set_default_wrap">
+                        <a class="inline cboxElement" href="#uploadFile" title="上传附件简历">我要上传附件简历</a>
+                        <div class="xl_list dn">
+                            <ul class="ul_resume_type">
+                                <li data-type="1">默认投递：在线简历</li>
+                                <li data-type="0">默认投递：附件简历</li></ul>
+                        </div>
+                    </div>
                 </div>
+            </div><!--end #resumeSet-->
+
+            <div class="mycenterR" id="myShare">
+                <h2>当前每日投递量：10个</h2>
+                <a target="_blank" href="">邀请好友，提升投递量</a>
+            </div><!--end #myShare-->
+
+
+            <div class="greybg qrcode mt20">
+                <img width="242" height="242" alt="拉勾微信公众号二维码" src="<?php echo e(url('home/jianli/images/qr_resume.png')); ?>">
+                <span class="c7">微信扫一扫，轻松找工作</span>
             </div>
+        </div><!--end .content_r-->
+    </div>
+
+    <input type="hidden" id="userid" name="userid" value="314873">
+
+    <!-------------------------------------弹窗lightbox ----------------------------------------->
+    <div style="display:none;">
+        <!-- 上传简历 -->
+        <div class="popup" id="uploadFile">
+            <table width="100%">
+                <tbody><tr>
+                    <td align="center">
+                        <form>
+                            <a class="btn_addPic" href="javascript:void(0);">
+                                <span>选择上传文件</span>
+                                <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload')" class="filePrew" id="resumeUpload" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" tabindex="3">
+                            </a>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">支持word、pdf、ppt、txt、wps格式文件<br>文件大小需小于10M</td>
+                </tr>
+                <tr>
+                    <td align="left" style="color:#dd4a38; padding-top:10px;">注：若从其它网站下载的word简历，请将文件另存为.docx格式后上传</td>
+                </tr>
+                <tr>
+                    <td align="center"><img width="55" height="16" alt="loading" style="visibility: hidden;" id="loadingImg" src="style/images/loading.gif"></td>
+                </tr>
+                </tbody></table>
+        </div><!--/#uploadFile-->
+
+        <!-- 简历上传成功 -->
+        <div class="popup" id="uploadFileSuccess">
+            <h4>简历上传成功！</h4>
+            <table width="100%">
+                <tbody><tr>
+                    <td align="center"><p>你可以将简历投给你中意的公司了。</p></td>
+                </tr>
+                <tr>
+                    <td align="center"><a class="btn_s" href="javascript:;">确&nbsp;定</a></td>
+                </tr>
+                </tbody></table>
+        </div><!--/#uploadFileSuccess-->
+
+        <!-- 没有简历请上传 -->
+        <div class="popup" id="deliverResumesNo">
+            <table width="100%">
+                <tbody><tr>
+                    <td align="center"><p class="font_16">你在拉勾还没有简历，请先上传一份</p></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <form>
+                            <a class="btn_addPic" href="javascript:void(0);">
+                                <span>选择上传文件</span>
+                                <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload1')" class="filePrew" id="resumeUpload1" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M">
+                            </a>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">支持word、pdf、ppt、txt、wps格式文件，大小不超过10M</td>
+                </tr>
+                </tbody></table>
+        </div><!--/#deliverResumesNo-->
+
+        <!-- 上传附件简历操作说明-重新上传 -->
+        <div class="popup" id="fileResumeUpload">
+            <table width="100%">
+                <tbody><tr>
+                    <td>
+                        <div class="f18 mb10">请上传标准格式的word简历</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f16">
+                            操作说明：<br>
+                            打开需要上传的文件 - 点击文件另存为 - 选择.docx - 保存
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a>
+                    </td>
+                </tr>
+                </tbody></table>
+        </div><!--/#fileResumeUpload-->
+
+        <!-- 上传附件简历操作说明-重新上传 -->
+        <div class="popup" id="fileResumeUploadSize">
+            <table width="100%">
+                <tbody><tr>
+                    <td>
+                        <div class="f18 mb10">上传文件大小超出限制</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="f16">
+                            提示：<br>
+                            单个附件不能超过10M，请重新选择附件简历！
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a>
+                    </td>
+                </tr>
+                </tbody></table>
+        </div><!--/#deliverResumeConfirm-->
+
+    </div>
+    <!------------------------------------- end ----------------------------------------->
+
+    <script src="<?php echo e(url('home/jianli/js/Chart.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(url('home/jianli/js/profile.min.js')); ?>" type="text/javascript"></script>
+    <!-- <div id="profileOverlay"></div> -->
+    <div class="" id="qr_cloud_resume" style="display: none;">
+        <div class="cloud">
+            <img width="134" height="134" src="">
+            <a class="close" href="javascript:;"></a>
         </div>
-    </div><!--end #resumeSet-->
-
-    <div class="mycenterR" id="myShare">
-        <h2>当前每日投递量：10个</h2>
-        <a target="_blank" href="">邀请好友，提升投递量</a>
-    </div><!--end #myShare-->
-
-
-    <div class="greybg qrcode mt20">
-        <img width="242" height="242" alt="拉勾微信公众号二维码" src="<?php echo e(url('home/jianli/images/qr_resume.png')); ?>">
-        <span class="c7">微信扫一扫，轻松找工作</span>
     </div>
-</div><!--end .content_r-->
-</div>
-
-<input type="hidden" id="userid" name="userid" value="314873">
-
-<!-------------------------------------弹窗lightbox ----------------------------------------->
-<div style="display:none;">
-    <!-- 上传简历 -->
-    <div class="popup" id="uploadFile">
-        <table width="100%">
-            <tbody><tr>
-                <td align="center">
-                    <form>
-                        <a class="btn_addPic" href="javascript:void(0);">
-                            <span>选择上传文件</span>
-                            <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload')" class="filePrew" id="resumeUpload" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" tabindex="3">
-                        </a>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td align="left">支持word、pdf、ppt、txt、wps格式文件<br>文件大小需小于10M</td>
-            </tr>
-            <tr>
-                <td align="left" style="color:#dd4a38; padding-top:10px;">注：若从其它网站下载的word简历，请将文件另存为.docx格式后上传</td>
-            </tr>
-            <tr>
-                <td align="center"><img width="55" height="16" alt="loading" style="visibility: hidden;" id="loadingImg" src="style/images/loading.gif"></td>
-            </tr>
-            </tbody></table>
-    </div><!--/#uploadFile-->
-
-    <!-- 简历上传成功 -->
-    <div class="popup" id="uploadFileSuccess">
-        <h4>简历上传成功！</h4>
-        <table width="100%">
-            <tbody><tr>
-                <td align="center"><p>你可以将简历投给你中意的公司了。</p></td>
-            </tr>
-            <tr>
-                <td align="center"><a class="btn_s" href="javascript:;">确&nbsp;定</a></td>
-            </tr>
-            </tbody></table>
-    </div><!--/#uploadFileSuccess-->
-
-    <!-- 没有简历请上传 -->
-    <div class="popup" id="deliverResumesNo">
-        <table width="100%">
-            <tbody><tr>
-                <td align="center"><p class="font_16">你在拉勾还没有简历，请先上传一份</p></td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <form>
-                        <a class="btn_addPic" href="javascript:void(0);">
-                            <span>选择上传文件</span>
-                            <input type="file" onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload1')" class="filePrew" id="resumeUpload1" name="newResume" size="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M">
-                        </a>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">支持word、pdf、ppt、txt、wps格式文件，大小不超过10M</td>
-            </tr>
-            </tbody></table>
-    </div><!--/#deliverResumesNo-->
-
-    <!-- 上传附件简历操作说明-重新上传 -->
-    <div class="popup" id="fileResumeUpload">
-        <table width="100%">
-            <tbody><tr>
-                <td>
-                    <div class="f18 mb10">请上传标准格式的word简历</div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="f16">
-                        操作说明：<br>
-                        打开需要上传的文件 - 点击文件另存为 - 选择.docx - 保存
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a>
-                </td>
-            </tr>
-            </tbody></table>
-    </div><!--/#fileResumeUpload-->
-
-    <!-- 上传附件简历操作说明-重新上传 -->
-    <div class="popup" id="fileResumeUploadSize">
-        <table width="100%">
-            <tbody><tr>
-                <td>
-                    <div class="f18 mb10">上传文件大小超出限制</div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="f16">
-                        提示：<br>
-                        单个附件不能超过10M，请重新选择附件简历！
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <a title="上传附件简历" href="#uploadFile" class="inline btn cboxElement">重新上传</a>
-                </td>
-            </tr>
-            </tbody></table>
-    </div><!--/#deliverResumeConfirm-->
-
-</div>
-<!------------------------------------- end ----------------------------------------->
-
-<script src="<?php echo e(url('home/jianli/js/Chart.min.js')); ?>" type="text/javascript"></script>
-<script src="<?php echo e(url('home/jianli/js/profile.min.js')); ?>" type="text/javascript"></script>
-<!-- <div id="profileOverlay"></div> -->
-<div class="" id="qr_cloud_resume" style="display: none;">
-    <div class="cloud">
-        <img width="134" height="134" src="">
-        <a class="close" href="javascript:;"></a>
-    </div>
-</div>
-<script>
-    $(function(){
-        $.ajax({
-            url:ctx+"/mycenter/showQRCode",
-            type:"GET",
-            async:false
-        }).done(function(data){
-            if(data.success){
-                $('#qr_cloud_resume img').attr("src",data.content);
+    <script>
+        $(function(){
+            $.ajax({
+                url:ctx+"/mycenter/showQRCode",
+                type:"GET",
+                async:false
+            }).done(function(data){
+                if(data.success){
+                    $('#qr_cloud_resume img').attr("src",data.content);
+                }
+            });
+            var sessionId = "resumeQR"+314873;
+            if(!$.cookie(sessionId)){
+                $.cookie(sessionId, 0, {expires: 1});
             }
+            if($.cookie(sessionId) &amp;&amp; $.cookie(sessionId) != 5){
+                $('#qr_cloud_resume').removeClass('dn');
+            }
+            $('#qr_cloud_resume .close').click(function(){
+                $('#qr_cloud_resume').fadeOut(200);
+                resumeQR = parseInt($.cookie(sessionId)) + 1;
+                $.cookie(sessionId, resumeQR, {expires: 1});
+            });
         });
-        var sessionId = "resumeQR"+314873;
-        if(!$.cookie(sessionId)){
-            $.cookie(sessionId, 0, {expires: 1});
-        }
-        if($.cookie(sessionId) &amp;&amp; $.cookie(sessionId) != 5){
-            $('#qr_cloud_resume').removeClass('dn');
-        }
-        $('#qr_cloud_resume .close').click(function(){
-            $('#qr_cloud_resume').fadeOut(200);
-            resumeQR = parseInt($.cookie(sessionId)) + 1;
-            $.cookie(sessionId, resumeQR, {expires: 1});
-        });
-    });
 
 
-</script>
+    </script>
 
-<div class="clear"></div>
-<input type="hidden" value="97fd449bcb294153a671f8fe6f4ba655" id="resubmitToken">
-<a rel="nofollow" title="回到顶部" id="backtop" style="display: none;"></a>
+    <div class="clear"></div>
+    <input type="hidden" value="97fd449bcb294153a671f8fe6f4ba655" id="resubmitToken">
+    <a rel="nofollow" title="回到顶部" id="backtop" style="display: none;"></a>
 </div><!-- end #container -->
 </div>
 <!-- 主体部分 结束-->

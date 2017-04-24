@@ -13,6 +13,9 @@ class IndexController extends Controller
         //前台个人主页
         //dd('index');
         //return view('home/index');
+        $result = DB::table('carousels')->orderBy('id')->where('cate', 0)->where('onsale', 1)->get();
+        $result2 = DB::table('carousels')->orderBy('id')->where('cate', 1)->where('onsale', 1)->get();
+
         $ad = DB::table('ad') ->orderBy('id' ,'desc') -> limit('6') -> get();
         //dd($ad);
         $links = DB::table('links') -> orderBy('id','desc') -> get();
@@ -106,8 +109,11 @@ class IndexController extends Controller
         return view('home.index',[
             'data'=>$data,
             'res' => $res,
-            'ad' => $ad
+            'ad' => $ad,
+            'arr1'=>$result,
+            'arr2'=>$result2
         ]);
+
     }
 
      public function retrievepassword()

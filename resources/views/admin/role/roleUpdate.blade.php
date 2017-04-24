@@ -12,18 +12,6 @@
     </ul>
     <!--面包屑导航 结束-->
 
-    <!--结果集标题与导航组件 开始-->
-    {{--<div class="result_wrap">--}}
-        {{--<div class="result_content">--}}
-            {{--<div class="short_wrap">--}}
-                {{--<a href="#"><i class="fa fa-plus"></i>新增文章</a>--}}
-                {{--<a href="#"><i class="fa fa-recycle"></i>批量删除</a>--}}
-                {{--<a href="#"><i class="fa fa-refresh"></i>更新排序</a>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    <!--结果集标题与导航组件 结束-->
-
     <div class="result_wrap">
         <form action="" method="post">
             {{csrf_field()}}

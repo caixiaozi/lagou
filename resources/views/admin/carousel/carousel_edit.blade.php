@@ -1,21 +1,7 @@
-@extends('Admin/extends')
+@extends('layouts.master')
 @section('title','修改轮播图')
-@section('css')
-    <style>
-        .zhong{
-            position:absolute;
-            left:450px;
-            top:40px;
-        }
-        .biaodan{
-            width:200px;
-        }
-        label{
-            margin-right:10px;
-        }
-    </style>
-@endsection
-@section('mian')
+
+@section('content')
     <div class="main-content">
         @if (session('status'))
             <div class="alert alert-success" id="boxx">

@@ -18,11 +18,7 @@ Route::get('/', function () {
 
 Route::group(['middleware'=>'check.login'],function() {
     //后台用户
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
     Route::get('admin/vip','Admin\VipController@viplist');
     Route::post('admin/vip-add','Admin\VipController@vipadd');
     Route::get('admin/vip-add', 'Admin\VipController@showAdd');
@@ -109,7 +105,7 @@ Route::group(['middleware'=>'check.login'],function() {
 Route::get('admin/login','Admin\IndexController@showLogin');
 Route::post('doLogin','Admin\IndexController@doLogin');
 
-<<<<<<< HEAD
+
 
 //后台轮播图管理
     Route::get('admin/carousel ', 'Admin\CarouselController@carousel');
@@ -125,13 +121,6 @@ Route::post('doLogin','Admin\IndexController@doLogin');
 
 
 
-
-
-=======
-
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
-
 //前台首页
 Route::get('/','Home\IndexController@index');
 
@@ -144,24 +133,23 @@ Route::get('aa/{id}','Home\RegisterController@jihuo');
 //前台登录
 Route::get('home/login','Home\LoginController@login');
 Route::post('home/doLogin','Home\LoginController@doLogin');
-<<<<<<< HEAD
+
 //前台退出登录
 Route::get('getLogout','home\LoginController@getLogout');
-=======
 
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
+
+
 //找回密码
 // 发送密码重置链接路由
 Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
 
 // 密码重置路由
-Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
-Route::post('password/reset', 'Auth\PasswordController@postReset');
+//Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+//Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 //我的简历
 Route::get('myresume','Home\MyresumeController@myresume');
-<<<<<<< HEAD
 Route::get('add','Home\MyresumeController@addmyresume');
 Route::post('myresume/hisajax','Home\MyresumeController@anyHisajax');
 Route::post('myresume/userupdate','Home\MyresumeController@postUserupdate');
@@ -177,20 +165,14 @@ Route::any('myresume/worksdel/{id}','Home\MyresumeController@getWorkdel');
 
 
 
-=======
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 
-
-
-<<<<<<< HEAD
 
 //公司注册首页
 Route::get('company','Home\CompanyController@company');
 Route::get('company','Home\CompanyController@getIndex');
 Route::post('company','Home\CompanyController@postZhuce');
 Route::post('company','Home\CompanyController@getInsert');
-=======
 //跳转公司信息页面
 Route::get('company', 'Home\CompanyController@company');
 
@@ -202,7 +184,6 @@ Route::get('company/companyEdt', 'Home\CompanyController@companyEdt');
 //修改公司信息
 Route::post('company/doEdt', 'Home\CompanyController@doEdt');
 
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 
 //公司主页
 Route::get('CompanyShow','Home\CompanyShowController@CompanyShow');
@@ -225,28 +206,6 @@ Route::get('firm','Home\FirmController@getDel');
 
 
 //公司首页
-<<<<<<< HEAD
-Route::get('head','Home\HeadController@head');
-Route::get('head','Home\HeadController@getIndex');
-Route::get('head','Home\HeadController@getApply');
-Route::post('head','Home\HeadController@postApply');
-Route::post('head','Home\HeadController@postLogo');
-Route::post('head','Home\HeadController@postEdd');
-Route::post('head','Home\HeadController@postTag');
-Route::post('head','Home\HeadController@postTtag');
-Route::post('head','Home\HeadController@postGgta');
-Route::post('head','Home\HeadController@postProduct');
-Route::post('head','Home\HeadController@postProd');
-Route::post('head','Home\HeadController@getDell');
-Route::post('head','Home\HeadController@postState');
-Route::post('head','Home\HeadController@postDesc');
-Route::post('head','Home\HeadController@postInfor');
-Route::post('head','Home\HeadController@postTeams');
-Route::get('head','Home\HeadController@getRemove');
-Route::post('head','Home\HeadController@postDevelop');
-Route::post('head','Home\HeadController@postDevelo');
-Route::get('head','Home\HeadController@getDevel');
-=======
 /*Route::get('head','Home\HeadController@head');*/
 Route::get('head','Home\HeadController@getIndex');
 Route::get('head/apply','Home\HeadController@getApply');
@@ -267,7 +226,7 @@ Route::post('head/Apply','Home\HeadController@postApply');
 //Route::post('head','Home\HeadController@postDevelop');
 //Route::post('head','Home\HeadController@postDevelo');
 //Route::get('head','Home\HeadController@getDevel');
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
+
 
 
 //公司简介
@@ -291,20 +250,3 @@ Route::get('resume/pending','Home\ResumeController@getPending');
 Route::get('search','Home\SearchController@getIndex');
 
 
-<<<<<<< HEAD
-
-
-=======
-
-
-//Route::get('/', 'IndexController@index');
-//Route::get('/register', 'UserController@register');
-//Route::get('/login', 'UserController@login');
-//Route::post('/singin', 'UserController@singin');
-//Route::get('/logout', 'UserController@logout');
-//Route::post('/store', 'UserController@store');
-//Route::get('/verify/{confirmed_code}', 'UserController@emailConfirm');
-//Route::get('/sendSMS', 'UserController@sendSMS');
-//Route::get('admin/index', 'AdminController@index');
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63

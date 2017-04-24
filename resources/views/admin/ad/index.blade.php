@@ -107,12 +107,7 @@
 
                         </tr>
                     @endforeach
-
-
                     </tbody></table>
-   {{--             <div class="dataTables_info" id="DataTables_Table_1_info">Showing 1 to 10 of 57 entries</div>--}}
-
-
                 <div class="dataTables_paginate paging_full_numbers" id="pages">
                     {!! $res->appends($request->all())->render() !!}
                 </div></div>
@@ -141,9 +136,5 @@
 
 <!-- Themer Script (Remove if not needed) -->
 <script src="{{url('admin/table/js/core/themer.js')}}"></script>
-
-
-
-
 </body>
 </html>

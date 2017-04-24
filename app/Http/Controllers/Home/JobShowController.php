@@ -11,16 +11,9 @@ class JobShowController extends Controller
     //
   public function jobShow(Request $request)
     {
-        //dd('dkd');
-<<<<<<< HEAD
-        return view('home.jobShow.index');
-   				preg_match('/\d+/',$request -> job,$id);
-		dd($id);
-=======
    //return view('home.jobShow.index');
    		preg_match('/\d+/',$request -> job,$id);
 		//dd($id);
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 		if($request -> job)
 		{
 			preg_match('/\d+/',$request -> job,$id);
@@ -29,39 +22,17 @@ class JobShowController extends Controller
 			
 		}else{
 			$job_id = 7;
-<<<<<<< HEAD
 		}
-		
-		dd($job_id);
-=======
 
-		}
-		
-		//dd($job_id);
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
-		//$job_id = 7;
 		$job = DB::table('job')->where('id',$job_id)->first();
 		//dd($job);
 
-<<<<<<< HEAD
-		// var_dump($arr);die;
-=======
-		//var_dump($arr);die;
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 		//搜索公司信息
-		/*$company=M('company');
-		$res_company=$company->where("id={$res_job['company_id']}")->find();
-		$ayy=$res_company;*/
-		//dd($job);
 		$company = DB::table('company')->where('id',$job->company_id) -> first();
 		//dd($company);
 		if(!$company)
 		{
 			$company = DB::table('company')->where('id',1) -> first();
-<<<<<<< HEAD
-=======
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 		}
 		/*//收藏框的判断
 		$user_col=M('user_col');
@@ -73,10 +44,7 @@ class JobShowController extends Controller
 		}*/
 
 		$user_col = DB::table('user_col')->where('job_id',$job->id)->first();
-<<<<<<< HEAD
-=======
-		//dd($user_col);
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
+
 		if($user_col)
 		{
 			$showCol = 'collected';
@@ -98,15 +66,6 @@ class JobShowController extends Controller
 		//dd($job_id);
 		//dd(session('user'));
 		$cl = "false";
-<<<<<<< HEAD
-		if(!empty(session('user') -> id))
-		{
-
-			$res_send = DB::table('send')-> where([
-				'user_id' => session('user') -> id,
-				'job_id' => $job_id
-				]) -> first();
-=======
 		if(!empty(session('vip') -> id))
 		{
 
@@ -115,7 +74,6 @@ class JobShowController extends Controller
 				'job_id' => $job_id
 				]) -> first();
 
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 			if($res_send)
 			{
 				$send = '已投递';
@@ -130,19 +88,13 @@ class JobShowController extends Controller
 		}
 
 		//判断是否收藏
-<<<<<<< HEAD
-		if(!empty(session('user') -> id))
-		{
-			$cang['uid'] = session('user') -> id;
-=======
+
 		if(!empty(session('vip') -> id))
 		{
 			$cang['uid'] = session('vip') -> id;
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 			$cang['job_id'] = $job_id;
 
 			$res_cang = DB::table('cang') -> where($cang) ->first();
-
 			//dd($res_cang);
 			if($res_cang)
 			{
@@ -181,28 +133,6 @@ class JobShowController extends Controller
 			'dn' => $dn
 			]);
 	}
-
-<<<<<<< HEAD
-=======
-    //简历的投递
-
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
-//    public function jobShow()
-//    {
-//        return view('home.Public.footer');
-//    }
-<<<<<<< HEAD
-    //public function jobShow()
-    //{
-       // return view('home.email.welecome');
-   // }
-=======
-    /*public function getResumesend()
-    {
-        return view('home.jobShow.indexs');
-     }*/
-
     //简历的投递
     public function getResumesend(Request $request)
     {
@@ -211,8 +141,6 @@ class JobShowController extends Controller
 		$data['job_id'] = $request -> jobid;
 		if(!empty(session('vid') -> id))
         {
-
-
             //$data['job_id'] = $request -> jobid;
             $data['company_id'] = $request -> comid;
             $data['vip_id'] = session('vid') -> id;
@@ -389,11 +317,4 @@ class JobShowController extends Controller
             'dn' => $dn
         ]);
     }
-
-
-
-
-
-
->>>>>>> 74db6e8c4451b10a0dee1e97229ce58ff8b78a63
 }
