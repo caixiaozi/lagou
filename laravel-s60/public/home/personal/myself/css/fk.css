@@ -1,0 +1,12 @@
+.all{width:1200px;height:auto;margin:0 auto;margin-top:40px;}
+/*侧边栏菜单*/
+.all .c_cdan{width:230px;height:272px;background:#FAFAFA;float:left; margin-left:70px;}
+.all .c_cdan .x_cdan ul li{width:230px;height:47px;float:left;text-align:center;line-height:47px; }
+.all .c_cdan .x_cdan ul li h3{line-height:30px;}
+.all .c_cdan .x_cdan ul li:hover{background:#F1F1F1;}
+
+/*js样式*/
+.txt{background:#F1F1F1;}
+
+/*右边内容*/
+.y_nav{width:745px;height:900px; float:left; margin-left: 50px;}

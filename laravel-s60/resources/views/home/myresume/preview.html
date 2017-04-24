@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="拉勾,拉勾网,拉勾招聘,拉钩, 拉钩网 ,互联网招聘,拉勾互联网招聘, 移动互联网招聘, 垂直互联网招聘, 微信招聘, 微博招聘, 拉勾官网, 拉勾百科,跳槽, 高薪职位, 互联网圈子, IT招聘, 职场招聘, 猎头招聘,O2O招聘, LBS招聘, 社交招聘, 校园招聘, 校招,社会招聘,社招" name="keywords">
+    <meta content="拉勾网是3W旗下的互联网领域垂直招聘网站,互联网职业机会尽在拉勾网" name="description">
+    <title>简历预览-我的简历-拉勾网-最专业的互联网招聘平台</title>
+    <link rel="Shortcut Icon" href="{{url('home/shou/css/favicon_faed927.ico')}}">
+    <link rel="stylesheet" type="text/css" href="home/shou/myresume/css/style.css">
+</head>
+
+<body>
+<div id="previewWrapper">
+    <div class="preview_header">
+        <h1 title="杜玉玲的简历">杜玉玲的简历</h1>
+    </div><!--end .preview_header-->
+
+    <div class="preview_content">
+        <div id="basicInfo" class="profile_box {$data['first']}">
+            <h2>基本信息</h2>
+            <div class="basicShow">
+                   <span>
+                   		杜玉玲 |女 |大专 |半年<br>15757300401 | 1655399007@qq.com<br>现在状态
+            	   </span>
+                <div class="m_portrait">
+                    <div></div>
+                    <img src="{{url('home/shou/myresume/images/jd_portrait.png')}}" alt="头像" height="120" width="120">
+                </div>
+            </div><!--end .basicShow-->
+        </div><!--end #basicInfo-->
+
+        <div id="expectJob" class="profile_box {$data['second']}">
+            <h2>期望工作</h2>
+            <div class="expectShow">
+                上海，PHP工程师，月薪8000
+            </div><!--end .expectShow-->
+        </div><!--end #expectJob-->
+
+        <div id="workExperience" class="profile_box {$data['third']}">
+            <h2>工作经历</h2>
+            <div class="experienceShow">
+                <ul class="wlist clearfix">
+                    <foreach name="data['work_history_value']" item="vo" >
+                        <li class="clear">
+                            <span class="c9">2016-11-20 - 至今</span>
+                            <div>
+                                <img src="{{url('home/shou/myresume/images/jd_portrait.png')}}" alt="xiaomi1" height="56" width="56">
+                                <h3>php程序员</h3>
+                                <h4>上海兄弟连</h4>
+                            </div>
+                        </li>
+                    </foreach>
+                </ul>
+            </div><!--end .experienceShow-->
+        </div><!--end #workExperience-->
+
+        <div id="projectExperience" class="profile_box {$data['fouth']}">
+            <h2>项目经验</h2>
+            <div class="projectShow">
+                <ul class="plist clearfix">
+                    <foreach name="data['res_project_value']" item="vo" >
+                        <li class="noborder">
+                            <div class="projectList">
+                                <div class="f16 mb10">{$vo.name}，{$vo.job}
+                                    <span class="c9">（{$vo.begin_yeartime}.{$vo.begin_monthtime}-{$vo.end_yeartime}.{$vo.end_monthtime}）</span>
+                                    }
+                                <div class="dl1">
+                                </div>
+                                    {$vo.description}
+                                </div>
+                            </div>
+                        </li>
+                    </foreach>
+                </ul>
+            </div><!--end .projectShow-->
+        </div><!--end #projectExperience-->
+
+        <div id="educationalBackground" class="profile_box {$data['five']}">
+            <h2>教育背景</h2>
+            <div class="educationalShow">
+                <ul class="elist clearfix">
+                    <foreach name="data['res_education_value']" item="vo" >
+                        <li class="clear">
+                            <span class="c9">{$vo.begin_time}-{$vo.end_time}</span>
+                            <div>
+                                <h3>{$vo.school}</h3>
+                                <h4>{$vo.professional}，{$vo.education}</h4>
+                            </div>
+                        </li>
+                    </foreach>
+                </ul>
+            </div><!--end .educationalShow-->
+        </div><!--end #educationalBackground-->
+        <div id="worksShow" class="profile_box {$data['sixty']}">
+            <h2>作品展示</h2>
+            <div class="workShow">
+                <ul class="slist clearfix">
+                    <foreach name="data['res_show_works_value']" item="vo" >
+                        <li class="noborder">
+                            <div class="workList c7">
+                                <div class="f16">
+                                    网址：<a href="http://{$vo.link}/" target="_blank">{$vo.link}</a>
+                                </div>
+                                <p>{$vo.description}</p>
+                            </div>
+                        </li>
+                    </foreach>
+                </ul>
+            </div><!--end .workShow-->
+        </div><!--end #worksShow-->
+    </div><!--end .preview_content-->
+</div><!--end #previewWrapper-->
+
+<!-------------------------------------弹窗lightbox ----------------------------------------->
+<div style="display:none;">
+    <!-- 下载简历 -->
+    <div id="downloadOnlineResume" class="popup">
+        <table width="100%">
+            <tbody><tr>
+                <td class="c5 f18">请选择下载简历格式：</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.lagou.com/resume/downloadResume?key=f8c9cb931414c41a2f5c461f170d980a&amp;type=1" class="btn_s">word格式</a>
+                    <a href="http://www.lagou.com/resume/downloadResume?key=f8c9cb931414c41a2f5c461f170d980a&amp;type=2" class="btn_s">html格式</a>
+                    <a href="http://www.lagou.com/resume/downloadResume?key=f8c9cb931414c41a2f5c461f170d980a&amp;type=3" class="btn_s">pdf格式</a>
+                </td>
+            </tr>
+            </tbody></table>
+    </div><!--/#downloadOnlineResume-->
+</div>
+</body>
+</html>
